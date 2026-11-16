@@ -1,0 +1,47 @@
+name: Relatar um problema
+description: Algo não funciona como deveria no Mo baile Web.
+title: "[bug] "
+labels: ["bug", "triagem"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por relatar. O Mo baile Web é um **produto em desenvolvimento** e
+        cada relato ajuda a corrigir mais rápido.
+
+        **Este relato é público.** Não inclua dados de clientes, tokens, CPF,
+        e-mails nem logs de produção. Troque por valores fictícios. Para anexar
+        capturas ou arquivos de exemplo, arraste-os para o campo "Anexos".
+  - type: textarea
+    id: aconteceu
+    attributes:
+      label: O que aconteceu
+    validations:
+      required: true
+  - type: textarea
+    id: fez
+    attributes:
+      label: O que você fez
+      placeholder: |
+        1. Abri a aba Relatório
+        2. Escolhi a spec e o log
+        3. Cliquei em Auditar
+  - type: textarea
+    id: esperava
+    attributes:
+      label: O que você esperava
+  - type: input
+    id: area
+    attributes:
+      label: Em que parte aconteceu
+      placeholder: "Relatório"
+  - type: input
+    id: ambiente
+    attributes:
+      label: Navegador e sistema
+      placeholder: "Chrome 142, Windows 11"
+  - type: textarea
+    id: anexos
+    attributes:
+      label: Anexos
+      description: Spec e log de exemplo (fictícios) ajudam a reproduzir.
