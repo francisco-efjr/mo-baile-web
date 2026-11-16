@@ -52,7 +52,7 @@ jobs:
         with:
           node-version: "22"
           cache: npm
-      - run: npm ci
+      - run: npm install --no-audit --no-fund  # npm ci: bug de dependência opcional no npm 11 (CONTRIBUTING)
       - run: npx tsc --noEmit
       - run: npx vitest run
       - run: npx vite build
@@ -69,7 +69,7 @@ jobs:
         with:
           node-version: "22"
           cache: npm
-      - run: npm ci
+      - run: npm install --no-audit --no-fund  # npm ci: bug de dependência opcional no npm 11 (CONTRIBUTING)
       - run: npx playwright install --with-deps chromium
       - run: npx playwright test
         env:

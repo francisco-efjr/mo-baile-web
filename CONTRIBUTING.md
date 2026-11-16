@@ -7,9 +7,13 @@ Obrigado pelo interesse. O projeto é um beta em desenvolvimento.
 Node 20 ou mais novo.
 
 ```bash
-npm ci
+npm install        # respeita o package-lock.json (versões exatas)
 npm run dev        # http://127.0.0.1:5173
 ```
+
+Use `npm install`, e não `npm ci`: o npm 11 grava o lockfile sem uma das
+dependências opcionais de plataforma do Rollup, e o `npm ci` recusa. As
+versões continuam as do lockfile.
 
 ## Portão de qualidade
 
