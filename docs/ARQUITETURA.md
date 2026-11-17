@@ -23,7 +23,8 @@ index.html ─ src/main.ts ─ src/ui/        interface (abas Relatório e Analy
   site e conferidos pelo sha256. Ele devolve as caixas de texto. Na página, a
   camada de ajustes (`src/engine/prints/adaptador.ts`) e o leitor de cards
   (`src/engine/prints/`, com paridade com o Mo baile) montam o rascunho da
-  spec com `rascunhoDosPrints`.
+  spec com `rascunhoDosPrints`. A tela fica em `src/ui/importacao.ts`, um
+  diálogo aberto pelo quadro da spec no Relatório.
 - **Publicação:** `vite build` gera `dist/`, que a workflow `pages.yml` envia
   ao GitHub Pages quando a tag `vX.Y.Z` sobe.
 

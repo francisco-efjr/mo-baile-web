@@ -4,10 +4,19 @@ Todas as mudanças relevantes do Mo baile Web ficam aqui, da mais nova para a
 mais antiga. O formato segue o [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/)
 e a numeração segue o [Versionamento Semântico](https://semver.org/lang/pt-BR/).
 
-## [Não publicado]
+
+## [0.2.0] - 2026-11-17
 
 ### Adicionado
 
+- **Importar Prints do Figma**, no quadro da spec do Relatório: monta o
+  rascunho da spec lendo os prints dos cards "Anotações" do Figma, no
+  navegador e com as regras do Mo baile.
+  - Escolha a pasta, os prints ou arraste.
+  - Acompanhe a leitura, com a opção de cancelar.
+  - Revise as dúvidas com a miniatura do print.
+  - Use o rascunho na auditoria, ou baixe a spec, a revisão e o checklist.
+  - Novo guia na Ajuda e teste F-11.
 - **Importação de prints, fase 1 (motor):** o leitor de cards do Mo baile,
   que monta o rascunho da spec, a revisão e o checklist a partir do texto
   lido dos prints do Figma, agora em TypeScript (`src/engine/prints/`). O
@@ -16,7 +25,7 @@ e a numeração segue o [Versionamento Semântico](https://semver.org/lang/pt-BR
     com 137 prints escritos à mão ou sorteados com ruído de OCR.
   - Conferido também, fora do repositório, sobre 129 prints reais lidos pelo
     Vision e pelo PaddleOCR: o resultado foi idêntico.
-  - A tela vem na fase 3, e o OCR no navegador na fase 2 (ADR 0002).
+  - Decisões no ADR 0002.
 - **Importação de prints, fase 2 (OCR no navegador):** o PaddleOCR v6 small
   lê os prints num worker, sem servidor (`src/ocr/`).
   - Dependências novas, com versão exata: `ppu-paddle-ocr` 6.6.1, `ppu-ocv`

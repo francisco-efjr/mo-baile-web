@@ -44,4 +44,4 @@ Você precisa auditar o carrinho do DemoApp. Arraste a `spec.json` e o `log.txt`
 - **Tudo aparece como Não Disparado.** Confira a **Plataforma**: ela precisa ser a do log.
 - **A spec não abre.** O arquivo precisa ser o JSON da spec do Mo baile. A mensagem embaixo do quadro diz o que está errado.
 - **O log salvo no Windows não abre.** O site lê UTF-8 e UTF-16, que é o que o `>` do PowerShell grava. Se ainda falhar, relate o problema com um log fictício.
-- **Faltam os prints dos cards.** O site não lê imagens. Os prints e a importação do Figma ficam no Mo baile para macOS.
+- **Ainda não tenho a spec, só os prints.** Clique em **Importar Prints do Figma…** no quadro da spec. O guia Importar Prints do Figma explica como.

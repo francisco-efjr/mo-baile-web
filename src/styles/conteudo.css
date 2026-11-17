@@ -323,3 +323,51 @@ button.mw-tile:hover { background: var(--fill-secondary); }
   .mw-linkbtn { min-height: 24px; }
   .mb-root .mw-ajuda__link { min-height: 44px; }
 }
+
+/* Importar Prints do Figma (diálogo). */
+.mw-dz__extra { margin-left: auto; }
+.mw-importar { width: min(980px, 94vw); height: min(860px, 92vh); }
+.mw-imp__corpo { flex: 1; min-height: 0; overflow: auto; padding: 18px 20px 24px; background: var(--bg-content); }
+.mw-imp__etapa { display: flex; flex-direction: column; gap: 14px; }
+.mw-imp__etapa[hidden] { display: none; }
+.mw-imp__zona .mw-dz__acao { justify-content: flex-start; }
+.mw-imp__ignorados:empty { display: none; }
+.mw-imp__detalhes { font-size: var(--text-callout); line-height: var(--lh-callout); color: var(--label-secondary); }
+.mw-imp__detalhes summary { cursor: pointer; }
+.mw-imp__detalhes ul { margin: 6px 0 0; padding-left: 20px; }
+.mw-imp__detalhes code { font-family: var(--font-mono); overflow-wrap: anywhere; }
+.mw-imp__campos { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px 16px; align-items: end; }
+.mw-imp__campo { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.mw-imp__projeto { width: 100%; height: var(--control-height-large); padding: 0 12px; font-size: var(--text-body); }
+.mw-imp__rodape { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.mw-imp__info-msg { display: flex; gap: 6px; align-items: flex-start; margin: 0; color: var(--label-secondary); font-size: var(--text-callout); }
+.mw-imp__info-msg .mb-icon { margin-top: 2px; flex: none; }
+.mw-imp__lendo { padding-top: 24px; max-width: 560px; }
+.mw-imp__subtitulo { font-size: var(--text-title-3); line-height: var(--lh-title-3); font-weight: var(--weight-semibold); }
+.mw-imp__progresso .mb-progress__bar { width: 0; }
+.mw-imp__texto-progresso { color: var(--label-secondary); font-size: var(--text-callout); overflow-wrap: anywhere; min-height: 1.5em; }
+.mw-imp__resumo { font-size: var(--text-body); outline: none; }
+.mw-imp__fluxos { color: var(--label-secondary); font-size: var(--text-callout); }
+.mw-imp__acoes { display: flex; flex-wrap: wrap; gap: 8px; }
+.mw-imp__filtro { align-self: flex-start; }
+.mw-imp__lista { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.mw-imp__card { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 14px; align-items: start; }
+.mw-imp__mini { display: block; border-radius: var(--radius-field); overflow: hidden; box-shadow: inset 0 0 0 1px var(--separator); background: #fff; }
+.mw-imp__mini img { display: block; width: 100%; height: auto; max-height: 220px; object-fit: contain; object-position: top; }
+.mw-imp__info { min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+.mw-imp__print code { font-family: var(--font-mono); font-size: var(--text-callout); color: var(--label-secondary); overflow-wrap: anywhere; }
+.mw-imp__evento { font-size: var(--text-body); overflow-wrap: anywhere; }
+.mw-imp__duvidas { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 4px; font-size: var(--text-callout); line-height: var(--lh-callout); }
+.mw-imp__duvidas li { display: flex; gap: 6px; align-items: flex-start; padding: 5px 8px; border-radius: var(--radius-field); background: var(--warning-tint); overflow-wrap: anywhere; }
+.mw-imp__duvidas .mb-icon { flex: none; margin-top: 2px; color: var(--warning); }
+.mw-imp__ok { display: flex; gap: 6px; align-items: center; color: var(--success); font-size: var(--text-callout); }
+.mw-imp__vazio { color: var(--label-secondary); font-size: var(--text-callout); padding: 12px 0; }
+
+@media (max-width: 760px) {
+  .mw-importar { width: 100vw; height: 100dvh; }
+  .mw-imp__corpo { padding: 14px var(--mw-gutter) 24px; }
+  .mw-imp__campos { grid-template-columns: minmax(0, 1fr); }
+  .mw-imp__card { grid-template-columns: minmax(0, 1fr); }
+  .mw-imp__mini img { max-height: 160px; }
+  .mw-dz__extra { margin-left: 0; }
+}

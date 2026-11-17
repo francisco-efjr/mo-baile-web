@@ -2,6 +2,7 @@
 // `report.import` do Mo baile (só os arquivos de imagem da própria pasta, sem
 // subpastas e sem ocultos), com o que o navegador consegue abrir: PNG e JPG.
 // HEIC e TIFF, que o Vision lê no Mac, ficam de fora com o motivo.
+import { cmpCodePoints } from "../engine/py";
 
 export const EXTENSOES_ACEITAS = [".png", ".jpg", ".jpeg"] as const;
 const EXTENSOES_DO_MAC = [".heic", ".tiff", ".tif"];
@@ -58,6 +59,8 @@ export function selecionarPrints<T extends EntradaDaPasta>(entradas: readonly T[
     }
     prints.push(e);
   });
+  // Em ordem de nome, como o Mo baile lê a pasta (e como o rascunho sai).
+  prints.sort((a, b) => cmpCodePoints(a.nome, b.nome));
   return { pasta, prints, ignorados };
 }
 

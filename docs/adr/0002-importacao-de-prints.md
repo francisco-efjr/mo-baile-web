@@ -1,7 +1,7 @@
 # ADR 0002 — Importação de prints no navegador
 
 Data: 2026-11-17
-Status: aceito (fases 1 e 2 entregues; fase 3, a tela, planejada)
+Status: aceito (fases 1, 2 e 3 entregues na 0.2.0)
 
 ## Contexto
 
@@ -91,6 +91,25 @@ e em 0,36 s com quatro, sem nenhuma requisição para fora.
   perfeita. Passa no Chrome e no Firefox. No WebKit do Playwright, que roda
   como sessão temporária, a leitura passa, mas o cache não guarda os modelos:
   eles são baixados de novo a cada vez.
+
+## Fase 3, como ficou (17/11/2026)
+
+- **Onde fica:** no quadro **Spec da demanda**, o botão **Importar Prints do
+  Figma…** abre um diálogo (`src/ui/importacao.ts`).
+- **O que a pessoa faz:**
+  - escolhe a pasta ou os prints, ou arrasta;
+  - vê os arquivos que ficaram de fora e o motivo;
+  - acompanha o download do leitor e cada print lido, e pode cancelar;
+  - revisa as dúvidas com a miniatura do print;
+  - usa o rascunho na auditoria ou baixa os três arquivos.
+- **Ordem dos prints:** os prints são lidos em ordem de nome, como o Mo baile
+  lê a pasta.
+- **Teste F-11:** cobre o fluxo inteiro no desktop, o cancelamento, os erros
+  e o layout no celular.
+- **Pasta real (22 prints) no build de produção, no Chrome:**
+  - a leitura levou 33,5 s;
+  - nenhuma requisição saiu do site, fora as miniaturas (`blob:`);
+  - "Usar na Auditoria" carregou a spec com 22 cards.
 
 ## Consequências
 

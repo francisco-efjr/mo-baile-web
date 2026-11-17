@@ -25,6 +25,7 @@ import {
   type Dependencias,
 } from "./motor";
 import { baixar, copiarComAviso, dataArquivo, slug, TIPO } from "./saida";
+import { criarImportacao } from "./importacao";
 import { criarSeletor } from "./seletor";
 
 type Filtro = "all" | "action" | "error" | "missing" | "ok";
@@ -60,13 +61,24 @@ export function criarRelatorio(deps: Dependencias): PainelRelatorio {
 
   /* ------------------------------------------------------------ entrada */
 
+  // Sem a spec? O rascunho sai dos prints dos cards (OCR no navegador).
+  const importacao = criarImportacao(deps, (rascunho) => {
+    seletorSpec.erro(null);
+    aplicarSpec(rascunho.specJson, rascunho.specName, null);
+    marcarDesatualizado();
+  });
+  const botaoImportar = botao("Importar Prints do Figma…", "images", () => importacao.abrir(), "mb-btn--plain mw-dz__extra");
+
   const seletorSpec = criarSeletor({
     titulo: "Spec da demanda",
-    dica: ["O JSON da spec de tagueamento (os cards do Figma), exportado ou editado no Mo baile."],
+    dica: [
+      "O JSON da spec de tagueamento (os cards do Figma), exportado ou editado no Mo baile. Sem a spec, monte o rascunho a partir dos prints dos cards.",
+    ],
     aceitar: ".json,application/json",
     rotuloBotao: "Escolher Spec…",
     icone: "file-code",
     aoEscolher: (arquivo) => void escolherSpec(arquivo),
+    extra: botaoImportar,
   });
 
   const seletorLog = criarSeletor({
@@ -295,6 +307,7 @@ export function criarRelatorio(deps: Dependencias): PainelRelatorio {
     vazio,
     resultado,
     dialogo.el,
+    importacao.el,
   );
 
   /* ------------------------------------------------------------ leitura */

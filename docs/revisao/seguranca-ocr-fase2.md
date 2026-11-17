@@ -59,6 +59,11 @@ não é uma revisão independente. Antes de publicar a tela de importação (fas
 | O3 | Baixa | cache | Em janela privada, ou com o armazenamento bloqueado, os 46 MB são baixados de novo a cada sessão. No WebKit do Playwright foi assim | Sem impacto de segurança. A tela da fase 3 deve avisar o tamanho antes do primeiro download |
 | O4 | Baixa | imagens | Uma imagem muito grande, mesmo abaixo de 20 MB, pode ocupar muita memória na decodificação | Limite de 20 MB por arquivo, e só um print por vez no worker; cancelar encerra o worker. Um limite em pixels pode entrar na fase 3 |
 
+Na fase 3 (a tela), o texto lido e os nomes de arquivo entram na página só
+como texto (`h()`/`textContent`, sem `innerHTML`). As miniaturas são
+endereços `blob:` dos próprios arquivos, liberados quando a revisão recomeça.
+A CSP já permitia `img-src blob:`.
+
 Conferido e sem achado:
 - nenhuma regra de auditoria mudou;
 - não há caminho de disco;

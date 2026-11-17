@@ -76,6 +76,10 @@ describe("arquivos da pasta", () => {
     ]);
     expect(s.pasta).toBe("DemoApp");
     expect(s.prints.map((p) => p.nome)).toEqual(["01.png", "02.JPG", "03.jpeg"]);
+    // Em ordem de nome (ponto de código), qualquer que seja a ordem do navegador.
+    expect(selecionarPrints([e("p/b.png"), e("p/B.png"), e("p/a10.png"), e("p/a2.png")]).prints.map((p) => p.nome)).toEqual([
+      "B.png", "a10.png", "a2.png", "b.png",
+    ]);
     expect(s.ignorados.map((i) => i.nome)).toEqual(["antigos/04.png", "05.heic", "06.png"]);
     expect(s.ignorados[1]!.motivo).toContain("exporte o print em PNG");
   });
