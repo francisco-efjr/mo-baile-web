@@ -1,6 +1,4 @@
 // A interface só fala com o motor por este contrato (src/engine/index.ts).
-// Em desenvolvimento, `?amostra` troca algumas funções por uma amostra
-// (src/ui/dev), sem tocar no motor nem entrar no build de produção.
 import type * as engine from "../engine/index";
 import { EngineError } from "../engine/index";
 import type { exemplo } from "../exemplos/index";
@@ -15,8 +13,6 @@ export type Exemplo = typeof exemplo;
 export interface Dependencias {
   motor: Motor;
   exemplo: Exemplo;
-  /** Verdadeiro só com a amostra de desenvolvimento ligada. */
-  amostra: boolean;
 }
 
 /** Texto para a tela: o do motor quando é erro de entrada, senão uma frase genérica. */

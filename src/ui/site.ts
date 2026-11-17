@@ -154,7 +154,6 @@ export function montarSite(raiz: HTMLElement, deps: Dependencias): void {
         icone("shield-check", 15),
         h("span", null, "Seus arquivos não saem deste navegador."),
       ),
-      deps.amostra ? h("span", { class: "mw-amostra" }, "Amostra de desenvolvimento") : null,
       relatar,
     ),
   );

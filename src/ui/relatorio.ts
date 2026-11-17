@@ -660,7 +660,7 @@ export function criarRelatorio(deps: Dependencias): PainelRelatorio {
       ["Fluxo", row.flow_label],
       ["Variação", row.variation],
       ["Disparo", quando],
-      ["Tela GA", row.ga_screen],
+      ["Tela GA", row.ga_screen == null ? null : String(row.ga_screen)],
       ["Nota", row.note],
     ];
 

@@ -8,13 +8,7 @@ import { iniciarTema } from "./ui/tema";
 
 async function iniciar(): Promise<void> {
   iniciarTema();
-  let deps: Dependencias = { motor: engine, exemplo, amostra: false };
-  // Amostra só de desenvolvimento (npm run dev + ?amostra). No build de
-  // produção `import.meta.env.DEV` é false e o import some do pacote.
-  if (import.meta.env.DEV && new URLSearchParams(location.search).has("amostra")) {
-    const { criarAmostra } = await import("./ui/dev/amostra");
-    deps = criarAmostra(engine);
-  }
+  const deps: Dependencias = { motor: engine, exemplo };
   const raiz = document.querySelector<HTMLDivElement>("#app");
   if (raiz) montarSite(raiz, deps);
 }

@@ -72,11 +72,6 @@
   font-weight: var(--weight-medium);
 }
 .mb-root .mw-relatar { color: var(--accent-text); }
-.mw-amostra {
-  display: inline-flex; align-items: center; height: 22px; padding: 0 8px;
-  border-radius: var(--radius-capsule); border: 1px dashed var(--warning);
-  color: var(--warning); font-size: var(--text-subheadline); font-weight: var(--weight-semibold);
-}
 
 .mw-principal { max-width: var(--mw-max); margin: 0 auto; padding: 28px var(--mw-gutter) 0; }
 .mw-aba-painel.is-entrando { animation: mw-entrar var(--motion-crossfade) var(--ease-out-standard) both; }
