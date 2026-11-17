@@ -1,0 +1,23 @@
+{
+  "nome": "DemoApp",
+  "spec_name": "demoapp.json",
+  "cards": [
+    {
+      "file": "acumulador/01.png",
+      "event": "login",
+      "params": {},
+      "bullets": {},
+      "doubts": []
+    }
+  ],
+  "review": [
+    {
+      "print": "01.png",
+      "evento": "login",
+      "duvidas": []
+    }
+  ],
+  "spec_json": "{\n  \"projeto\": \"DemoApp\",\n  \"versao_especificacao\": \"Rascunho gerado por OCR — revisar\",\n  \"plataforma\": \"android\",\n  \"prints_dir\": \"acumulador\",\n  \"fluxos\": {},\n  \"cards\": [\n    {\n      \"secao\": \"1. geral\",\n      \"titulo\": \"login · geral\",\n      \"print\": \"01.png\",\n      \"evento\": \"login\",\n      \"params\": {}\n    }\n  ]\n}\n",
+  "review_md": "# Revisão do rascunho — DemoApp\n\n1 prints lidos · 0 ponto(s) para conferir. Corrija direto no JSON e audite de novo na aba Relatório.\n\n## 1. login — `01.png`\n- ✓ nada a conferir\n",
+  "checklist_md": "# Checklist · DemoApp\n\n- Plataforma: ANDROID\n- Gerado em: 16/11/2026 09:30\n- Spec: `demoapp.json`\n- Prints: `acumulador`\n\nMarque cada item com `[x]` ao conferir. Os itens com ⚠ são do OCR: confira no print e corrija a spec antes de auditar. Para o HTML no padrão do design system, use **Exportar Checklist…** na aba Relatório.\n\n## 1. geral\n\n### login · geral — `01.png`\n\n**Conferir**\n\n- [ ] disparo de `login`\n"
+}

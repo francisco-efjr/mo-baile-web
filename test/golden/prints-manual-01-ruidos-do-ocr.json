@@ -1,0 +1,106 @@
+{
+  "nome": "DemoApp pedido",
+  "spec_name": "demoapp-pedido.json",
+  "cards": [
+    {
+      "file": "prints-pedido/01-interaction.png",
+      "event": "interaction_pedido_[avulso|empresa]",
+      "params": {
+        "screen_name": "app:pedido:[avulso|empresa]:simulacao",
+        "flow_name": "pedido-[avulso|empresa]",
+        "component": "[elemento]",
+        "detail": "click:[numero de parcelas]-parcela-[com|sem]-seguro"
+      },
+      "bullets": {
+        "component": [
+          "modal"
+        ],
+        "detail": [
+          "click:10-parcela-com-seguro",
+          "click:fechar"
+        ]
+      },
+      "doubts": [
+        "parâmetro 'screen name' lido como 'screen_name'",
+        "detail: item 'clickifechar' lido como 'click:fechar'"
+      ]
+    },
+    {
+      "file": "prints-pedido/02-checkout.png",
+      "event": "add_to_cart",
+      "params": {
+        "screen_name": "app:pedido:[avulso|empresa]:simulacao",
+        "flow_name": "pedido-[avulso|empresa]",
+        "installments": "[número de parcelas]",
+        "items": [
+          {
+            "item_id": "1001",
+            "item_name": "pedido-avulso",
+            "item_category": "simulacao"
+          }
+        ],
+        "due_date": "[data primeiro vencimento]",
+        "insurance": "[0|1]",
+        "loan_insurance_value": "[valor do seguro]",
+        "operation_type": "[avulso|empresa]-pre-agendado"
+      },
+      "bullets": {},
+      "doubts": [
+        "items.item_category: 'Simulacao' lido como 'simulacao'"
+      ]
+    },
+    {
+      "file": "prints-pedido/03-lista.png",
+      "event": "view_item_list",
+      "params": {
+        "screen_name": "app:pedido:reserva-de-entrega",
+        "item_list_name": "agenda-de-pedidos",
+        "items": [
+          {
+            "item_name": "recebivel-1",
+            "item_id": "card-1",
+            "price": "[numero]"
+          },
+          {
+            "item_name": "recebivel-2",
+            "item_id": "card-2",
+            "price": "[numero]"
+          }
+        ]
+      },
+      "bullets": {},
+      "doubts": []
+    }
+  ],
+  "review": [
+    {
+      "print": "01-interaction.png",
+      "evento": "interaction_pedido_{fluxo}",
+      "duvidas": [
+        "parâmetro 'screen name' lido como 'screen_name'",
+        "detail: item 'clickifechar' lido como 'click:fechar'",
+        "detail: exemplo 'click:10-parcela-com-seguro' generalizado para 'click:[numero]-parcela-com-seguro' (padrão da tabela)"
+      ]
+    },
+    {
+      "print": "02-checkout.png",
+      "evento": "add_to_cart",
+      "duvidas": [
+        "items.item_category: 'Simulacao' lido como 'simulacao'",
+        "items: exemplo da spec é do fluxo 'avulso'; item_id fixado só para 'avulso'"
+      ]
+    },
+    {
+      "print": "03-lista.png",
+      "evento": "view_item_list",
+      "duvidas": [
+        "items.item_name: exemplos ['recebivel-1', 'recebivel-2'] viraram o padrão 'recebivel-[numero]'",
+        "items.item_id: exemplos ['card-1', 'card-2'] viraram o padrão 'card-[preenchido]'",
+        "items: a spec mostra 2 itens; só o primeiro é validado"
+      ]
+    }
+  ],
+  "spec_json": "{\n  \"projeto\": \"DemoApp pedido\",\n  \"versao_especificacao\": \"Rascunho gerado por OCR — revisar\",\n  \"plataforma\": \"android\",\n  \"prints_dir\": \"prints-pedido\",\n  \"fluxos\": {\n    \"avulso\": \"avulso\",\n    \"empresa\": \"empresa\"\n  },\n  \"cards\": [\n    {\n      \"secao\": \"1. simulacao\",\n      \"titulo\": \"interaction_pedido_{fluxo} · simulacao\",\n      \"print\": \"01-interaction.png\",\n      \"evento\": \"interaction_pedido_{fluxo}\",\n      \"params\": {\n        \"screen_name\": \"app:pedido:{fluxo}:simulacao\",\n        \"flow_name\": \"pedido-{fluxo}\",\n        \"component\": \"modal\"\n      },\n      \"variacoes\": [\n        {\n          \"detail\": \"click:[numero]-parcela-com-seguro\"\n        },\n        {\n          \"detail\": \"click:fechar\"\n        }\n      ]\n    },\n    {\n      \"secao\": \"1. simulacao\",\n      \"titulo\": \"add_to_cart · simulacao\",\n      \"print\": \"02-checkout.png\",\n      \"evento\": \"add_to_cart\",\n      \"params\": {\n        \"screen_name\": \"app:pedido:{fluxo}:simulacao\",\n        \"flow_name\": \"pedido-{fluxo}\",\n        \"installments\": \"[numero]\",\n        \"items\": [\n          {\n            \"item_id\": \"[preenchido]\",\n            \"item_name\": \"pedido-{fluxo}\",\n            \"item_category\": \"simulacao\"\n          }\n        ],\n        \"due_date\": \"[data]\",\n        \"insurance\": \"[0|1]\",\n        \"loan_insurance_value\": \"[numero]\",\n        \"operation_type\": \"{fluxo}-pre-agendado\"\n      },\n      \"params_por_fluxo\": {\n        \"avulso\": {\n          \"items\": [\n            {\n              \"item_id\": \"1001\"\n            }\n          ]\n        }\n      }\n    },\n    {\n      \"secao\": \"2. reserva-de-entrega\",\n      \"titulo\": \"view_item_list · reserva-de-entrega\",\n      \"print\": \"03-lista.png\",\n      \"evento\": \"view_item_list\",\n      \"params\": {\n        \"screen_name\": \"app:pedido:reserva-de-entrega\",\n        \"item_list_name\": \"agenda-de-pedidos\",\n        \"items\": [\n          {\n            \"item_name\": \"recebivel-[numero]\",\n            \"item_id\": \"card-[preenchido]\",\n            \"price\": \"[numero]\"\n          }\n        ]\n      }\n    }\n  ]\n}\n",
+  "review_md": "# Revisão do rascunho — DemoApp pedido\n\n3 prints lidos · 8 ponto(s) para conferir. Corrija direto no JSON e audite de novo na aba Relatório.\n\nFluxos detectados: avulso, empresa (renomeie os rótulos em 'fluxos' se quiser).\n\n## 1. interaction_pedido_{fluxo} — `01-interaction.png`\n- ⚠ parâmetro 'screen name' lido como 'screen_name'\n- ⚠ detail: item 'clickifechar' lido como 'click:fechar'\n- ⚠ detail: exemplo 'click:10-parcela-com-seguro' generalizado para 'click:[numero]-parcela-com-seguro' (padrão da tabela)\n\n## 2. add_to_cart — `02-checkout.png`\n- ⚠ items.item_category: 'Simulacao' lido como 'simulacao'\n- ⚠ items: exemplo da spec é do fluxo 'avulso'; item_id fixado só para 'avulso'\n\n## 3. view_item_list — `03-lista.png`\n- ⚠ items.item_name: exemplos ['recebivel-1', 'recebivel-2'] viraram o padrão 'recebivel-[numero]'\n- ⚠ items.item_id: exemplos ['card-1', 'card-2'] viraram o padrão 'card-[preenchido]'\n- ⚠ items: a spec mostra 2 itens; só o primeiro é validado\n",
+  "checklist_md": "# Checklist · DemoApp pedido\n\n- Plataforma: ANDROID\n- Gerado em: 16/11/2026 09:30\n- Spec: `demoapp-pedido.json`\n- Prints: `prints-pedido`\n- Fluxos: avulso, empresa\n\nMarque cada item com `[x]` ao conferir. Os itens com ⚠ são do OCR: confira no print e corrija a spec antes de auditar. Para o HTML no padrão do design system, use **Exportar Checklist…** na aba Relatório.\n\n## 1. simulacao\n\n### interaction_pedido_{fluxo} · simulacao — `01-interaction.png`\n\n**Parâmetros esperados**\n\n- `screen_name`: `app:pedido:{fluxo}:simulacao`\n- `flow_name`: `pedido-{fluxo}`\n- `component`: `modal`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: parâmetro 'screen name' lido como 'screen_name'\n- [ ] ⚠ Revisar OCR: detail: item 'clickifechar' lido como 'click:fechar'\n- [ ] ⚠ Revisar OCR: detail: exemplo 'click:10-parcela-com-seguro' generalizado para 'click:[numero]-parcela-com-seguro' (padrão da tabela)\n- [ ] fluxo **avulso** · `detail` = `click:[numero]-parcela-com-seguro`\n- [ ] fluxo **avulso** · `detail` = `click:fechar`\n- [ ] fluxo **empresa** · `detail` = `click:[numero]-parcela-com-seguro`\n- [ ] fluxo **empresa** · `detail` = `click:fechar`\n\n### add_to_cart · simulacao — `02-checkout.png`\n\n**Parâmetros esperados**\n\n- `screen_name`: `app:pedido:{fluxo}:simulacao`\n- `flow_name`: `pedido-{fluxo}`\n- `installments`: `[numero]`\n- `items[0].item_id`: `[preenchido]`\n- `items[0].item_name`: `pedido-{fluxo}`\n- `items[0].item_category`: `simulacao`\n- `due_date`: `[data]`\n- `insurance`: `[0|1]`\n- `loan_insurance_value`: `[numero]`\n- `operation_type`: `{fluxo}-pre-agendado`\n- `items[0].item_id` (só no fluxo avulso): `1001`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: items.item_category: 'Simulacao' lido como 'simulacao'\n- [ ] ⚠ Revisar OCR: items: exemplo da spec é do fluxo 'avulso'; item_id fixado só para 'avulso'\n- [ ] fluxo **avulso** · disparo de `add_to_cart`\n- [ ] fluxo **empresa** · disparo de `add_to_cart`\n\n## 2. reserva-de-entrega\n\n### view_item_list · reserva-de-entrega — `03-lista.png`\n\n**Parâmetros esperados**\n\n- `screen_name`: `app:pedido:reserva-de-entrega`\n- `item_list_name`: `agenda-de-pedidos`\n- `items[0].item_name`: `recebivel-[numero]`\n- `items[0].item_id`: `card-[preenchido]`\n- `items[0].price`: `[numero]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: items.item_name: exemplos ['recebivel-1', 'recebivel-2'] viraram o padrão 'recebivel-[numero]'\n- [ ] ⚠ Revisar OCR: items.item_id: exemplos ['card-1', 'card-2'] viraram o padrão 'card-[preenchido]'\n- [ ] ⚠ Revisar OCR: items: a spec mostra 2 itens; só o primeiro é validado\n- [ ] disparo de `view_item_list`\n"
+}

@@ -19,6 +19,12 @@ Abra **<https://francisco-efjr.github.io/mo-baile-web/>**.
   validações, OK, divergentes, não disparadas, conformidade em %, eventos
   fora da spec e alertas, com Obtido × Esperado de cada parâmetro. Exporte em
   HTML, Markdown ou TSV, ou copie o resumo.
+- **Importar Prints do Figma** (no quadro da spec): escolha a pasta com os
+  prints dos cards e o site lê o texto no navegador (PaddleOCR) e monta o
+  rascunho da spec com as mesmas regras do Mo baile. Revise as dúvidas com o
+  print ao lado e use o rascunho na auditoria, ou baixe a spec, a revisão e o
+  checklist. Na primeira vez, o site baixa o leitor de texto (46 MB), que fica
+  guardado no navegador.
 - **Analytics**: escolha um logcat salvo de um aparelho Android
   (`adb logcat -d > log.txt`) para ver os eventos e os parâmetros. Baixe em
   TSV ou JSON. O Android ao vivo pelo cabo (WebUSB) vem numa próxima versão.
@@ -30,7 +36,8 @@ Abra **<https://francisco-efjr.github.io/mo-baile-web/>**.
 e auditados no seu computador. A página não faz chamada de rede
 (`connect-src 'none'` na política de segurança), não usa CDN, fonte externa,
 cookies nem telemetria. O site guarda só a escolha de tema, no próprio
-navegador. Detalhes em [SECURITY.md](SECURITY.md).
+navegador. A importação de prints baixa o leitor de texto do próprio site e
+lê as imagens ali mesmo. Detalhes em [SECURITY.md](SECURITY.md).
 
 ## Rodar localmente
 
@@ -52,7 +59,9 @@ para quem escreve testes automatizados de apps mobile: espelho do aparelho,
 hierarquia, Page Objects, rede HTTP, Analytics e Relatório. O Mo baile Web
 traz só a parte de tagueamento para o navegador. As regras de auditoria são um
 port do motor Python do Mo baile, com paridade provada por teste
-([ARQUITETURA](docs/ARQUITETURA.md)). Importar prints do Figma, o espelho e a
+([ARQUITETURA](docs/ARQUITETURA.md)). A importação de prints usa o mesmo leitor
+de cards do Mo baile, mas o OCR é o PaddleOCR no navegador, e não o Vision do
+macOS ([ADR 0002](docs/adr/0002-importacao-de-prints.md)). O espelho e a
 escuta ao vivo continuam no app.
 
 ## Créditos e licença

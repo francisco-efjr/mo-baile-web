@@ -4,6 +4,12 @@ O Mo baile Web é um site estático: o motor roda no seu navegador e nenhum
 arquivo que você escolhe sai do seu computador. A página não faz chamada de
 rede (`connect-src 'none'` na CSP) e não usa CDN, cookies nem telemetria.
 
+A única exceção é a importação de prints. Na primeira vez, o leitor de texto
+(um worker) baixa os modelos do OCR, cerca de 46 MB, do próprio endereço do
+site. Cada arquivo é conferido pelo sha256 antes de ser usado e fica guardado
+no navegador. Os prints são lidos ali mesmo e nunca são enviados. Revisão em
+[docs/revisao/seguranca-ocr-fase2.md](docs/revisao/seguranca-ocr-fase2.md).
+
 ## Como relatar uma falha de segurança
 
 Não abra issue pública. Use o relato privado do GitHub:

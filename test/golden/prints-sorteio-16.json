@@ -1,0 +1,145 @@
+{
+  "nome": "DemoApp",
+  "spec_name": "demoapp.json",
+  "cards": [
+    {
+      "file": "demo-16/Captura 83.11.png",
+      "event": "remove_from__cart_install_mens",
+      "params": {
+        "flow_name": "demo-mensal",
+        "insurance": "[0|1]",
+        "campo_novo": "[taxa de juros]"
+      },
+      "bullets": {
+        "order_status": [
+          "click:continua"
+        ]
+      },
+      "doubts": [
+        "parâmetro desconhecido 'campo novo' (mantido como 'campo_novo')",
+        "Observação: parâmetro 'order_status' lido como 'order_status'"
+      ]
+    },
+    {
+      "file": "demo-16/Captura 84.22.png",
+      "event": "select",
+      "params": {
+        "items": [],
+        "insurance": "[0|1]",
+        "currency": "[label do botao]",
+        "due_date": "[Ialor|da|parcela]"
+      },
+      "bullets": {},
+      "doubts": [
+        "parâmetro '_item' lido como 'items'",
+        "parâmetro 'due date' lido como 'due_date'",
+        "items: não foi possível ler o JSON"
+      ]
+    },
+    {
+      "file": "demo-16/Captura 85.29.png",
+      "event": "refund",
+      "params": {
+        "operation_type": "[nome do produto]",
+        "installments": "[data primeiro ven cimento]",
+        "detail": "click:fechar",
+        "screen_name": "app:demo:[sucesso|detalhe]",
+        "due_date": "[número de p arcelas]",
+        "campo_novo": "[número de parcelas]"
+      },
+      "bullets": {},
+      "doubts": [
+        "parâmetro desconhecido 'campo_novo' (mantido como 'campo_novo')",
+        "Observação: parâmetro 'screen_nIme' lido como 'screen_name'"
+      ]
+    },
+    {
+      "file": "demo-16/Captura 86.58.png",
+      "event": "login",
+      "params": {
+        "component": "|número de parcelas]",
+        "currency": "[label do botao]",
+        "items": [
+          {
+            "item_brand": "[numero]",
+            "item_category2": "[numero]",
+            "item_id": "demo-mensal"
+          }
+        ],
+        "due_date": "[mensal|anual]-pre-agendado",
+        "insurance": "[0|1]",
+        "installments": "[elemento]"
+      },
+      "bullets": {},
+      "doubts": []
+    },
+    {
+      "file": "demo-16/Captura 89.43.png",
+      "event": "remove_demo_[mensal|anual]",
+      "params": {
+        "items": [
+          {
+            "item_category2": "[numero]",
+            "item_category4": "[numero]",
+            "item_id": "[numero]"
+          }
+        ],
+        "installment_value": "[id da transacao]",
+        "screen_name": "app:demo:[mensal|anual]:resumo",
+        "component": "[valor]",
+        "due_date": "[valor da parcela]",
+        "insurance": "[0|1]"
+      },
+      "bullets": {},
+      "doubts": [
+        "parâmetro 'instalment_value' lido como 'installment_value'",
+        "items: chave 'iem_category2' lida como 'item_category2'"
+      ]
+    }
+  ],
+  "review": [
+    {
+      "print": "Captura 83.11.png",
+      "evento": "remove_from__cart_install_mens",
+      "duvidas": [
+        "parâmetro desconhecido 'campo novo' (mantido como 'campo_novo')",
+        "Observação: parâmetro 'order_status' lido como 'order_status'"
+      ]
+    },
+    {
+      "print": "Captura 84.22.png",
+      "evento": "select",
+      "duvidas": [
+        "parâmetro '_item' lido como 'items'",
+        "parâmetro 'due date' lido como 'due_date'",
+        "items: não foi possível ler o JSON"
+      ]
+    },
+    {
+      "print": "Captura 85.29.png",
+      "evento": "refund",
+      "duvidas": [
+        "parâmetro desconhecido 'campo_novo' (mantido como 'campo_novo')",
+        "Observação: parâmetro 'screen_nIme' lido como 'screen_name'"
+      ]
+    },
+    {
+      "print": "Captura 86.58.png",
+      "evento": "login",
+      "duvidas": [
+        "items: exemplo da spec é do fluxo 'mensal'; item_id fixado só para 'mensal'"
+      ]
+    },
+    {
+      "print": "Captura 89.43.png",
+      "evento": "remove_demo_{fluxo}",
+      "duvidas": [
+        "parâmetro 'instalment_value' lido como 'installment_value'",
+        "items: chave 'iem_category2' lida como 'item_category2'"
+      ]
+    }
+  ],
+  "spec_json": "{\n  \"projeto\": \"DemoApp\",\n  \"versao_especificacao\": \"Rascunho gerado por OCR — revisar\",\n  \"plataforma\": \"ios\",\n  \"prints_dir\": \"demo-16\",\n  \"fluxos\": {\n    \"mensal\": \"mensal\",\n    \"anual\": \"anual\"\n  },\n  \"cards\": [\n    {\n      \"secao\": \"1. geral\",\n      \"titulo\": \"remove_from__cart_install_mens · geral\",\n      \"print\": \"Captura 83.11.png\",\n      \"evento\": \"remove_from__cart_install_mens\",\n      \"params\": {\n        \"flow_name\": \"demo-mensal\",\n        \"insurance\": \"[0|1]\",\n        \"campo_novo\": \"[numero]\",\n        \"order_status\": \"click:continua\"\n      }\n    },\n    {\n      \"secao\": \"1. geral\",\n      \"titulo\": \"select · geral\",\n      \"print\": \"Captura 84.22.png\",\n      \"evento\": \"select\",\n      \"params\": {\n        \"items\": [],\n        \"insurance\": \"[0|1]\",\n        \"currency\": \"[preenchido]\",\n        \"due_date\": \"[Ialor|da|parcela]\"\n      }\n    },\n    {\n      \"secao\": \"2. demo\",\n      \"titulo\": \"refund · demo\",\n      \"print\": \"Captura 85.29.png\",\n      \"evento\": \"refund\",\n      \"params\": {\n        \"operation_type\": \"[preenchido]\",\n        \"installments\": \"[data]\",\n        \"detail\": \"click:fechar\",\n        \"due_date\": \"[numero]\",\n        \"campo_novo\": \"[numero]\"\n      },\n      \"variacoes\": [\n        {\n          \"screen_name\": \"app:demo:sucesso\"\n        },\n        {\n          \"screen_name\": \"app:demo:detalhe\"\n        }\n      ]\n    },\n    {\n      \"secao\": \"1. geral\",\n      \"titulo\": \"login · geral\",\n      \"print\": \"Captura 86.58.png\",\n      \"evento\": \"login\",\n      \"params\": {\n        \"component\": \"|número de parcelas]\",\n        \"currency\": \"[preenchido]\",\n        \"items\": [\n          {\n            \"item_brand\": \"[numero]\",\n            \"item_category2\": \"[numero]\",\n            \"item_id\": \"demo-{fluxo}\"\n          }\n        ],\n        \"due_date\": \"{fluxo}-pre-agendado\",\n        \"insurance\": \"[0|1]\",\n        \"installments\": \"[preenchido]\"\n      }\n    },\n    {\n      \"secao\": \"3. resumo\",\n      \"titulo\": \"remove_demo_{fluxo} · resumo\",\n      \"print\": \"Captura 89.43.png\",\n      \"evento\": \"remove_demo_{fluxo}\",\n      \"params\": {\n        \"items\": [\n          {\n            \"item_category2\": \"[numero]\",\n            \"item_category4\": \"[numero]\",\n            \"item_id\": \"[numero]\"\n          }\n        ],\n        \"installment_value\": \"[preenchido]\",\n        \"screen_name\": \"app:demo:{fluxo}:resumo\",\n        \"component\": \"[numero]\",\n        \"due_date\": \"[numero]\",\n        \"insurance\": \"[0|1]\"\n      }\n    }\n  ]\n}\n",
+  "review_md": "# Revisão do rascunho — DemoApp\n\n5 prints lidos · 10 ponto(s) para conferir. Corrija direto no JSON e audite de novo na aba Relatório.\n\nFluxos detectados: mensal, anual (renomeie os rótulos em 'fluxos' se quiser).\n\n## 1. remove_from__cart_install_mens — `Captura 83.11.png`\n- ⚠ parâmetro desconhecido 'campo novo' (mantido como 'campo_novo')\n- ⚠ Observação: parâmetro 'order_status' lido como 'order_status'\n\n## 2. select — `Captura 84.22.png`\n- ⚠ parâmetro '_item' lido como 'items'\n- ⚠ parâmetro 'due date' lido como 'due_date'\n- ⚠ items: não foi possível ler o JSON\n\n## 3. refund — `Captura 85.29.png`\n- ⚠ parâmetro desconhecido 'campo_novo' (mantido como 'campo_novo')\n- ⚠ Observação: parâmetro 'screen_nIme' lido como 'screen_name'\n\n## 4. login — `Captura 86.58.png`\n- ⚠ items: exemplo da spec é do fluxo 'mensal'; item_id fixado só para 'mensal'\n\n## 5. remove_demo_{fluxo} — `Captura 89.43.png`\n- ⚠ parâmetro 'instalment_value' lido como 'installment_value'\n- ⚠ items: chave 'iem_category2' lida como 'item_category2'\n",
+  "checklist_md": "# Checklist · DemoApp\n\n- Plataforma: IOS\n- Gerado em: 16/11/2026 09:30\n- Spec: `demoapp.json`\n- Prints: `demo-16`\n- Fluxos: mensal, anual\n\nMarque cada item com `[x]` ao conferir. Os itens com ⚠ são do OCR: confira no print e corrija a spec antes de auditar. Para o HTML no padrão do design system, use **Exportar Checklist…** na aba Relatório.\n\n## 1. geral\n\n### remove_from__cart_install_mens · geral — `Captura 83.11.png`\n\n**Parâmetros esperados**\n\n- `flow_name`: `demo-mensal`\n- `insurance`: `[0|1]`\n- `campo_novo`: `[numero]`\n- `order_status`: `click:continua`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: parâmetro desconhecido 'campo novo' (mantido como 'campo_novo')\n- [ ] ⚠ Revisar OCR: Observação: parâmetro 'order_status' lido como 'order_status'\n- [ ] disparo de `remove_from__cart_install_mens`\n\n### select · geral — `Captura 84.22.png`\n\n**Parâmetros esperados**\n\n- `items`: `[]`\n- `insurance`: `[0|1]`\n- `currency`: `[preenchido]`\n- `due_date`: `[Ialor|da|parcela]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: parâmetro '_item' lido como 'items'\n- [ ] ⚠ Revisar OCR: parâmetro 'due date' lido como 'due_date'\n- [ ] ⚠ Revisar OCR: items: não foi possível ler o JSON\n- [ ] disparo de `select`\n\n### login · geral — `Captura 86.58.png`\n\n**Parâmetros esperados**\n\n- `component`: `|número de parcelas]`\n- `currency`: `[preenchido]`\n- `items[0].item_brand`: `[numero]`\n- `items[0].item_category2`: `[numero]`\n- `items[0].item_id`: `demo-{fluxo}`\n- `due_date`: `{fluxo}-pre-agendado`\n- `insurance`: `[0|1]`\n- `installments`: `[preenchido]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: items: exemplo da spec é do fluxo 'mensal'; item_id fixado só para 'mensal'\n- [ ] fluxo **mensal** · disparo de `login`\n- [ ] fluxo **anual** · disparo de `login`\n\n## 2. demo\n\n### refund · demo — `Captura 85.29.png`\n\n**Parâmetros esperados**\n\n- `operation_type`: `[preenchido]`\n- `installments`: `[data]`\n- `detail`: `click:fechar`\n- `due_date`: `[numero]`\n- `campo_novo`: `[numero]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: parâmetro desconhecido 'campo_novo' (mantido como 'campo_novo')\n- [ ] ⚠ Revisar OCR: Observação: parâmetro 'screen_nIme' lido como 'screen_name'\n- [ ] `screen_name` = `app:demo:sucesso`\n- [ ] `screen_name` = `app:demo:detalhe`\n\n## 3. resumo\n\n### remove_demo_{fluxo} · resumo — `Captura 89.43.png`\n\n**Parâmetros esperados**\n\n- `items[0].item_category2`: `[numero]`\n- `items[0].item_category4`: `[numero]`\n- `items[0].item_id`: `[numero]`\n- `installment_value`: `[preenchido]`\n- `screen_name`: `app:demo:{fluxo}:resumo`\n- `component`: `[numero]`\n- `due_date`: `[numero]`\n- `insurance`: `[0|1]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: parâmetro 'instalment_value' lido como 'installment_value'\n- [ ] ⚠ Revisar OCR: items: chave 'iem_category2' lida como 'item_category2'\n- [ ] fluxo **mensal** · disparo de `remove_demo_{fluxo}`\n- [ ] fluxo **anual** · disparo de `remove_demo_{fluxo}`\n"
+}

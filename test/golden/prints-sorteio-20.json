@@ -1,0 +1,151 @@
+{
+  "nome": "DemoApp",
+  "spec_name": "demoapp.json",
+  "cards": [
+    {
+      "file": "demo-20/Captura 37.24.png",
+      "event": "purchase",
+      "params": {
+        "component": "[valor]",
+        "items": [
+          {
+            "item_category": "simulcao",
+            "item_category5": "demo-avulso",
+            "item_id": "demo-avulso",
+            "item_name": "1001"
+          },
+          {
+            "item_id": "simulacao"
+          }
+        ],
+        "installments": "B RL"
+      },
+      "bullets": {
+        "order_statu_s": [
+          "cliIk:voltar",
+          "click:10-parcelas",
+          "click:ver-detalhes",
+          "aprovado"
+        ],
+        "screen_name": [
+          "click:12-parcelas",
+          "click:simular"
+        ]
+      },
+      "doubts": [
+        "items.item_category: 'Simulcao' lido como 'simulcao'",
+        "Observação: parâmetro 'order_statu s' lido como 'order_statu_s'"
+      ]
+    },
+    {
+      "file": "demo-20/Captura 41.58.png",
+      "event": "screen_view",
+      "params": {
+        "currency": "[id da tran sacao]",
+        "items": [
+          {
+            "item_name": "simulacao",
+            "item_category2": "1000",
+            "item_id": "card-1",
+            "item_category5": "simulacao"
+          },
+          {
+            "item_id": "siulacao",
+            "item_category3": "[numero]"
+          },
+          {
+            "item_id": "demo-avulso"
+          }
+        ],
+        "insurance": "[0|1]",
+        "detail": "click:[numero]-parcelas",
+        "installment_value": "[número de parcelas]",
+        "campo_novo": "[valor]"
+      },
+      "bullets": {},
+      "doubts": [
+        "parâmetro 'insura nce' lido como 'insurance'",
+        "parâmetro desconhecido 'campo_novo' (mantido como 'campo_novo')",
+        "items.item_name: 'Simulacao' lido como 'simulacao'"
+      ]
+    },
+    {
+      "file": "demo-20/Captura 66.22.png",
+      "event": "view_item",
+      "params": {
+        "flow_name": "demo-[avulso|empresa|grupo]",
+        "items": [
+          {
+            "item_name": "[numero]",
+            "item_category": "simulacao",
+            "item_category2": "card-1",
+            "item_category4": "[numero]",
+            "item_id": "card-1"
+          }
+        ]
+      },
+      "bullets": {},
+      "doubts": [
+        "items.item_category: 'Simulacao' lido como 'simulacao'",
+        "items: chave 'item__id' lida como 'item_id'"
+      ]
+    },
+    {
+      "file": "demo-20/Captura 95.18.png",
+      "event": "interaction",
+      "params": {
+        "detail": "cick:simular",
+        "installments": "[elemento]",
+        "flow_name": "demo",
+        "component": "[elemento]"
+      },
+      "bullets": {},
+      "doubts": [
+        "parâmetro 'install ments' lido como 'installments'",
+        "evento 'O intera ction' lido como 'interaction'"
+      ]
+    }
+  ],
+  "review": [
+    {
+      "print": "Captura 37.24.png",
+      "evento": "purchase",
+      "duvidas": [
+        "items.item_category: 'Simulcao' lido como 'simulcao'",
+        "Observação: parâmetro 'order_statu s' lido como 'order_statu_s'",
+        "order_statu_s aceita ['cliIk:voltar', 'click:10-parcelas', 'click:ver-detalhes', 'aprovado']; se cada variação usa um valor específico, ajuste em 'variacoes'",
+        "screen_name aceita ['click:12-parcelas', 'click:simular']; se cada variação usa um valor específico, ajuste em 'variacoes'",
+        "items: a spec mostra 2 itens; só o primeiro é validado"
+      ]
+    },
+    {
+      "print": "Captura 41.58.png",
+      "evento": "screen_view",
+      "duvidas": [
+        "parâmetro 'insura nce' lido como 'insurance'",
+        "parâmetro desconhecido 'campo_novo' (mantido como 'campo_novo')",
+        "items.item_name: 'Simulacao' lido como 'simulacao'",
+        "items: a spec mostra 3 itens; só o primeiro é validado"
+      ]
+    },
+    {
+      "print": "Captura 66.22.png",
+      "evento": "view_item",
+      "duvidas": [
+        "items.item_category: 'Simulacao' lido como 'simulacao'",
+        "items: chave 'item__id' lida como 'item_id'"
+      ]
+    },
+    {
+      "print": "Captura 95.18.png",
+      "evento": "interaction",
+      "duvidas": [
+        "parâmetro 'install ments' lido como 'installments'",
+        "evento 'O intera ction' lido como 'interaction'"
+      ]
+    }
+  ],
+  "spec_json": "{\n  \"projeto\": \"DemoApp\",\n  \"versao_especificacao\": \"Rascunho gerado por OCR — revisar\",\n  \"plataforma\": \"android\",\n  \"prints_dir\": \"demo-20\",\n  \"fluxos\": {\n    \"avulso\": \"avulso\",\n    \"empresa\": \"empresa\",\n    \"grupo\": \"grupo\"\n  },\n  \"cards\": [\n    {\n      \"secao\": \"1. geral\",\n      \"titulo\": \"purchase · geral\",\n      \"print\": \"Captura 37.24.png\",\n      \"evento\": \"purchase\",\n      \"params\": {\n        \"component\": \"[numero]\",\n        \"items\": [\n          {\n            \"item_category\": \"simulcao\",\n            \"item_category5\": \"demo-avulso\",\n            \"item_id\": \"demo-avulso\",\n            \"item_name\": \"1001\"\n          }\n        ],\n        \"installments\": \"B RL\",\n        \"order_statu_s\": \"[cliIk:voltar|click:10-parcelas|click:ver-detalhes|aprovado]\",\n        \"screen_name\": \"[click:12-parcelas|click:simular]\"\n      }\n    },\n    {\n      \"secao\": \"1. geral\",\n      \"titulo\": \"screen_view · geral\",\n      \"print\": \"Captura 41.58.png\",\n      \"evento\": \"screen_view\",\n      \"params\": {\n        \"currency\": \"[preenchido]\",\n        \"items\": [\n          {\n            \"item_name\": \"simulacao\",\n            \"item_category2\": \"1000\",\n            \"item_id\": \"card-1\",\n            \"item_category5\": \"simulacao\"\n          }\n        ],\n        \"insurance\": \"[0|1]\",\n        \"detail\": \"click:[numero]-parcelas\",\n        \"installment_value\": \"[numero]\",\n        \"campo_novo\": \"[numero]\"\n      }\n    },\n    {\n      \"secao\": \"1. geral\",\n      \"titulo\": \"view_item · geral\",\n      \"print\": \"Captura 66.22.png\",\n      \"evento\": \"view_item\",\n      \"params\": {\n        \"flow_name\": \"demo-{fluxo}\",\n        \"items\": [\n          {\n            \"item_name\": \"[numero]\",\n            \"item_category\": \"simulacao\",\n            \"item_category2\": \"card-1\",\n            \"item_category4\": \"[numero]\",\n            \"item_id\": \"card-1\"\n          }\n        ]\n      }\n    },\n    {\n      \"secao\": \"1. geral\",\n      \"titulo\": \"interaction · geral\",\n      \"print\": \"Captura 95.18.png\",\n      \"evento\": \"interaction\",\n      \"params\": {\n        \"detail\": \"cick:simular\",\n        \"installments\": \"[preenchido]\",\n        \"flow_name\": \"demo\",\n        \"component\": \"[preenchido]\"\n      }\n    }\n  ]\n}\n",
+  "review_md": "# Revisão do rascunho — DemoApp\n\n4 prints lidos · 13 ponto(s) para conferir. Corrija direto no JSON e audite de novo na aba Relatório.\n\nFluxos detectados: avulso, empresa, grupo (renomeie os rótulos em 'fluxos' se quiser).\n\n## 1. purchase — `Captura 37.24.png`\n- ⚠ items.item_category: 'Simulcao' lido como 'simulcao'\n- ⚠ Observação: parâmetro 'order_statu s' lido como 'order_statu_s'\n- ⚠ order_statu_s aceita ['cliIk:voltar', 'click:10-parcelas', 'click:ver-detalhes', 'aprovado']; se cada variação usa um valor específico, ajuste em 'variacoes'\n- ⚠ screen_name aceita ['click:12-parcelas', 'click:simular']; se cada variação usa um valor específico, ajuste em 'variacoes'\n- ⚠ items: a spec mostra 2 itens; só o primeiro é validado\n\n## 2. screen_view — `Captura 41.58.png`\n- ⚠ parâmetro 'insura nce' lido como 'insurance'\n- ⚠ parâmetro desconhecido 'campo_novo' (mantido como 'campo_novo')\n- ⚠ items.item_name: 'Simulacao' lido como 'simulacao'\n- ⚠ items: a spec mostra 3 itens; só o primeiro é validado\n\n## 3. view_item — `Captura 66.22.png`\n- ⚠ items.item_category: 'Simulacao' lido como 'simulacao'\n- ⚠ items: chave 'item__id' lida como 'item_id'\n\n## 4. interaction — `Captura 95.18.png`\n- ⚠ parâmetro 'install ments' lido como 'installments'\n- ⚠ evento 'O intera ction' lido como 'interaction'\n",
+  "checklist_md": "# Checklist · DemoApp\n\n- Plataforma: ANDROID\n- Gerado em: 16/11/2026 09:30\n- Spec: `demoapp.json`\n- Prints: `demo-20`\n- Fluxos: avulso, empresa, grupo\n\nMarque cada item com `[x]` ao conferir. Os itens com ⚠ são do OCR: confira no print e corrija a spec antes de auditar. Para o HTML no padrão do design system, use **Exportar Checklist…** na aba Relatório.\n\n## 1. geral\n\n### purchase · geral — `Captura 37.24.png`\n\n**Parâmetros esperados**\n\n- `component`: `[numero]`\n- `items[0].item_category`: `simulcao`\n- `items[0].item_category5`: `demo-avulso`\n- `items[0].item_id`: `demo-avulso`\n- `items[0].item_name`: `1001`\n- `installments`: `B RL`\n- `order_statu_s`: `[cliIk:voltar|click:10-parcelas|click:ver-detalhes|aprovado]`\n- `screen_name`: `[click:12-parcelas|click:simular]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: items.item_category: 'Simulcao' lido como 'simulcao'\n- [ ] ⚠ Revisar OCR: Observação: parâmetro 'order_statu s' lido como 'order_statu_s'\n- [ ] ⚠ Revisar OCR: order_statu_s aceita ['cliIk:voltar', 'click:10-parcelas', 'click:ver-detalhes', 'aprovado']; se cada variação usa um valor específico, ajuste em 'variacoes'\n- [ ] ⚠ Revisar OCR: screen_name aceita ['click:12-parcelas', 'click:simular']; se cada variação usa um valor específico, ajuste em 'variacoes'\n- [ ] ⚠ Revisar OCR: items: a spec mostra 2 itens; só o primeiro é validado\n- [ ] disparo de `purchase`\n\n### screen_view · geral — `Captura 41.58.png`\n\n**Parâmetros esperados**\n\n- `currency`: `[preenchido]`\n- `items[0].item_name`: `simulacao`\n- `items[0].item_category2`: `1000`\n- `items[0].item_id`: `card-1`\n- `items[0].item_category5`: `simulacao`\n- `insurance`: `[0|1]`\n- `detail`: `click:[numero]-parcelas`\n- `installment_value`: `[numero]`\n- `campo_novo`: `[numero]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: parâmetro 'insura nce' lido como 'insurance'\n- [ ] ⚠ Revisar OCR: parâmetro desconhecido 'campo_novo' (mantido como 'campo_novo')\n- [ ] ⚠ Revisar OCR: items.item_name: 'Simulacao' lido como 'simulacao'\n- [ ] ⚠ Revisar OCR: items: a spec mostra 3 itens; só o primeiro é validado\n- [ ] disparo de `screen_view`\n\n### view_item · geral — `Captura 66.22.png`\n\n**Parâmetros esperados**\n\n- `flow_name`: `demo-{fluxo}`\n- `items[0].item_name`: `[numero]`\n- `items[0].item_category`: `simulacao`\n- `items[0].item_category2`: `card-1`\n- `items[0].item_category4`: `[numero]`\n- `items[0].item_id`: `card-1`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: items.item_category: 'Simulacao' lido como 'simulacao'\n- [ ] ⚠ Revisar OCR: items: chave 'item__id' lida como 'item_id'\n- [ ] fluxo **avulso** · disparo de `view_item`\n- [ ] fluxo **empresa** · disparo de `view_item`\n- [ ] fluxo **grupo** · disparo de `view_item`\n\n### interaction · geral — `Captura 95.18.png`\n\n**Parâmetros esperados**\n\n- `detail`: `cick:simular`\n- `installments`: `[preenchido]`\n- `flow_name`: `demo`\n- `component`: `[preenchido]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: parâmetro 'install ments' lido como 'installments'\n- [ ] ⚠ Revisar OCR: evento 'O intera ction' lido como 'interaction'\n- [ ] disparo de `interaction`\n"
+}

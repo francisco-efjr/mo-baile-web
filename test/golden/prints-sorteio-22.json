@@ -1,0 +1,125 @@
+{
+  "nome": "Demo Ação & Reação",
+  "spec_name": "demo-acao-reacao.json",
+  "cards": [
+    {
+      "file": "demo-22/Captura 44.58.png",
+      "event": "view_item_list_it1ms",
+      "params": {
+        "flow_name": "demo-mensal",
+        "installment_value": "[label do botao]",
+        "screen_name": "app:de:mo:sucesso",
+        "insurance": "[0|1]",
+        "value": "[data primeiro vencimento]"
+      },
+      "bullets": {
+        "component": [
+          "demo-mensl"
+        ],
+        "detail": [
+          "aprovado",
+          "click:ver-detalhes"
+        ]
+      },
+      "doubts": [
+        "screen_name 'app:de mo:sucesso' lido como 'app:de:mo:sucesso' (espaço vira ':')"
+      ]
+    },
+    {
+      "file": "demo-22/Captura 56.45.png",
+      "event": "purchase_demo_[mensal|anual]",
+      "params": {
+        "detail": "click:[numero]-parcelas",
+        "installment_value": "BRL",
+        "items": [
+          {
+            "item_id": "card-1",
+            "item_category2": "simulacao"
+          },
+          {
+            "item_id": "1000",
+            "item_category5": "delo-mensal",
+            "item_name": "card-2",
+            "item_category2": "[numero]"
+          },
+          {
+            "item_id": "simulacao"
+          }
+        ],
+        "screen_name": "app:demo:[simulacao|termos-e-condicoes]",
+        "installments": "[valor]",
+        "flow_name": "demo-[mensal|a nual]"
+      },
+      "bullets": {},
+      "doubts": [
+        "parâmetro 'nstallment_value' lido como 'installment_value'",
+        "parâmetro 'installmen ts' lido como 'installments'"
+      ]
+    },
+    {
+      "file": "demo-22/Captura 64.33.png",
+      "event": "remove_demo_[mensal|anual]",
+      "params": {
+        "items": [
+          {
+            "item_category3": "1000",
+            "item_category2": "demo-mensal",
+            "item_id": "card-1",
+            "item_brand": "[numero]"
+          },
+          {
+            "item_id": "1001"
+          },
+          {
+            "item_id": "[numero]",
+            "item_category5": "[numero]",
+            "item_category2": "1002"
+          },
+          {
+            "item_id": "1002"
+          }
+        ],
+        "installments": "[mensal|anual]-pre-agendado",
+        "value": "BRL",
+        "installment_value": "[data primei ro vencimento]"
+      },
+      "bullets": {},
+      "doubts": [
+        "parâmetro 'instalment_value' lido como 'installment_value'",
+        "items: chave 'tem_category5' lida como 'item_category5'"
+      ]
+    }
+  ],
+  "review": [
+    {
+      "print": "Captura 44.58.png",
+      "evento": "view_item_list_it1ms",
+      "duvidas": [
+        "screen_name 'app:de mo:sucesso' lido como 'app:de:mo:sucesso' (espaço vira ':')"
+      ]
+    },
+    {
+      "print": "Captura 56.45.png",
+      "evento": "purchase_demo_{fluxo}",
+      "duvidas": [
+        "parâmetro 'nstallment_value' lido como 'installment_value'",
+        "parâmetro 'installmen ts' lido como 'installments'",
+        "items: a spec mostra 3 itens; só o primeiro é validado",
+        "flow_name='demo-[mensal|a nual]' cita o fluxo 'mensal' fixo num card por fluxo — confira"
+      ]
+    },
+    {
+      "print": "Captura 64.33.png",
+      "evento": "remove_demo_{fluxo}",
+      "duvidas": [
+        "parâmetro 'instalment_value' lido como 'installment_value'",
+        "items: chave 'tem_category5' lida como 'item_category5'",
+        "items: a spec mostra 4 itens; só o primeiro é validado",
+        "items: exemplo da spec é do fluxo 'mensal'; item_id fixado só para 'mensal'"
+      ]
+    }
+  ],
+  "spec_json": "{\n  \"projeto\": \"Demo Ação & Reação\",\n  \"versao_especificacao\": \"Rascunho gerado por OCR — revisar\",\n  \"plataforma\": \"android\",\n  \"prints_dir\": \"demo-22\",\n  \"fluxos\": {\n    \"mensal\": \"mensal\",\n    \"anual\": \"anual\"\n  },\n  \"cards\": [\n    {\n      \"secao\": \"1. sucesso\",\n      \"titulo\": \"view_item_list_it1ms · sucesso\",\n      \"print\": \"Captura 44.58.png\",\n      \"evento\": \"view_item_list_it1ms\",\n      \"params\": {\n        \"flow_name\": \"demo-mensal\",\n        \"installment_value\": \"[preenchido]\",\n        \"screen_name\": \"app:de:mo:sucesso\",\n        \"insurance\": \"[0|1]\",\n        \"value\": \"[data]\",\n        \"component\": \"demo-mensl\"\n      },\n      \"variacoes\": [\n        {\n          \"detail\": \"aprovado\"\n        },\n        {\n          \"detail\": \"click:ver-detalhes\"\n        }\n      ]\n    },\n    {\n      \"secao\": \"2. demo\",\n      \"titulo\": \"purchase_demo_{fluxo} · demo\",\n      \"print\": \"Captura 56.45.png\",\n      \"evento\": \"purchase_demo_{fluxo}\",\n      \"params\": {\n        \"detail\": \"click:[numero]-parcelas\",\n        \"installment_value\": \"BRL\",\n        \"items\": [\n          {\n            \"item_id\": \"card-1\",\n            \"item_category2\": \"simulacao\"\n          }\n        ],\n        \"installments\": \"[numero]\",\n        \"flow_name\": \"demo-[mensal|a nual]\"\n      },\n      \"variacoes\": [\n        {\n          \"screen_name\": \"app:demo:simulacao\"\n        },\n        {\n          \"screen_name\": \"app:demo:termos-e-condicoes\"\n        }\n      ]\n    },\n    {\n      \"secao\": \"3. geral\",\n      \"titulo\": \"remove_demo_{fluxo} · geral\",\n      \"print\": \"Captura 64.33.png\",\n      \"evento\": \"remove_demo_{fluxo}\",\n      \"params\": {\n        \"items\": [\n          {\n            \"item_category3\": \"1000\",\n            \"item_category2\": \"demo-{fluxo}\",\n            \"item_id\": \"[preenchido]\",\n            \"item_brand\": \"[numero]\"\n          }\n        ],\n        \"installments\": \"{fluxo}-pre-agendado\",\n        \"value\": \"BRL\",\n        \"installment_value\": \"[data]\"\n      },\n      \"params_por_fluxo\": {\n        \"mensal\": {\n          \"items\": [\n            {\n              \"item_id\": \"card-1\"\n            }\n          ]\n        }\n      }\n    }\n  ]\n}\n",
+  "review_md": "# Revisão do rascunho — Demo Ação & Reação\n\n3 prints lidos · 9 ponto(s) para conferir. Corrija direto no JSON e audite de novo na aba Relatório.\n\nFluxos detectados: mensal, anual (renomeie os rótulos em 'fluxos' se quiser).\n\n## 1. view_item_list_it1ms — `Captura 44.58.png`\n- ⚠ screen_name 'app:de mo:sucesso' lido como 'app:de:mo:sucesso' (espaço vira ':')\n\n## 2. purchase_demo_{fluxo} — `Captura 56.45.png`\n- ⚠ parâmetro 'nstallment_value' lido como 'installment_value'\n- ⚠ parâmetro 'installmen ts' lido como 'installments'\n- ⚠ items: a spec mostra 3 itens; só o primeiro é validado\n- ⚠ flow_name='demo-[mensal|a nual]' cita o fluxo 'mensal' fixo num card por fluxo — confira\n\n## 3. remove_demo_{fluxo} — `Captura 64.33.png`\n- ⚠ parâmetro 'instalment_value' lido como 'installment_value'\n- ⚠ items: chave 'tem_category5' lida como 'item_category5'\n- ⚠ items: a spec mostra 4 itens; só o primeiro é validado\n- ⚠ items: exemplo da spec é do fluxo 'mensal'; item_id fixado só para 'mensal'\n",
+  "checklist_md": "# Checklist · Demo Ação & Reação\n\n- Plataforma: ANDROID\n- Gerado em: 16/11/2026 09:30\n- Spec: `demo-acao-reacao.json`\n- Prints: `demo-22`\n- Fluxos: mensal, anual\n\nMarque cada item com `[x]` ao conferir. Os itens com ⚠ são do OCR: confira no print e corrija a spec antes de auditar. Para o HTML no padrão do design system, use **Exportar Checklist…** na aba Relatório.\n\n## 1. sucesso\n\n### view_item_list_it1ms · sucesso — `Captura 44.58.png`\n\n**Parâmetros esperados**\n\n- `flow_name`: `demo-mensal`\n- `installment_value`: `[preenchido]`\n- `screen_name`: `app:de:mo:sucesso`\n- `insurance`: `[0|1]`\n- `value`: `[data]`\n- `component`: `demo-mensl`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: screen_name 'app:de mo:sucesso' lido como 'app:de:mo:sucesso' (espaço vira ':')\n- [ ] `detail` = `aprovado`\n- [ ] `detail` = `click:ver-detalhes`\n\n## 2. demo\n\n### purchase_demo_{fluxo} · demo — `Captura 56.45.png`\n\n**Parâmetros esperados**\n\n- `detail`: `click:[numero]-parcelas`\n- `installment_value`: `BRL`\n- `items[0].item_id`: `card-1`\n- `items[0].item_category2`: `simulacao`\n- `installments`: `[numero]`\n- `flow_name`: `demo-[mensal|a nual]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: parâmetro 'nstallment_value' lido como 'installment_value'\n- [ ] ⚠ Revisar OCR: parâmetro 'installmen ts' lido como 'installments'\n- [ ] ⚠ Revisar OCR: items: a spec mostra 3 itens; só o primeiro é validado\n- [ ] ⚠ Revisar OCR: flow_name='demo-[mensal|a nual]' cita o fluxo 'mensal' fixo num card por fluxo — confira\n- [ ] fluxo **mensal** · `screen_name` = `app:demo:simulacao`\n- [ ] fluxo **mensal** · `screen_name` = `app:demo:termos-e-condicoes`\n- [ ] fluxo **anual** · `screen_name` = `app:demo:simulacao`\n- [ ] fluxo **anual** · `screen_name` = `app:demo:termos-e-condicoes`\n\n## 3. geral\n\n### remove_demo_{fluxo} · geral — `Captura 64.33.png`\n\n**Parâmetros esperados**\n\n- `items[0].item_category3`: `1000`\n- `items[0].item_category2`: `demo-{fluxo}`\n- `items[0].item_id`: `[preenchido]`\n- `items[0].item_brand`: `[numero]`\n- `installments`: `{fluxo}-pre-agendado`\n- `value`: `BRL`\n- `installment_value`: `[data]`\n- `items[0].item_id` (só no fluxo mensal): `card-1`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: parâmetro 'instalment_value' lido como 'installment_value'\n- [ ] ⚠ Revisar OCR: items: chave 'tem_category5' lida como 'item_category5'\n- [ ] ⚠ Revisar OCR: items: a spec mostra 4 itens; só o primeiro é validado\n- [ ] ⚠ Revisar OCR: items: exemplo da spec é do fluxo 'mensal'; item_id fixado só para 'mensal'\n- [ ] fluxo **mensal** · disparo de `remove_demo_{fluxo}`\n- [ ] fluxo **anual** · disparo de `remove_demo_{fluxo}`\n"
+}

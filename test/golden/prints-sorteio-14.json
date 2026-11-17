@@ -1,0 +1,70 @@
+{
+  "nome": "DemoApp",
+  "spec_name": "demoapp.json",
+  "cards": [
+    {
+      "file": "demo-14/Captura 25.30.png",
+      "event": "remove_from_cart",
+      "params": {
+        "detail": "click:[numero]-parcelas",
+        "currency": "[mensal|anual]-pre-agendado",
+        "operation_type": "[número de parcelas]"
+      },
+      "bullets": {},
+      "doubts": []
+    },
+    {
+      "file": "demo-14/Captura 28.35.png",
+      "event": "remove__demo_[mensal|anual]",
+      "params": {
+        "component": "[nome do produto]",
+        "installment_value": "[número de parcelas]",
+        "currency": "texto livre",
+        "items": [
+          {
+            "item_id": "simulacao",
+            "item_category5": "simulacao",
+            "item_category4": "1000",
+            "item_category3": "1000"
+          },
+          {
+            "item_id": "1000"
+          }
+        ],
+        "screen_name": "app:demo:[resumo|erro]",
+        "detail": "click:1 2-parcelas",
+        "camp_novo": "[valor]"
+      },
+      "bullets": {
+        "detail": [
+          "aprovado"
+        ]
+      },
+      "doubts": [
+        "parâmetro 'it ems' lido como 'items'",
+        "parâmetro desconhecido 'camp_novo' (mantido como 'camp_novo')",
+        "items.item_id: 'Simulacao' lido como 'simulacao'"
+      ]
+    }
+  ],
+  "review": [
+    {
+      "print": "Captura 25.30.png",
+      "evento": "remove_from_cart",
+      "duvidas": []
+    },
+    {
+      "print": "Captura 28.35.png",
+      "evento": "remove__demo_{fluxo}",
+      "duvidas": [
+        "parâmetro 'it ems' lido como 'items'",
+        "parâmetro desconhecido 'camp_novo' (mantido como 'camp_novo')",
+        "items.item_id: 'Simulacao' lido como 'simulacao'",
+        "items: a spec mostra 2 itens; só o primeiro é validado"
+      ]
+    }
+  ],
+  "spec_json": "{\n  \"projeto\": \"DemoApp\",\n  \"versao_especificacao\": \"Rascunho gerado por OCR — revisar\",\n  \"plataforma\": \"ios\",\n  \"prints_dir\": \"demo-14\",\n  \"fluxos\": {\n    \"mensal\": \"mensal\",\n    \"anual\": \"anual\"\n  },\n  \"cards\": [\n    {\n      \"secao\": \"1. geral\",\n      \"titulo\": \"remove_from_cart · geral\",\n      \"print\": \"Captura 25.30.png\",\n      \"evento\": \"remove_from_cart\",\n      \"params\": {\n        \"detail\": \"click:[numero]-parcelas\",\n        \"currency\": \"{fluxo}-pre-agendado\",\n        \"operation_type\": \"[numero]\"\n      }\n    },\n    {\n      \"secao\": \"2. demo\",\n      \"titulo\": \"remove__demo_{fluxo} · demo\",\n      \"print\": \"Captura 28.35.png\",\n      \"evento\": \"remove__demo_{fluxo}\",\n      \"params\": {\n        \"component\": \"[preenchido]\",\n        \"installment_value\": \"[numero]\",\n        \"currency\": \"texto livre\",\n        \"items\": [\n          {\n            \"item_id\": \"simulacao\",\n            \"item_category5\": \"simulacao\",\n            \"item_category4\": \"1000\",\n            \"item_category3\": \"1000\"\n          }\n        ],\n        \"camp_novo\": \"[numero]\"\n      },\n      \"variacoes\": [\n        {\n          \"screen_name\": \"app:demo:resumo\",\n          \"detail\": \"aprovado\"\n        },\n        {\n          \"screen_name\": \"app:demo:erro\",\n          \"detail\": \"aprovado\"\n        }\n      ]\n    }\n  ]\n}\n",
+  "review_md": "# Revisão do rascunho — DemoApp\n\n2 prints lidos · 4 ponto(s) para conferir. Corrija direto no JSON e audite de novo na aba Relatório.\n\nFluxos detectados: mensal, anual (renomeie os rótulos em 'fluxos' se quiser).\n\n## 1. remove_from_cart — `Captura 25.30.png`\n- ✓ nada a conferir\n\n## 2. remove__demo_{fluxo} — `Captura 28.35.png`\n- ⚠ parâmetro 'it ems' lido como 'items'\n- ⚠ parâmetro desconhecido 'camp_novo' (mantido como 'camp_novo')\n- ⚠ items.item_id: 'Simulacao' lido como 'simulacao'\n- ⚠ items: a spec mostra 2 itens; só o primeiro é validado\n",
+  "checklist_md": "# Checklist · DemoApp\n\n- Plataforma: IOS\n- Gerado em: 16/11/2026 09:30\n- Spec: `demoapp.json`\n- Prints: `demo-14`\n- Fluxos: mensal, anual\n\nMarque cada item com `[x]` ao conferir. Os itens com ⚠ são do OCR: confira no print e corrija a spec antes de auditar. Para o HTML no padrão do design system, use **Exportar Checklist…** na aba Relatório.\n\n## 1. geral\n\n### remove_from_cart · geral — `Captura 25.30.png`\n\n**Parâmetros esperados**\n\n- `detail`: `click:[numero]-parcelas`\n- `currency`: `{fluxo}-pre-agendado`\n- `operation_type`: `[numero]`\n\n**Conferir**\n\n- [ ] fluxo **mensal** · disparo de `remove_from_cart`\n- [ ] fluxo **anual** · disparo de `remove_from_cart`\n\n## 2. demo\n\n### remove__demo_{fluxo} · demo — `Captura 28.35.png`\n\n**Parâmetros esperados**\n\n- `component`: `[preenchido]`\n- `installment_value`: `[numero]`\n- `currency`: `texto livre`\n- `items[0].item_id`: `simulacao`\n- `items[0].item_category5`: `simulacao`\n- `items[0].item_category4`: `1000`\n- `items[0].item_category3`: `1000`\n- `camp_novo`: `[numero]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: parâmetro 'it ems' lido como 'items'\n- [ ] ⚠ Revisar OCR: parâmetro desconhecido 'camp_novo' (mantido como 'camp_novo')\n- [ ] ⚠ Revisar OCR: items.item_id: 'Simulacao' lido como 'simulacao'\n- [ ] ⚠ Revisar OCR: items: a spec mostra 2 itens; só o primeiro é validado\n- [ ] fluxo **mensal** · `screen_name` = `app:demo:resumo` · `detail` = `aprovado`\n- [ ] fluxo **mensal** · `screen_name` = `app:demo:erro` · `detail` = `aprovado`\n- [ ] fluxo **anual** · `screen_name` = `app:demo:resumo` · `detail` = `aprovado`\n- [ ] fluxo **anual** · `screen_name` = `app:demo:erro` · `detail` = `aprovado`\n"
+}

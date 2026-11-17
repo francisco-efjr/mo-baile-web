@@ -1,0 +1,134 @@
+{
+  "nome": "DemoApp",
+  "spec_name": "demoapp.json",
+  "cards": [
+    {
+      "file": "demo-09/Captura 11.58.png",
+      "event": "add_0ayment_info",
+      "params": {
+        "flow_name": "deoo-pf",
+        "items": [
+          {
+            "item_category": "card-1",
+            "item_category2": "simulacao",
+            "item_id": "[numero]",
+            "item_brand": "[numero]"
+          },
+          {
+            "item_category2": "dem-pf",
+            "item_id": "[numero]",
+            "item_brand": "card-3",
+            "item_name": "card-3"
+          },
+          {
+            "item_id": "[numero]"
+          }
+        ]
+      },
+      "bullets": {
+        "flow_name": [
+          "button",
+          "aprovado",
+          "demo-pf"
+        ],
+        "order_status": [
+          "aprovado",
+          "modal"
+        ]
+      },
+      "doubts": [
+        "items: chave 'litem_category2' lida como 'item_category2'",
+        "items.item_category2: 'Simulacao' lido como 'simulacao'",
+        "Observação: parâmetro 'order_status' lido como 'order_status'"
+      ]
+    },
+    {
+      "file": "demo-09/Captura 53.40.png",
+      "event": "login",
+      "params": {
+        "flow_name": "demo",
+        "due_date": "[data primeir o vencimento]",
+        "x": "[id da transacao]"
+      },
+      "bullets": {},
+      "doubts": [
+        "parâmetro 'due date' lido como 'due_date'",
+        "parâmetro desconhecido 'x' (mantido como 'x')"
+      ]
+    },
+    {
+      "file": "demo-09/Captura 54.44.png",
+      "event": "add__demo_[pf_pj]",
+      "params": {
+        "due_date": "[id da transacao]",
+        "installment_value": "[número de parcelas]",
+        "component": "[nome do produto]",
+        "installments": "BRL"
+      },
+      "bullets": {},
+      "doubts": []
+    },
+    {
+      "file": "demo-09/Captura 94.50.png",
+      "event": "flow_success",
+      "params": {
+        "items": [
+          {
+            "item_category4": "simulcao",
+            "item_id": "simulacao",
+            "item_category2": "demo-pf"
+          },
+          {
+            "item_id": "[numero]"
+          }
+        ],
+        "installment_value": "[valor]",
+        "insurance": "[0|1]"
+      },
+      "bullets": {},
+      "doubts": [
+        "items.item_category4: 'Simulcao' lido como 'simulcao'",
+        "evento '• low_success' lido como 'flow_success'"
+      ]
+    }
+  ],
+  "review": [
+    {
+      "print": "Captura 11.58.png",
+      "evento": "add_0ayment_info",
+      "duvidas": [
+        "items: chave 'litem_category2' lida como 'item_category2'",
+        "items.item_category2: 'Simulacao' lido como 'simulacao'",
+        "Observação: parâmetro 'order_status' lido como 'order_status'",
+        "flow_name aceita ['button', 'aprovado', 'demo-pf']; se cada variação usa um valor específico, ajuste em 'variacoes'",
+        "order_status aceita ['aprovado', 'modal']; se cada variação usa um valor específico, ajuste em 'variacoes'",
+        "items: a spec mostra 3 itens; só o primeiro é validado"
+      ]
+    },
+    {
+      "print": "Captura 53.40.png",
+      "evento": "login",
+      "duvidas": [
+        "parâmetro 'due date' lido como 'due_date'",
+        "parâmetro desconhecido 'x' (mantido como 'x')"
+      ]
+    },
+    {
+      "print": "Captura 54.44.png",
+      "evento": "add__demo_[pf_pj]",
+      "duvidas": []
+    },
+    {
+      "print": "Captura 94.50.png",
+      "evento": "flow_success",
+      "duvidas": [
+        "items.item_category4: 'Simulcao' lido como 'simulcao'",
+        "evento '• low_success' lido como 'flow_success'",
+        "items: a spec mostra 2 itens; só o primeiro é validado"
+      ]
+    }
+  ],
+  "spec_json": "{\n  \"projeto\": \"DemoApp\",\n  \"versao_especificacao\": \"Rascunho gerado por OCR — revisar\",\n  \"plataforma\": \"android\",\n  \"prints_dir\": \"demo-09\",\n  \"fluxos\": {},\n  \"cards\": [\n    {\n      \"secao\": \"1. geral\",\n      \"titulo\": \"add_0ayment_info · geral\",\n      \"print\": \"Captura 11.58.png\",\n      \"evento\": \"add_0ayment_info\",\n      \"params\": {\n        \"flow_name\": \"[button|aprovado|demo-pf]\",\n        \"items\": [\n          {\n            \"item_category\": \"card-1\",\n            \"item_category2\": \"simulacao\",\n            \"item_id\": \"[numero]\",\n            \"item_brand\": \"[numero]\"\n          }\n        ],\n        \"order_status\": \"[aprovado|modal]\"\n      }\n    },\n    {\n      \"secao\": \"1. geral\",\n      \"titulo\": \"login · geral\",\n      \"print\": \"Captura 53.40.png\",\n      \"evento\": \"login\",\n      \"params\": {\n        \"flow_name\": \"demo\",\n        \"due_date\": \"[data]\",\n        \"x\": \"[preenchido]\"\n      }\n    },\n    {\n      \"secao\": \"1. geral\",\n      \"titulo\": \"add__demo_[pf_pj] · geral\",\n      \"print\": \"Captura 54.44.png\",\n      \"evento\": \"add__demo_[pf_pj]\",\n      \"params\": {\n        \"due_date\": \"[preenchido]\",\n        \"installment_value\": \"[numero]\",\n        \"component\": \"[preenchido]\",\n        \"installments\": \"BRL\"\n      }\n    },\n    {\n      \"secao\": \"1. geral\",\n      \"titulo\": \"flow_success · geral\",\n      \"print\": \"Captura 94.50.png\",\n      \"evento\": \"flow_success\",\n      \"params\": {\n        \"items\": [\n          {\n            \"item_category4\": \"simulcao\",\n            \"item_id\": \"simulacao\",\n            \"item_category2\": \"demo-pf\"\n          }\n        ],\n        \"installment_value\": \"[numero]\",\n        \"insurance\": \"[0|1]\"\n      }\n    }\n  ]\n}\n",
+  "review_md": "# Revisão do rascunho — DemoApp\n\n4 prints lidos · 11 ponto(s) para conferir. Corrija direto no JSON e audite de novo na aba Relatório.\n\n## 1. add_0ayment_info — `Captura 11.58.png`\n- ⚠ items: chave 'litem_category2' lida como 'item_category2'\n- ⚠ items.item_category2: 'Simulacao' lido como 'simulacao'\n- ⚠ Observação: parâmetro 'order_status' lido como 'order_status'\n- ⚠ flow_name aceita ['button', 'aprovado', 'demo-pf']; se cada variação usa um valor específico, ajuste em 'variacoes'\n- ⚠ order_status aceita ['aprovado', 'modal']; se cada variação usa um valor específico, ajuste em 'variacoes'\n- ⚠ items: a spec mostra 3 itens; só o primeiro é validado\n\n## 2. login — `Captura 53.40.png`\n- ⚠ parâmetro 'due date' lido como 'due_date'\n- ⚠ parâmetro desconhecido 'x' (mantido como 'x')\n\n## 3. add__demo_[pf_pj] — `Captura 54.44.png`\n- ✓ nada a conferir\n\n## 4. flow_success — `Captura 94.50.png`\n- ⚠ items.item_category4: 'Simulcao' lido como 'simulcao'\n- ⚠ evento '• low_success' lido como 'flow_success'\n- ⚠ items: a spec mostra 2 itens; só o primeiro é validado\n",
+  "checklist_md": "# Checklist · DemoApp\n\n- Plataforma: ANDROID\n- Gerado em: 16/11/2026 09:30\n- Spec: `demoapp.json`\n- Prints: `demo-09`\n\nMarque cada item com `[x]` ao conferir. Os itens com ⚠ são do OCR: confira no print e corrija a spec antes de auditar. Para o HTML no padrão do design system, use **Exportar Checklist…** na aba Relatório.\n\n## 1. geral\n\n### add_0ayment_info · geral — `Captura 11.58.png`\n\n**Parâmetros esperados**\n\n- `flow_name`: `[button|aprovado|demo-pf]`\n- `items[0].item_category`: `card-1`\n- `items[0].item_category2`: `simulacao`\n- `items[0].item_id`: `[numero]`\n- `items[0].item_brand`: `[numero]`\n- `order_status`: `[aprovado|modal]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: items: chave 'litem_category2' lida como 'item_category2'\n- [ ] ⚠ Revisar OCR: items.item_category2: 'Simulacao' lido como 'simulacao'\n- [ ] ⚠ Revisar OCR: Observação: parâmetro 'order_status' lido como 'order_status'\n- [ ] ⚠ Revisar OCR: flow_name aceita ['button', 'aprovado', 'demo-pf']; se cada variação usa um valor específico, ajuste em 'variacoes'\n- [ ] ⚠ Revisar OCR: order_status aceita ['aprovado', 'modal']; se cada variação usa um valor específico, ajuste em 'variacoes'\n- [ ] ⚠ Revisar OCR: items: a spec mostra 3 itens; só o primeiro é validado\n- [ ] disparo de `add_0ayment_info`\n\n### login · geral — `Captura 53.40.png`\n\n**Parâmetros esperados**\n\n- `flow_name`: `demo`\n- `due_date`: `[data]`\n- `x`: `[preenchido]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: parâmetro 'due date' lido como 'due_date'\n- [ ] ⚠ Revisar OCR: parâmetro desconhecido 'x' (mantido como 'x')\n- [ ] disparo de `login`\n\n### add__demo_[pf_pj] · geral — `Captura 54.44.png`\n\n**Parâmetros esperados**\n\n- `due_date`: `[preenchido]`\n- `installment_value`: `[numero]`\n- `component`: `[preenchido]`\n- `installments`: `BRL`\n\n**Conferir**\n\n- [ ] disparo de `add__demo_[pf_pj]`\n\n### flow_success · geral — `Captura 94.50.png`\n\n**Parâmetros esperados**\n\n- `items[0].item_category4`: `simulcao`\n- `items[0].item_id`: `simulacao`\n- `items[0].item_category2`: `demo-pf`\n- `installment_value`: `[numero]`\n- `insurance`: `[0|1]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: items.item_category4: 'Simulcao' lido como 'simulcao'\n- [ ] ⚠ Revisar OCR: evento '• low_success' lido como 'flow_success'\n- [ ] ⚠ Revisar OCR: items: a spec mostra 2 itens; só o primeiro é validado\n- [ ] disparo de `flow_success`\n"
+}

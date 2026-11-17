@@ -1,0 +1,55 @@
+{
+  "nome": "demo-01",
+  "spec_name": "demo-01.json",
+  "cards": [
+    {
+      "file": "demo-01/Captura 37.31.png",
+      "event": "search",
+      "params": {
+        "items": [
+          {
+            "item_brand": "demo-novo",
+            "item_name": "[numero]",
+            "item_id": "[numero]"
+          }
+        ],
+        "screen_name": "app:demo:resumo",
+        "detail": "click:[label do botao]",
+        "insurance": "0l1]"
+      },
+      "bullets": {},
+      "doubts": [
+        "parâmetro 'dtail' lido como 'detail'",
+        "screen_name 'app demo resumo' lido como 'app:demo:resumo' (espaço vira ':')"
+      ]
+    },
+    {
+      "file": "demo-01/Captura 39.22.png",
+      "event": "purchase_demo_[_novo|usado]",
+      "params": {
+        "component": "[nome d o produto]",
+        "insurance": "[|1]"
+      },
+      "bullets": {},
+      "doubts": []
+    }
+  ],
+  "review": [
+    {
+      "print": "Captura 37.31.png",
+      "evento": "search",
+      "duvidas": [
+        "parâmetro 'dtail' lido como 'detail'",
+        "screen_name 'app demo resumo' lido como 'app:demo:resumo' (espaço vira ':')"
+      ]
+    },
+    {
+      "print": "Captura 39.22.png",
+      "evento": "purchase_demo_[_novo|usado]",
+      "duvidas": []
+    }
+  ],
+  "spec_json": "{\n  \"projeto\": \"demo-01\",\n  \"versao_especificacao\": \"Rascunho gerado por OCR — revisar\",\n  \"plataforma\": \"android\",\n  \"prints_dir\": \"demo-01\",\n  \"fluxos\": {},\n  \"cards\": [\n    {\n      \"secao\": \"1. resumo\",\n      \"titulo\": \"search · resumo\",\n      \"print\": \"Captura 37.31.png\",\n      \"evento\": \"search\",\n      \"params\": {\n        \"items\": [\n          {\n            \"item_brand\": \"demo-novo\",\n            \"item_name\": \"[numero]\",\n            \"item_id\": \"[numero]\"\n          }\n        ],\n        \"screen_name\": \"app:demo:resumo\",\n        \"detail\": \"click:[preenchido]\",\n        \"insurance\": \"0l1]\"\n      }\n    },\n    {\n      \"secao\": \"2. geral\",\n      \"titulo\": \"purchase_demo_[_novo|usado] · geral\",\n      \"print\": \"Captura 39.22.png\",\n      \"evento\": \"purchase_demo_[_novo|usado]\",\n      \"params\": {\n        \"component\": \"[preenchido]\",\n        \"insurance\": \"[|1]\"\n      }\n    }\n  ]\n}\n",
+  "review_md": "# Revisão do rascunho — demo-01\n\n2 prints lidos · 2 ponto(s) para conferir. Corrija direto no JSON e audite de novo na aba Relatório.\n\n## 1. search — `Captura 37.31.png`\n- ⚠ parâmetro 'dtail' lido como 'detail'\n- ⚠ screen_name 'app demo resumo' lido como 'app:demo:resumo' (espaço vira ':')\n\n## 2. purchase_demo_[_novo|usado] — `Captura 39.22.png`\n- ✓ nada a conferir\n",
+  "checklist_md": "# Checklist · demo-01\n\n- Plataforma: ANDROID\n- Gerado em: 16/11/2026 09:30\n- Spec: `demo-01.json`\n- Prints: `demo-01`\n\nMarque cada item com `[x]` ao conferir. Os itens com ⚠ são do OCR: confira no print e corrija a spec antes de auditar. Para o HTML no padrão do design system, use **Exportar Checklist…** na aba Relatório.\n\n## 1. resumo\n\n### search · resumo — `Captura 37.31.png`\n\n**Parâmetros esperados**\n\n- `items[0].item_brand`: `demo-novo`\n- `items[0].item_name`: `[numero]`\n- `items[0].item_id`: `[numero]`\n- `screen_name`: `app:demo:resumo`\n- `detail`: `click:[preenchido]`\n- `insurance`: `0l1]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: parâmetro 'dtail' lido como 'detail'\n- [ ] ⚠ Revisar OCR: screen_name 'app demo resumo' lido como 'app:demo:resumo' (espaço vira ':')\n- [ ] disparo de `search`\n\n## 2. geral\n\n### purchase_demo_[_novo|usado] · geral — `Captura 39.22.png`\n\n**Parâmetros esperados**\n\n- `component`: `[preenchido]`\n- `insurance`: `[|1]`\n\n**Conferir**\n\n- [ ] disparo de `purchase_demo_[_novo|usado]`\n"
+}

@@ -8,8 +8,8 @@
  * contra o gabarito gerado pelo motor Python (`tools/golden`).
  *
  * Nada aqui faz rede, lê disco ou guarda estado global: entra texto, sai objeto.
- * Diferenças deliberadas (sem caminho de disco, sem prints, OCR, board ou
- * checklist, `source` fixo) estão em docs/PARIDADE.md.
+ * Diferenças deliberadas (sem caminho de disco, OCR próprio, sem board, `source`
+ * fixo) estão em docs/PARIDADE.md.
  *
  * Os objetos devolvidos por `loadSpec`, `readLog` e `audit` levam, num campo
  * oculto, a versão interna (com os tipos do Python) que as etapas seguintes
@@ -23,9 +23,12 @@ import { runAudit } from "./audit";
 import { EngineError, INTERNAL_MESSAGE } from "./errors";
 import { eventsFromItems, itemsFromText } from "./firebaseLog";
 import { exportInfo, generateInteractiveHtml, reportInlineHashes, type InlineHashes } from "./html";
-import { htmlFileName as fileName } from "./names";
+import { htmlFileName as fileName, safeFileStem } from "./names";
 import { reportPayloadPy, specSummaryPy } from "./payload";
-import { fromJs, JSONDecodeError, PyInternalError, pyJsonDumps, pyJsonLoads, toJs, type Json, type PyDict, type PyValue } from "./py";
+import { cmpCodePoints, fromJs, JSONDecodeError, PyInternalError, pyJsonDumps, pyJsonLoads, pyStrip, strRepr, toJs, type Json, type PyDict, type PyValue } from "./py";
+import { readCard, type OcrLine } from "./prints/cardReader";
+import { checklistMarkdown } from "./prints/checklist";
+import { buildSpec, reviewMarkdown } from "./prints/draft";
 import { PLATFORMS, specFromDict, type Report, type SpecTemplate } from "./spec";
 
 export { EngineError } from "./errors";
@@ -398,4 +401,79 @@ export function decodeText(bytes: Uint8Array, options: { label?: "spec" | "log";
   } catch {
     throw new EngineError(`O arquivo de ${label} não está em UTF-8 nem em UTF-16.`);
   }
+}
+
+// ------------------------------------------------------------ importação de prints
+
+export type { OcrLine };
+
+/** Um print da pasta, já lido pelo OCR. `nome` é o nome do arquivo (ou o caminho dentro da pasta). */
+export interface PrintLido {
+  nome: string;
+  linhas: readonly OcrLine[];
+}
+
+export interface DuvidaDoPrint {
+  print: string;
+  event: string;
+  doubts: string[];
+}
+
+/** O que `report.import` grava e devolve, sem disco: os três arquivos em texto e a revisão. */
+export interface RascunhoDosPrints {
+  projeto: string;
+  specName: string;
+  reviewName: string;
+  checklistName: string;
+  specJson: string;
+  reviewMd: string;
+  checklistMd: string;
+  review: DuvidaDoPrint[];
+  doubtsTotal: number;
+}
+
+/** Mais que isso não é um card por print: é a pasta errada (o mesmo limite do Mo baile). */
+export const MAX_PRINTS = 300;
+
+/**
+ * Rascunho da spec a partir dos prints de uma pasta já lidos pelo OCR: o
+ * `report.import` do Mo baile depois do OCR. Os prints vão em ordem de nome,
+ * um card por print; o nome do projeto, se vazio, é o da pasta.
+ */
+export function rascunhoDosPrints(
+  prints: readonly PrintLido[],
+  options: { pasta: string; projeto?: string; plataforma?: string; agora?: Date },
+): RascunhoDosPrints {
+  return guard(() => {
+    const chosen = (options.plataforma || "android").toLowerCase();
+    if (!(PLATFORMS as readonly string[]).includes(chosen)) {
+      throw new EngineError(`Plataforma inválida: ${strRepr(chosen)}. Use android ou ios.`);
+    }
+    if (!prints.length) throw new EngineError(`Nenhuma imagem em ${options.pasta}. Use os prints dos cards em PNG ou JPG.`);
+    if (prints.length > MAX_PRINTS) {
+      throw new EngineError(`${prints.length} imagens em ${options.pasta}; o limite é ${MAX_PRINTS} prints por spec.`);
+    }
+    const ordem = [...prints].sort((a, b) => cmpCodePoints(a.nome, b.nome));
+    const cards = ordem.map((p) => readCard(p.linhas, `${options.pasta}/${p.nome}`));
+    const projeto = pyStrip(options.projeto ?? "") || options.pasta;
+    const [spec, review] = buildSpec(cards, projeto, chosen, options.pasta);
+    const stem = safeFileStem(projeto, "spec");
+    const specName = `${stem}.json`;
+    const lista = review.map((r) => ({
+      print: r.get("print") as string,
+      event: r.get("evento") as string,
+      doubts: [...(r.get("duvidas") as string[])],
+    }));
+    return {
+      projeto,
+      specName,
+      reviewName: `${stem}.revisao.md`,
+      checklistName: `${stem}.checklist.md`,
+      specJson: pyJsonDumps(spec, { indent: 2 }) + "\n",
+      reviewMd: reviewMarkdown(spec, review),
+      checklistMd: checklistMarkdown(spec, review, { specName, generatedAt: options.agora ?? new Date() }),
+      review: lista,
+      doubtsTotal: lista.reduce((s, r) => s + r.doubts.length, 0),
+    };
+  });
 }

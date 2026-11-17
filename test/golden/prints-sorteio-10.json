@@ -1,0 +1,243 @@
+{
+  "nome": "demo-10",
+  "spec_name": "demo-10.json",
+  "cards": [
+    {
+      "file": "demo-10/Captura 12.49.png",
+      "event": "add_demo_[mensal|anual]",
+      "params": {
+        "insurance": "[0|1]",
+        "due_date": "[id da transacao]",
+        "screen_name": "app:demo:[simula cao|home]",
+        "items": [
+          {
+            "item_category5": "[numero]",
+            "item_category4": "card-1",
+            "item_category2": "card-1",
+            "item_id": "demo-mensal",
+            "item_brand": "card-2",
+            "item_category": "[numero]",
+            "item_category3": "card-2"
+          },
+          {
+            "item_category2": "simulacao",
+            "item_id": "simulacao",
+            "item_category3": "card-3"
+          },
+          {
+            "item_category2": "[numero]",
+            "item_category4": "card-3",
+            "item_brand": "card-3",
+            "item_id": "1002"
+          }
+        ]
+      },
+      "bullets": {
+        "detail": [
+          "click:voltar",
+          "click:fechar"
+        ]
+      },
+      "doubts": [
+        "parâmetro 'inaurance' lido como 'insurance'",
+        "items: chave 'item__category' lida como 'item_category'"
+      ]
+    },
+    {
+      "file": "demo-10/Captura 38.11.png",
+      "event": "interaction_demo_[mensal|anual]",
+      "params": {
+        "operation_type": "[nome do produto]",
+        "installments": "BRL",
+        "detail": "click:[label do b|tao]",
+        "screen_name": "app.demo:[home|home]",
+        "insurance": "[0|1]",
+        "items": [
+          {
+            "item_category2": "[numero]",
+            "item_id": "demo-mensal",
+            "item_category4": "card-2"
+          },
+          {
+            "item_id": "card-2"
+          }
+        ],
+        "component": "[id da tra nsacao]"
+      },
+      "bullets": {},
+      "doubts": [
+        "parâmetro 'screen name' lido como 'screen_name'",
+        "items: chave 'item__category4' lida como 'item_category4'"
+      ]
+    },
+    {
+      "file": "demo-10/Captura 41.38.png",
+      "event": "ad_d_to_cart",
+      "params": {
+        "installment_value": "[id da transacao]",
+        "installments": "[id da transacao]",
+        "screen_name": "app:demo:home",
+        "detail": "click:[lab el do botao]",
+        "flow_name": "demo-mensal"
+      },
+      "bullets": {
+        "flow_name": [
+          "clic-k:simular",
+          "click:12-parcelas"
+        ]
+      },
+      "doubts": [
+        "parâmetro 'sceen_name' lido como 'screen_name'",
+        "screen_name 'app demo home' lido como 'app:demo:home' (espaço vira ':')",
+        "flow_name: item 'clic k:simular' lido como 'clic-k:simular'"
+      ]
+    },
+    {
+      "file": "demo-10/Captura 41.50.png",
+      "event": "sign_up",
+      "params": {
+        "value": "[data primeiro vencimento]"
+      },
+      "bullets": {
+        "order_status": [
+          "button"
+        ]
+      },
+      "doubts": [
+        "Observação: parâmetro 'order_status' lido como 'order_status'"
+      ]
+    },
+    {
+      "file": "demo-10/Captura 46.11.png",
+      "event": "begin_checkout",
+      "params": {
+        "screen_name": "app:demo:simulacao",
+        "items": [
+          {
+            "item_category4": "[numero]",
+            "item_category": "demo-mensal",
+            "item_name": "1000",
+            "item_category3": "1000",
+            "item_id": "1000"
+          }
+        ],
+        "installments": "texto livre",
+        "flow_name": "demo-[mensal|anual]"
+      },
+      "bullets": {
+        "detail": [
+          "click:10-parcelas",
+          "click:fechar",
+          "click:ver-det1lhes",
+          "modal"
+        ]
+      },
+      "doubts": [
+        "screen_name 'app demo simulacao' lido como 'app:demo:simulacao' (espaço vira ':')",
+        "evento '@ begin__checkout' lido como 'begin_checkout'"
+      ]
+    },
+    {
+      "file": "demo-10/Captura 48.41.png",
+      "event": "begin_demo_[mensal_anuol]",
+      "params": {
+        "component": "[men|al anual]-pre-agendado",
+        "items": [
+          {
+            "item_name": "[numero]",
+            "item_id": "simulacao"
+          },
+          {
+            "item_id": "demo-mensal",
+            "item_name": "[numero]"
+          },
+          {
+            "item_id": "[numero]"
+          }
+        ],
+        "flow_name": "demo-[mens|al|anual]",
+        "due_date": "[nome do produto]"
+      },
+      "bullets": {
+        "component": [
+          "click:fechar",
+          "click:simular",
+          "click:voltar"
+        ],
+        "flow_name": [
+          "click:simular"
+        ]
+      },
+      "doubts": [
+        "parâmetro 'c omponent' lido como 'component'",
+        "parâmetro 'due date' lido como 'due_date'",
+        "items.item_id: 'Simulacao' lido como 'simulacao'"
+      ]
+    }
+  ],
+  "review": [
+    {
+      "print": "Captura 12.49.png",
+      "evento": "add_demo_{fluxo}",
+      "duvidas": [
+        "parâmetro 'inaurance' lido como 'insurance'",
+        "items: chave 'item__category' lida como 'item_category'",
+        "items.item_category4: exemplos ['card-1', 'card-3'] viraram o padrão 'card-[numero]'",
+        "items.item_brand: exemplos ['card-2', 'card-3'] viraram o padrão 'card-[numero]'",
+        "items.item_category3: exemplos ['card-2', 'card-3'] viraram o padrão 'card-[numero]'",
+        "items: a spec mostra 3 itens; só o primeiro é validado",
+        "items: exemplo da spec é do fluxo 'mensal'; item_id fixado só para 'mensal'"
+      ]
+    },
+    {
+      "print": "Captura 38.11.png",
+      "evento": "interaction_demo_{fluxo}",
+      "duvidas": [
+        "parâmetro 'screen name' lido como 'screen_name'",
+        "items: chave 'item__category4' lida como 'item_category4'",
+        "items: a spec mostra 2 itens; só o primeiro é validado",
+        "items: exemplo da spec é do fluxo 'mensal'; item_id fixado só para 'mensal'"
+      ]
+    },
+    {
+      "print": "Captura 41.38.png",
+      "evento": "ad_d_to_cart",
+      "duvidas": [
+        "parâmetro 'sceen_name' lido como 'screen_name'",
+        "screen_name 'app demo home' lido como 'app:demo:home' (espaço vira ':')",
+        "flow_name: item 'clic k:simular' lido como 'clic-k:simular'",
+        "flow_name aceita ['clic-k:simular', 'click:12-parcelas']; se cada variação usa um valor específico, ajuste em 'variacoes'"
+      ]
+    },
+    {
+      "print": "Captura 41.50.png",
+      "evento": "sign_up",
+      "duvidas": [
+        "Observação: parâmetro 'order_status' lido como 'order_status'"
+      ]
+    },
+    {
+      "print": "Captura 46.11.png",
+      "evento": "begin_checkout",
+      "duvidas": [
+        "screen_name 'app demo simulacao' lido como 'app:demo:simulacao' (espaço vira ':')",
+        "evento '@ begin__checkout' lido como 'begin_checkout'",
+        "items: exemplo da spec é do fluxo 'mensal'; item_id fixado só para 'mensal'"
+      ]
+    },
+    {
+      "print": "Captura 48.41.png",
+      "evento": "begin_demo_[mensal_anuol]",
+      "duvidas": [
+        "parâmetro 'c omponent' lido como 'component'",
+        "parâmetro 'due date' lido como 'due_date'",
+        "items.item_id: 'Simulacao' lido como 'simulacao'",
+        "component aceita ['click:fechar', 'click:simular', 'click:voltar']; se cada variação usa um valor específico, ajuste em 'variacoes'",
+        "items: a spec mostra 3 itens; só o primeiro é validado"
+      ]
+    }
+  ],
+  "spec_json": "{\n  \"projeto\": \"demo-10\",\n  \"versao_especificacao\": \"Rascunho gerado por OCR — revisar\",\n  \"plataforma\": \"ios\",\n  \"prints_dir\": \"demo-10\",\n  \"fluxos\": {\n    \"mensal\": \"mensal\",\n    \"anual\": \"anual\",\n    \"mens\": \"mens\",\n    \"al\": \"al\"\n  },\n  \"cards\": [\n    {\n      \"secao\": \"1. demo\",\n      \"titulo\": \"add_demo_{fluxo} · demo\",\n      \"print\": \"Captura 12.49.png\",\n      \"evento\": \"add_demo_{fluxo}\",\n      \"params\": {\n        \"insurance\": \"[0|1]\",\n        \"due_date\": \"[preenchido]\",\n        \"screen_name\": \"app:demo:[simula cao|home]\",\n        \"items\": [\n          {\n            \"item_category5\": \"[numero]\",\n            \"item_category4\": \"card-[numero]\",\n            \"item_category2\": \"card-1\",\n            \"item_id\": \"demo-{fluxo}\",\n            \"item_brand\": \"card-[numero]\",\n            \"item_category\": \"[numero]\",\n            \"item_category3\": \"card-[numero]\"\n          }\n        ]\n      },\n      \"variacoes\": [\n        {\n          \"detail\": \"click:voltar\"\n        },\n        {\n          \"detail\": \"click:fechar\"\n        }\n      ]\n    },\n    {\n      \"secao\": \"2. app.demo\",\n      \"titulo\": \"interaction_demo_{fluxo} · app.demo\",\n      \"print\": \"Captura 38.11.png\",\n      \"evento\": \"interaction_demo_{fluxo}\",\n      \"params\": {\n        \"operation_type\": \"[preenchido]\",\n        \"installments\": \"BRL\",\n        \"detail\": \"click:[label do b|tao]\",\n        \"insurance\": \"[0|1]\",\n        \"items\": [\n          {\n            \"item_category2\": \"[numero]\",\n            \"item_id\": \"demo-{fluxo}\",\n            \"item_category4\": \"card-2\"\n          }\n        ],\n        \"component\": \"[preenchido]\"\n      },\n      \"variacoes\": [\n        {\n          \"screen_name\": \"app.demo:home\"\n        },\n        {\n          \"screen_name\": \"app.demo:home\"\n        }\n      ]\n    },\n    {\n      \"secao\": \"3. home\",\n      \"titulo\": \"ad_d_to_cart · home\",\n      \"print\": \"Captura 41.38.png\",\n      \"evento\": \"ad_d_to_cart\",\n      \"params\": {\n        \"installment_value\": \"[preenchido]\",\n        \"installments\": \"[preenchido]\",\n        \"screen_name\": \"app:demo:home\",\n        \"detail\": \"click:[preenchido]\",\n        \"flow_name\": \"[clic-k:simular|click:12-parcelas]\"\n      }\n    },\n    {\n      \"secao\": \"4. geral\",\n      \"titulo\": \"sign_up · geral\",\n      \"print\": \"Captura 41.50.png\",\n      \"evento\": \"sign_up\",\n      \"params\": {\n        \"value\": \"[data]\",\n        \"order_status\": \"button\"\n      }\n    },\n    {\n      \"secao\": \"5. simulacao\",\n      \"titulo\": \"begin_checkout · simulacao\",\n      \"print\": \"Captura 46.11.png\",\n      \"evento\": \"begin_checkout\",\n      \"params\": {\n        \"screen_name\": \"app:demo:simulacao\",\n        \"items\": [\n          {\n            \"item_category4\": \"[numero]\",\n            \"item_category\": \"demo-{fluxo}\",\n            \"item_name\": \"1000\",\n            \"item_category3\": \"1000\",\n            \"item_id\": \"[preenchido]\"\n          }\n        ],\n        \"installments\": \"texto livre\",\n        \"flow_name\": \"demo-{fluxo}\"\n      },\n      \"variacoes\": [\n        {\n          \"detail\": \"click:10-parcelas\"\n        },\n        {\n          \"detail\": \"click:fechar\"\n        },\n        {\n          \"detail\": \"click:ver-det1lhes\"\n        },\n        {\n          \"detail\": \"modal\"\n        }\n      ],\n      \"params_por_fluxo\": {\n        \"mensal\": {\n          \"items\": [\n            {\n              \"item_id\": \"1000\"\n            }\n          ]\n        }\n      }\n    },\n    {\n      \"secao\": \"4. geral\",\n      \"titulo\": \"begin_demo_[mensal_anuol] · geral\",\n      \"print\": \"Captura 48.41.png\",\n      \"evento\": \"begin_demo_[mensal_anuol]\",\n      \"params\": {\n        \"component\": \"[click:fechar|click:simular|click:voltar]\",\n        \"items\": [\n          {\n            \"item_name\": \"[numero]\",\n            \"item_id\": \"simulacao\"\n          }\n        ],\n        \"flow_name\": \"click:simular\",\n        \"due_date\": \"[preenchido]\"\n      }\n    }\n  ]\n}\n",
+  "review_md": "# Revisão do rascunho — demo-10\n\n6 prints lidos · 24 ponto(s) para conferir. Corrija direto no JSON e audite de novo na aba Relatório.\n\nFluxos detectados: mensal, anual, mens, al (renomeie os rótulos em 'fluxos' se quiser).\n\n## 1. add_demo_{fluxo} — `Captura 12.49.png`\n- ⚠ parâmetro 'inaurance' lido como 'insurance'\n- ⚠ items: chave 'item__category' lida como 'item_category'\n- ⚠ items.item_category4: exemplos ['card-1', 'card-3'] viraram o padrão 'card-[numero]'\n- ⚠ items.item_brand: exemplos ['card-2', 'card-3'] viraram o padrão 'card-[numero]'\n- ⚠ items.item_category3: exemplos ['card-2', 'card-3'] viraram o padrão 'card-[numero]'\n- ⚠ items: a spec mostra 3 itens; só o primeiro é validado\n- ⚠ items: exemplo da spec é do fluxo 'mensal'; item_id fixado só para 'mensal'\n\n## 2. interaction_demo_{fluxo} — `Captura 38.11.png`\n- ⚠ parâmetro 'screen name' lido como 'screen_name'\n- ⚠ items: chave 'item__category4' lida como 'item_category4'\n- ⚠ items: a spec mostra 2 itens; só o primeiro é validado\n- ⚠ items: exemplo da spec é do fluxo 'mensal'; item_id fixado só para 'mensal'\n\n## 3. ad_d_to_cart — `Captura 41.38.png`\n- ⚠ parâmetro 'sceen_name' lido como 'screen_name'\n- ⚠ screen_name 'app demo home' lido como 'app:demo:home' (espaço vira ':')\n- ⚠ flow_name: item 'clic k:simular' lido como 'clic-k:simular'\n- ⚠ flow_name aceita ['clic-k:simular', 'click:12-parcelas']; se cada variação usa um valor específico, ajuste em 'variacoes'\n\n## 4. sign_up — `Captura 41.50.png`\n- ⚠ Observação: parâmetro 'order_status' lido como 'order_status'\n\n## 5. begin_checkout — `Captura 46.11.png`\n- ⚠ screen_name 'app demo simulacao' lido como 'app:demo:simulacao' (espaço vira ':')\n- ⚠ evento '@ begin__checkout' lido como 'begin_checkout'\n- ⚠ items: exemplo da spec é do fluxo 'mensal'; item_id fixado só para 'mensal'\n\n## 6. begin_demo_[mensal_anuol] — `Captura 48.41.png`\n- ⚠ parâmetro 'c omponent' lido como 'component'\n- ⚠ parâmetro 'due date' lido como 'due_date'\n- ⚠ items.item_id: 'Simulacao' lido como 'simulacao'\n- ⚠ component aceita ['click:fechar', 'click:simular', 'click:voltar']; se cada variação usa um valor específico, ajuste em 'variacoes'\n- ⚠ items: a spec mostra 3 itens; só o primeiro é validado\n",
+  "checklist_md": "# Checklist · demo-10\n\n- Plataforma: IOS\n- Gerado em: 16/11/2026 09:30\n- Spec: `demo-10.json`\n- Prints: `demo-10`\n- Fluxos: mensal, anual, mens, al\n\nMarque cada item com `[x]` ao conferir. Os itens com ⚠ são do OCR: confira no print e corrija a spec antes de auditar. Para o HTML no padrão do design system, use **Exportar Checklist…** na aba Relatório.\n\n## 1. demo\n\n### add_demo_{fluxo} · demo — `Captura 12.49.png`\n\n**Parâmetros esperados**\n\n- `insurance`: `[0|1]`\n- `due_date`: `[preenchido]`\n- `screen_name`: `app:demo:[simula cao|home]`\n- `items[0].item_category5`: `[numero]`\n- `items[0].item_category4`: `card-[numero]`\n- `items[0].item_category2`: `card-1`\n- `items[0].item_id`: `demo-{fluxo}`\n- `items[0].item_brand`: `card-[numero]`\n- `items[0].item_category`: `[numero]`\n- `items[0].item_category3`: `card-[numero]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: parâmetro 'inaurance' lido como 'insurance'\n- [ ] ⚠ Revisar OCR: items: chave 'item__category' lida como 'item_category'\n- [ ] ⚠ Revisar OCR: items.item_category4: exemplos ['card-1', 'card-3'] viraram o padrão 'card-[numero]'\n- [ ] ⚠ Revisar OCR: items.item_brand: exemplos ['card-2', 'card-3'] viraram o padrão 'card-[numero]'\n- [ ] ⚠ Revisar OCR: items.item_category3: exemplos ['card-2', 'card-3'] viraram o padrão 'card-[numero]'\n- [ ] ⚠ Revisar OCR: items: a spec mostra 3 itens; só o primeiro é validado\n- [ ] ⚠ Revisar OCR: items: exemplo da spec é do fluxo 'mensal'; item_id fixado só para 'mensal'\n- [ ] fluxo **mensal** · `detail` = `click:voltar`\n- [ ] fluxo **mensal** · `detail` = `click:fechar`\n- [ ] fluxo **anual** · `detail` = `click:voltar`\n- [ ] fluxo **anual** · `detail` = `click:fechar`\n- [ ] fluxo **mens** · `detail` = `click:voltar`\n- [ ] fluxo **mens** · `detail` = `click:fechar`\n- [ ] fluxo **al** · `detail` = `click:voltar`\n- [ ] fluxo **al** · `detail` = `click:fechar`\n\n## 2. app.demo\n\n### interaction_demo_{fluxo} · app.demo — `Captura 38.11.png`\n\n**Parâmetros esperados**\n\n- `operation_type`: `[preenchido]`\n- `installments`: `BRL`\n- `detail`: `click:[label do b|tao]`\n- `insurance`: `[0|1]`\n- `items[0].item_category2`: `[numero]`\n- `items[0].item_id`: `demo-{fluxo}`\n- `items[0].item_category4`: `card-2`\n- `component`: `[preenchido]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: parâmetro 'screen name' lido como 'screen_name'\n- [ ] ⚠ Revisar OCR: items: chave 'item__category4' lida como 'item_category4'\n- [ ] ⚠ Revisar OCR: items: a spec mostra 2 itens; só o primeiro é validado\n- [ ] ⚠ Revisar OCR: items: exemplo da spec é do fluxo 'mensal'; item_id fixado só para 'mensal'\n- [ ] fluxo **mensal** · `screen_name` = `app.demo:home`\n- [ ] fluxo **mensal** · `screen_name` = `app.demo:home`\n- [ ] fluxo **anual** · `screen_name` = `app.demo:home`\n- [ ] fluxo **anual** · `screen_name` = `app.demo:home`\n- [ ] fluxo **mens** · `screen_name` = `app.demo:home`\n- [ ] fluxo **mens** · `screen_name` = `app.demo:home`\n- [ ] fluxo **al** · `screen_name` = `app.demo:home`\n- [ ] fluxo **al** · `screen_name` = `app.demo:home`\n\n## 3. home\n\n### ad_d_to_cart · home — `Captura 41.38.png`\n\n**Parâmetros esperados**\n\n- `installment_value`: `[preenchido]`\n- `installments`: `[preenchido]`\n- `screen_name`: `app:demo:home`\n- `detail`: `click:[preenchido]`\n- `flow_name`: `[clic-k:simular|click:12-parcelas]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: parâmetro 'sceen_name' lido como 'screen_name'\n- [ ] ⚠ Revisar OCR: screen_name 'app demo home' lido como 'app:demo:home' (espaço vira ':')\n- [ ] ⚠ Revisar OCR: flow_name: item 'clic k:simular' lido como 'clic-k:simular'\n- [ ] ⚠ Revisar OCR: flow_name aceita ['clic-k:simular', 'click:12-parcelas']; se cada variação usa um valor específico, ajuste em 'variacoes'\n- [ ] disparo de `ad_d_to_cart`\n\n## 4. geral\n\n### sign_up · geral — `Captura 41.50.png`\n\n**Parâmetros esperados**\n\n- `value`: `[data]`\n- `order_status`: `button`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: Observação: parâmetro 'order_status' lido como 'order_status'\n- [ ] disparo de `sign_up`\n\n### begin_demo_[mensal_anuol] · geral — `Captura 48.41.png`\n\n**Parâmetros esperados**\n\n- `component`: `[click:fechar|click:simular|click:voltar]`\n- `items[0].item_name`: `[numero]`\n- `items[0].item_id`: `simulacao`\n- `flow_name`: `click:simular`\n- `due_date`: `[preenchido]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: parâmetro 'c omponent' lido como 'component'\n- [ ] ⚠ Revisar OCR: parâmetro 'due date' lido como 'due_date'\n- [ ] ⚠ Revisar OCR: items.item_id: 'Simulacao' lido como 'simulacao'\n- [ ] ⚠ Revisar OCR: component aceita ['click:fechar', 'click:simular', 'click:voltar']; se cada variação usa um valor específico, ajuste em 'variacoes'\n- [ ] ⚠ Revisar OCR: items: a spec mostra 3 itens; só o primeiro é validado\n- [ ] disparo de `begin_demo_[mensal_anuol]`\n\n## 5. simulacao\n\n### begin_checkout · simulacao — `Captura 46.11.png`\n\n**Parâmetros esperados**\n\n- `screen_name`: `app:demo:simulacao`\n- `items[0].item_category4`: `[numero]`\n- `items[0].item_category`: `demo-{fluxo}`\n- `items[0].item_name`: `1000`\n- `items[0].item_category3`: `1000`\n- `items[0].item_id`: `[preenchido]`\n- `installments`: `texto livre`\n- `flow_name`: `demo-{fluxo}`\n- `items[0].item_id` (só no fluxo mensal): `1000`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: screen_name 'app demo simulacao' lido como 'app:demo:simulacao' (espaço vira ':')\n- [ ] ⚠ Revisar OCR: evento '@ begin__checkout' lido como 'begin_checkout'\n- [ ] ⚠ Revisar OCR: items: exemplo da spec é do fluxo 'mensal'; item_id fixado só para 'mensal'\n- [ ] fluxo **mensal** · `detail` = `click:10-parcelas`\n- [ ] fluxo **mensal** · `detail` = `click:fechar`\n- [ ] fluxo **mensal** · `detail` = `click:ver-det1lhes`\n- [ ] fluxo **mensal** · `detail` = `modal`\n- [ ] fluxo **anual** · `detail` = `click:10-parcelas`\n- [ ] fluxo **anual** · `detail` = `click:fechar`\n- [ ] fluxo **anual** · `detail` = `click:ver-det1lhes`\n- [ ] fluxo **anual** · `detail` = `modal`\n- [ ] fluxo **mens** · `detail` = `click:10-parcelas`\n- [ ] fluxo **mens** · `detail` = `click:fechar`\n- [ ] fluxo **mens** · `detail` = `click:ver-det1lhes`\n- [ ] fluxo **mens** · `detail` = `modal`\n- [ ] fluxo **al** · `detail` = `click:10-parcelas`\n- [ ] fluxo **al** · `detail` = `click:fechar`\n- [ ] fluxo **al** · `detail` = `click:ver-det1lhes`\n- [ ] fluxo **al** · `detail` = `modal`\n"
+}

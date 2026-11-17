@@ -70,7 +70,7 @@ test("F-03 relatório por arquivos: plataforma escolhida muda o resultado (caso 
   const g = gabarito("20-plataforma-escolhida");
   await abrir(page);
   await carregarCaso(page, "20-plataforma-escolhida", "log.json");
-  await page.getByLabel("Plataforma").selectOption("ios");
+  await page.getByRole("combobox", { name: "Plataforma" }).selectOption("ios");
   await auditar(page);
   await conferirResumo(page, g.summary!);
 });

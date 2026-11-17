@@ -1,0 +1,60 @@
+{
+  "nome": "demo",
+  "spec_name": "demo.json",
+  "cards": [
+    {
+      "file": "demo-21/Captura 71.25.png",
+      "event": "search",
+      "params": {
+        "screen_name": "app:demo:[simulacao|e rro]",
+        "flow_name": "emo",
+        "value": "[valor da parcela]"
+      },
+      "bullets": {
+        "screen_name": [
+          "button",
+          "click:simular",
+          "modal"
+        ]
+      },
+      "doubts": [
+        "evento 's earch' lido como 'search'"
+      ]
+    },
+    {
+      "file": "demo-21/Captura 90.10.png",
+      "event": "form_demo_[pf|pj]",
+      "params": {
+        "installment_value": "[nome d o produto]",
+        "currency": "[pf|pj]-pre-agendado",
+        "value": "[número  de parcelas]",
+        "flow_name": "demo",
+        "detail": "click:[numero]-parcelas"
+      },
+      "bullets": {},
+      "doubts": [
+        "parâmetro 'installment__value' lido como 'installment_value'"
+      ]
+    }
+  ],
+  "review": [
+    {
+      "print": "Captura 71.25.png",
+      "evento": "search",
+      "duvidas": [
+        "evento 's earch' lido como 'search'",
+        "screen_name aceita ['button', 'click:simular', 'modal']; se cada variação usa um valor específico, ajuste em 'variacoes'"
+      ]
+    },
+    {
+      "print": "Captura 90.10.png",
+      "evento": "form_demo_{fluxo}",
+      "duvidas": [
+        "parâmetro 'installment__value' lido como 'installment_value'"
+      ]
+    }
+  ],
+  "spec_json": "{\n  \"projeto\": \"demo\",\n  \"versao_especificacao\": \"Rascunho gerado por OCR — revisar\",\n  \"plataforma\": \"android\",\n  \"prints_dir\": \"demo-21\",\n  \"fluxos\": {\n    \"pf\": \"pf\",\n    \"pj\": \"pj\"\n  },\n  \"cards\": [\n    {\n      \"secao\": \"1. demo\",\n      \"titulo\": \"search · demo\",\n      \"print\": \"Captura 71.25.png\",\n      \"evento\": \"search\",\n      \"params\": {\n        \"screen_name\": \"[button|click:simular|modal]\",\n        \"flow_name\": \"emo\",\n        \"value\": \"[numero]\"\n      }\n    },\n    {\n      \"secao\": \"2. geral\",\n      \"titulo\": \"form_demo_{fluxo} · geral\",\n      \"print\": \"Captura 90.10.png\",\n      \"evento\": \"form_demo_{fluxo}\",\n      \"params\": {\n        \"installment_value\": \"[preenchido]\",\n        \"currency\": \"{fluxo}-pre-agendado\",\n        \"value\": \"[numero]\",\n        \"flow_name\": \"demo\",\n        \"detail\": \"click:[numero]-parcelas\"\n      }\n    }\n  ]\n}\n",
+  "review_md": "# Revisão do rascunho — demo\n\n2 prints lidos · 3 ponto(s) para conferir. Corrija direto no JSON e audite de novo na aba Relatório.\n\nFluxos detectados: pf, pj (renomeie os rótulos em 'fluxos' se quiser).\n\n## 1. search — `Captura 71.25.png`\n- ⚠ evento 's earch' lido como 'search'\n- ⚠ screen_name aceita ['button', 'click:simular', 'modal']; se cada variação usa um valor específico, ajuste em 'variacoes'\n\n## 2. form_demo_{fluxo} — `Captura 90.10.png`\n- ⚠ parâmetro 'installment__value' lido como 'installment_value'\n",
+  "checklist_md": "# Checklist · demo\n\n- Plataforma: ANDROID\n- Gerado em: 16/11/2026 09:30\n- Spec: `demo.json`\n- Prints: `demo-21`\n- Fluxos: pf, pj\n\nMarque cada item com `[x]` ao conferir. Os itens com ⚠ são do OCR: confira no print e corrija a spec antes de auditar. Para o HTML no padrão do design system, use **Exportar Checklist…** na aba Relatório.\n\n## 1. demo\n\n### search · demo — `Captura 71.25.png`\n\n**Parâmetros esperados**\n\n- `screen_name`: `[button|click:simular|modal]`\n- `flow_name`: `emo`\n- `value`: `[numero]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: evento 's earch' lido como 'search'\n- [ ] ⚠ Revisar OCR: screen_name aceita ['button', 'click:simular', 'modal']; se cada variação usa um valor específico, ajuste em 'variacoes'\n- [ ] disparo de `search`\n\n## 2. geral\n\n### form_demo_{fluxo} · geral — `Captura 90.10.png`\n\n**Parâmetros esperados**\n\n- `installment_value`: `[preenchido]`\n- `currency`: `{fluxo}-pre-agendado`\n- `value`: `[numero]`\n- `flow_name`: `demo`\n- `detail`: `click:[numero]-parcelas`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: parâmetro 'installment__value' lido como 'installment_value'\n- [ ] fluxo **pf** · disparo de `form_demo_{fluxo}`\n- [ ] fluxo **pj** · disparo de `form_demo_{fluxo}`\n"
+}

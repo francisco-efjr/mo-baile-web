@@ -10,6 +10,8 @@ export interface OpcoesSeletor {
   rotuloBotao: string;
   icone: NomeIcone;
   aoEscolher: (arquivo: File) => void;
+  /** Ação a mais ao lado do botão (por exemplo, Importar Prints do Figma…). */
+  extra?: HTMLElement;
 }
 
 export interface Seletor {
@@ -56,7 +58,13 @@ export function criarSeletor(op: OpcoesSeletor): Seletor {
       escolhido,
       estado,
     ),
-    h("div", { class: "mw-dz__acao" }, botao, h("span", { class: "mw-dz__ou", "aria-hidden": "true" }, "ou arraste aqui")),
+    h(
+      "div",
+      { class: "mw-dz__acao" },
+      botao,
+      h("span", { class: "mw-dz__ou", "aria-hidden": "true" }, "ou arraste aqui"),
+      op.extra ?? null,
+    ),
     entrada,
   );
 

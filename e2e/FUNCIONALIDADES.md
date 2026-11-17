@@ -18,6 +18,8 @@ textos do código de `src/ui/`. Dados: só o corpus sintético de `test/corpus/`
 | F-07 | Ajuda: guias e seis seções, endereço direto | Ajuda | Baixo | docs/ajuda | `F-07-ajuda.spec.ts` |
 | F-08 | Tema (claro, escuro, sistema, memória) e ausência de rolagem horizontal no celular | todas | Médio | casos 11, 01 | `F-08-tema-celular.spec.ts` |
 | F-09 | Segurança do conteúdo: HTML hostil dos dados nunca executa nem vira elemento | Relatório, Analytics, pré-visualização | Alto | caso 17 | `F-09-seguranca-conteudo.spec.ts` |
+| F-11 | Importar Prints do Figma: pasta ou prints, leitura com progresso, Cancelar, revisão das dúvidas com o print, Baixar Spec, Revisão e Checklist, Usar na Auditoria, erros (sem imagem, imagem falsa, HEIC), celular sem rolagem horizontal | Relatório (`src/ui/importacao.ts`) | Alto | 6 cards fictícios em `e2e/fixtures/prints/` | `F-11-importar-prints.spec.ts` |
+| F-10 | OCR dos prints no navegador: mesma spec da leitura perfeita, modelos só do próprio site, cache, cancelar, arquivo falso | `src/ocr/` (página de teste `e2e/paginas/ocr.html`, só no build `MOBAILE_E2E=1`) | Alto | 6 cards fictícios em `e2e/fixtures/prints/` | `F-10-ocr-navegador.spec.ts` |
 
 ## Risco alto: cenário feliz, negativo e fonte do esperado
 

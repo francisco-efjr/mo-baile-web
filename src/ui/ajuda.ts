@@ -2,6 +2,7 @@
 // desenhados pelo leitor do subconjunto de Markdown do Mo baile.
 import analyticsMd from "../../docs/ajuda/analytics.md?raw";
 import comecandoMd from "../../docs/ajuda/comecando.md?raw";
+import importarMd from "../../docs/ajuda/importar-prints.md?raw";
 import relatarMd from "../../docs/ajuda/relatar-problema.md?raw";
 import reportMd from "../../docs/ajuda/report.md?raw";
 import { h, trocar } from "./dom";
@@ -17,6 +18,7 @@ interface Topico {
 const TOPICOS: Topico[] = [
   { id: "comecando", icone: "info", guia: lerGuia(comecandoMd) },
   { id: "report", icone: "list-filter", guia: lerGuia(reportMd) },
+  { id: "importar-prints", icone: "images", guia: lerGuia(importarMd) },
   { id: "analytics", icone: "chart-line", guia: lerGuia(analyticsMd) },
   { id: "relatar-problema", icone: "circle-alert", guia: lerGuia(relatarMd) },
 ];

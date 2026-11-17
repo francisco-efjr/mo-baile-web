@@ -1,0 +1,159 @@
+{
+  "nome": "demo",
+  "spec_name": "demo.json",
+  "cards": [
+    {
+      "file": "demo-04/Captura 34.47.png",
+      "event": "begin_checkout",
+      "params": {
+        "items": [
+          {
+            "item_category4": "simulacao",
+            "item_category5": "simulacao",
+            "item_category": "[numero]",
+            "item_id": "[numero]"
+          },
+          {
+            "item_id": "1000"
+          },
+          {
+            "item_id": "simulacao"
+          },
+          {
+            "item_id": "card-2"
+          }
+        ],
+        "installments": "[lael do botao]",
+        "value": "texto livre"
+      },
+      "bullets": {},
+      "doubts": [
+        "parâmetro 'ite ms' lido como 'items'",
+        "parâmetro 'installmets' lido como 'installments'",
+        "items.item_category5: 'Simulacao' lido como 'simulacao'",
+        "items.item_id: 'Simulacao' lido como 'simulacao'",
+        "Observação: parâmetro 'order_status' lido como 'order_status'",
+        "cabeçalho '5 begin0checkout' corrigido para 'begin_checkout' pela Observação"
+      ]
+    },
+    {
+      "file": "demo-04/Captura 59.35.png",
+      "event": "error_view",
+      "params": {
+        "operation_type": "BRL",
+        "currency": "[pf|pj]-pre-agendado",
+        "due_date": "BRL",
+        "installment_value": "[valor]",
+        "installments": "[label do botao]",
+        "campo_novo": "BRL"
+      },
+      "bullets": {},
+      "doubts": [
+        "parâmetro desconhecido 'campo_novo' (mantido como 'campo_novo')"
+      ]
+    },
+    {
+      "file": "demo-04/Captura 82.22.png",
+      "event": "view_demo_[pf|pj]",
+      "params": {
+        "operation_type": "[elemento]",
+        "detail": "click:[numero]-parcelas",
+        "installments": "[pf|pj]-pre-agendado",
+        "items": [
+          {
+            "item_id": "demo-pf",
+            "item_category3": "card-1"
+          },
+          {
+            "item_id": "1000",
+            "item_category2": "demo-pf",
+            "item_category4": "1001",
+            "item_category3": "card-2",
+            "item_brand": "[numero]"
+          },
+          {
+            "item_id": "[numero]",
+            "item_brand": "[numero]"
+          },
+          {
+            "item_id": "demo-pf"
+          }
+        ],
+        "screen_name": "app:demo:sucesso",
+        "currency": "[elemento]"
+      },
+      "bullets": {},
+      "doubts": [
+        "parâmetro 'scre en_name' lido como 'screen_name'",
+        "parâmetro 'crrency' lido como 'currency'",
+        "items: chave 'itIm_category3' lida como 'item_category3'"
+      ]
+    },
+    {
+      "file": "demo-04/Captura 87.10.png",
+      "event": "creen_view",
+      "params": {
+        "installment_value": "[elemento]",
+        "detail": "click:vltar",
+        "insurance": "[0|1]",
+        "installments": "[nome do produto]",
+        "currency": "texto livre",
+        "operation_type": "[nome do produto]"
+      },
+      "bullets": {
+        "component": [
+          "click:continuar",
+          "click:10-parcelas"
+        ]
+      },
+      "doubts": [
+        "cabeçalho '🛒 screen_view' corrigido para 'creen_view' pela Observação"
+      ]
+    }
+  ],
+  "review": [
+    {
+      "print": "Captura 34.47.png",
+      "evento": "begin_checkout",
+      "duvidas": [
+        "parâmetro 'ite ms' lido como 'items'",
+        "parâmetro 'installmets' lido como 'installments'",
+        "items.item_category5: 'Simulacao' lido como 'simulacao'",
+        "items.item_id: 'Simulacao' lido como 'simulacao'",
+        "Observação: parâmetro 'order_status' lido como 'order_status'",
+        "cabeçalho '5 begin0checkout' corrigido para 'begin_checkout' pela Observação",
+        "items: a spec mostra 4 itens; só o primeiro é validado"
+      ]
+    },
+    {
+      "print": "Captura 59.35.png",
+      "evento": "error_view",
+      "duvidas": [
+        "parâmetro desconhecido 'campo_novo' (mantido como 'campo_novo')"
+      ]
+    },
+    {
+      "print": "Captura 82.22.png",
+      "evento": "view_demo_{fluxo}",
+      "duvidas": [
+        "parâmetro 'scre en_name' lido como 'screen_name'",
+        "parâmetro 'crrency' lido como 'currency'",
+        "items: chave 'itIm_category3' lida como 'item_category3'",
+        "items.item_category3: exemplos ['card-1', 'card-2'] viraram o padrão 'card-[numero]'",
+        "items: a spec mostra 4 itens; só o primeiro é validado",
+        "items: exemplo da spec é do fluxo 'pf'; item_id fixado só para 'pf'"
+      ]
+    },
+    {
+      "print": "Captura 87.10.png",
+      "evento": "creen_view",
+      "duvidas": [
+        "cabeçalho '🛒 screen_view' corrigido para 'creen_view' pela Observação",
+        "component aceita ['click:continuar', 'click:10-parcelas']; se cada variação usa um valor específico, ajuste em 'variacoes'"
+      ]
+    }
+  ],
+  "spec_json": "{\n  \"projeto\": \"demo\",\n  \"versao_especificacao\": \"Rascunho gerado por OCR — revisar\",\n  \"plataforma\": \"ios\",\n  \"prints_dir\": \"demo-04\",\n  \"fluxos\": {\n    \"pf\": \"pf\",\n    \"pj\": \"pj\"\n  },\n  \"cards\": [\n    {\n      \"secao\": \"1. geral\",\n      \"titulo\": \"begin_checkout · geral\",\n      \"print\": \"Captura 34.47.png\",\n      \"evento\": \"begin_checkout\",\n      \"params\": {\n        \"items\": [\n          {\n            \"item_category4\": \"simulacao\",\n            \"item_category5\": \"simulacao\",\n            \"item_category\": \"[numero]\",\n            \"item_id\": \"[numero]\"\n          }\n        ],\n        \"installments\": \"[preenchido]\",\n        \"value\": \"texto livre\"\n      }\n    },\n    {\n      \"secao\": \"1. geral\",\n      \"titulo\": \"error_view · geral\",\n      \"print\": \"Captura 59.35.png\",\n      \"evento\": \"error_view\",\n      \"params\": {\n        \"operation_type\": \"BRL\",\n        \"currency\": \"{fluxo}-pre-agendado\",\n        \"due_date\": \"BRL\",\n        \"installment_value\": \"[numero]\",\n        \"installments\": \"[preenchido]\",\n        \"campo_novo\": \"BRL\"\n      }\n    },\n    {\n      \"secao\": \"2. sucesso\",\n      \"titulo\": \"view_demo_{fluxo} · sucesso\",\n      \"print\": \"Captura 82.22.png\",\n      \"evento\": \"view_demo_{fluxo}\",\n      \"params\": {\n        \"operation_type\": \"[preenchido]\",\n        \"detail\": \"click:[numero]-parcelas\",\n        \"installments\": \"{fluxo}-pre-agendado\",\n        \"items\": [\n          {\n            \"item_id\": \"demo-{fluxo}\",\n            \"item_category3\": \"card-[numero]\"\n          }\n        ],\n        \"screen_name\": \"app:demo:sucesso\",\n        \"currency\": \"[preenchido]\"\n      }\n    },\n    {\n      \"secao\": \"1. geral\",\n      \"titulo\": \"creen_view · geral\",\n      \"print\": \"Captura 87.10.png\",\n      \"evento\": \"creen_view\",\n      \"params\": {\n        \"installment_value\": \"[preenchido]\",\n        \"detail\": \"click:vltar\",\n        \"insurance\": \"[0|1]\",\n        \"installments\": \"[preenchido]\",\n        \"currency\": \"texto livre\",\n        \"operation_type\": \"[preenchido]\",\n        \"component\": \"[click:continuar|click:10-parcelas]\"\n      }\n    }\n  ]\n}\n",
+  "review_md": "# Revisão do rascunho — demo\n\n4 prints lidos · 16 ponto(s) para conferir. Corrija direto no JSON e audite de novo na aba Relatório.\n\nFluxos detectados: pf, pj (renomeie os rótulos em 'fluxos' se quiser).\n\n## 1. begin_checkout — `Captura 34.47.png`\n- ⚠ parâmetro 'ite ms' lido como 'items'\n- ⚠ parâmetro 'installmets' lido como 'installments'\n- ⚠ items.item_category5: 'Simulacao' lido como 'simulacao'\n- ⚠ items.item_id: 'Simulacao' lido como 'simulacao'\n- ⚠ Observação: parâmetro 'order_status' lido como 'order_status'\n- ⚠ cabeçalho '5 begin0checkout' corrigido para 'begin_checkout' pela Observação\n- ⚠ items: a spec mostra 4 itens; só o primeiro é validado\n\n## 2. error_view — `Captura 59.35.png`\n- ⚠ parâmetro desconhecido 'campo_novo' (mantido como 'campo_novo')\n\n## 3. view_demo_{fluxo} — `Captura 82.22.png`\n- ⚠ parâmetro 'scre en_name' lido como 'screen_name'\n- ⚠ parâmetro 'crrency' lido como 'currency'\n- ⚠ items: chave 'itIm_category3' lida como 'item_category3'\n- ⚠ items.item_category3: exemplos ['card-1', 'card-2'] viraram o padrão 'card-[numero]'\n- ⚠ items: a spec mostra 4 itens; só o primeiro é validado\n- ⚠ items: exemplo da spec é do fluxo 'pf'; item_id fixado só para 'pf'\n\n## 4. creen_view — `Captura 87.10.png`\n- ⚠ cabeçalho '🛒 screen_view' corrigido para 'creen_view' pela Observação\n- ⚠ component aceita ['click:continuar', 'click:10-parcelas']; se cada variação usa um valor específico, ajuste em 'variacoes'\n",
+  "checklist_md": "# Checklist · demo\n\n- Plataforma: IOS\n- Gerado em: 16/11/2026 09:30\n- Spec: `demo.json`\n- Prints: `demo-04`\n- Fluxos: pf, pj\n\nMarque cada item com `[x]` ao conferir. Os itens com ⚠ são do OCR: confira no print e corrija a spec antes de auditar. Para o HTML no padrão do design system, use **Exportar Checklist…** na aba Relatório.\n\n## 1. geral\n\n### begin_checkout · geral — `Captura 34.47.png`\n\n**Parâmetros esperados**\n\n- `items[0].item_category4`: `simulacao`\n- `items[0].item_category5`: `simulacao`\n- `items[0].item_category`: `[numero]`\n- `items[0].item_id`: `[numero]`\n- `installments`: `[preenchido]`\n- `value`: `texto livre`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: parâmetro 'ite ms' lido como 'items'\n- [ ] ⚠ Revisar OCR: parâmetro 'installmets' lido como 'installments'\n- [ ] ⚠ Revisar OCR: items.item_category5: 'Simulacao' lido como 'simulacao'\n- [ ] ⚠ Revisar OCR: items.item_id: 'Simulacao' lido como 'simulacao'\n- [ ] ⚠ Revisar OCR: Observação: parâmetro 'order_status' lido como 'order_status'\n- [ ] ⚠ Revisar OCR: cabeçalho '5 begin0checkout' corrigido para 'begin_checkout' pela Observação\n- [ ] ⚠ Revisar OCR: items: a spec mostra 4 itens; só o primeiro é validado\n- [ ] disparo de `begin_checkout`\n\n### error_view · geral — `Captura 59.35.png`\n\n**Parâmetros esperados**\n\n- `operation_type`: `BRL`\n- `currency`: `{fluxo}-pre-agendado`\n- `due_date`: `BRL`\n- `installment_value`: `[numero]`\n- `installments`: `[preenchido]`\n- `campo_novo`: `BRL`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: parâmetro desconhecido 'campo_novo' (mantido como 'campo_novo')\n- [ ] fluxo **pf** · disparo de `error_view`\n- [ ] fluxo **pj** · disparo de `error_view`\n\n### creen_view · geral — `Captura 87.10.png`\n\n**Parâmetros esperados**\n\n- `installment_value`: `[preenchido]`\n- `detail`: `click:vltar`\n- `insurance`: `[0|1]`\n- `installments`: `[preenchido]`\n- `currency`: `texto livre`\n- `operation_type`: `[preenchido]`\n- `component`: `[click:continuar|click:10-parcelas]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: cabeçalho '🛒 screen_view' corrigido para 'creen_view' pela Observação\n- [ ] ⚠ Revisar OCR: component aceita ['click:continuar', 'click:10-parcelas']; se cada variação usa um valor específico, ajuste em 'variacoes'\n- [ ] disparo de `creen_view`\n\n## 2. sucesso\n\n### view_demo_{fluxo} · sucesso — `Captura 82.22.png`\n\n**Parâmetros esperados**\n\n- `operation_type`: `[preenchido]`\n- `detail`: `click:[numero]-parcelas`\n- `installments`: `{fluxo}-pre-agendado`\n- `items[0].item_id`: `demo-{fluxo}`\n- `items[0].item_category3`: `card-[numero]`\n- `screen_name`: `app:demo:sucesso`\n- `currency`: `[preenchido]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: parâmetro 'scre en_name' lido como 'screen_name'\n- [ ] ⚠ Revisar OCR: parâmetro 'crrency' lido como 'currency'\n- [ ] ⚠ Revisar OCR: items: chave 'itIm_category3' lida como 'item_category3'\n- [ ] ⚠ Revisar OCR: items.item_category3: exemplos ['card-1', 'card-2'] viraram o padrão 'card-[numero]'\n- [ ] ⚠ Revisar OCR: items: a spec mostra 4 itens; só o primeiro é validado\n- [ ] ⚠ Revisar OCR: items: exemplo da spec é do fluxo 'pf'; item_id fixado só para 'pf'\n- [ ] fluxo **pf** · disparo de `view_demo_{fluxo}`\n- [ ] fluxo **pj** · disparo de `view_demo_{fluxo}`\n"
+}

@@ -1,0 +1,292 @@
+{
+  "nome": "demo-07",
+  "spec_name": "demo-07.json",
+  "cards": [
+    {
+      "file": "demo-07/Captura 10.44.png",
+      "event": "error_view",
+      "params": {
+        "installment_value": "[elemento]",
+        "installments": "BRL",
+        "component": "teeto livre",
+        "screen_name": "app:demo:detalhe",
+        "due_date": "[id da transacao]",
+        "insurance": "[0|1]"
+      },
+      "bullets": {
+        "detail": [
+          "click:12-parcelas",
+          "click:conti-nuar"
+        ]
+      },
+      "doubts": [
+        "parâmetro 'ins tallments' lido como 'installments'",
+        "screen_name 'app demo detalhe' lido como 'app:demo:detalhe' (espaço vira ':')",
+        "detail: item 'click:conti nuar' lido como 'click:conti-nuar'"
+      ]
+    },
+    {
+      "file": "demo-07/Captura 11.43.png",
+      "event": "begin_demo_[n_ovo_a_usado]",
+      "params": {
+        "component": "[número de parcelas]",
+        "flow_name": "demo-[novo|usado]",
+        "insurance": "[0|1]"
+      },
+      "bullets": {},
+      "doubts": []
+    },
+    {
+      "file": "demo-07/Captura 20.23.png",
+      "event": "login_demo_[novo_usado]",
+      "params": {
+        "component": "texto livre"
+      },
+      "bullets": {
+        "order_status": [
+          "click:voltar",
+          "click:ver-detalhes"
+        ]
+      },
+      "doubts": [
+        "Observação: parâmetro 'order_status' lido como 'order_status'"
+      ]
+    },
+    {
+      "file": "demo-07/Captura 24.13.png",
+      "event": "begin_demo_[novo|usado]",
+      "params": {
+        "installments": "texto livre",
+        "due_date": "exto livre",
+        "items": [
+          {
+            "item_category4": "1000",
+            "item_category2": "card-1",
+            "item_id": "1000"
+          },
+          {
+            "item_id": "demo-novo",
+            "item_brand": "[numero]",
+            "item_category4": "1001"
+          },
+          {
+            "item_id": "card-2",
+            "item_category3": "card-3",
+            "item_category2": "1002"
+          },
+          {
+            "item_id": "card-3"
+          }
+        ],
+        "currency": "[va|lor]",
+        "value": "[velor]"
+      },
+      "bullets": {},
+      "doubts": [
+        "items: chave 'item__category3' lida como 'item_category3'"
+      ]
+    },
+    {
+      "file": "demo-07/Captura 38.21.png",
+      "event": "share",
+      "params": {
+        "items": [
+          {
+            "item_category5": "[numero]",
+            "item_id": "simulacao"
+          },
+          {
+            "item_category5": "simulacao",
+            "item_brand": "simulacao",
+            "item_category2": "simulacao",
+            "item_id": "[numero]"
+          },
+          {
+            "item_id": "[numero]",
+            "item_category2": "[numero]"
+          },
+          {
+            "item_id": "[numero]",
+            "item_brand": "demo-novo",
+            "item_category5": "demo-novo"
+          },
+          {
+            "item_id": "card-3"
+          }
+        ],
+        "value": "BRL"
+      },
+      "bullets": {
+        "component": [
+          "click:12-parcelas",
+          "click:fechar",
+          "clck:simular"
+        ]
+      },
+      "doubts": [
+        "items.item_id: 'Simulacao' lido como 'simulacao'",
+        "items.item_brand: 'Simulacao' lido como 'simulacao'",
+        "items.item_category2: 'Simulacao' lido como 'simulacao'",
+        "items: chave 'item__id' lida como 'item_id'",
+        "items: chave 'tem_category2' lida como 'item_category2'"
+      ]
+    },
+    {
+      "file": "demo-07/Captura 45.35.png",
+      "event": "refund",
+      "params": {
+        "items": [
+          {
+            "item_category2": "demo-novo",
+            "item_name": "card-1",
+            "item_category4": "1000",
+            "item_id": "card-1"
+          },
+          {
+            "item_name": "1001",
+            "item_id": "card-2",
+            "item_category": "[numero]"
+          },
+          {
+            "item_id": "[numero]",
+            "item_brand": "card-3"
+          },
+          {
+            "item_id": "simulacao"
+          }
+        ],
+        "flow_name": "demo",
+        "due_date": "texto livre"
+      },
+      "bullets": {
+        "screen_name": [
+          "click:simular",
+          "click:ver-detalhes"
+        ]
+      },
+      "doubts": [
+        "parâmetro '1ue_date' lido como 'due_date'",
+        "items: chave 'item__id' lida como 'item_id'"
+      ]
+    },
+    {
+      "file": "demo-07/Captura 58.48.png",
+      "event": "remove_from_cart",
+      "params": {
+        "detail": "click:[label do botao]"
+      },
+      "bullets": {
+        "screen_name": [
+          "click:conoinuar",
+          "click:10-parcelas"
+        ]
+      },
+      "doubts": [
+        "parâmetro 'detai' lido como 'detail'"
+      ]
+    },
+    {
+      "file": "demo-07/Captura 65.17.png",
+      "event": "purchase",
+      "params": {
+        "screen_name": "app:dem:o:resumo",
+        "operation_type": "[label do botaoe",
+        "items": [
+          {
+            "item_category3": "demo-novo",
+            "item_category": "simulacao",
+            "item_name": "demo-novo",
+            "item_brand": "1000"
+          },
+          {
+            "item_category": "card-2",
+            "item_category3": "demo-novo",
+            "item_category2": "demo-novo",
+            "item_brand": "simulacao",
+            "item_id": "[numero]"
+          }
+        ],
+        "component": "[elemento]"
+      },
+      "bullets": {},
+      "doubts": [
+        "screen_name 'app:dem o:resumo' lido como 'app:dem:o:resumo' (espaço vira ':')"
+      ]
+    }
+  ],
+  "review": [
+    {
+      "print": "Captura 10.44.png",
+      "evento": "error_view",
+      "duvidas": [
+        "parâmetro 'ins tallments' lido como 'installments'",
+        "screen_name 'app demo detalhe' lido como 'app:demo:detalhe' (espaço vira ':')",
+        "detail: item 'click:conti nuar' lido como 'click:conti-nuar'"
+      ]
+    },
+    {
+      "print": "Captura 11.43.png",
+      "evento": "begin_demo_[n_ovo_a_usado]",
+      "duvidas": []
+    },
+    {
+      "print": "Captura 20.23.png",
+      "evento": "login_demo_[novo_usado]",
+      "duvidas": [
+        "Observação: parâmetro 'order_status' lido como 'order_status'",
+        "order_status aceita ['click:voltar', 'click:ver-detalhes']; se cada variação usa um valor específico, ajuste em 'variacoes'"
+      ]
+    },
+    {
+      "print": "Captura 24.13.png",
+      "evento": "begin_demo_{fluxo}",
+      "duvidas": [
+        "items: chave 'item__category3' lida como 'item_category3'",
+        "items.item_category4: exemplos ['1000', '1001'] viraram o padrão '[numero]'",
+        "items: a spec mostra 4 itens; só o primeiro é validado"
+      ]
+    },
+    {
+      "print": "Captura 38.21.png",
+      "evento": "share",
+      "duvidas": [
+        "items.item_id: 'Simulacao' lido como 'simulacao'",
+        "items.item_brand: 'Simulacao' lido como 'simulacao'",
+        "items.item_category2: 'Simulacao' lido como 'simulacao'",
+        "items: chave 'item__id' lida como 'item_id'",
+        "items: chave 'tem_category2' lida como 'item_category2'",
+        "component aceita ['click:12-parcelas', 'click:fechar', 'clck:simular']; se cada variação usa um valor específico, ajuste em 'variacoes'",
+        "items: a spec mostra 5 itens; só o primeiro é validado"
+      ]
+    },
+    {
+      "print": "Captura 45.35.png",
+      "evento": "refund",
+      "duvidas": [
+        "parâmetro '1ue_date' lido como 'due_date'",
+        "items: chave 'item__id' lida como 'item_id'",
+        "screen_name aceita ['click:simular', 'click:ver-detalhes']; se cada variação usa um valor específico, ajuste em 'variacoes'",
+        "items: a spec mostra 4 itens; só o primeiro é validado"
+      ]
+    },
+    {
+      "print": "Captura 58.48.png",
+      "evento": "remove_from_cart",
+      "duvidas": [
+        "parâmetro 'detai' lido como 'detail'",
+        "screen_name aceita ['click:conoinuar', 'click:10-parcelas']; se cada variação usa um valor específico, ajuste em 'variacoes'"
+      ]
+    },
+    {
+      "print": "Captura 65.17.png",
+      "evento": "purchase",
+      "duvidas": [
+        "screen_name 'app:dem o:resumo' lido como 'app:dem:o:resumo' (espaço vira ':')",
+        "items: a spec mostra 2 itens; só o primeiro é validado"
+      ]
+    }
+  ],
+  "spec_json": "{\n  \"projeto\": \"demo-07\",\n  \"versao_especificacao\": \"Rascunho gerado por OCR — revisar\",\n  \"plataforma\": \"android\",\n  \"prints_dir\": \"demo-07\",\n  \"fluxos\": {\n    \"novo\": \"novo\",\n    \"usado\": \"usado\"\n  },\n  \"cards\": [\n    {\n      \"secao\": \"1. detalhe\",\n      \"titulo\": \"error_view · detalhe\",\n      \"print\": \"Captura 10.44.png\",\n      \"evento\": \"error_view\",\n      \"params\": {\n        \"installment_value\": \"[preenchido]\",\n        \"installments\": \"BRL\",\n        \"component\": \"teeto livre\",\n        \"screen_name\": \"app:demo:detalhe\",\n        \"due_date\": \"[preenchido]\",\n        \"insurance\": \"[0|1]\"\n      },\n      \"variacoes\": [\n        {\n          \"detail\": \"click:12-parcelas\"\n        },\n        {\n          \"detail\": \"click:conti-nuar\"\n        }\n      ]\n    },\n    {\n      \"secao\": \"2. geral\",\n      \"titulo\": \"begin_demo_[n_ovo_a_usado] · geral\",\n      \"print\": \"Captura 11.43.png\",\n      \"evento\": \"begin_demo_[n_ovo_a_usado]\",\n      \"params\": {\n        \"component\": \"[numero]\",\n        \"flow_name\": \"demo-{fluxo}\",\n        \"insurance\": \"[0|1]\"\n      }\n    },\n    {\n      \"secao\": \"2. geral\",\n      \"titulo\": \"login_demo_[novo_usado] · geral\",\n      \"print\": \"Captura 20.23.png\",\n      \"evento\": \"login_demo_[novo_usado]\",\n      \"params\": {\n        \"component\": \"texto livre\",\n        \"order_status\": \"[click:voltar|click:ver-detalhes]\"\n      }\n    },\n    {\n      \"secao\": \"2. geral\",\n      \"titulo\": \"begin_demo_{fluxo} · geral\",\n      \"print\": \"Captura 24.13.png\",\n      \"evento\": \"begin_demo_{fluxo}\",\n      \"params\": {\n        \"installments\": \"texto livre\",\n        \"due_date\": \"exto livre\",\n        \"items\": [\n          {\n            \"item_category4\": \"[numero]\",\n            \"item_category2\": \"card-1\",\n            \"item_id\": \"1000\"\n          }\n        ],\n        \"currency\": \"[va|lor]\",\n        \"value\": \"[preenchido]\"\n      }\n    },\n    {\n      \"secao\": \"2. geral\",\n      \"titulo\": \"share · geral\",\n      \"print\": \"Captura 38.21.png\",\n      \"evento\": \"share\",\n      \"params\": {\n        \"items\": [\n          {\n            \"item_category5\": \"[numero]\",\n            \"item_id\": \"simulacao\"\n          }\n        ],\n        \"value\": \"BRL\",\n        \"component\": \"[click:12-parcelas|click:fechar|clck:simular]\"\n      }\n    },\n    {\n      \"secao\": \"2. geral\",\n      \"titulo\": \"refund · geral\",\n      \"print\": \"Captura 45.35.png\",\n      \"evento\": \"refund\",\n      \"params\": {\n        \"items\": [\n          {\n            \"item_category2\": \"demo-novo\",\n            \"item_name\": \"card-1\",\n            \"item_category4\": \"1000\",\n            \"item_id\": \"card-1\"\n          }\n        ],\n        \"flow_name\": \"demo\",\n        \"due_date\": \"texto livre\",\n        \"screen_name\": \"[click:simular|click:ver-detalhes]\"\n      }\n    },\n    {\n      \"secao\": \"2. geral\",\n      \"titulo\": \"remove_from_cart · geral\",\n      \"print\": \"Captura 58.48.png\",\n      \"evento\": \"remove_from_cart\",\n      \"params\": {\n        \"detail\": \"click:[preenchido]\",\n        \"screen_name\": \"[click:conoinuar|click:10-parcelas]\"\n      }\n    },\n    {\n      \"secao\": \"3. resumo\",\n      \"titulo\": \"purchase · resumo\",\n      \"print\": \"Captura 65.17.png\",\n      \"evento\": \"purchase\",\n      \"params\": {\n        \"screen_name\": \"app:dem:o:resumo\",\n        \"operation_type\": \"[label do botaoe\",\n        \"items\": [\n          {\n            \"item_category3\": \"demo-novo\",\n            \"item_category\": \"simulacao\",\n            \"item_name\": \"demo-novo\",\n            \"item_brand\": \"1000\"\n          }\n        ],\n        \"component\": \"[preenchido]\"\n      }\n    }\n  ]\n}\n",
+  "review_md": "# Revisão do rascunho — demo-07\n\n8 prints lidos · 23 ponto(s) para conferir. Corrija direto no JSON e audite de novo na aba Relatório.\n\nFluxos detectados: novo, usado (renomeie os rótulos em 'fluxos' se quiser).\n\n## 1. error_view — `Captura 10.44.png`\n- ⚠ parâmetro 'ins tallments' lido como 'installments'\n- ⚠ screen_name 'app demo detalhe' lido como 'app:demo:detalhe' (espaço vira ':')\n- ⚠ detail: item 'click:conti nuar' lido como 'click:conti-nuar'\n\n## 2. begin_demo_[n_ovo_a_usado] — `Captura 11.43.png`\n- ✓ nada a conferir\n\n## 3. login_demo_[novo_usado] — `Captura 20.23.png`\n- ⚠ Observação: parâmetro 'order_status' lido como 'order_status'\n- ⚠ order_status aceita ['click:voltar', 'click:ver-detalhes']; se cada variação usa um valor específico, ajuste em 'variacoes'\n\n## 4. begin_demo_{fluxo} — `Captura 24.13.png`\n- ⚠ items: chave 'item__category3' lida como 'item_category3'\n- ⚠ items.item_category4: exemplos ['1000', '1001'] viraram o padrão '[numero]'\n- ⚠ items: a spec mostra 4 itens; só o primeiro é validado\n\n## 5. share — `Captura 38.21.png`\n- ⚠ items.item_id: 'Simulacao' lido como 'simulacao'\n- ⚠ items.item_brand: 'Simulacao' lido como 'simulacao'\n- ⚠ items.item_category2: 'Simulacao' lido como 'simulacao'\n- ⚠ items: chave 'item__id' lida como 'item_id'\n- ⚠ items: chave 'tem_category2' lida como 'item_category2'\n- ⚠ component aceita ['click:12-parcelas', 'click:fechar', 'clck:simular']; se cada variação usa um valor específico, ajuste em 'variacoes'\n- ⚠ items: a spec mostra 5 itens; só o primeiro é validado\n\n## 6. refund — `Captura 45.35.png`\n- ⚠ parâmetro '1ue_date' lido como 'due_date'\n- ⚠ items: chave 'item__id' lida como 'item_id'\n- ⚠ screen_name aceita ['click:simular', 'click:ver-detalhes']; se cada variação usa um valor específico, ajuste em 'variacoes'\n- ⚠ items: a spec mostra 4 itens; só o primeiro é validado\n\n## 7. remove_from_cart — `Captura 58.48.png`\n- ⚠ parâmetro 'detai' lido como 'detail'\n- ⚠ screen_name aceita ['click:conoinuar', 'click:10-parcelas']; se cada variação usa um valor específico, ajuste em 'variacoes'\n\n## 8. purchase — `Captura 65.17.png`\n- ⚠ screen_name 'app:dem o:resumo' lido como 'app:dem:o:resumo' (espaço vira ':')\n- ⚠ items: a spec mostra 2 itens; só o primeiro é validado\n",
+  "checklist_md": "# Checklist · demo-07\n\n- Plataforma: ANDROID\n- Gerado em: 16/11/2026 09:30\n- Spec: `demo-07.json`\n- Prints: `demo-07`\n- Fluxos: novo, usado\n\nMarque cada item com `[x]` ao conferir. Os itens com ⚠ são do OCR: confira no print e corrija a spec antes de auditar. Para o HTML no padrão do design system, use **Exportar Checklist…** na aba Relatório.\n\n## 1. detalhe\n\n### error_view · detalhe — `Captura 10.44.png`\n\n**Parâmetros esperados**\n\n- `installment_value`: `[preenchido]`\n- `installments`: `BRL`\n- `component`: `teeto livre`\n- `screen_name`: `app:demo:detalhe`\n- `due_date`: `[preenchido]`\n- `insurance`: `[0|1]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: parâmetro 'ins tallments' lido como 'installments'\n- [ ] ⚠ Revisar OCR: screen_name 'app demo detalhe' lido como 'app:demo:detalhe' (espaço vira ':')\n- [ ] ⚠ Revisar OCR: detail: item 'click:conti nuar' lido como 'click:conti-nuar'\n- [ ] `detail` = `click:12-parcelas`\n- [ ] `detail` = `click:conti-nuar`\n\n## 2. geral\n\n### begin_demo_[n_ovo_a_usado] · geral — `Captura 11.43.png`\n\n**Parâmetros esperados**\n\n- `component`: `[numero]`\n- `flow_name`: `demo-{fluxo}`\n- `insurance`: `[0|1]`\n\n**Conferir**\n\n- [ ] fluxo **novo** · disparo de `begin_demo_[n_ovo_a_usado]`\n- [ ] fluxo **usado** · disparo de `begin_demo_[n_ovo_a_usado]`\n\n### login_demo_[novo_usado] · geral — `Captura 20.23.png`\n\n**Parâmetros esperados**\n\n- `component`: `texto livre`\n- `order_status`: `[click:voltar|click:ver-detalhes]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: Observação: parâmetro 'order_status' lido como 'order_status'\n- [ ] ⚠ Revisar OCR: order_status aceita ['click:voltar', 'click:ver-detalhes']; se cada variação usa um valor específico, ajuste em 'variacoes'\n- [ ] disparo de `login_demo_[novo_usado]`\n\n### begin_demo_{fluxo} · geral — `Captura 24.13.png`\n\n**Parâmetros esperados**\n\n- `installments`: `texto livre`\n- `due_date`: `exto livre`\n- `items[0].item_category4`: `[numero]`\n- `items[0].item_category2`: `card-1`\n- `items[0].item_id`: `1000`\n- `currency`: `[va|lor]`\n- `value`: `[preenchido]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: items: chave 'item__category3' lida como 'item_category3'\n- [ ] ⚠ Revisar OCR: items.item_category4: exemplos ['1000', '1001'] viraram o padrão '[numero]'\n- [ ] ⚠ Revisar OCR: items: a spec mostra 4 itens; só o primeiro é validado\n- [ ] fluxo **novo** · disparo de `begin_demo_{fluxo}`\n- [ ] fluxo **usado** · disparo de `begin_demo_{fluxo}`\n\n### share · geral — `Captura 38.21.png`\n\n**Parâmetros esperados**\n\n- `items[0].item_category5`: `[numero]`\n- `items[0].item_id`: `simulacao`\n- `value`: `BRL`\n- `component`: `[click:12-parcelas|click:fechar|clck:simular]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: items.item_id: 'Simulacao' lido como 'simulacao'\n- [ ] ⚠ Revisar OCR: items.item_brand: 'Simulacao' lido como 'simulacao'\n- [ ] ⚠ Revisar OCR: items.item_category2: 'Simulacao' lido como 'simulacao'\n- [ ] ⚠ Revisar OCR: items: chave 'item__id' lida como 'item_id'\n- [ ] ⚠ Revisar OCR: items: chave 'tem_category2' lida como 'item_category2'\n- [ ] ⚠ Revisar OCR: component aceita ['click:12-parcelas', 'click:fechar', 'clck:simular']; se cada variação usa um valor específico, ajuste em 'variacoes'\n- [ ] ⚠ Revisar OCR: items: a spec mostra 5 itens; só o primeiro é validado\n- [ ] disparo de `share`\n\n### refund · geral — `Captura 45.35.png`\n\n**Parâmetros esperados**\n\n- `items[0].item_category2`: `demo-novo`\n- `items[0].item_name`: `card-1`\n- `items[0].item_category4`: `1000`\n- `items[0].item_id`: `card-1`\n- `flow_name`: `demo`\n- `due_date`: `texto livre`\n- `screen_name`: `[click:simular|click:ver-detalhes]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: parâmetro '1ue_date' lido como 'due_date'\n- [ ] ⚠ Revisar OCR: items: chave 'item__id' lida como 'item_id'\n- [ ] ⚠ Revisar OCR: screen_name aceita ['click:simular', 'click:ver-detalhes']; se cada variação usa um valor específico, ajuste em 'variacoes'\n- [ ] ⚠ Revisar OCR: items: a spec mostra 4 itens; só o primeiro é validado\n- [ ] disparo de `refund`\n\n### remove_from_cart · geral — `Captura 58.48.png`\n\n**Parâmetros esperados**\n\n- `detail`: `click:[preenchido]`\n- `screen_name`: `[click:conoinuar|click:10-parcelas]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: parâmetro 'detai' lido como 'detail'\n- [ ] ⚠ Revisar OCR: screen_name aceita ['click:conoinuar', 'click:10-parcelas']; se cada variação usa um valor específico, ajuste em 'variacoes'\n- [ ] disparo de `remove_from_cart`\n\n## 3. resumo\n\n### purchase · resumo — `Captura 65.17.png`\n\n**Parâmetros esperados**\n\n- `screen_name`: `app:dem:o:resumo`\n- `operation_type`: `[label do botaoe`\n- `items[0].item_category3`: `demo-novo`\n- `items[0].item_category`: `simulacao`\n- `items[0].item_name`: `demo-novo`\n- `items[0].item_brand`: `1000`\n- `component`: `[preenchido]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: screen_name 'app:dem o:resumo' lido como 'app:dem:o:resumo' (espaço vira ':')\n- [ ] ⚠ Revisar OCR: items: a spec mostra 2 itens; só o primeiro é validado\n- [ ] disparo de `purchase`\n"
+}

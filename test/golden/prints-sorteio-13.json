@@ -1,0 +1,291 @@
+{
+  "nome": "demo-13",
+  "spec_name": "demo-13.json",
+  "cards": [
+    {
+      "file": "demo-13/Captura 26.27.png",
+      "event": "purchase",
+      "params": {
+        "items": [
+          {
+            "item_id": "card-1",
+            "item_category": "[numero]"
+          },
+          {
+            "item_id": "demo-pf",
+            "item_category4": "card-2",
+            "item_category": "[numero]",
+            "item_name": "simulacao",
+            "item_category5": "1001"
+          },
+          {
+            "item_id": "simulacao",
+            "item_category2": "[numero]"
+          },
+          {
+            "item_id": "card-3"
+          }
+        ],
+        "value": "[pf|pj]-pre-agendado",
+        "installments": "[taxa de juros]"
+      },
+      "bullets": {},
+      "doubts": [
+        "items: chave 'item__id' lida como 'item_id'",
+        "items: chave 'item_ida' lida como 'item_id'",
+        "evento 'urchase' lido como 'purchase'"
+      ]
+    },
+    {
+      "file": "demo-13/Captura 40.46.png",
+      "event": "interaction",
+      "params": {
+        "due_date": "[número de parcelas]"
+      },
+      "bullets": {
+        "screen_name": [
+          "mdal"
+        ],
+        "order_status": [
+          "click:simular",
+          "click:ver-detalhes",
+          "click:10-parcelas",
+          "click:continuar"
+        ]
+      },
+      "doubts": [
+        "Observação: parâmetro 'order_status' lido como 'order_status'"
+      ]
+    },
+    {
+      "file": "demo-13/Captura 40.57.png",
+      "event": "sign_up",
+      "params": {
+        "currency": "[elemento]",
+        "operation_type": "[valor]",
+        "screen_name": "app:dem:o:[pf|pj]:termos-e-condicoes",
+        "flow_name": "demo",
+        "insurance": "[0|1]",
+        "due_date": "[valor]",
+        "items": [
+          {
+            "item_name": "[numero]",
+            "item_category4": "1000",
+            "item_id": "simulacao"
+          }
+        ]
+      },
+      "bullets": {
+        "flow_name": [
+          "demo-pf"
+        ]
+      },
+      "doubts": [
+        "parâmetro 'd1e_date' lido como 'due_date'",
+        "screen_name 'app:dem o:[pf|pj]:termos-e-condicoes' lido como 'app:dem:o:[pf|pj]:termos-e-condicoes' (espaço vira ':')",
+        "items.item_id: 'Simulacao' lido como 'simulacao'"
+      ]
+    },
+    {
+      "file": "demo-13/Captura 48.32.png",
+      "event": "add_payment_info",
+      "params": {
+        "currency": "[data primeiro vencimento]",
+        "items": [
+          {
+            "item_brand": "simulacao",
+            "item_category4": "[numero]",
+            "item_category5": "[numero]",
+            "item_category2": "simulacao",
+            "item_id": "[numero]",
+            "item_category3": "[numero]"
+          },
+          {
+            "item_id": "1001l",
+            "item_category2": "1001",
+            "item_brand": "simulacao"
+          },
+          {
+            "item_id": "simulacao"
+          }
+        ],
+        "component": "[elemento]",
+        "detail": "click:ver-detlhes",
+        "value": "[valor]",
+        "operation_type": "[valor]"
+      },
+      "bullets": {},
+      "doubts": [
+        "items.item_brand: 'Simulacao' lido como 'simulacao'",
+        "items.item_category2: 'Simulacao' lido como 'simulacao'",
+        "Observação: parâmetro 'order_sOatus' lido como 'order_sOatus'"
+      ]
+    },
+    {
+      "file": "demo-13/Captura 66.42.png",
+      "event": "screen_demo_[pf|pj]",
+      "params": {
+        "currency": "[data pOimeiro v encimento]",
+        "installments": "[pf|pj]-pre-agendado",
+        "value": "BRL",
+        "items": [
+          {
+            "item_category5": "[preenchido]",
+            "item_id": "demo-pf",
+            "item_brand": "card-1",
+            "item_category4": "simulacao"
+          },
+          {
+            "item_id": "1000",
+            "item_brand": "1001",
+            "item_name": "simulacao"
+          },
+          {
+            "item_id": "demo-pf",
+            "item_brand": "1002",
+            "item_category2": "simulacao"
+          },
+          {
+            "item_id": "simulacao"
+          }
+        ],
+        "component": "[id da transacao]"
+      },
+      "bullets": {
+        "flow_name": [
+          "click:ver-detalhes",
+          "deo-pf",
+          "click:simula"
+        ]
+      },
+      "doubts": [
+        "items.item_category4: 'Simulacao' lido como 'simulacao'",
+        "items.item_category2: 'Simulacao' lido como 'simulacao'",
+        "items.item_id: 'Simulacao' lido como 'simulacao'",
+        "cabeçalho 'screen_demo1[pf | pj]' corrigido para 'screen_demo_[pf|pj]' pela Observação"
+      ]
+    },
+    {
+      "file": "demo-13/Captura 72.45.png",
+      "event": "share",
+      "params": {
+        "items": [
+          {
+            "item_category3": "simulacao",
+            "item_id": "simulacao"
+          },
+          {
+            "item_id": "simulacao",
+            "item_category2": "simulacao",
+            "item_category5": "demo-pf"
+          },
+          {
+            "item_id": "simulacao"
+          }
+        ],
+        "currency": "[data primeiro vencimento]",
+        "installments": "[elemeno]"
+      },
+      "bullets": {},
+      "doubts": [
+        "items.item_category3: 'Simulacao' lido como 'simulacao'",
+        "items.item_id: 'Simulacao' lido como 'simulacao'"
+      ]
+    },
+    {
+      "file": "demo-13/Captura 93.50.png",
+      "event": "purchase",
+      "params": {
+        "screen_name": "app:demo:termos-e-condicoes"
+      },
+      "bullets": {
+        "component": [
+          "click:ver-detalh0s",
+          "click:12-parcelas",
+          "demo-pf"
+        ],
+        "detail": [
+          "click:ver-detalhes",
+          "click:fechr"
+        ]
+      },
+      "doubts": [
+        "screen_name 'app demo termos-e-condicoes' lido como 'app:demo:termos-e-condicoes' (espaço vira ':')"
+      ]
+    }
+  ],
+  "review": [
+    {
+      "print": "Captura 26.27.png",
+      "evento": "purchase",
+      "duvidas": [
+        "items: chave 'item__id' lida como 'item_id'",
+        "items: chave 'item_ida' lida como 'item_id'",
+        "evento 'urchase' lido como 'purchase'",
+        "items: a spec mostra 4 itens; só o primeiro é validado"
+      ]
+    },
+    {
+      "print": "Captura 40.46.png",
+      "evento": "interaction",
+      "duvidas": [
+        "Observação: parâmetro 'order_status' lido como 'order_status'",
+        "order_status aceita ['click:simular', 'click:ver-detalhes', 'click:10-parcelas', 'click:continuar']; se cada variação usa um valor específico, ajuste em 'variacoes'"
+      ]
+    },
+    {
+      "print": "Captura 40.57.png",
+      "evento": "sign_up",
+      "duvidas": [
+        "parâmetro 'd1e_date' lido como 'due_date'",
+        "screen_name 'app:dem o:[pf|pj]:termos-e-condicoes' lido como 'app:dem:o:[pf|pj]:termos-e-condicoes' (espaço vira ':')",
+        "items.item_id: 'Simulacao' lido como 'simulacao'",
+        "flow_name='demo-pf' cita o fluxo 'pf' fixo num card por fluxo — confira"
+      ]
+    },
+    {
+      "print": "Captura 48.32.png",
+      "evento": "add_payment_info",
+      "duvidas": [
+        "items.item_brand: 'Simulacao' lido como 'simulacao'",
+        "items.item_category2: 'Simulacao' lido como 'simulacao'",
+        "Observação: parâmetro 'order_sOatus' lido como 'order_sOatus'",
+        "items: a spec mostra 3 itens; só o primeiro é validado"
+      ]
+    },
+    {
+      "print": "Captura 66.42.png",
+      "evento": "screen_demo_{fluxo}",
+      "duvidas": [
+        "items.item_category4: 'Simulacao' lido como 'simulacao'",
+        "items.item_category2: 'Simulacao' lido como 'simulacao'",
+        "items.item_id: 'Simulacao' lido como 'simulacao'",
+        "cabeçalho 'screen_demo1[pf | pj]' corrigido para 'screen_demo_[pf|pj]' pela Observação",
+        "flow_name aceita ['click:ver-detalhes', 'deo-pf', 'click:simula']; se cada variação usa um valor específico, ajuste em 'variacoes'",
+        "items: a spec mostra 4 itens; só o primeiro é validado",
+        "items: exemplo da spec é do fluxo 'pf'; item_id fixado só para 'pf'",
+        "flow_name='[click:ver-detalhes|deo-pf|click:simula]' cita o fluxo 'pf' fixo num card por fluxo — confira"
+      ]
+    },
+    {
+      "print": "Captura 72.45.png",
+      "evento": "share",
+      "duvidas": [
+        "items.item_category3: 'Simulacao' lido como 'simulacao'",
+        "items.item_id: 'Simulacao' lido como 'simulacao'",
+        "items: a spec mostra 3 itens; só o primeiro é validado"
+      ]
+    },
+    {
+      "print": "Captura 93.50.png",
+      "evento": "purchase",
+      "duvidas": [
+        "screen_name 'app demo termos-e-condicoes' lido como 'app:demo:termos-e-condicoes' (espaço vira ':')",
+        "component aceita ['click:ver-detalh0s', 'click:12-parcelas', 'demo-pf']; se cada variação usa um valor específico, ajuste em 'variacoes'"
+      ]
+    }
+  ],
+  "spec_json": "{\n  \"projeto\": \"demo-13\",\n  \"versao_especificacao\": \"Rascunho gerado por OCR — revisar\",\n  \"plataforma\": \"ios\",\n  \"prints_dir\": \"demo-13\",\n  \"fluxos\": {\n    \"pf\": \"pf\",\n    \"pj\": \"pj\"\n  },\n  \"cards\": [\n    {\n      \"secao\": \"1. geral\",\n      \"titulo\": \"purchase · geral\",\n      \"print\": \"Captura 26.27.png\",\n      \"evento\": \"purchase\",\n      \"params\": {\n        \"items\": [\n          {\n            \"item_id\": \"card-1\",\n            \"item_category\": \"[numero]\"\n          }\n        ],\n        \"value\": \"{fluxo}-pre-agendado\",\n        \"installments\": \"[numero]\"\n      }\n    },\n    {\n      \"secao\": \"2. mdal\",\n      \"titulo\": \"interaction · mdal\",\n      \"print\": \"Captura 40.46.png\",\n      \"evento\": \"interaction\",\n      \"params\": {\n        \"due_date\": \"[numero]\",\n        \"screen_name\": \"mdal\",\n        \"order_status\": \"[click:simular|click:ver-detalhes|click:10-parcelas|click:continuar]\"\n      }\n    },\n    {\n      \"secao\": \"3. termos-e-condicoes\",\n      \"titulo\": \"sign_up · termos-e-condicoes\",\n      \"print\": \"Captura 40.57.png\",\n      \"evento\": \"sign_up\",\n      \"params\": {\n        \"currency\": \"[preenchido]\",\n        \"operation_type\": \"[numero]\",\n        \"screen_name\": \"app:dem:o:{fluxo}:termos-e-condicoes\",\n        \"flow_name\": \"demo-pf\",\n        \"insurance\": \"[0|1]\",\n        \"due_date\": \"[numero]\",\n        \"items\": [\n          {\n            \"item_name\": \"[numero]\",\n            \"item_category4\": \"1000\",\n            \"item_id\": \"simulacao\"\n          }\n        ]\n      }\n    },\n    {\n      \"secao\": \"1. geral\",\n      \"titulo\": \"add_payment_info · geral\",\n      \"print\": \"Captura 48.32.png\",\n      \"evento\": \"add_payment_info\",\n      \"params\": {\n        \"currency\": \"[data]\",\n        \"items\": [\n          {\n            \"item_brand\": \"simulacao\",\n            \"item_category4\": \"[numero]\",\n            \"item_category5\": \"[numero]\",\n            \"item_category2\": \"simulacao\",\n            \"item_id\": \"[numero]\",\n            \"item_category3\": \"[numero]\"\n          }\n        ],\n        \"component\": \"[preenchido]\",\n        \"detail\": \"click:ver-detlhes\",\n        \"value\": \"[numero]\",\n        \"operation_type\": \"[numero]\"\n      }\n    },\n    {\n      \"secao\": \"1. geral\",\n      \"titulo\": \"screen_demo_{fluxo} · geral\",\n      \"print\": \"Captura 66.42.png\",\n      \"evento\": \"screen_demo_{fluxo}\",\n      \"params\": {\n        \"currency\": \"[data]\",\n        \"installments\": \"{fluxo}-pre-agendado\",\n        \"value\": \"BRL\",\n        \"items\": [\n          {\n            \"item_category5\": \"[preenchido]\",\n            \"item_id\": \"demo-{fluxo}\",\n            \"item_brand\": \"card-1\",\n            \"item_category4\": \"simulacao\"\n          }\n        ],\n        \"component\": \"[preenchido]\",\n        \"flow_name\": \"[click:ver-detalhes|deo-pf|click:simula]\"\n      }\n    },\n    {\n      \"secao\": \"1. geral\",\n      \"titulo\": \"share · geral\",\n      \"print\": \"Captura 72.45.png\",\n      \"evento\": \"share\",\n      \"params\": {\n        \"items\": [\n          {\n            \"item_category3\": \"simulacao\",\n            \"item_id\": \"simulacao\"\n          }\n        ],\n        \"currency\": \"[data]\",\n        \"installments\": \"[preenchido]\"\n      }\n    },\n    {\n      \"secao\": \"3. termos-e-condicoes\",\n      \"titulo\": \"purchase · termos-e-condicoes\",\n      \"print\": \"Captura 93.50.png\",\n      \"evento\": \"purchase\",\n      \"params\": {\n        \"screen_name\": \"app:demo:termos-e-condicoes\",\n        \"component\": \"[click:ver-detalh0s|click:12-parcelas|demo-pf]\"\n      },\n      \"variacoes\": [\n        {\n          \"detail\": \"click:ver-detalhes\"\n        },\n        {\n          \"detail\": \"click:fechr\"\n        }\n      ]\n    }\n  ]\n}\n",
+  "review_md": "# Revisão do rascunho — demo-13\n\n7 prints lidos · 27 ponto(s) para conferir. Corrija direto no JSON e audite de novo na aba Relatório.\n\nFluxos detectados: pf, pj (renomeie os rótulos em 'fluxos' se quiser).\n\n## 1. purchase — `Captura 26.27.png`\n- ⚠ items: chave 'item__id' lida como 'item_id'\n- ⚠ items: chave 'item_ida' lida como 'item_id'\n- ⚠ evento 'urchase' lido como 'purchase'\n- ⚠ items: a spec mostra 4 itens; só o primeiro é validado\n\n## 2. interaction — `Captura 40.46.png`\n- ⚠ Observação: parâmetro 'order_status' lido como 'order_status'\n- ⚠ order_status aceita ['click:simular', 'click:ver-detalhes', 'click:10-parcelas', 'click:continuar']; se cada variação usa um valor específico, ajuste em 'variacoes'\n\n## 3. sign_up — `Captura 40.57.png`\n- ⚠ parâmetro 'd1e_date' lido como 'due_date'\n- ⚠ screen_name 'app:dem o:[pf|pj]:termos-e-condicoes' lido como 'app:dem:o:[pf|pj]:termos-e-condicoes' (espaço vira ':')\n- ⚠ items.item_id: 'Simulacao' lido como 'simulacao'\n- ⚠ flow_name='demo-pf' cita o fluxo 'pf' fixo num card por fluxo — confira\n\n## 4. add_payment_info — `Captura 48.32.png`\n- ⚠ items.item_brand: 'Simulacao' lido como 'simulacao'\n- ⚠ items.item_category2: 'Simulacao' lido como 'simulacao'\n- ⚠ Observação: parâmetro 'order_sOatus' lido como 'order_sOatus'\n- ⚠ items: a spec mostra 3 itens; só o primeiro é validado\n\n## 5. screen_demo_{fluxo} — `Captura 66.42.png`\n- ⚠ items.item_category4: 'Simulacao' lido como 'simulacao'\n- ⚠ items.item_category2: 'Simulacao' lido como 'simulacao'\n- ⚠ items.item_id: 'Simulacao' lido como 'simulacao'\n- ⚠ cabeçalho 'screen_demo1[pf | pj]' corrigido para 'screen_demo_[pf|pj]' pela Observação\n- ⚠ flow_name aceita ['click:ver-detalhes', 'deo-pf', 'click:simula']; se cada variação usa um valor específico, ajuste em 'variacoes'\n- ⚠ items: a spec mostra 4 itens; só o primeiro é validado\n- ⚠ items: exemplo da spec é do fluxo 'pf'; item_id fixado só para 'pf'\n- ⚠ flow_name='[click:ver-detalhes|deo-pf|click:simula]' cita o fluxo 'pf' fixo num card por fluxo — confira\n\n## 6. share — `Captura 72.45.png`\n- ⚠ items.item_category3: 'Simulacao' lido como 'simulacao'\n- ⚠ items.item_id: 'Simulacao' lido como 'simulacao'\n- ⚠ items: a spec mostra 3 itens; só o primeiro é validado\n\n## 7. purchase — `Captura 93.50.png`\n- ⚠ screen_name 'app demo termos-e-condicoes' lido como 'app:demo:termos-e-condicoes' (espaço vira ':')\n- ⚠ component aceita ['click:ver-detalh0s', 'click:12-parcelas', 'demo-pf']; se cada variação usa um valor específico, ajuste em 'variacoes'\n",
+  "checklist_md": "# Checklist · demo-13\n\n- Plataforma: IOS\n- Gerado em: 16/11/2026 09:30\n- Spec: `demo-13.json`\n- Prints: `demo-13`\n- Fluxos: pf, pj\n\nMarque cada item com `[x]` ao conferir. Os itens com ⚠ são do OCR: confira no print e corrija a spec antes de auditar. Para o HTML no padrão do design system, use **Exportar Checklist…** na aba Relatório.\n\n## 1. geral\n\n### purchase · geral — `Captura 26.27.png`\n\n**Parâmetros esperados**\n\n- `items[0].item_id`: `card-1`\n- `items[0].item_category`: `[numero]`\n- `value`: `{fluxo}-pre-agendado`\n- `installments`: `[numero]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: items: chave 'item__id' lida como 'item_id'\n- [ ] ⚠ Revisar OCR: items: chave 'item_ida' lida como 'item_id'\n- [ ] ⚠ Revisar OCR: evento 'urchase' lido como 'purchase'\n- [ ] ⚠ Revisar OCR: items: a spec mostra 4 itens; só o primeiro é validado\n- [ ] fluxo **pf** · disparo de `purchase`\n- [ ] fluxo **pj** · disparo de `purchase`\n\n### add_payment_info · geral — `Captura 48.32.png`\n\n**Parâmetros esperados**\n\n- `currency`: `[data]`\n- `items[0].item_brand`: `simulacao`\n- `items[0].item_category4`: `[numero]`\n- `items[0].item_category5`: `[numero]`\n- `items[0].item_category2`: `simulacao`\n- `items[0].item_id`: `[numero]`\n- `items[0].item_category3`: `[numero]`\n- `component`: `[preenchido]`\n- `detail`: `click:ver-detlhes`\n- `value`: `[numero]`\n- `operation_type`: `[numero]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: items.item_brand: 'Simulacao' lido como 'simulacao'\n- [ ] ⚠ Revisar OCR: items.item_category2: 'Simulacao' lido como 'simulacao'\n- [ ] ⚠ Revisar OCR: Observação: parâmetro 'order_sOatus' lido como 'order_sOatus'\n- [ ] ⚠ Revisar OCR: items: a spec mostra 3 itens; só o primeiro é validado\n- [ ] disparo de `add_payment_info`\n\n### screen_demo_{fluxo} · geral — `Captura 66.42.png`\n\n**Parâmetros esperados**\n\n- `currency`: `[data]`\n- `installments`: `{fluxo}-pre-agendado`\n- `value`: `BRL`\n- `items[0].item_category5`: `[preenchido]`\n- `items[0].item_id`: `demo-{fluxo}`\n- `items[0].item_brand`: `card-1`\n- `items[0].item_category4`: `simulacao`\n- `component`: `[preenchido]`\n- `flow_name`: `[click:ver-detalhes|deo-pf|click:simula]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: items.item_category4: 'Simulacao' lido como 'simulacao'\n- [ ] ⚠ Revisar OCR: items.item_category2: 'Simulacao' lido como 'simulacao'\n- [ ] ⚠ Revisar OCR: items.item_id: 'Simulacao' lido como 'simulacao'\n- [ ] ⚠ Revisar OCR: cabeçalho 'screen_demo1[pf | pj]' corrigido para 'screen_demo_[pf|pj]' pela Observação\n- [ ] ⚠ Revisar OCR: flow_name aceita ['click:ver-detalhes', 'deo-pf', 'click:simula']; se cada variação usa um valor específico, ajuste em 'variacoes'\n- [ ] ⚠ Revisar OCR: items: a spec mostra 4 itens; só o primeiro é validado\n- [ ] ⚠ Revisar OCR: items: exemplo da spec é do fluxo 'pf'; item_id fixado só para 'pf'\n- [ ] ⚠ Revisar OCR: flow_name='[click:ver-detalhes|deo-pf|click:simula]' cita o fluxo 'pf' fixo num card por fluxo — confira\n- [ ] fluxo **pf** · disparo de `screen_demo_{fluxo}`\n- [ ] fluxo **pj** · disparo de `screen_demo_{fluxo}`\n\n### share · geral — `Captura 72.45.png`\n\n**Parâmetros esperados**\n\n- `items[0].item_category3`: `simulacao`\n- `items[0].item_id`: `simulacao`\n- `currency`: `[data]`\n- `installments`: `[preenchido]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: items.item_category3: 'Simulacao' lido como 'simulacao'\n- [ ] ⚠ Revisar OCR: items.item_id: 'Simulacao' lido como 'simulacao'\n- [ ] ⚠ Revisar OCR: items: a spec mostra 3 itens; só o primeiro é validado\n- [ ] disparo de `share`\n\n## 2. mdal\n\n### interaction · mdal — `Captura 40.46.png`\n\n**Parâmetros esperados**\n\n- `due_date`: `[numero]`\n- `screen_name`: `mdal`\n- `order_status`: `[click:simular|click:ver-detalhes|click:10-parcelas|click:continuar]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: Observação: parâmetro 'order_status' lido como 'order_status'\n- [ ] ⚠ Revisar OCR: order_status aceita ['click:simular', 'click:ver-detalhes', 'click:10-parcelas', 'click:continuar']; se cada variação usa um valor específico, ajuste em 'variacoes'\n- [ ] disparo de `interaction`\n\n## 3. termos-e-condicoes\n\n### sign_up · termos-e-condicoes — `Captura 40.57.png`\n\n**Parâmetros esperados**\n\n- `currency`: `[preenchido]`\n- `operation_type`: `[numero]`\n- `screen_name`: `app:dem:o:{fluxo}:termos-e-condicoes`\n- `flow_name`: `demo-pf`\n- `insurance`: `[0|1]`\n- `due_date`: `[numero]`\n- `items[0].item_name`: `[numero]`\n- `items[0].item_category4`: `1000`\n- `items[0].item_id`: `simulacao`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: parâmetro 'd1e_date' lido como 'due_date'\n- [ ] ⚠ Revisar OCR: screen_name 'app:dem o:[pf|pj]:termos-e-condicoes' lido como 'app:dem:o:[pf|pj]:termos-e-condicoes' (espaço vira ':')\n- [ ] ⚠ Revisar OCR: items.item_id: 'Simulacao' lido como 'simulacao'\n- [ ] ⚠ Revisar OCR: flow_name='demo-pf' cita o fluxo 'pf' fixo num card por fluxo — confira\n- [ ] fluxo **pf** · disparo de `sign_up`\n- [ ] fluxo **pj** · disparo de `sign_up`\n\n### purchase · termos-e-condicoes — `Captura 93.50.png`\n\n**Parâmetros esperados**\n\n- `screen_name`: `app:demo:termos-e-condicoes`\n- `component`: `[click:ver-detalh0s|click:12-parcelas|demo-pf]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: screen_name 'app demo termos-e-condicoes' lido como 'app:demo:termos-e-condicoes' (espaço vira ':')\n- [ ] ⚠ Revisar OCR: component aceita ['click:ver-detalh0s', 'click:12-parcelas', 'demo-pf']; se cada variação usa um valor específico, ajuste em 'variacoes'\n- [ ] `detail` = `click:ver-detalhes`\n- [ ] `detail` = `click:fechr`\n"
+}
