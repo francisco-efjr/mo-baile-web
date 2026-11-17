@@ -223,7 +223,13 @@ export function montarSite(raiz: HTMLElement, deps: Dependencias): void {
   }
 
   function rota(): { area: Area; topico?: string } | null {
-    const hash = decodeURIComponent(location.hash.replace(/^#/, ""));
+    let hash: string;
+    try {
+      hash = decodeURIComponent(location.hash.replace(/^#/, ""));
+    } catch {
+      // Endereço com % malformado (#%E0%A4%A): abre no Relatório em vez de quebrar.
+      return { area: "relatorio" };
+    }
     if (hash === "" || hash === "relatorio") return { area: "relatorio" };
     if (hash === "analytics") return { area: "analytics" };
     if (hash === "ajuda") return { area: "ajuda" };

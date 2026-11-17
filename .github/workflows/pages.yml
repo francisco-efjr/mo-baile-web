@@ -34,7 +34,9 @@ jobs:
           REF_NAME: ${{ github.ref_name }}
         run: |
           [ "$REF_NAME" = "v$(tr -d '[:space:]' < VERSION)" ] || { echo "::error::A tag $REF_NAME não bate com VERSION."; exit 1; }
-      - run: npm install --no-audit --no-fund  # npm ci: bug de dependência opcional no npm 11 (CONTRIBUTING)
+      # npm ci: bug de dependência opcional no npm 11 (CONTRIBUTING). Sem scripts
+      # de instalação: nenhuma dependência precisa deles para tipos, testes e build.
+      - run: npm install --no-audit --no-fund --ignore-scripts
       - run: npm run check
       - uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
       - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0

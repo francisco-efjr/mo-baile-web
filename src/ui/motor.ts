@@ -1,6 +1,6 @@
 // A interface só fala com o motor por este contrato (src/engine/index.ts).
 import type * as engine from "../engine/index";
-import { EngineError } from "../engine/index";
+import { EngineError, MAX_LOG_BYTES } from "../engine/index";
 import type { exemplo } from "../exemplos/index";
 
 export type Motor = Pick<
@@ -21,13 +21,14 @@ export function mensagemDeErro(erro: unknown, contexto: string): string {
   return `Algo deu errado ao ${contexto}. Tente de novo; se continuar, use Relatar um Problema.`;
 }
 
-/** Limite de leitura: acima disso o navegador pode travar ao decodificar. */
-export const LIMITE_BYTES = 200 * 1024 * 1024;
+/** Limite de leitura: o mesmo teto de log do motor (e do Mo baile). Acima
+ * disso o navegador pode esgotar a memória da aba ao decodificar. */
+export const LIMITE_BYTES = MAX_LOG_BYTES;
 
 export async function lerArquivo(motor: Motor, arquivo: File): Promise<string> {
   if (arquivo.size > LIMITE_BYTES) {
     throw new EngineError(
-      `O arquivo tem ${tamanhoLegivel(arquivo.size)}, mais do que o navegador consegue ler com folga (200 MB). ` +
+      `O arquivo tem ${tamanhoLegivel(arquivo.size)}, mais do que o limite de ${tamanhoLegivel(LIMITE_BYTES)}. ` +
         "Salve só o Firebase com adb logcat -d -s FA FA-SVC > log.txt e tente de novo.",
       "too_large",
     );
