@@ -4,6 +4,20 @@ Todas as mudanças relevantes do Mo baile Web ficam aqui, da mais nova para a
 mais antiga. O formato segue o [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/)
 e a numeração segue o [Versionamento Semântico](https://semver.org/lang/pt-BR/).
 
+## [Não publicado]
+
+### Adicionado
+
+- **Importação de prints, fase 1 (motor):** o leitor de cards do Mo baile,
+  que monta o rascunho da spec, a revisão e o checklist a partir do texto
+  lido dos prints do Figma, agora em TypeScript (`src/engine/prints/`). O
+  contrato é `rascunhoDosPrints`.
+  - A paridade com o Python é provada por gabarito sobre 29 pastas fictícias,
+    com 137 prints escritos à mão ou sorteados com ruído de OCR.
+  - Conferido também, fora do repositório, sobre 129 prints reais lidos pelo
+    Vision e pelo PaddleOCR: o resultado foi idêntico.
+  - A tela vem na fase 3, e o OCR no navegador na fase 2 (ADR 0002).
+
 ## [0.1.0] - 2026-11-16
 
 ### Adicionado

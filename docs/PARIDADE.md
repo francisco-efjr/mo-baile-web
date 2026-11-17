@@ -21,6 +21,7 @@ grava o gabarito em `test/golden/`. `test/parity.test.ts` exige, para cada caso:
 | Nome do HTML | `htmlFileName` igual ao `html_file_name` do Python |
 | Aba Analytics | leitura do logcat (eventos, `stats`, TSV, JSON) igual, byte a byte |
 | Recusas | mesma etapa (spec, log, auditoria), mesma mensagem em pt-BR, mesmo código (`invalid_input` ou `internal_error`) |
+| Importação de prints (`report.import` depois do OCR) | leitor de cards (`read_card`), rascunho da spec (`build_spec`, gravado com `json.dumps(indent=2)`), revisão (`review_markdown`) e checklist (`checklist_markdown`) iguais caractere por caractere, sobre `test/corpus-prints/` (prints fictícios escritos à mão e sorteados com ruído de OCR) |
 
 Não há tolerância numérica: os números saem formatados como o Python os
 escreve (`round`, `repr` de float, `:.1f`, `:.2f` do anel do HTML).
@@ -36,7 +37,8 @@ pelo sha256, que `src/engine/assets/` tem os mesmos arquivos do Mo baile
 Além dos casos, `test/golden/_unidades.json` guarda as respostas do Python
 para as peças em que o JavaScript diverge do Python: `repr` de float,
 arredondamento, `json.loads` (com a posição do erro), `str()` de valores,
-expressões regulares do `re` (casamento e mensagem de erro), `textwrap`,
+expressões regulares do `re` (casamento e mensagem de erro), `difflib`
+(`get_close_matches` e `SequenceMatcher.ratio`, usados pelo leitor de cards), `textwrap`,
 `strip`, `splitlines` e o nome de arquivo. `test/unidades.test.ts` cobre essas
 peças uma a uma.
 
@@ -65,10 +67,15 @@ O resultado só sai igual se o motor guardar o que o Python guarda. Por isso
    `prints_dir`, `prints_dir_exists` e `print_path`. A versão web do Mo baile
    também tira os caminhos, mas usa o nome gerado no envio (`log-<hex>.log`);
    aqui vale o nome original, inclusive na mensagem "O log ... não tem eventos".
-2. **Sem prints, OCR, board e checklist.** A spec perde `print` e `prints_dir`
-   ao ser lida (como o `WebReportService`), o HTML não tem coluna de print, e
-   ficam fora `report.import`, o board Excalidraw (`board_auditoria.excalidraw`),
-   o checklist e a edição de cards (ADR 0001).
+2. **OCR próprio, sem board.** Na auditoria, a spec perde `print` e
+   `prints_dir` ao ser lida (como o `WebReportService`), e o HTML não tem coluna
+   de print. Na importação de prints, o leitor de cards e o checklist em
+   Markdown seguem o Mo baile (tabela acima). O OCR, porém, não é o Vision do
+   macOS: é o PaddleOCR no navegador (ADR 0002), e a mesma pasta pode gerar
+   linhas um pouco diferentes. A pasta não tem caminho de disco: `prints_dir`
+   e as mensagens de recusa ("Nenhuma imagem em …") usam o nome da pasta.
+   Ficam fora o board Excalidraw (`board_auditoria.excalidraw`), o checklist
+   em HTML e a edição de cards.
 3. **`source` é sempre `file`.** Não há escuta de Analytics ao vivo nesta versão.
 4. **Rodapé e instante do HTML.** O Python escreve "Gerado pelo Mo baile
    <versão do app>" e a hora atual. Aqui a versão é `Web <VERSION do site>` e o

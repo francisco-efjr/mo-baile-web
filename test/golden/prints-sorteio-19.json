@@ -1,0 +1,251 @@
+{
+  "nome": "Demo Ação & Reação",
+  "spec_name": "demo-acao-reacao.json",
+  "cards": [
+    {
+      "file": "demo-19/Captura 10.37.png",
+      "event": "search",
+      "params": {
+        "installment_value": "[valor da parcel a]",
+        "operation_type": "[id da transacao]",
+        "value": "[abel do botao]",
+        "det1il": "click:voltar",
+        "installments": "[número de parcelas]"
+      },
+      "bullets": {},
+      "doubts": [
+        "parâmetro desconhecido 'det1il' (mantido como 'det1il')"
+      ]
+    },
+    {
+      "file": "demo-19/Captura 15.25.png",
+      "event": "refund",
+      "params": {
+        "detail": "click:[numero]-parcelas",
+        "component": "[número de parcelas]",
+        "items": [
+          {
+            "item_category4": "1000",
+            "item_category2": "[numero]",
+            "item_category3": "1000",
+            "item_id": "[numero]"
+          },
+          {
+            "item_id": "demo-pf"
+          }
+        ],
+        "operation_type": "[número de parcelas]"
+      },
+      "bullets": {},
+      "doubts": [
+        "parâmetro 'deail' lido como 'detail'"
+      ]
+    },
+    {
+      "file": "demo-19/Captura 16.20.png",
+      "event": "view_item_list",
+      "params": {
+        "screen_name": "app:demo:[pf|pj]:s:ucesso",
+        "value": "[id da tran slcao]",
+        "due_date": "[nome do produto]",
+        "installments": "[taxa de juros]",
+        "installment_value": "[valor]",
+        "insurance": "[0/O]"
+      },
+      "bullets": {},
+      "doubts": [
+        "parâmetro 'sreen_name' lido como 'screen_name'",
+        "screen_name 'app:demo:[pf|pj]:s ucesso' lido como 'app:demo:[pf|pj]:s:ucesso' (espaço vira ':')"
+      ]
+    },
+    {
+      "file": "demo-19/Captura 20.12.png",
+      "event": "view_demo_[_pf|pj]",
+      "params": {
+        "installments": "texto livre",
+        "value": "[id datr ansacao]",
+        "component": "[elemento]",
+        "detail": "click:ver-detalhes"
+      },
+      "bullets": {
+        "flow_name": [
+          "click:ver-detalhes"
+        ],
+        "order_status": [
+          "click:12-arcelas",
+          "click:echar"
+        ]
+      },
+      "doubts": [
+        "parâmetro 'coIponent' lido como 'component'",
+        "parâmetro 'detil' lido como 'detail'",
+        "Observação: parâmetro 'flow_nae' lido como 'flow_name'",
+        "Observação: parâmetro 'order_status' lido como 'order_status'"
+      ]
+    },
+    {
+      "file": "demo-19/Captura 35.22.png",
+      "event": "modal_de_mo_[pf_pj]",
+      "params": {
+        "detail": "click:[numero]-parcelas",
+        "installments": "[valor da parcela]",
+        "value": "[id da transacao]",
+        "flow_name": "demo-pf",
+        "insurance": "[0|1]"
+      },
+      "bullets": {
+        "order_status": [
+          "click:10-parcelas",
+          "click:12-parcelas",
+          "button"
+        ]
+      },
+      "doubts": [
+        "Observação: parâmetro 'order_status' lido como 'order_status'"
+      ]
+    },
+    {
+      "file": "demo-19/Captura 67.25.png",
+      "event": "interaction",
+      "params": {
+        "installments": "[pf|pj]-pre-agendado",
+        "operation_type": "[data primeiro vencimento]",
+        "screen_name": "ap:demo:[pf|pj]:termos-e-con:dicoes",
+        "installment_value": "[número de parcelas]",
+        "value": "[data primeiro vencimento]"
+      },
+      "bullets": {
+        "detail": [
+          "demo-pf"
+        ]
+      },
+      "doubts": [
+        "parâmetro 'screen name' lido como 'screen_name'",
+        "screen_name 'ap:demo:[pf|pj]:termos-e-con dicoes' lido como 'ap:demo:[pf|pj]:termos-e-con:dicoes' (espaço vira ':')"
+      ]
+    },
+    {
+      "file": "demo-19/Captura 76.47.png",
+      "event": "error__view",
+      "params": {
+        "flow_name": "demo",
+        "screen_name": "app:demo:[pf|pj]:sucesso",
+        "value": "[número de parcelas]",
+        "items": [
+          {
+            "item_category5": "card-1",
+            "item_category": "card-1",
+            "item_name": "[numero]",
+            "item_category4": "[numero]",
+            "item_id": "card-1"
+          }
+        ]
+      },
+      "bullets": {
+        "detail": [
+          "click:10-parcelas",
+          "aprovado"
+        ],
+        "flow_name": [
+          "click:12-parcelas"
+        ]
+      },
+      "doubts": [
+        "Observação: parâmetro 'det ail' lido como 'detail'"
+      ]
+    },
+    {
+      "file": "demo-19/Captura 84.20.png",
+      "event": "add_to_cart",
+      "params": {
+        "component": "[nome do produto]",
+        "screen_name": "app:demo:simulacao",
+        "installment_value": "texto livre",
+        "due_date": "[número d parcelas]",
+        "flow_name": "demo-pf"
+      },
+      "bullets": {
+        "order__status": [
+          "demo-pf",
+          "click:voltar",
+          "click:ver-detalhes"
+        ]
+      },
+      "doubts": [
+        "parâmetro 'flow_naoe' lido como 'flow_name'",
+        "Observação: parâmetro 'order__status' lido como 'order__status'"
+      ]
+    }
+  ],
+  "review": [
+    {
+      "print": "Captura 10.37.png",
+      "evento": "search",
+      "duvidas": [
+        "parâmetro desconhecido 'det1il' (mantido como 'det1il')"
+      ]
+    },
+    {
+      "print": "Captura 15.25.png",
+      "evento": "refund",
+      "duvidas": [
+        "parâmetro 'deail' lido como 'detail'",
+        "items: a spec mostra 2 itens; só o primeiro é validado"
+      ]
+    },
+    {
+      "print": "Captura 16.20.png",
+      "evento": "view_item_list",
+      "duvidas": [
+        "parâmetro 'sreen_name' lido como 'screen_name'",
+        "screen_name 'app:demo:[pf|pj]:s ucesso' lido como 'app:demo:[pf|pj]:s:ucesso' (espaço vira ':')"
+      ]
+    },
+    {
+      "print": "Captura 20.12.png",
+      "evento": "view_demo_[_pf|pj]",
+      "duvidas": [
+        "parâmetro 'coIponent' lido como 'component'",
+        "parâmetro 'detil' lido como 'detail'",
+        "Observação: parâmetro 'flow_nae' lido como 'flow_name'",
+        "Observação: parâmetro 'order_status' lido como 'order_status'",
+        "order_status aceita ['click:12-arcelas', 'click:echar']; se cada variação usa um valor específico, ajuste em 'variacoes'"
+      ]
+    },
+    {
+      "print": "Captura 35.22.png",
+      "evento": "modal_de_mo_[pf_pj]",
+      "duvidas": [
+        "Observação: parâmetro 'order_status' lido como 'order_status'",
+        "order_status aceita ['click:10-parcelas', 'click:12-parcelas', 'button']; se cada variação usa um valor específico, ajuste em 'variacoes'"
+      ]
+    },
+    {
+      "print": "Captura 67.25.png",
+      "evento": "interaction",
+      "duvidas": [
+        "parâmetro 'screen name' lido como 'screen_name'",
+        "screen_name 'ap:demo:[pf|pj]:termos-e-con dicoes' lido como 'ap:demo:[pf|pj]:termos-e-con:dicoes' (espaço vira ':')"
+      ]
+    },
+    {
+      "print": "Captura 76.47.png",
+      "evento": "error__view",
+      "duvidas": [
+        "Observação: parâmetro 'det ail' lido como 'detail'"
+      ]
+    },
+    {
+      "print": "Captura 84.20.png",
+      "evento": "add_to_cart",
+      "duvidas": [
+        "parâmetro 'flow_naoe' lido como 'flow_name'",
+        "Observação: parâmetro 'order__status' lido como 'order__status'",
+        "order__status aceita ['demo-pf', 'click:voltar', 'click:ver-detalhes']; se cada variação usa um valor específico, ajuste em 'variacoes'"
+      ]
+    }
+  ],
+  "spec_json": "{\n  \"projeto\": \"Demo Ação & Reação\",\n  \"versao_especificacao\": \"Rascunho gerado por OCR — revisar\",\n  \"plataforma\": \"ios\",\n  \"prints_dir\": \"demo-19\",\n  \"fluxos\": {},\n  \"cards\": [\n    {\n      \"secao\": \"1. geral\",\n      \"titulo\": \"search · geral\",\n      \"print\": \"Captura 10.37.png\",\n      \"evento\": \"search\",\n      \"params\": {\n        \"installment_value\": \"[numero]\",\n        \"operation_type\": \"[preenchido]\",\n        \"value\": \"[preenchido]\",\n        \"det1il\": \"click:voltar\",\n        \"installments\": \"[numero]\"\n      }\n    },\n    {\n      \"secao\": \"1. geral\",\n      \"titulo\": \"refund · geral\",\n      \"print\": \"Captura 15.25.png\",\n      \"evento\": \"refund\",\n      \"params\": {\n        \"detail\": \"click:[numero]-parcelas\",\n        \"component\": \"[numero]\",\n        \"items\": [\n          {\n            \"item_category4\": \"1000\",\n            \"item_category2\": \"[numero]\",\n            \"item_category3\": \"1000\",\n            \"item_id\": \"[numero]\"\n          }\n        ],\n        \"operation_type\": \"[numero]\"\n      }\n    },\n    {\n      \"secao\": \"2. ucesso\",\n      \"titulo\": \"view_item_list · ucesso\",\n      \"print\": \"Captura 16.20.png\",\n      \"evento\": \"view_item_list\",\n      \"params\": {\n        \"value\": \"[preenchido]\",\n        \"due_date\": \"[preenchido]\",\n        \"installments\": \"[numero]\",\n        \"installment_value\": \"[numero]\",\n        \"insurance\": \"[preenchido]\"\n      },\n      \"variacoes\": [\n        {\n          \"screen_name\": \"app:demo:pf:s:ucesso\"\n        },\n        {\n          \"screen_name\": \"app:demo:pj:s:ucesso\"\n        }\n      ]\n    },\n    {\n      \"secao\": \"1. geral\",\n      \"titulo\": \"view_demo_[_pf|pj] · geral\",\n      \"print\": \"Captura 20.12.png\",\n      \"evento\": \"view_demo_[_pf|pj]\",\n      \"params\": {\n        \"installments\": \"texto livre\",\n        \"value\": \"[preenchido]\",\n        \"component\": \"[preenchido]\",\n        \"detail\": \"click:ver-detalhes\",\n        \"flow_name\": \"click:ver-detalhes\",\n        \"order_status\": \"[click:12-arcelas|click:echar]\"\n      }\n    },\n    {\n      \"secao\": \"1. geral\",\n      \"titulo\": \"modal_de_mo_[pf_pj] · geral\",\n      \"print\": \"Captura 35.22.png\",\n      \"evento\": \"modal_de_mo_[pf_pj]\",\n      \"params\": {\n        \"detail\": \"click:[numero]-parcelas\",\n        \"installments\": \"[numero]\",\n        \"value\": \"[preenchido]\",\n        \"flow_name\": \"demo-pf\",\n        \"insurance\": \"[0|1]\",\n        \"order_status\": \"[click:10-parcelas|click:12-parcelas|button]\"\n      }\n    },\n    {\n      \"secao\": \"3. dicoes\",\n      \"titulo\": \"interaction · dicoes\",\n      \"print\": \"Captura 67.25.png\",\n      \"evento\": \"interaction\",\n      \"params\": {\n        \"installments\": \"[pf|pj]-pre-agendado\",\n        \"operation_type\": \"[data]\",\n        \"installment_value\": \"[numero]\",\n        \"value\": \"[data]\"\n      },\n      \"variacoes\": [\n        {\n          \"screen_name\": \"ap:demo:pf:termos-e-con:dicoes\",\n          \"detail\": \"demo-pf\"\n        },\n        {\n          \"screen_name\": \"ap:demo:pj:termos-e-con:dicoes\",\n          \"detail\": \"demo-pf\"\n        }\n      ]\n    },\n    {\n      \"secao\": \"4. sucesso\",\n      \"titulo\": \"error__view · sucesso\",\n      \"print\": \"Captura 76.47.png\",\n      \"evento\": \"error__view\",\n      \"params\": {\n        \"flow_name\": \"click:12-parcelas\",\n        \"value\": \"[numero]\",\n        \"items\": [\n          {\n            \"item_category5\": \"card-1\",\n            \"item_category\": \"card-1\",\n            \"item_name\": \"[numero]\",\n            \"item_category4\": \"[numero]\",\n            \"item_id\": \"card-1\"\n          }\n        ]\n      },\n      \"variacoes\": [\n        {\n          \"screen_name\": \"app:demo:pf:sucesso\",\n          \"detail\": \"click:10-parcelas\"\n        },\n        {\n          \"screen_name\": \"app:demo:pf:sucesso\",\n          \"detail\": \"aprovado\"\n        },\n        {\n          \"screen_name\": \"app:demo:pj:sucesso\",\n          \"detail\": \"click:10-parcelas\"\n        },\n        {\n          \"screen_name\": \"app:demo:pj:sucesso\",\n          \"detail\": \"aprovado\"\n        }\n      ]\n    },\n    {\n      \"secao\": \"5. simulacao\",\n      \"titulo\": \"add_to_cart · simulacao\",\n      \"print\": \"Captura 84.20.png\",\n      \"evento\": \"add_to_cart\",\n      \"params\": {\n        \"component\": \"[preenchido]\",\n        \"screen_name\": \"app:demo:simulacao\",\n        \"installment_value\": \"texto livre\",\n        \"due_date\": \"[numero]\",\n        \"flow_name\": \"demo-pf\",\n        \"order__status\": \"[demo-pf|click:voltar|click:ver-detalhes]\"\n      }\n    }\n  ]\n}\n",
+  "review_md": "# Revisão do rascunho — Demo Ação & Reação\n\n8 prints lidos · 18 ponto(s) para conferir. Corrija direto no JSON e audite de novo na aba Relatório.\n\n## 1. search — `Captura 10.37.png`\n- ⚠ parâmetro desconhecido 'det1il' (mantido como 'det1il')\n\n## 2. refund — `Captura 15.25.png`\n- ⚠ parâmetro 'deail' lido como 'detail'\n- ⚠ items: a spec mostra 2 itens; só o primeiro é validado\n\n## 3. view_item_list — `Captura 16.20.png`\n- ⚠ parâmetro 'sreen_name' lido como 'screen_name'\n- ⚠ screen_name 'app:demo:[pf|pj]:s ucesso' lido como 'app:demo:[pf|pj]:s:ucesso' (espaço vira ':')\n\n## 4. view_demo_[_pf|pj] — `Captura 20.12.png`\n- ⚠ parâmetro 'coIponent' lido como 'component'\n- ⚠ parâmetro 'detil' lido como 'detail'\n- ⚠ Observação: parâmetro 'flow_nae' lido como 'flow_name'\n- ⚠ Observação: parâmetro 'order_status' lido como 'order_status'\n- ⚠ order_status aceita ['click:12-arcelas', 'click:echar']; se cada variação usa um valor específico, ajuste em 'variacoes'\n\n## 5. modal_de_mo_[pf_pj] — `Captura 35.22.png`\n- ⚠ Observação: parâmetro 'order_status' lido como 'order_status'\n- ⚠ order_status aceita ['click:10-parcelas', 'click:12-parcelas', 'button']; se cada variação usa um valor específico, ajuste em 'variacoes'\n\n## 6. interaction — `Captura 67.25.png`\n- ⚠ parâmetro 'screen name' lido como 'screen_name'\n- ⚠ screen_name 'ap:demo:[pf|pj]:termos-e-con dicoes' lido como 'ap:demo:[pf|pj]:termos-e-con:dicoes' (espaço vira ':')\n\n## 7. error__view — `Captura 76.47.png`\n- ⚠ Observação: parâmetro 'det ail' lido como 'detail'\n\n## 8. add_to_cart — `Captura 84.20.png`\n- ⚠ parâmetro 'flow_naoe' lido como 'flow_name'\n- ⚠ Observação: parâmetro 'order__status' lido como 'order__status'\n- ⚠ order__status aceita ['demo-pf', 'click:voltar', 'click:ver-detalhes']; se cada variação usa um valor específico, ajuste em 'variacoes'\n",
+  "checklist_md": "# Checklist · Demo Ação & Reação\n\n- Plataforma: IOS\n- Gerado em: 16/11/2026 09:30\n- Spec: `demo-acao-reacao.json`\n- Prints: `demo-19`\n\nMarque cada item com `[x]` ao conferir. Os itens com ⚠ são do OCR: confira no print e corrija a spec antes de auditar. Para o HTML no padrão do design system, use **Exportar Checklist…** na aba Relatório.\n\n## 1. geral\n\n### search · geral — `Captura 10.37.png`\n\n**Parâmetros esperados**\n\n- `installment_value`: `[numero]`\n- `operation_type`: `[preenchido]`\n- `value`: `[preenchido]`\n- `det1il`: `click:voltar`\n- `installments`: `[numero]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: parâmetro desconhecido 'det1il' (mantido como 'det1il')\n- [ ] disparo de `search`\n\n### refund · geral — `Captura 15.25.png`\n\n**Parâmetros esperados**\n\n- `detail`: `click:[numero]-parcelas`\n- `component`: `[numero]`\n- `items[0].item_category4`: `1000`\n- `items[0].item_category2`: `[numero]`\n- `items[0].item_category3`: `1000`\n- `items[0].item_id`: `[numero]`\n- `operation_type`: `[numero]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: parâmetro 'deail' lido como 'detail'\n- [ ] ⚠ Revisar OCR: items: a spec mostra 2 itens; só o primeiro é validado\n- [ ] disparo de `refund`\n\n### view_demo_[_pf|pj] · geral — `Captura 20.12.png`\n\n**Parâmetros esperados**\n\n- `installments`: `texto livre`\n- `value`: `[preenchido]`\n- `component`: `[preenchido]`\n- `detail`: `click:ver-detalhes`\n- `flow_name`: `click:ver-detalhes`\n- `order_status`: `[click:12-arcelas|click:echar]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: parâmetro 'coIponent' lido como 'component'\n- [ ] ⚠ Revisar OCR: parâmetro 'detil' lido como 'detail'\n- [ ] ⚠ Revisar OCR: Observação: parâmetro 'flow_nae' lido como 'flow_name'\n- [ ] ⚠ Revisar OCR: Observação: parâmetro 'order_status' lido como 'order_status'\n- [ ] ⚠ Revisar OCR: order_status aceita ['click:12-arcelas', 'click:echar']; se cada variação usa um valor específico, ajuste em 'variacoes'\n- [ ] disparo de `view_demo_[_pf|pj]`\n\n### modal_de_mo_[pf_pj] · geral — `Captura 35.22.png`\n\n**Parâmetros esperados**\n\n- `detail`: `click:[numero]-parcelas`\n- `installments`: `[numero]`\n- `value`: `[preenchido]`\n- `flow_name`: `demo-pf`\n- `insurance`: `[0|1]`\n- `order_status`: `[click:10-parcelas|click:12-parcelas|button]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: Observação: parâmetro 'order_status' lido como 'order_status'\n- [ ] ⚠ Revisar OCR: order_status aceita ['click:10-parcelas', 'click:12-parcelas', 'button']; se cada variação usa um valor específico, ajuste em 'variacoes'\n- [ ] disparo de `modal_de_mo_[pf_pj]`\n\n## 2. ucesso\n\n### view_item_list · ucesso — `Captura 16.20.png`\n\n**Parâmetros esperados**\n\n- `value`: `[preenchido]`\n- `due_date`: `[preenchido]`\n- `installments`: `[numero]`\n- `installment_value`: `[numero]`\n- `insurance`: `[preenchido]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: parâmetro 'sreen_name' lido como 'screen_name'\n- [ ] ⚠ Revisar OCR: screen_name 'app:demo:[pf|pj]:s ucesso' lido como 'app:demo:[pf|pj]:s:ucesso' (espaço vira ':')\n- [ ] `screen_name` = `app:demo:pf:s:ucesso`\n- [ ] `screen_name` = `app:demo:pj:s:ucesso`\n\n## 3. dicoes\n\n### interaction · dicoes — `Captura 67.25.png`\n\n**Parâmetros esperados**\n\n- `installments`: `[pf|pj]-pre-agendado`\n- `operation_type`: `[data]`\n- `installment_value`: `[numero]`\n- `value`: `[data]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: parâmetro 'screen name' lido como 'screen_name'\n- [ ] ⚠ Revisar OCR: screen_name 'ap:demo:[pf|pj]:termos-e-con dicoes' lido como 'ap:demo:[pf|pj]:termos-e-con:dicoes' (espaço vira ':')\n- [ ] `screen_name` = `ap:demo:pf:termos-e-con:dicoes` · `detail` = `demo-pf`\n- [ ] `screen_name` = `ap:demo:pj:termos-e-con:dicoes` · `detail` = `demo-pf`\n\n## 4. sucesso\n\n### error__view · sucesso — `Captura 76.47.png`\n\n**Parâmetros esperados**\n\n- `flow_name`: `click:12-parcelas`\n- `value`: `[numero]`\n- `items[0].item_category5`: `card-1`\n- `items[0].item_category`: `card-1`\n- `items[0].item_name`: `[numero]`\n- `items[0].item_category4`: `[numero]`\n- `items[0].item_id`: `card-1`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: Observação: parâmetro 'det ail' lido como 'detail'\n- [ ] `screen_name` = `app:demo:pf:sucesso` · `detail` = `click:10-parcelas`\n- [ ] `screen_name` = `app:demo:pf:sucesso` · `detail` = `aprovado`\n- [ ] `screen_name` = `app:demo:pj:sucesso` · `detail` = `click:10-parcelas`\n- [ ] `screen_name` = `app:demo:pj:sucesso` · `detail` = `aprovado`\n\n## 5. simulacao\n\n### add_to_cart · simulacao — `Captura 84.20.png`\n\n**Parâmetros esperados**\n\n- `component`: `[preenchido]`\n- `screen_name`: `app:demo:simulacao`\n- `installment_value`: `texto livre`\n- `due_date`: `[numero]`\n- `flow_name`: `demo-pf`\n- `order__status`: `[demo-pf|click:voltar|click:ver-detalhes]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: parâmetro 'flow_naoe' lido como 'flow_name'\n- [ ] ⚠ Revisar OCR: Observação: parâmetro 'order__status' lido como 'order__status'\n- [ ] ⚠ Revisar OCR: order__status aceita ['demo-pf', 'click:voltar', 'click:ver-detalhes']; se cada variação usa um valor específico, ajuste em 'variacoes'\n- [ ] disparo de `add_to_cart`\n"
+}

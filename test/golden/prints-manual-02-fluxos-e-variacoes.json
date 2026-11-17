@@ -1,0 +1,74 @@
+{
+  "nome": "DemoApp Café",
+  "spec_name": "demoapp-cafe.json",
+  "cards": [
+    {
+      "file": "DemoApp Café/a-compra.png",
+      "event": "purchase",
+      "params": {
+        "screen_name": "app:demo:[pf|pj]:sucesso",
+        "flow_name": "demo-[pf|pj]",
+        "currency": "BRL",
+        "items": [
+          {
+            "item_id": "5501",
+            "item_name": "demo-pf",
+            "item_category": "simulacao"
+          }
+        ],
+        "value": "[valor desejado total]",
+        "transaction_id": "[id da transacao]",
+        "detail": "click:[numero]-parcelas"
+      },
+      "bullets": {
+        "detail": [
+          "click:10-parcelas",
+          "click:12-parcelas",
+          "click:12-parcelas",
+          "click:ver-mais"
+        ]
+      },
+      "doubts": []
+    },
+    {
+      "file": "DemoApp Café/b-tela.png",
+      "event": "screen_view",
+      "params": {
+        "screen_name": "app:demo:[resumo|detalhe]",
+        "flow_name": "demo-pf"
+      },
+      "bullets": {
+        "flow_name": [
+          "demo-pf",
+          "demo-pj"
+        ]
+      },
+      "doubts": [
+        "Observação: parâmetro 'flow name' lido como 'flow_name'"
+      ]
+    }
+  ],
+  "review": [
+    {
+      "print": "a-compra.png",
+      "evento": "purchase",
+      "duvidas": [
+        "detail: exemplo 'click:10-parcelas' generalizado para 'click:[numero]-parcelas' (padrão da tabela)",
+        "detail: exemplo 'click:12-parcelas' generalizado para 'click:[numero]-parcelas' (padrão da tabela)",
+        "detail: exemplo 'click:12-parcelas' generalizado para 'click:[numero]-parcelas' (padrão da tabela)",
+        "items: exemplo da spec é do fluxo 'pf'; item_id fixado só para 'pf'"
+      ]
+    },
+    {
+      "print": "b-tela.png",
+      "evento": "screen_view",
+      "duvidas": [
+        "Observação: parâmetro 'flow name' lido como 'flow_name'",
+        "flow_name aceita ['demo-pf', 'demo-pj']; se cada variação usa um valor específico, ajuste em 'variacoes'"
+      ]
+    }
+  ],
+  "spec_json": "{\n  \"projeto\": \"DemoApp Café\",\n  \"versao_especificacao\": \"Rascunho gerado por OCR — revisar\",\n  \"plataforma\": \"ios\",\n  \"prints_dir\": \"DemoApp Café\",\n  \"fluxos\": {\n    \"pf\": \"pf\",\n    \"pj\": \"pj\"\n  },\n  \"cards\": [\n    {\n      \"secao\": \"1. sucesso\",\n      \"titulo\": \"purchase · sucesso\",\n      \"print\": \"a-compra.png\",\n      \"evento\": \"purchase\",\n      \"params\": {\n        \"screen_name\": \"app:demo:{fluxo}:sucesso\",\n        \"flow_name\": \"demo-{fluxo}\",\n        \"currency\": \"BRL\",\n        \"items\": [\n          {\n            \"item_id\": \"[preenchido]\",\n            \"item_name\": \"demo-{fluxo}\",\n            \"item_category\": \"simulacao\"\n          }\n        ],\n        \"value\": \"[numero]\",\n        \"transaction_id\": \"[preenchido]\"\n      },\n      \"variacoes\": [\n        {\n          \"detail\": \"click:[numero]-parcelas\"\n        },\n        {\n          \"detail\": \"click:ver-mais\"\n        }\n      ],\n      \"params_por_fluxo\": {\n        \"pf\": {\n          \"items\": [\n            {\n              \"item_id\": \"5501\"\n            }\n          ]\n        }\n      }\n    },\n    {\n      \"secao\": \"2. demo\",\n      \"titulo\": \"screen_view · demo\",\n      \"print\": \"b-tela.png\",\n      \"evento\": \"screen_view\",\n      \"params\": {\n        \"flow_name\": \"[demo-pf|demo-pj]\"\n      },\n      \"variacoes\": [\n        {\n          \"screen_name\": \"app:demo:resumo\"\n        },\n        {\n          \"screen_name\": \"app:demo:detalhe\"\n        }\n      ]\n    }\n  ]\n}\n",
+  "review_md": "# Revisão do rascunho — DemoApp Café\n\n2 prints lidos · 6 ponto(s) para conferir. Corrija direto no JSON e audite de novo na aba Relatório.\n\nFluxos detectados: pf, pj (renomeie os rótulos em 'fluxos' se quiser).\n\n## 1. purchase — `a-compra.png`\n- ⚠ detail: exemplo 'click:10-parcelas' generalizado para 'click:[numero]-parcelas' (padrão da tabela)\n- ⚠ detail: exemplo 'click:12-parcelas' generalizado para 'click:[numero]-parcelas' (padrão da tabela)\n- ⚠ detail: exemplo 'click:12-parcelas' generalizado para 'click:[numero]-parcelas' (padrão da tabela)\n- ⚠ items: exemplo da spec é do fluxo 'pf'; item_id fixado só para 'pf'\n\n## 2. screen_view — `b-tela.png`\n- ⚠ Observação: parâmetro 'flow name' lido como 'flow_name'\n- ⚠ flow_name aceita ['demo-pf', 'demo-pj']; se cada variação usa um valor específico, ajuste em 'variacoes'\n",
+  "checklist_md": "# Checklist · DemoApp Café\n\n- Plataforma: IOS\n- Gerado em: 16/11/2026 09:30\n- Spec: `demoapp-cafe.json`\n- Prints: `DemoApp Café`\n- Fluxos: pf, pj\n\nMarque cada item com `[x]` ao conferir. Os itens com ⚠ são do OCR: confira no print e corrija a spec antes de auditar. Para o HTML no padrão do design system, use **Exportar Checklist…** na aba Relatório.\n\n## 1. sucesso\n\n### purchase · sucesso — `a-compra.png`\n\n**Parâmetros esperados**\n\n- `screen_name`: `app:demo:{fluxo}:sucesso`\n- `flow_name`: `demo-{fluxo}`\n- `currency`: `BRL`\n- `items[0].item_id`: `[preenchido]`\n- `items[0].item_name`: `demo-{fluxo}`\n- `items[0].item_category`: `simulacao`\n- `value`: `[numero]`\n- `transaction_id`: `[preenchido]`\n- `items[0].item_id` (só no fluxo pf): `5501`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: detail: exemplo 'click:10-parcelas' generalizado para 'click:[numero]-parcelas' (padrão da tabela)\n- [ ] ⚠ Revisar OCR: detail: exemplo 'click:12-parcelas' generalizado para 'click:[numero]-parcelas' (padrão da tabela)\n- [ ] ⚠ Revisar OCR: detail: exemplo 'click:12-parcelas' generalizado para 'click:[numero]-parcelas' (padrão da tabela)\n- [ ] ⚠ Revisar OCR: items: exemplo da spec é do fluxo 'pf'; item_id fixado só para 'pf'\n- [ ] fluxo **pf** · `detail` = `click:[numero]-parcelas`\n- [ ] fluxo **pf** · `detail` = `click:ver-mais`\n- [ ] fluxo **pj** · `detail` = `click:[numero]-parcelas`\n- [ ] fluxo **pj** · `detail` = `click:ver-mais`\n\n## 2. demo\n\n### screen_view · demo — `b-tela.png`\n\n**Parâmetros esperados**\n\n- `flow_name`: `[demo-pf|demo-pj]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: Observação: parâmetro 'flow name' lido como 'flow_name'\n- [ ] ⚠ Revisar OCR: flow_name aceita ['demo-pf', 'demo-pj']; se cada variação usa um valor específico, ajuste em 'variacoes'\n- [ ] `screen_name` = `app:demo:resumo`\n- [ ] `screen_name` = `app:demo:detalhe`\n"
+}

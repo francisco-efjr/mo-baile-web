@@ -1,0 +1,52 @@
+{
+ "projeto": "DemoApp",
+ "pasta": "acumulador",
+ "plataforma": "android",
+ "prints": [
+  {
+   "file": "01.png",
+   "lines": [
+    {
+     "t": "login",
+     "x": 0.04,
+     "y": 0.02,
+     "w": 0.3,
+     "h": 0.03,
+     "c": 1.0
+    },
+    {
+     "t": "Observação",
+     "x": 0.04,
+     "y": 0.2,
+     "w": 0.3,
+     "h": 0.03,
+     "c": 1.0
+    },
+    {
+     "t": "texto de apoio sem regra nenhuma texto de apoio sem regra nenhuma texto de apoio sem regra nenhuma texto de apoio sem regra nenhuma texto de apoio semx",
+     "x": 0.04,
+     "y": 0.25,
+     "w": 0.3,
+     "h": 0.03,
+     "c": 1.0
+    },
+    {
+     "t": "abcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdzz O evento search deve disparar abcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdea",
+     "x": 0.04,
+     "y": 0.3,
+     "w": 0.3,
+     "h": 0.03,
+     "c": 1.0
+    },
+    {
+     "t": "fim.",
+     "x": 0.04,
+     "y": 0.35,
+     "w": 0.3,
+     "h": 0.03,
+     "c": 1.0
+    }
+   ]
+  }
+ ]
+}
