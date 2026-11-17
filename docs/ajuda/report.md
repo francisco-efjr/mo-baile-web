@@ -9,7 +9,7 @@ precisa: a spec da demanda (JSON) e um log de eventos
 
 O Relatório compara os eventos de um log com a spec de tagueamento (os cards do Figma) e mostra o que bate, o que diverge e o que não disparou.
 
-> Dica: a spec é o JSON exportado ou editado no Mo baile. O log pode ser um logcat salvo, o JSON do Firebase ou o JSON exportado pelo Analytics do Mo baile.
+> Dica: a spec é o JSON exportado ou editado no Mo baile. O log pode ser um logcat salvo, o JSON do Firebase, o JSON exportado pelo Analytics do Mo baile ou o TSV de uma exploração do Google Analytics (GA4).
 
 ## Quando usar
 
@@ -36,6 +36,7 @@ Você precisa auditar o carrinho do DemoApp. Arraste a `spec.json` e o `log.txt`
 - **Filtros e busca**: Todas, Pedem Ação, Divergentes, Não Disparadas e OK, e a busca por evento, parâmetro ou divergência.
 - **Detalhe**: Obtido × Esperado de cada parâmetro e o bloco do disparo, com **Copiar Bloco**.
 - **Fora da spec e alertas**: eventos dos fluxos da spec que nenhum card cobre, e `app_exception` ou `error_view` nas telas da spec.
+- **Log do Google Analytics**: o TSV baixado de uma exploração do GA4 (**Fazer o download dos dados** › TSV). Cada combinação de evento e dimensões vira um disparo, por plataforma quando a exploração separa por sistema operacional. Só as dimensões exportadas são conferidas; o resto aparece como **não exportado**, sem contar como divergência.
 - **Ver HTML**: mostra aqui mesmo o relatório que você vai baixar.
 - **Exportar**: HTML (abre em qualquer navegador), Markdown e TSV (para colar numa planilha).
 
@@ -44,4 +45,5 @@ Você precisa auditar o carrinho do DemoApp. Arraste a `spec.json` e o `log.txt`
 - **Tudo aparece como Não Disparado.** Confira a **Plataforma**: ela precisa ser a do log.
 - **A spec não abre.** O arquivo precisa ser o JSON da spec do Mo baile. A mensagem embaixo do quadro diz o que está errado.
 - **O log salvo no Windows não abre.** O site lê UTF-8 e UTF-16, que é o que o `>` do PowerShell grava. Se ainda falhar, relate o problema com um log fictício.
+- **Com o TSV do Analytics, vários parâmetros aparecem como não exportado.** O export só traz as dimensões escolhidas na exploração (ex.: `firebase_screen`, `flow_name`, `flow_step`). Só elas são conferidas; para conferir mais, inclua as dimensões na exploração e exporte de novo.
 - **Ainda não tenho a spec, só os prints.** Clique em **Importar Prints do Figma…** no quadro da spec. O guia Importar Prints do Figma explica como.

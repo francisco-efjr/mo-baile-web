@@ -55,6 +55,7 @@ export function analyticsPy(text: string): PyDict {
         ["da_plataforma", stats.da_plataforma],
         ["duplicados", stats.duplicados],
         ["uteis", stats.uteis],
+        ...(stats.exportados !== undefined ? ([["exportados", [...stats.exportados]]] as [string, PyValue][]) : []),
       ]),
     ],
     ["events", eventos],

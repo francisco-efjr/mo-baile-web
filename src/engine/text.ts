@@ -42,6 +42,10 @@ export function variantBlockText(result: VariantResult, flowLabel: string | null
     ];
     result.checks.forEach((check, i) => {
       const comma = i < result.checks.length - 1 ? "," : "";
+      if (check.exported === false) {
+        lines.push(`  "${check.field}": —${comma}  // não exportado`);
+        return;
+      }
       const got = check.obtained === null ? "AUSENTE" : fmt(check.obtained);
       lines.push(`  "${check.field}": ${got}${comma}  ${check.ok ? "✓" : "✗"}`);
       if (!check.ok) lines.push(`    // ↳ esperado: ${check.expected}`);

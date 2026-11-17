@@ -2,8 +2,8 @@
  * Leitura do log de Firebase Analytics: port de `services/report/firebase_log.py`.
  *
  * Formatos aceitos: a lista que o Mo baile exporta (`log_obtido.json`), objeto
- * com `eventos` ou `jornadas`, e Logcat em texto (uma linha `Logging event:`
- * por evento). Logs mistos são filtrados pela plataforma; no Android os
+ * com `eventos` ou `jornadas`, Logcat em texto (uma linha `Logging event:`
+ * por evento) e o TSV de uma exploração do GA4 (`ga4Tsv.ts`). Logs mistos são filtrados pela plataforma; no Android os
  * parâmetros são relidos do `raw_log`; disparos repetidos (mesmo horário, nome
  * e parâmetros) contam uma vez; a ordem final é a do horário.
  */
@@ -26,6 +26,7 @@ import {
   type PyDict,
   type PyValue,
 } from "./py";
+import { ANY_PLATFORM, itemsFromGa4Tsv, looksLikeGa4Tsv } from "./ga4Tsv";
 import { pyCompile } from "./pyre";
 import { cleanColonSpacing, stripEventSuffixes, stripParamKeySuffixes } from "./rules";
 import type { LogStats, TagEvent } from "./spec";
@@ -124,7 +125,7 @@ export function itemsFromJson(data: PyValue): PyDict[] {
 }
 
 export interface ItemsRead {
-  format: "json" | "logcat";
+  format: "json" | "logcat" | "tsv";
   items: PyDict[];
 }
 
@@ -135,6 +136,7 @@ export function itemsFromText(content: string): ItemsRead {
     data = pyJsonLoads(content);
   } catch (err) {
     if (!(err instanceof JSONDecodeError)) throw err;
+    if (looksLikeGa4Tsv(content)) return { format: "tsv", items: itemsFromGa4Tsv(content) };
     const items = pySplitlines(content)
       .filter((line) => line.includes("Logging event:"))
       .map((line) => new Map<string, PyValue>([["raw_log", line], ["tag", "FA-SVC"]]));
@@ -151,7 +153,9 @@ export function eventsFromItems(items: PyDict[], platformIn: string, dedupe = tr
   const events: TagEvent[] = [];
   const order: string[] = [];
   items.forEach((item, index) => {
-    if (detectPlatform(item) !== platform) return;
+    const detected = detectPlatform(item);
+    if (detected !== platform && detected !== ANY_PLATFORM) return;
+    if (item.has("exportados") && stats.exportados === undefined) stats.exportados = [...(dictGet(item, "exportados") as string[])];
     stats.da_plataforma++;
     const raw = pyStr(pyOr(dictGet(item, "raw_log"), ""));
     const parsed = platform === "android" ? fromAndroidRaw(raw) : null;

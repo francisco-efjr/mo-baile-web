@@ -86,9 +86,9 @@ export function criarRelatorio(deps: Dependencias): PainelRelatorio {
     dica: [
       "Um logcat salvo (",
       h("code", null, ".txt"),
-      "), o JSON do Firebase ou o JSON exportado pelo Analytics do Mo baile.",
+      "), o JSON do Firebase, o JSON exportado pelo Analytics do Mo baile ou o TSV de uma exploração do Google Analytics.",
     ],
-    aceitar: ".txt,.log,.json,text/plain,application/json",
+    aceitar: ".txt,.log,.json,.tsv,text/plain,application/json,text/tab-separated-values",
     rotuloBotao: "Escolher Log…",
     icone: "radio-tower",
     aoEscolher: (arquivo) => void escolherLog(arquivo),
@@ -340,10 +340,10 @@ export function criarRelatorio(deps: Dependencias): PainelRelatorio {
     try {
       const log = motor.readLog(texto, nome);
       estado.log = { nome, log };
-      const partes = [
-        log.format === "logcat" ? "logcat" : "JSON",
-        plural(log.items.length, "registro", "registros"),
-      ];
+      const partes =
+        log.format === "tsv"
+          ? ["TSV do Google Analytics", plural(log.items.length, "combinação", "combinações")]
+          : [log.format === "logcat" ? "logcat" : "JSON", plural(log.items.length, "registro", "registros")];
       if (tamanho !== null) partes.push(tamanhoLegivel(tamanho));
       seletorLog.mostrarArquivo(nome, partes.join(" · "));
       return true;
@@ -468,6 +468,13 @@ export function criarRelatorio(deps: Dependencias): PainelRelatorio {
       r.spec.versao_especificacao ? h("span", null, `versão ${r.spec.versao_especificacao}`) : null,
       h("span", { class: "mw-res__arquivo" }, icone("file-code", 13), r.spec.name),
       h("span", { class: "mw-res__arquivo" }, icone("radio-tower", 13), r.log_name),
+      r.exported_fields
+        ? h(
+            "span",
+            { class: "mw-res__export", title: "O que a spec pede e o export não traz aparece como não exportado." },
+            `export do GA4 · confere ${r.exported_fields.join(", ") || "só o nome do evento"}`,
+          )
+        : null,
     );
 
     const total = Math.max(1, s.total);
@@ -699,14 +706,23 @@ export function criarRelatorio(deps: Dependencias): PainelRelatorio {
           "tbody",
           null,
           ...row.checks.map((c) =>
-            h(
-              "tr",
-              { class: c.ok ? null : "is-bad" },
-              h("td", null, icone(c.ok ? "circle-check" : "circle-x", 14, c.ok ? "mw-ok" : "mw-bad"), sr(c.ok ? "confere" : "diverge")),
-              h("th", { scope: "row", class: "mw-checks__campo" }, c.field),
-              h("td", { class: "mw-checks__obtido" }, c.obtained),
-              h("td", { class: "mw-checks__esperado" }, c.expected),
-            ),
+            c.exported === false
+              ? h(
+                  "tr",
+                  { class: "is-off" },
+                  h("td", null, icone("minus", 14, "mw-off"), sr("não exportado")),
+                  h("th", { scope: "row", class: "mw-checks__campo" }, c.field),
+                  h("td", { class: "mw-checks__obtido mw-checks__nao" }, "não exportado"),
+                  h("td", { class: "mw-checks__esperado" }, c.expected),
+                )
+              : h(
+                  "tr",
+                  { class: c.ok ? null : "is-bad" },
+                  h("td", null, icone(c.ok ? "circle-check" : "circle-x", 14, c.ok ? "mw-ok" : "mw-bad"), sr(c.ok ? "confere" : "diverge")),
+                  h("th", { scope: "row", class: "mw-checks__campo" }, c.field),
+                  h("td", { class: "mw-checks__obtido" }, c.obtained),
+                  h("td", { class: "mw-checks__esperado" }, c.expected),
+                ),
           ),
         ),
       );

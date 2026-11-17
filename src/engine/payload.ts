@@ -70,6 +70,8 @@ function resultPayload(report: Report, index: number, result: VariantResult): Py
           ["expected", c.expected],
           ["obtained", display(c.obtained)],
           ["ok", c.ok],
+          // Só aparece quando é falso: export do GA4 sem o parâmetro.
+          ...(c.exported === false ? ([["exported", false]] as [string, PyValue][]) : []),
         ]),
       ),
     ],
@@ -130,5 +132,7 @@ export function reportPayloadPy(report: Report, specName: string, logName: strin
     ["observations", observationLines(report).join("\n")],
     ["markdown", generateMarkdown(report)],
     ["tsv", generateTsv(report)],
+    // Só num export do GA4: os parâmetros que o arquivo traz.
+    ...(stats.exportados !== undefined ? ([["exported_fields", [...stats.exportados]]] as [string, PyValue][]) : []),
   ]);
 }

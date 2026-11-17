@@ -1,0 +1,29 @@
+{
+  "platform": "android",
+  "stats": {
+    "total_lidos": 3,
+    "da_plataforma": 1,
+    "duplicados": 0,
+    "uteis": 1,
+    "exportados": [
+      "ga_screen",
+      "flow_name"
+    ]
+  },
+  "events": [
+    {
+      "id": 0,
+      "event_name": "screen_view",
+      "params": {
+        "ga_screen": "demoapp:cadastro:dados",
+        "flow_name": "cadastro"
+      },
+      "platform": "android",
+      "raw_log": null,
+      "time_str": null,
+      "origin": null
+    }
+  ],
+  "tsv": "Hora\tPlataforma\tOrigem\tNome do Evento\tParâmetros Principais\tJSON dos Parâmetros\n\tANDROID\t\tscreen_view\tga_screen: demoapp:cadastro:dados, flow_name: cadastro\t{\"ga_screen\": \"demoapp:cadastro:dados\", \"flow_name\": \"cadastro\"}",
+  "json": "[\n  {\n    \"id\": 0,\n    \"event_name\": \"screen_view\",\n    \"params\": {\n      \"ga_screen\": \"demoapp:cadastro:dados\",\n      \"flow_name\": \"cadastro\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": null,\n    \"time_str\": null,\n    \"origin\": null\n  }\n]"
+}

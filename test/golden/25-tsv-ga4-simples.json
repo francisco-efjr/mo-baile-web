@@ -1,0 +1,212 @@
+{
+  "spec": {
+    "name": "spec.json",
+    "projeto": "DemoApp cadastro",
+    "versao_especificacao": null,
+    "plataforma": "android",
+    "fluxos": [],
+    "cards": 3,
+    "variants": 3,
+    "sections": [
+      "Cadastro"
+    ]
+  },
+  "platform": "android",
+  "source": "file",
+  "log_name": "log.tsv",
+  "log_stats": {
+    "total_lidos": 5,
+    "da_plataforma": 5,
+    "duplicados": 0,
+    "uteis": 5
+  },
+  "summary": {
+    "total": 3,
+    "ok": 2,
+    "divergent": 0,
+    "missing": 1,
+    "compliance_rate": 66.7,
+    "extras": 2,
+    "alerts": 1
+  },
+  "results": [
+    {
+      "id": 0,
+      "card_index": 0,
+      "section": "Cadastro",
+      "card_title": "Dados",
+      "flow": null,
+      "flow_label": null,
+      "event": "screen_view",
+      "variation": "demoapp:cadastro:dados",
+      "status": "ok",
+      "checks": [
+        {
+          "field": "screen_name",
+          "expected": "demoapp:cadastro:dados",
+          "obtained": "demoapp:cadastro:dados",
+          "ok": true
+        },
+        {
+          "field": "flow_name",
+          "expected": "cadastro",
+          "obtained": "cadastro",
+          "ok": true
+        }
+      ],
+      "expected": [
+        {
+          "key": "screen_name",
+          "value": "demoapp:cadastro:dados"
+        },
+        {
+          "key": "flow_name",
+          "value": "cadastro"
+        }
+      ],
+      "matched": {
+        "id": 0,
+        "time": null,
+        "event_name": "screen_view",
+        "params": {
+          "ga_screen": "demoapp:cadastro:dados",
+          "flow_name": "cadastro"
+        }
+      },
+      "occurrences": 1,
+      "older_divergent": 0,
+      "older_divergences": [],
+      "ga_screen": null,
+      "note": null,
+      "divergences": "",
+      "block": "// screen_view [OK]\n// log  · 1 disparo(s)\n{\n  \"screen_name\": \"demoapp:cadastro:dados\",  ✓\n  \"flow_name\": \"cadastro\"  ✓\n}"
+    },
+    {
+      "id": 1,
+      "card_index": 1,
+      "section": "Cadastro",
+      "card_title": "Campo",
+      "flow": null,
+      "flow_label": null,
+      "event": "form_input",
+      "variation": "demoapp:cadastro:dados",
+      "status": "ok",
+      "checks": [
+        {
+          "field": "screen_name",
+          "expected": "demoapp:cadastro:dados",
+          "obtained": "demoapp:cadastro:dados",
+          "ok": true
+        },
+        {
+          "field": "flow_name",
+          "expected": "cadastro",
+          "obtained": "cadastro",
+          "ok": true
+        },
+        {
+          "field": "text",
+          "expected": "[nome do campo]",
+          "obtained": null,
+          "ok": true,
+          "exported": false
+        }
+      ],
+      "expected": [
+        {
+          "key": "screen_name",
+          "value": "demoapp:cadastro:dados"
+        },
+        {
+          "key": "flow_name",
+          "value": "cadastro"
+        },
+        {
+          "key": "text",
+          "value": "[nome do campo]"
+        }
+      ],
+      "matched": {
+        "id": 1,
+        "time": null,
+        "event_name": "form_input",
+        "params": {
+          "ga_screen": "demoapp:cadastro:dados",
+          "flow_name": "cadastro"
+        }
+      },
+      "occurrences": 1,
+      "older_divergent": 0,
+      "older_divergences": [],
+      "ga_screen": null,
+      "note": null,
+      "divergences": "",
+      "block": "// form_input [OK]\n// log  · 1 disparo(s)\n{\n  \"screen_name\": \"demoapp:cadastro:dados\",  ✓\n  \"flow_name\": \"cadastro\",  ✓\n  \"text\": —  // não exportado\n}"
+    },
+    {
+      "id": 2,
+      "card_index": 2,
+      "section": "Cadastro",
+      "card_title": "Sucesso",
+      "flow": null,
+      "flow_label": null,
+      "event": "screen_view",
+      "variation": "demoapp:cadastro:sucesso",
+      "status": "missing",
+      "checks": [],
+      "expected": [
+        {
+          "key": "screen_name",
+          "value": "demoapp:cadastro:sucesso"
+        },
+        {
+          "key": "flow_name",
+          "value": "cadastro-final"
+        }
+      ],
+      "matched": null,
+      "occurrences": 0,
+      "older_divergent": 0,
+      "older_divergences": [],
+      "ga_screen": null,
+      "note": null,
+      "divergences": "Não disparado no log",
+      "block": "// screen_view [ERRO]\n// NÃO DISPARADO no log\n{\n  \"screen_name\": \"demoapp:cadastro:sucesso\",\n  \"flow_name\": \"cadastro-final\"\n}  // esperado (spec)"
+    }
+  ],
+  "extras": [
+    {
+      "event": "screen_view",
+      "screen": "demoapp:cadastro:sucesso",
+      "flow_name": "cadastro",
+      "component": null,
+      "detail": null,
+      "count": 1
+    },
+    {
+      "event": "interaction_cadastro",
+      "screen": "demoapp:cadastro:dados",
+      "flow_name": "cadastro",
+      "component": null,
+      "detail": null,
+      "count": 1
+    }
+  ],
+  "alerts": [
+    {
+      "event": "error_view",
+      "screen": "demoapp:cadastro:dados",
+      "flow_name": "cadastro",
+      "component": null,
+      "detail": null,
+      "count": 1
+    }
+  ],
+  "observations": "Eventos dos fluxos da spec que nenhum card cobre:\n  • screen_view · demoapp:cadastro:sucesso — 1x\n  • interaction_cadastro · demoapp:cadastro:dados — 1x\n\nAlertas (app_exception / error_view nas telas da spec):\n  • error_view · demoapp:cadastro:dados — 1x\n\nRegra: cada variação é validada pelo disparo mais recente; '⚠' indica disparos anteriores com divergência diferente.",
+  "markdown": "# Auditoria de Tagueamento — DemoApp cadastro (ANDROID)\n\n- 3 cards · 3 validações · OK: 2 · Erro: 1 (sendo 1 não disparadas) · Conformidade: 66.7%\n- Plataforma: ANDROID · 5 eventos únicos (0 duplicados removidos de 5 da plataforma; 5 lidos no arquivo)\n\n| Seção | Card | Fluxo | Evento | Variação | Status | Divergências | Horário | Disparos |\n|---|---|---|---|---|---|---|---|---|\n| Cadastro | Dados | - | screen_view | demoapp:cadastro:dados | OK |  |  | 1 |\n| Cadastro | Campo | - | form_input | demoapp:cadastro:dados | OK |  |  | 1 |\n| Cadastro | Sucesso | - | screen_view | demoapp:cadastro:sucesso | NÃO DISPARADO | Não disparado no log |  | 0 |\n\n## Fora da spec / Observações\n\nEventos dos fluxos da spec que nenhum card cobre:\n  • screen_view · demoapp:cadastro:sucesso — 1x\n  • interaction_cadastro · demoapp:cadastro:dados — 1x\n\nAlertas (app_exception / error_view nas telas da spec):\n  • error_view · demoapp:cadastro:dados — 1x\n\nRegra: cada variação é validada pelo disparo mais recente; '⚠' indica disparos anteriores com divergência diferente.\n",
+  "tsv": "Seção\tCard\tFluxo\tEvento\tVariação\tStatus\tDivergências\tHorário\tDisparos\nCadastro\tDados\t-\tscreen_view\tdemoapp:cadastro:dados\tOK\t\t\t1\nCadastro\tCampo\t-\tform_input\tdemoapp:cadastro:dados\tOK\t\t\t1\nCadastro\tSucesso\t-\tscreen_view\tdemoapp:cadastro:sucesso\tNÃO DISPARADO\tNão disparado no log\t\t0\n",
+  "exported_fields": [
+    "ga_screen",
+    "flow_name"
+  ]
+}

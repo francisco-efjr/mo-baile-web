@@ -20,6 +20,7 @@ grava o gabarito em `test/golden/`. `test/parity.test.ts` exige, para cada caso:
 | Relatório HTML | `exportHtml` igual ao `generate_interactive_html` do Python, byte a byte, com instante e versão fixos |
 | Nome do HTML | `htmlFileName` igual ao `html_file_name` do Python |
 | Aba Analytics | leitura do logcat (eventos, `stats`, TSV, JSON) igual, byte a byte |
+| Log em TSV do GA4 | leitura do export (combinações por plataforma, `exportados`), "não exportado" no payload, no bloco e no HTML, sobre os casos 24 a 26 (com pivô por sistema operacional, sem pivô e com a plataforma na linha) |
 | Recusas | mesma etapa (spec, log, auditoria), mesma mensagem em pt-BR, mesmo código (`invalid_input` ou `internal_error`) |
 | Importação de prints (`report.import` depois do OCR) | leitor de cards (`read_card`), rascunho da spec (`build_spec`, gravado com `json.dumps(indent=2)`), revisão (`review_markdown`) e checklist (`checklist_markdown`) iguais caractere por caractere, sobre `test/corpus-prints/` (prints fictícios escritos à mão e sorteados com ruído de OCR) |
 
@@ -118,7 +119,7 @@ O resultado só sai igual se o motor guardar o que o Python guarda. Por isso
 
 ## Diferenças que restam
 
-Nenhuma conhecida nos 23 casos do corpus e nas 200+ entradas de unidade: tudo
+Nenhuma conhecida nos 26 casos do corpus e nas 200+ entradas de unidade: tudo
 igual byte a byte, sem tolerância.
 
 Um comportamento do Mo baile que o site reproduz de propósito, e que vale

@@ -1,0 +1,15 @@
+# ----------------------------------------
+# DemoApp
+# Exploração loja
+# 20261111-20261112
+# ----------------------------------------
+
+			Sistema operacional	iOS	Android	Totais
+Nome do evento	firebase_screen	flow_name	flow_step	Total de usuários	Total de usuários	Total de usuários
+				9	4	13	Total geral
+screen_view	demoapp:loja:inicio	loja	primeiro-acesso	5	2	7
+screen_view	demoapp:loja:inicio	loja	retomada	1	0	1
+interaction_loja	demoapp:loja:sacola	loja	(not set)	2	1	3
+add_to_cart	demoapp:loja:sacola	loja	(not set)	1	0	1
+purchase	demoapp:loja:sucesso	compra	retomada	0	1	1
+

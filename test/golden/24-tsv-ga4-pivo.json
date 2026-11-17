@@ -1,0 +1,371 @@
+{
+  "spec": {
+    "name": "spec.json",
+    "projeto": "DemoApp loja",
+    "versao_especificacao": "v3",
+    "plataforma": "ios",
+    "fluxos": [],
+    "cards": 4,
+    "variants": 5,
+    "sections": [
+      "Loja",
+      "Compra"
+    ]
+  },
+  "platform": "ios",
+  "source": "file",
+  "log_name": "log.tsv",
+  "log_stats": {
+    "total_lidos": 7,
+    "da_plataforma": 4,
+    "duplicados": 0,
+    "uteis": 4
+  },
+  "summary": {
+    "total": 5,
+    "ok": 3,
+    "divergent": 1,
+    "missing": 1,
+    "compliance_rate": 60.0,
+    "extras": 0,
+    "alerts": 0
+  },
+  "results": [
+    {
+      "id": 0,
+      "card_index": 0,
+      "section": "Loja",
+      "card_title": "Início",
+      "flow": null,
+      "flow_label": null,
+      "event": "screen_view",
+      "variation": "demoapp:loja:inicio",
+      "status": "ok",
+      "checks": [
+        {
+          "field": "screen_name",
+          "expected": "demoapp:loja:inicio",
+          "obtained": "demoapp:loja:inicio",
+          "ok": true
+        },
+        {
+          "field": "flow_name",
+          "expected": "loja",
+          "obtained": "loja",
+          "ok": true
+        },
+        {
+          "field": "flow_step",
+          "expected": "primeiro-acesso",
+          "obtained": "primeiro-acesso",
+          "ok": true
+        }
+      ],
+      "expected": [
+        {
+          "key": "screen_name",
+          "value": "demoapp:loja:inicio"
+        },
+        {
+          "key": "flow_name",
+          "value": "loja"
+        },
+        {
+          "key": "flow_step",
+          "value": "primeiro-acesso"
+        }
+      ],
+      "matched": {
+        "id": 0,
+        "time": null,
+        "event_name": "screen_view",
+        "params": {
+          "ga_screen": "demoapp:loja:inicio",
+          "flow_name": "loja",
+          "flow_step": "primeiro-acesso"
+        }
+      },
+      "occurrences": 2,
+      "older_divergent": 1,
+      "older_divergences": [
+        "flow_step=retomada"
+      ],
+      "ga_screen": null,
+      "note": null,
+      "divergences": "⚠ 1 disparo(s) anterior(es): flow_step=retomada",
+      "block": "// screen_view [OK]\n// log  · 2 disparo(s)\n{\n  \"screen_name\": \"demoapp:loja:inicio\",  ✓\n  \"flow_name\": \"loja\",  ✓\n  \"flow_step\": \"primeiro-acesso\"  ✓\n}\n// ⚠ 1 disparo(s) anterior(es) divergente(s):\n//   flow_step=retomada"
+    },
+    {
+      "id": 1,
+      "card_index": 1,
+      "section": "Loja",
+      "card_title": "Botões da sacola",
+      "flow": null,
+      "flow_label": null,
+      "event": "interaction_loja",
+      "variation": "click:finalizar",
+      "status": "ok",
+      "checks": [
+        {
+          "field": "screen_name",
+          "expected": "demoapp:loja:sacola",
+          "obtained": "demoapp:loja:sacola",
+          "ok": true
+        },
+        {
+          "field": "flow_name",
+          "expected": "loja",
+          "obtained": "loja",
+          "ok": true
+        },
+        {
+          "field": "component",
+          "expected": "button",
+          "obtained": null,
+          "ok": true,
+          "exported": false
+        },
+        {
+          "field": "detail",
+          "expected": "click:finalizar",
+          "obtained": null,
+          "ok": true,
+          "exported": false
+        }
+      ],
+      "expected": [
+        {
+          "key": "screen_name",
+          "value": "demoapp:loja:sacola"
+        },
+        {
+          "key": "flow_name",
+          "value": "loja"
+        },
+        {
+          "key": "component",
+          "value": "button"
+        },
+        {
+          "key": "detail",
+          "value": "click:finalizar"
+        }
+      ],
+      "matched": {
+        "id": 3,
+        "time": null,
+        "event_name": "interaction_loja",
+        "params": {
+          "ga_screen": "demoapp:loja:sacola",
+          "flow_name": "loja",
+          "flow_step": null
+        }
+      },
+      "occurrences": 1,
+      "older_divergent": 0,
+      "older_divergences": [],
+      "ga_screen": null,
+      "note": null,
+      "divergences": "",
+      "block": "// interaction_loja [OK]\n// log  · 1 disparo(s)\n{\n  \"screen_name\": \"demoapp:loja:sacola\",  ✓\n  \"flow_name\": \"loja\",  ✓\n  \"component\": —,  // não exportado\n  \"detail\": —  // não exportado\n}"
+    },
+    {
+      "id": 2,
+      "card_index": 1,
+      "section": "Loja",
+      "card_title": "Botões da sacola",
+      "flow": null,
+      "flow_label": null,
+      "event": "interaction_loja",
+      "variation": "click:continuar",
+      "status": "ok",
+      "checks": [
+        {
+          "field": "screen_name",
+          "expected": "demoapp:loja:sacola",
+          "obtained": "demoapp:loja:sacola",
+          "ok": true
+        },
+        {
+          "field": "flow_name",
+          "expected": "loja",
+          "obtained": "loja",
+          "ok": true
+        },
+        {
+          "field": "component",
+          "expected": "button",
+          "obtained": null,
+          "ok": true,
+          "exported": false
+        },
+        {
+          "field": "detail",
+          "expected": "click:continuar",
+          "obtained": null,
+          "ok": true,
+          "exported": false
+        }
+      ],
+      "expected": [
+        {
+          "key": "screen_name",
+          "value": "demoapp:loja:sacola"
+        },
+        {
+          "key": "flow_name",
+          "value": "loja"
+        },
+        {
+          "key": "component",
+          "value": "button"
+        },
+        {
+          "key": "detail",
+          "value": "click:continuar"
+        }
+      ],
+      "matched": {
+        "id": 3,
+        "time": null,
+        "event_name": "interaction_loja",
+        "params": {
+          "ga_screen": "demoapp:loja:sacola",
+          "flow_name": "loja",
+          "flow_step": null
+        }
+      },
+      "occurrences": 1,
+      "older_divergent": 0,
+      "older_divergences": [],
+      "ga_screen": null,
+      "note": null,
+      "divergences": "",
+      "block": "// interaction_loja [OK]\n// log  · 1 disparo(s)\n{\n  \"screen_name\": \"demoapp:loja:sacola\",  ✓\n  \"flow_name\": \"loja\",  ✓\n  \"component\": —,  // não exportado\n  \"detail\": —  // não exportado\n}"
+    },
+    {
+      "id": 3,
+      "card_index": 2,
+      "section": "Loja",
+      "card_title": "Sacola",
+      "flow": null,
+      "flow_label": null,
+      "event": "add_to_cart",
+      "variation": "demoapp:loja:sacola",
+      "status": "error",
+      "checks": [
+        {
+          "field": "screen_name",
+          "expected": "demoapp:loja:sacola",
+          "obtained": "demoapp:loja:sacola",
+          "ok": true
+        },
+        {
+          "field": "flow_name",
+          "expected": "loja",
+          "obtained": "loja",
+          "ok": true
+        },
+        {
+          "field": "flow_step",
+          "expected": "[preenchido]",
+          "obtained": null,
+          "ok": false
+        },
+        {
+          "field": "items[0].item_id",
+          "expected": "[preenchido]",
+          "obtained": null,
+          "ok": true,
+          "exported": false
+        },
+        {
+          "field": "items[0].price",
+          "expected": "[numero]",
+          "obtained": null,
+          "ok": true,
+          "exported": false
+        }
+      ],
+      "expected": [
+        {
+          "key": "screen_name",
+          "value": "demoapp:loja:sacola"
+        },
+        {
+          "key": "flow_name",
+          "value": "loja"
+        },
+        {
+          "key": "flow_step",
+          "value": "[preenchido]"
+        },
+        {
+          "key": "items",
+          "value": "[{\"item_id\": \"[preenchido]\", \"price\": \"[numero]\"}]"
+        }
+      ],
+      "matched": {
+        "id": 5,
+        "time": null,
+        "event_name": "add_to_cart",
+        "params": {
+          "ga_screen": "demoapp:loja:sacola",
+          "flow_name": "loja",
+          "flow_step": null
+        }
+      },
+      "occurrences": 1,
+      "older_divergent": 0,
+      "older_divergences": [],
+      "ga_screen": null,
+      "note": null,
+      "divergences": "flow_step: obtido AUSENTE, esperado [preenchido]",
+      "block": "// add_to_cart [ERRO]\n// log  · 1 disparo(s)\n{\n  \"screen_name\": \"demoapp:loja:sacola\",  ✓\n  \"flow_name\": \"loja\",  ✓\n  \"flow_step\": AUSENTE,  ✗\n    // ↳ esperado: [preenchido]\n  \"items[0].item_id\": —,  // não exportado\n  \"items[0].price\": —  // não exportado\n}"
+    },
+    {
+      "id": 4,
+      "card_index": 3,
+      "section": "Compra",
+      "card_title": "Compra",
+      "flow": null,
+      "flow_label": null,
+      "event": "purchase",
+      "variation": "demoapp:loja:sucesso",
+      "status": "missing",
+      "checks": [],
+      "expected": [
+        {
+          "key": "screen_name",
+          "value": "demoapp:loja:sucesso"
+        },
+        {
+          "key": "flow_name",
+          "value": "compra"
+        },
+        {
+          "key": "value",
+          "value": "[numero]"
+        }
+      ],
+      "matched": null,
+      "occurrences": 0,
+      "older_divergent": 0,
+      "older_divergences": [],
+      "ga_screen": null,
+      "note": null,
+      "divergences": "Não disparado no log",
+      "block": "// purchase [ERRO]\n// NÃO DISPARADO no log\n{\n  \"screen_name\": \"demoapp:loja:sucesso\",\n  \"flow_name\": \"compra\",\n  \"value\": \"[numero]\"\n}  // esperado (spec)"
+    }
+  ],
+  "extras": [],
+  "alerts": [],
+  "observations": "Eventos dos fluxos da spec que nenhum card cobre:\n  (nenhum)\n\nAlertas (app_exception / error_view nas telas da spec):\n  (nenhum)\n\nRegra: cada variação é validada pelo disparo mais recente; '⚠' indica disparos anteriores com divergência diferente.",
+  "markdown": "# Auditoria de Tagueamento — DemoApp loja (IOS)\n\nSpec: v3\n- 4 cards · 5 validações · OK: 3 · Erro: 2 (sendo 1 não disparadas) · Conformidade: 60.0%\n- Plataforma: IOS · 4 eventos únicos (0 duplicados removidos de 4 da plataforma; 7 lidos no arquivo)\n\n| Seção | Card | Fluxo | Evento | Variação | Status | Divergências | Horário | Disparos |\n|---|---|---|---|---|---|---|---|---|\n| Loja | Início | - | screen_view | demoapp:loja:inicio | OK | ⚠ 1 disparo(s) anterior(es): flow_step=retomada |  | 2 |\n| Loja | Botões da sacola | - | interaction_loja | click:finalizar | OK |  |  | 1 |\n| Loja | Botões da sacola | - | interaction_loja | click:continuar | OK |  |  | 1 |\n| Loja | Sacola | - | add_to_cart | demoapp:loja:sacola | ERRO | flow_step: obtido AUSENTE, esperado [preenchido] |  | 1 |\n| Compra | Compra | - | purchase | demoapp:loja:sucesso | NÃO DISPARADO | Não disparado no log |  | 0 |\n\n## Fora da spec / Observações\n\nEventos dos fluxos da spec que nenhum card cobre:\n  (nenhum)\n\nAlertas (app_exception / error_view nas telas da spec):\n  (nenhum)\n\nRegra: cada variação é validada pelo disparo mais recente; '⚠' indica disparos anteriores com divergência diferente.\n",
+  "tsv": "Seção\tCard\tFluxo\tEvento\tVariação\tStatus\tDivergências\tHorário\tDisparos\nLoja\tInício\t-\tscreen_view\tdemoapp:loja:inicio\tOK\t⚠ 1 disparo(s) anterior(es): flow_step=retomada\t\t2\nLoja\tBotões da sacola\t-\tinteraction_loja\tclick:finalizar\tOK\t\t\t1\nLoja\tBotões da sacola\t-\tinteraction_loja\tclick:continuar\tOK\t\t\t1\nLoja\tSacola\t-\tadd_to_cart\tdemoapp:loja:sacola\tERRO\tflow_step: obtido AUSENTE, esperado [preenchido]\t\t1\nCompra\tCompra\t-\tpurchase\tdemoapp:loja:sucesso\tNÃO DISPARADO\tNão disparado no log\t\t0\n",
+  "exported_fields": [
+    "ga_screen",
+    "flow_name",
+    "flow_step"
+  ]
+}

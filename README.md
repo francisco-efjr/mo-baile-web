@@ -14,7 +14,8 @@ e funciona em Windows, Linux e macOS.
 Abra **<https://francisco-efjr.github.io/mo-baile-web/>**.
 
 - **Relatório**: escolha (ou arraste) a spec da demanda em JSON e o log de
-  eventos (logcat salvo, JSON do Firebase ou JSON exportado pelo Mo baile),
+  eventos (logcat salvo, JSON do Firebase, JSON exportado pelo Mo baile ou
+  TSV de uma exploração do Google Analytics),
   confira a plataforma e clique em **Auditar**. O resultado mostra
   validações, OK, divergentes, não disparadas, conformidade em %, eventos
   fora da spec e alertas, com Obtido × Esperado de cada parâmetro. Exporte em

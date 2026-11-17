@@ -1,0 +1,62 @@
+{
+  "projeto": "DemoApp loja",
+  "versao_especificacao": "v3",
+  "plataforma": "ios",
+  "fluxos": {},
+  "cards": [
+    {
+      "secao": "Loja",
+      "titulo": "Início",
+      "evento": "screen_view",
+      "params": {
+        "screen_name": "demoapp:loja:inicio",
+        "flow_name": "loja",
+        "flow_step": "primeiro-acesso"
+      }
+    },
+    {
+      "secao": "Loja",
+      "titulo": "Botões da sacola",
+      "evento": "interaction_loja",
+      "params": {
+        "screen_name": "demoapp:loja:sacola",
+        "flow_name": "loja",
+        "component": "button"
+      },
+      "variacoes": [
+        {
+          "detail": "click:finalizar"
+        },
+        {
+          "detail": "click:continuar"
+        }
+      ]
+    },
+    {
+      "secao": "Loja",
+      "titulo": "Sacola",
+      "evento": "add_to_cart",
+      "params": {
+        "screen_name": "demoapp:loja:sacola",
+        "flow_name": "loja",
+        "flow_step": "[preenchido]",
+        "items": [
+          {
+            "item_id": "[preenchido]",
+            "price": "[numero]"
+          }
+        ]
+      }
+    },
+    {
+      "secao": "Compra",
+      "titulo": "Compra",
+      "evento": "purchase",
+      "params": {
+        "screen_name": "demoapp:loja:sucesso",
+        "flow_name": "compra",
+        "value": "[numero]"
+      }
+    }
+  ]
+}

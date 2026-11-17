@@ -57,6 +57,8 @@ export interface ParamCheck {
   expected: string;
   obtained: PyValue;
   ok: boolean;
+  /** Falso quando o log é um export do GA4 que não traz o parâmetro (não conta como divergência). */
+  exported?: boolean;
 }
 
 export interface VariantResult {
@@ -84,6 +86,8 @@ export interface LogStats {
   da_plataforma: number;
   duplicados: number;
   uteis: number;
+  /** Só num export do GA4: os parâmetros que o arquivo traz. */
+  exportados?: string[];
 }
 
 export interface Report {

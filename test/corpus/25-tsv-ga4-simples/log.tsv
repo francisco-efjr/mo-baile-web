@@ -1,0 +1,10 @@
+# DemoApp
+# Exploração cadastro
+Nome do evento	Título da página e nome da tela	flow_name	Contagem de eventos
+			30
+screen_view	demoapp:cadastro:dados	cadastro	20
+form_input	demoapp:cadastro:dados	cadastro	6
+screen_view	demoapp:cadastro:sucesso	cadastro	3
+interaction_cadastro	demoapp:cadastro:dados	cadastro	1
+error_view	demoapp:cadastro:dados	cadastro	1
+screen_view	demoapp:outra:tela	outro-fluxo	0

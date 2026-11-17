@@ -1,6 +1,6 @@
 {
   "name": "mo-baile-web",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "description": "Mo baile Web: auditoria de tagueamento (Analytics e Relatório) no navegador, com motor próprio.",
   "license": "MIT",

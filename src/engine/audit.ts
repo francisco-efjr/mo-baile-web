@@ -23,9 +23,28 @@ export function screenOf(params: PyDict): PyValue {
   return pyOr(dictGet(params, "screen_name"), dictGet(params, "ga_screen"));
 }
 
-export function checkParams(expected: PyDict, params: PyDict): ParamCheck[] {
+/** O log traz este parâmetro? Num logcat (`exported` nulo), sempre. */
+export function isExported(key: string, exported: Set<string> | null): boolean {
+  if (exported === null) return true;
+  if (key === "screen_name") return exported.has("screen_name") || exported.has("ga_screen");
+  return exported.has(key);
+}
+
+/** Confere cada parâmetro da spec. O que o export do GA4 não traz vira "não exportado". */
+export function checkParams(expected: PyDict, params: PyDict, exported: Set<string> | null = null): ParamCheck[] {
   const checks: ParamCheck[] = [];
   for (const [key, exp] of expected) {
+    if (!isExported(key, exported)) {
+      if (key === "items" && isList(exp)) {
+        const expFirst = exp.length && isDict(exp[0]) ? (exp[0] as PyDict) : new Map();
+        for (const [k, v] of expFirst) {
+          checks.push({ field: `items[0].${k}`, expected: displayExpected(v), obtained: null, ok: true, exported: false });
+        }
+      } else {
+        checks.push({ field: key, expected: displayExpected(exp), obtained: null, ok: true, exported: false });
+      }
+      continue;
+    }
     if (key === "items" && isList(exp)) {
       const gotItems = dictGet(params, "items");
       const first = isList(gotItems) && gotItems.length && isDict(gotItems[0]) ? (gotItems[0] as PyDict) : new Map();
@@ -115,10 +134,13 @@ export class EventIndex {
   }
 }
 
-function candidates(variant: Variant, events: EventIndex): TagEvent[] {
+function candidates(variant: Variant, events: EventIndex, exported: Set<string> | null): TagEvent[] {
   const exp = variant.expected;
-  const base: [Field, PyValue][] = (["flow_name", "detail"] as const).filter((k) => exp.has(k)).map((k) => [k, exp.get(k)!]);
-  if (!exp.has("screen_name")) return events.select(variant.event, base);
+  // Campo que o export não traz não recorta: ele não está em nenhum evento.
+  const base: [Field, PyValue][] = (["flow_name", "detail"] as const)
+    .filter((k) => exp.has(k) && isExported(k, exported))
+    .map((k) => [k, exp.get(k)!]);
+  if (!exp.has("screen_name") || !isExported("screen_name", exported)) return events.select(variant.event, base);
   const sameScreen = events.select(variant.event, [...base, ["screen", exp.get("screen_name")!]]);
   if (sameScreen.length) return sameScreen;
   // Disparou na tela certa (ga_screen) com screen_name divergente: vira erro
@@ -126,15 +148,25 @@ function candidates(variant: Variant, events: EventIndex): TagEvent[] {
   return events.select(variant.event, [...base, ["ga_screen", exp.get("screen_name")!]]);
 }
 
-function judge(variant: Variant, pool: TagEvent[]): VariantResult {
+function judge(variant: Variant, pool: TagEvent[], exported: Set<string> | null): VariantResult {
   if (!pool.length)
     return { variant, status: "missing", matched: null, checks: [], occurrences: 0, older_divergent: 0, older_divergences: [], ga_screen: null };
-  const latest = pool[pool.length - 1]!;
-  const checks = checkParams(variant.expected, latest.params);
+  let latest = pool[pool.length - 1]!;
+  let others = pool.slice(0, -1);
+  if (exported !== null) {
+    // Export do GA4: as linhas são combinações, sem "mais recente". Vale a
+    // última que atende tudo, se houver; as outras viram aviso.
+    const matching = pool.filter((e) => failures(checkParams(variant.expected, e.params, exported)).size === 0);
+    if (matching.length) {
+      latest = matching[matching.length - 1]!;
+      others = pool.filter((e) => e !== latest);
+    }
+  }
+  const checks = checkParams(variant.expected, latest.params, exported);
   const current = failures(checks);
   const olderBad: Set<string>[] = [];
-  for (const e of pool.slice(0, -1)) {
-    const diff = new Set([...failures(checkParams(variant.expected, e.params))].filter((f) => !current.has(f)));
+  for (const e of others) {
+    const diff = new Set([...failures(checkParams(variant.expected, e.params, exported))].filter((f) => !current.has(f)));
     if (diff.size) olderBad.push(diff);
   }
   const union = new Set<string>();
@@ -218,8 +250,10 @@ export function findExtras(variants: Variant[], events: TagEvent[], pools: TagEv
 export function runAudit(spec: SpecTemplate, events: TagEvent[], platform: string, logStats: LogStats): Report {
   const variants = expandSpec(spec);
   const index = new EventIndex(events);
-  const pools = variants.map((v) => candidates(v, index));
-  const results = variants.map((v, i) => judge(v, pools[i]!));
+  // Export do GA4: só os parâmetros que vieram no arquivo são conferidos.
+  const exported = logStats.exportados !== undefined ? new Set(logStats.exportados) : null;
+  const pools = variants.map((v) => candidates(v, index, exported));
+  const results = variants.map((v, i) => judge(v, pools[i]!, exported));
   const [extras, alerts] = findExtras(variants, events, pools);
   return {
     spec,

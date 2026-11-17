@@ -1,0 +1,77 @@
+{
+  "platform": "android",
+  "stats": {
+    "total_lidos": 5,
+    "da_plataforma": 5,
+    "duplicados": 0,
+    "uteis": 5,
+    "exportados": [
+      "ga_screen",
+      "flow_name"
+    ]
+  },
+  "events": [
+    {
+      "id": 0,
+      "event_name": "screen_view",
+      "params": {
+        "ga_screen": "demoapp:cadastro:dados",
+        "flow_name": "cadastro"
+      },
+      "platform": "android",
+      "raw_log": null,
+      "time_str": null,
+      "origin": null
+    },
+    {
+      "id": 1,
+      "event_name": "form_input",
+      "params": {
+        "ga_screen": "demoapp:cadastro:dados",
+        "flow_name": "cadastro"
+      },
+      "platform": "android",
+      "raw_log": null,
+      "time_str": null,
+      "origin": null
+    },
+    {
+      "id": 2,
+      "event_name": "screen_view",
+      "params": {
+        "ga_screen": "demoapp:cadastro:sucesso",
+        "flow_name": "cadastro"
+      },
+      "platform": "android",
+      "raw_log": null,
+      "time_str": null,
+      "origin": null
+    },
+    {
+      "id": 3,
+      "event_name": "interaction_cadastro",
+      "params": {
+        "ga_screen": "demoapp:cadastro:dados",
+        "flow_name": "cadastro"
+      },
+      "platform": "android",
+      "raw_log": null,
+      "time_str": null,
+      "origin": null
+    },
+    {
+      "id": 4,
+      "event_name": "error_view",
+      "params": {
+        "ga_screen": "demoapp:cadastro:dados",
+        "flow_name": "cadastro"
+      },
+      "platform": "android",
+      "raw_log": null,
+      "time_str": null,
+      "origin": null
+    }
+  ],
+  "tsv": "Hora\tPlataforma\tOrigem\tNome do Evento\tParâmetros Principais\tJSON dos Parâmetros\n\tANDROID\t\tscreen_view\tga_screen: demoapp:cadastro:dados, flow_name: cadastro\t{\"ga_screen\": \"demoapp:cadastro:dados\", \"flow_name\": \"cadastro\"}\n\tANDROID\t\tform_input\tga_screen: demoapp:cadastro:dados, flow_name: cadastro\t{\"ga_screen\": \"demoapp:cadastro:dados\", \"flow_name\": \"cadastro\"}\n\tANDROID\t\tscreen_view\tga_screen: demoapp:cadastro:sucesso, flow_name: cadastro\t{\"ga_screen\": \"demoapp:cadastro:sucesso\", \"flow_name\": \"cadastro\"}\n\tANDROID\t\tinteraction_cadastro\tga_screen: demoapp:cadastro:dados, flow_name: cadastro\t{\"ga_screen\": \"demoapp:cadastro:dados\", \"flow_name\": \"cadastro\"}\n\tANDROID\t\terror_view\tga_screen: demoapp:cadastro:dados, flow_name: cadastro\t{\"ga_screen\": \"demoapp:cadastro:dados\", \"flow_name\": \"cadastro\"}",
+  "json": "[\n  {\n    \"id\": 0,\n    \"event_name\": \"screen_view\",\n    \"params\": {\n      \"ga_screen\": \"demoapp:cadastro:dados\",\n      \"flow_name\": \"cadastro\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": null,\n    \"time_str\": null,\n    \"origin\": null\n  },\n  {\n    \"id\": 1,\n    \"event_name\": \"form_input\",\n    \"params\": {\n      \"ga_screen\": \"demoapp:cadastro:dados\",\n      \"flow_name\": \"cadastro\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": null,\n    \"time_str\": null,\n    \"origin\": null\n  },\n  {\n    \"id\": 2,\n    \"event_name\": \"screen_view\",\n    \"params\": {\n      \"ga_screen\": \"demoapp:cadastro:sucesso\",\n      \"flow_name\": \"cadastro\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": null,\n    \"time_str\": null,\n    \"origin\": null\n  },\n  {\n    \"id\": 3,\n    \"event_name\": \"interaction_cadastro\",\n    \"params\": {\n      \"ga_screen\": \"demoapp:cadastro:dados\",\n      \"flow_name\": \"cadastro\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": null,\n    \"time_str\": null,\n    \"origin\": null\n  },\n  {\n    \"id\": 4,\n    \"event_name\": \"error_view\",\n    \"params\": {\n      \"ga_screen\": \"demoapp:cadastro:dados\",\n      \"flow_name\": \"cadastro\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": null,\n    \"time_str\": null,\n    \"origin\": null\n  }\n]"
+}

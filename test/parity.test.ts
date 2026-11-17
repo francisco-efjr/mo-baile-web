@@ -65,7 +65,7 @@ function mesmoTexto(obtido: string, esperado: string): void {
 function rodar(caso: string): { report?: AuditReport; erro?: { stage: Etapa; error: unknown }; logTexto: string | null } {
   const pasta = new URL(`${caso}/`, corpus);
   const meta = JSON.parse(ler(new URL("meta.json", pasta))) as Meta;
-  const logNome = ["log.txt", "log.json"].find((n) => existsSync(new URL(n, pasta)))!;
+  const logNome = ["log.txt", "log.json", "log.tsv"].find((n) => existsSync(new URL(n, pasta)))!;
   const logTexto = decodeText(readFileSync(new URL(logNome, pasta)), { label: "log" });
   let etapa: Etapa = "spec";
   try {

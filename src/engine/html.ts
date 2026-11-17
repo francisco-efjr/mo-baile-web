@@ -178,6 +178,14 @@ function checksTable(result: VariantResult): string {
     }
   } else {
     for (const check of result.checks) {
+      if (check.exported === false) {
+        rows.push(
+          `<tr class="is-off"><td class="v__none">${icon("minus", 12, 2.2)}` +
+            `<span class="rp-sr">não exportado</span></td><td class="v__field">${e(check.field)}</td>` +
+            `<td class="v__none">não exportado</td><td class="v__exp">${e(check.expected)}</td></tr>`,
+        );
+        continue;
+      }
       const mark = check.ok
         ? `<td class="v__ok">${icon("circle-check", 12, 2.2)}<span class="rp-sr">ok</span></td>`
         : `<td class="v__bad">${icon("circle-x", 12, 2.2)}<span class="rp-sr">diverge</span></td>`;
@@ -516,6 +524,11 @@ export function generateInteractiveHtml(report: Report, info: [string, string][]
     `<span class="rp-chip rp-chip--${e(platform)}">${icon("smartphone", 11, 2)}${e(report.platform.toUpperCase())}</span>`,
     period(report),
   ];
+  if (report.log_stats.exportados !== undefined) {
+    // Export do GA4: diz o que deu para conferir; o resto aparece como "não exportado".
+    const campos = report.log_stats.exportados.join(", ") || "só o nome do evento";
+    meta.push(`<span>export do GA4 · confere ${e(campos)}</span>`);
+  }
   if (spec.versao_especificacao) meta.push(`<span>spec ${e(spec.versao_especificacao)}</span>`);
   meta.push(`<span>${spec.cards.length} cards</span>`, `<span>${t.total} validações</span>`, `<span>gerado em ${when}</span>`);
   meta.push(...info.map(([label, v]) => `<span class="rp-info">${e(label)} <strong>${e(v)}</strong></span>`));

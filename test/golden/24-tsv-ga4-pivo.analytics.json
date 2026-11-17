@@ -1,0 +1,57 @@
+{
+  "platform": "android",
+  "stats": {
+    "total_lidos": 7,
+    "da_plataforma": 3,
+    "duplicados": 0,
+    "uteis": 3,
+    "exportados": [
+      "ga_screen",
+      "flow_name",
+      "flow_step"
+    ]
+  },
+  "events": [
+    {
+      "id": 1,
+      "event_name": "screen_view",
+      "params": {
+        "ga_screen": "demoapp:loja:inicio",
+        "flow_name": "loja",
+        "flow_step": "primeiro-acesso"
+      },
+      "platform": "android",
+      "raw_log": null,
+      "time_str": null,
+      "origin": null
+    },
+    {
+      "id": 4,
+      "event_name": "interaction_loja",
+      "params": {
+        "ga_screen": "demoapp:loja:sacola",
+        "flow_name": "loja",
+        "flow_step": null
+      },
+      "platform": "android",
+      "raw_log": null,
+      "time_str": null,
+      "origin": null
+    },
+    {
+      "id": 6,
+      "event_name": "purchase",
+      "params": {
+        "ga_screen": "demoapp:loja:sucesso",
+        "flow_name": "compra",
+        "flow_step": "retomada"
+      },
+      "platform": "android",
+      "raw_log": null,
+      "time_str": null,
+      "origin": null
+    }
+  ],
+  "tsv": "Hora\tPlataforma\tOrigem\tNome do Evento\tParâmetros Principais\tJSON dos Parâmetros\n\tANDROID\t\tscreen_view\tga_screen: demoapp:loja:inicio, flow_name: loja, flow_step: primeiro-acesso\t{\"ga_screen\": \"demoapp:loja:inicio\", \"flow_name\": \"loja\", \"flow_step\": \"primeiro-acesso\"}\n\tANDROID\t\tinteraction_loja\tga_screen: demoapp:loja:sacola, flow_name: loja, flow_step: None\t{\"ga_screen\": \"demoapp:loja:sacola\", \"flow_name\": \"loja\", \"flow_step\": null}\n\tANDROID\t\tpurchase\tga_screen: demoapp:loja:sucesso, flow_name: compra, flow_step: retomada\t{\"ga_screen\": \"demoapp:loja:sucesso\", \"flow_name\": \"compra\", \"flow_step\": \"retomada\"}",
+  "json": "[\n  {\n    \"id\": 1,\n    \"event_name\": \"screen_view\",\n    \"params\": {\n      \"ga_screen\": \"demoapp:loja:inicio\",\n      \"flow_name\": \"loja\",\n      \"flow_step\": \"primeiro-acesso\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": null,\n    \"time_str\": null,\n    \"origin\": null\n  },\n  {\n    \"id\": 4,\n    \"event_name\": \"interaction_loja\",\n    \"params\": {\n      \"ga_screen\": \"demoapp:loja:sacola\",\n      \"flow_name\": \"loja\",\n      \"flow_step\": null\n    },\n    \"platform\": \"android\",\n    \"raw_log\": null,\n    \"time_str\": null,\n    \"origin\": null\n  },\n  {\n    \"id\": 6,\n    \"event_name\": \"purchase\",\n    \"params\": {\n      \"ga_screen\": \"demoapp:loja:sucesso\",\n      \"flow_name\": \"compra\",\n      \"flow_step\": \"retomada\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": null,\n    \"time_str\": null,\n    \"origin\": null\n  }\n]"
+}

@@ -156,7 +156,7 @@ export function specSummary(spec: Spec, name: string = spec.name): SpecSummary {
 /** Itens lidos de um log (logcat salvo, JSON do Firebase ou export do Mo baile). */
 export interface LogRead {
   name: string;
-  format: "logcat" | "json";
+  format: "logcat" | "json" | "tsv";
   /** Quantos itens o arquivo tem (antes de filtrar a plataforma). */
   count: number;
   /** Itens crus, com os tipos do Python: opacos para a interface. */
@@ -197,6 +197,8 @@ export interface FieldCheck {
   /** Valor do log como texto (JSON quando não é texto), ou `null` se o parâmetro não veio. */
   obtained: string | null;
   ok: boolean;
+  /** Só vem (falso) quando o log é um export do GA4 que não traz o parâmetro. */
+  exported?: false;
 }
 
 export interface MatchedEvent {
@@ -253,6 +255,8 @@ export interface AuditReport {
   observations: string;
   markdown: string;
   tsv: string;
+  /** Só num export do GA4 (TSV): os parâmetros que o arquivo traz. */
+  exported_fields?: string[];
 }
 
 interface Internal {

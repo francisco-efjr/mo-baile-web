@@ -1,0 +1,35 @@
+{
+  "projeto": "DemoApp cadastro",
+  "plataforma": "android",
+  "fluxos": {},
+  "cards": [
+    {
+      "secao": "Cadastro",
+      "titulo": "Dados",
+      "evento": "screen_view",
+      "params": {
+        "screen_name": "demoapp:cadastro:dados",
+        "flow_name": "cadastro"
+      }
+    },
+    {
+      "secao": "Cadastro",
+      "titulo": "Campo",
+      "evento": "form_input",
+      "params": {
+        "screen_name": "demoapp:cadastro:dados",
+        "flow_name": "cadastro",
+        "text": "[nome do campo]"
+      }
+    },
+    {
+      "secao": "Cadastro",
+      "titulo": "Sucesso",
+      "evento": "screen_view",
+      "params": {
+        "screen_name": "demoapp:cadastro:sucesso",
+        "flow_name": "cadastro-final"
+      }
+    }
+  ]
+}

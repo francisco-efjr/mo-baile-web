@@ -5,7 +5,7 @@ Uso (a partir da raiz do repositório):
 
     PYTHONPATH=<mo-baile>/engine/src python3 tools/golden/gerar.py
 
-Para cada caso de `test/corpus/<caso>/` (spec.json, log.txt ou log.json e
+Para cada caso de `test/corpus/<caso>/` (spec.json, log.txt, log.json ou log.tsv e
 meta.json) grava em `test/golden/`:
 
 - `<caso>.json`: o `report.audit` no formato web (sem caminho de disco: `name`
@@ -108,7 +108,7 @@ def erro(etapa: str, exc: EngineError) -> dict:
 def caso(pasta: Path) -> None:
     nome = pasta.name
     meta = json.loads((pasta / "meta.json").read_text(encoding="utf-8"))
-    logs = [p for p in (pasta / "log.txt", pasta / "log.json") if p.exists()]
+    logs = [p for p in (pasta / "log.txt", pasta / "log.json", pasta / "log.tsv") if p.exists()]
     with tempfile.TemporaryDirectory(prefix="mobaile-paridade-") as tmp:
         tmpdir = Path(tmp)
         servico = WebReportService(ocr=None, documents_dir=tmpdir)

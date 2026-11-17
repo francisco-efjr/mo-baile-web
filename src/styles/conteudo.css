@@ -371,3 +371,8 @@ button.mw-tile:hover { background: var(--fill-secondary); }
   .mw-imp__mini img { max-height: 160px; }
   .mw-dz__extra { margin-left: 0; }
 }
+
+/* Export do GA4 (TSV): parâmetro que o arquivo não traz. */
+.mw-off { color: var(--label-tertiary); }
+.mw-checks__nao { color: var(--label-tertiary); font-style: italic; }
+.mw-res__export { color: var(--label-secondary); }

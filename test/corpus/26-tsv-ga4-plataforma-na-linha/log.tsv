@@ -1,0 +1,4 @@
+Nome do evento	Plataforma	firebase_screen	flow_name	Total de usuários
+screen_view	Android	demoapp:cadastro:dados	cadastro	4
+screen_view	iOS	demoapp:cadastro:dados	outro	1
+form_input	iOS	demoapp:cadastro:dados	cadastro	2

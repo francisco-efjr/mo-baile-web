@@ -5,6 +5,25 @@ mais antiga. O formato segue o [Keep a Changelog](https://keepachangelog.com/pt-
 e a numeração segue o [Versionamento Semântico](https://semver.org/lang/pt-BR/).
 
 
+## [0.3.0] - 2026-11-17
+
+### Adicionado
+
+- **Log em TSV do Google Analytics** no quadro **Log de eventos** do
+  Relatório: o arquivo de **Fazer o download dos dados** › TSV de uma
+  exploração do GA4 (port do Mo baile 3.25.0, com paridade por gabarito).
+  - Cada combinação de evento e dimensões com métrica maior que zero vira um
+    disparo, uma vez por plataforma quando a exploração separa por sistema
+    operacional. Sem a plataforma no arquivo, vale a da auditoria.
+  - `firebase_screen` vira o `screen_name`, como no logcat. `(not set)` é
+    exportado e vazio, e diverge.
+  - Só as dimensões exportadas são conferidas. O resto da spec aparece como
+    **não exportado**, sem contar como divergência, no detalhe, no bloco e no
+    HTML; o resultado diz quais campos o export confere.
+  - Como o export não tem ordem de disparo, vale a combinação que atende à
+    spec; as outras viram aviso de disparo anterior divergente.
+  - Casos 24 a 26 no corpus, teste F-12 e a Ajuda do Relatório atualizada.
+
 ## [0.2.0] - 2026-11-17
 
 ### Adicionado
