@@ -1,0 +1,65 @@
+{
+  "platform": "android",
+  "stats": {
+    "total_lidos": 7,
+    "da_plataforma": 7,
+    "duplicados": 3,
+    "uteis": 4
+  },
+  "events": [
+    {
+      "id": 0,
+      "event_name": "add_to_wishlist",
+      "params": {
+        "screen_name": "demoapp:favoritos:lista",
+        "flow_name": "favoritos",
+        "item_id": "SKU-9"
+      },
+      "platform": "android",
+      "raw_log": "11-16 18:00:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=add_to_wishlist,params=Bundle[{screen_name=demoapp:favoritos:lista, flow_name=favoritos, item_id=SKU-9}]",
+      "time_str": "18:00:00.000",
+      "origin": "app"
+    },
+    {
+      "id": 5,
+      "event_name": "add_to_wishlist",
+      "params": {
+        "screen_name": "demoapp:favoritos:lista",
+        "flow_name": "favoritos",
+        "item_id": "SKU-10"
+      },
+      "platform": "android",
+      "raw_log": "11-16 18:00:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=add_to_wishlist,params=Bundle[{screen_name=demoapp:favoritos:lista, flow_name=favoritos, item_id=SKU-10}]",
+      "time_str": "18:00:00.000",
+      "origin": "app"
+    },
+    {
+      "id": 4,
+      "event_name": "add_to_wishlist",
+      "params": {
+        "screen_name": "demoapp:favoritos:lista",
+        "flow_name": "favoritos",
+        "item_id": "SKU-9"
+      },
+      "platform": "android",
+      "raw_log": "11-16 18:00:01.000  4321  4400 V FA-SVC : Logging event: origin=app,name=add_to_wishlist,params=Bundle[{screen_name=demoapp:favoritos:lista, flow_name=favoritos, item_id=SKU-9}]",
+      "time_str": "18:00:01.000",
+      "origin": "app"
+    },
+    {
+      "id": 6,
+      "event_name": "add_to_wishlist",
+      "params": {
+        "screen_name": "demoapp:favoritos:lista",
+        "flow_name": "favoritos",
+        "item_id": "SKU-11"
+      },
+      "platform": "android",
+      "raw_log": "11-17 00:00:05.000  4321  4400 V FA-SVC : Logging event: origin=app,name=add_to_wishlist,params=Bundle[{screen_name=demoapp:favoritos:lista, flow_name=favoritos, item_id=SKU-11}]",
+      "time_str": "00:00:05.000",
+      "origin": "app"
+    }
+  ],
+  "tsv": "Hora\tPlataforma\tOrigem\tNome do Evento\tParâmetros Principais\tJSON dos Parâmetros\n18:00:00.000\tANDROID\tapp\tadd_to_wishlist\tscreen_name: demoapp:favoritos:lista, flow_name: favoritos, item_id: SKU-9\t{\"screen_name\": \"demoapp:favoritos:lista\", \"flow_name\": \"favoritos\", \"item_id\": \"SKU-9\"}\n18:00:00.000\tANDROID\tapp\tadd_to_wishlist\tscreen_name: demoapp:favoritos:lista, flow_name: favoritos, item_id: SKU-10\t{\"screen_name\": \"demoapp:favoritos:lista\", \"flow_name\": \"favoritos\", \"item_id\": \"SKU-10\"}\n18:00:01.000\tANDROID\tapp\tadd_to_wishlist\tscreen_name: demoapp:favoritos:lista, flow_name: favoritos, item_id: SKU-9\t{\"screen_name\": \"demoapp:favoritos:lista\", \"flow_name\": \"favoritos\", \"item_id\": \"SKU-9\"}\n00:00:05.000\tANDROID\tapp\tadd_to_wishlist\tscreen_name: demoapp:favoritos:lista, flow_name: favoritos, item_id: SKU-11\t{\"screen_name\": \"demoapp:favoritos:lista\", \"flow_name\": \"favoritos\", \"item_id\": \"SKU-11\"}",
+  "json": "[\n  {\n    \"id\": 0,\n    \"event_name\": \"add_to_wishlist\",\n    \"params\": {\n      \"screen_name\": \"demoapp:favoritos:lista\",\n      \"flow_name\": \"favoritos\",\n      \"item_id\": \"SKU-9\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 18:00:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=add_to_wishlist,params=Bundle[{screen_name=demoapp:favoritos:lista, flow_name=favoritos, item_id=SKU-9}]\",\n    \"time_str\": \"18:00:00.000\",\n    \"origin\": \"app\"\n  },\n  {\n    \"id\": 5,\n    \"event_name\": \"add_to_wishlist\",\n    \"params\": {\n      \"screen_name\": \"demoapp:favoritos:lista\",\n      \"flow_name\": \"favoritos\",\n      \"item_id\": \"SKU-10\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 18:00:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=add_to_wishlist,params=Bundle[{screen_name=demoapp:favoritos:lista, flow_name=favoritos, item_id=SKU-10}]\",\n    \"time_str\": \"18:00:00.000\",\n    \"origin\": \"app\"\n  },\n  {\n    \"id\": 4,\n    \"event_name\": \"add_to_wishlist\",\n    \"params\": {\n      \"screen_name\": \"demoapp:favoritos:lista\",\n      \"flow_name\": \"favoritos\",\n      \"item_id\": \"SKU-9\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 18:00:01.000  4321  4400 V FA-SVC : Logging event: origin=app,name=add_to_wishlist,params=Bundle[{screen_name=demoapp:favoritos:lista, flow_name=favoritos, item_id=SKU-9}]\",\n    \"time_str\": \"18:00:01.000\",\n    \"origin\": \"app\"\n  },\n  {\n    \"id\": 6,\n    \"event_name\": \"add_to_wishlist\",\n    \"params\": {\n      \"screen_name\": \"demoapp:favoritos:lista\",\n      \"flow_name\": \"favoritos\",\n      \"item_id\": \"SKU-11\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-17 00:00:05.000  4321  4400 V FA-SVC : Logging event: origin=app,name=add_to_wishlist,params=Bundle[{screen_name=demoapp:favoritos:lista, flow_name=favoritos, item_id=SKU-11}]\",\n    \"time_str\": \"00:00:05.000\",\n    \"origin\": \"app\"\n  }\n]"
+}

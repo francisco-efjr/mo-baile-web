@@ -1,0 +1,99 @@
+{
+  "platform": "android",
+  "stats": {
+    "total_lidos": 7,
+    "da_plataforma": 7,
+    "duplicados": 0,
+    "uteis": 7
+  },
+  "events": [
+    {
+      "id": 0,
+      "event_name": "add_payment_info",
+      "params": {
+        "screen_name": "demoapp:checkout:pagamento",
+        "flow_name": "checkout",
+        "payment_type": "boleto"
+      },
+      "platform": "android",
+      "raw_log": "11-16 17:30:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=add_payment_info,params=Bundle[{screen_name=demoapp:checkout:pagamento, flow_name=checkout, payment_type=boleto}]",
+      "time_str": "17:30:00.000",
+      "origin": "app"
+    },
+    {
+      "id": 1,
+      "event_name": "app_exception",
+      "params": {
+        "ga_screen": "demoapp:checkout:pagamento",
+        "fatal": "0"
+      },
+      "platform": "android",
+      "raw_log": "11-16 17:30:05.000  4321  4400 V FA-SVC : Logging event: origin=app,name=app_exception(_ae),params=Bundle[{ga_screen(_sn)=demoapp:checkout:pagamento, fatal=0}]",
+      "time_str": "17:30:05.000",
+      "origin": "app"
+    },
+    {
+      "id": 2,
+      "event_name": "app_exception",
+      "params": {
+        "ga_screen": "demoapp:checkout:pagamento",
+        "fatal": "0"
+      },
+      "platform": "android",
+      "raw_log": "11-16 17:30:06.000  4321  4400 V FA-SVC : Logging event: origin=app,name=app_exception(_ae),params=Bundle[{ga_screen(_sn)=demoapp:checkout:pagamento, fatal=0}]",
+      "time_str": "17:30:06.000",
+      "origin": "app"
+    },
+    {
+      "id": 3,
+      "event_name": "error_view",
+      "params": {
+        "flow_name": "checkout",
+        "screen_name": "demoapp:checkout:revisao",
+        "error_code": "E42"
+      },
+      "platform": "android",
+      "raw_log": "11-16 17:30:07.000  4321  4400 V FA-SVC : Logging event: origin=app,name=error_view,params=Bundle[{flow_name=checkout, screen_name=demoapp:checkout:revisao, error_code=E42}]",
+      "time_str": "17:30:07.000",
+      "origin": "app"
+    },
+    {
+      "id": 4,
+      "event_name": "error_view",
+      "params": {
+        "screen_name": "demoapp:checkout:pagamento",
+        "error_code": "E13"
+      },
+      "platform": "android",
+      "raw_log": "11-16 17:30:08.000  4321  4400 V FA-SVC : Logging event: origin=app,name=error_view,params=Bundle[{screen_name=demoapp:checkout:pagamento, error_code=E13}]",
+      "time_str": "17:30:08.000",
+      "origin": "app"
+    },
+    {
+      "id": 5,
+      "event_name": "app_exception",
+      "params": {
+        "ga_screen": "demoapp:conta:perfil",
+        "fatal": "1"
+      },
+      "platform": "android",
+      "raw_log": "11-16 17:30:09.000  4321  4400 V FA-SVC : Logging event: origin=app,name=app_exception(_ae),params=Bundle[{ga_screen(_sn)=demoapp:conta:perfil, fatal=1}]",
+      "time_str": "17:30:09.000",
+      "origin": "app"
+    },
+    {
+      "id": 6,
+      "event_name": "error_view",
+      "params": {
+        "flow_name": "conta",
+        "screen_name": "demoapp:conta:perfil"
+      },
+      "platform": "android",
+      "raw_log": "11-16 17:30:10.000  4321  4400 V FA-SVC : Logging event: origin=app,name=error_view,params=Bundle[{flow_name=conta, screen_name=demoapp:conta:perfil}]",
+      "time_str": "17:30:10.000",
+      "origin": "app"
+    }
+  ],
+  "tsv": "Hora\tPlataforma\tOrigem\tNome do Evento\tParâmetros Principais\tJSON dos Parâmetros\n17:30:00.000\tANDROID\tapp\tadd_payment_info\tscreen_name: demoapp:checkout:pagamento, flow_name: checkout, payment_type: boleto\t{\"screen_name\": \"demoapp:checkout:pagamento\", \"flow_name\": \"checkout\", \"payment_type\": \"boleto\"}\n17:30:05.000\tANDROID\tapp\tapp_exception\tga_screen: demoapp:checkout:pagamento, fatal: 0\t{\"ga_screen\": \"demoapp:checkout:pagamento\", \"fatal\": \"0\"}\n17:30:06.000\tANDROID\tapp\tapp_exception\tga_screen: demoapp:checkout:pagamento, fatal: 0\t{\"ga_screen\": \"demoapp:checkout:pagamento\", \"fatal\": \"0\"}\n17:30:07.000\tANDROID\tapp\terror_view\tflow_name: checkout, screen_name: demoapp:checkout:revisao, error_code: E42\t{\"flow_name\": \"checkout\", \"screen_name\": \"demoapp:checkout:revisao\", \"error_code\": \"E42\"}\n17:30:08.000\tANDROID\tapp\terror_view\tscreen_name: demoapp:checkout:pagamento, error_code: E13\t{\"screen_name\": \"demoapp:checkout:pagamento\", \"error_code\": \"E13\"}\n17:30:09.000\tANDROID\tapp\tapp_exception\tga_screen: demoapp:conta:perfil, fatal: 1\t{\"ga_screen\": \"demoapp:conta:perfil\", \"fatal\": \"1\"}\n17:30:10.000\tANDROID\tapp\terror_view\tflow_name: conta, screen_name: demoapp:conta:perfil\t{\"flow_name\": \"conta\", \"screen_name\": \"demoapp:conta:perfil\"}",
+  "json": "[\n  {\n    \"id\": 0,\n    \"event_name\": \"add_payment_info\",\n    \"params\": {\n      \"screen_name\": \"demoapp:checkout:pagamento\",\n      \"flow_name\": \"checkout\",\n      \"payment_type\": \"boleto\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 17:30:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=add_payment_info,params=Bundle[{screen_name=demoapp:checkout:pagamento, flow_name=checkout, payment_type=boleto}]\",\n    \"time_str\": \"17:30:00.000\",\n    \"origin\": \"app\"\n  },\n  {\n    \"id\": 1,\n    \"event_name\": \"app_exception\",\n    \"params\": {\n      \"ga_screen\": \"demoapp:checkout:pagamento\",\n      \"fatal\": \"0\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 17:30:05.000  4321  4400 V FA-SVC : Logging event: origin=app,name=app_exception(_ae),params=Bundle[{ga_screen(_sn)=demoapp:checkout:pagamento, fatal=0}]\",\n    \"time_str\": \"17:30:05.000\",\n    \"origin\": \"app\"\n  },\n  {\n    \"id\": 2,\n    \"event_name\": \"app_exception\",\n    \"params\": {\n      \"ga_screen\": \"demoapp:checkout:pagamento\",\n      \"fatal\": \"0\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 17:30:06.000  4321  4400 V FA-SVC : Logging event: origin=app,name=app_exception(_ae),params=Bundle[{ga_screen(_sn)=demoapp:checkout:pagamento, fatal=0}]\",\n    \"time_str\": \"17:30:06.000\",\n    \"origin\": \"app\"\n  },\n  {\n    \"id\": 3,\n    \"event_name\": \"error_view\",\n    \"params\": {\n      \"flow_name\": \"checkout\",\n      \"screen_name\": \"demoapp:checkout:revisao\",\n      \"error_code\": \"E42\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 17:30:07.000  4321  4400 V FA-SVC : Logging event: origin=app,name=error_view,params=Bundle[{flow_name=checkout, screen_name=demoapp:checkout:revisao, error_code=E42}]\",\n    \"time_str\": \"17:30:07.000\",\n    \"origin\": \"app\"\n  },\n  {\n    \"id\": 4,\n    \"event_name\": \"error_view\",\n    \"params\": {\n      \"screen_name\": \"demoapp:checkout:pagamento\",\n      \"error_code\": \"E13\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 17:30:08.000  4321  4400 V FA-SVC : Logging event: origin=app,name=error_view,params=Bundle[{screen_name=demoapp:checkout:pagamento, error_code=E13}]\",\n    \"time_str\": \"17:30:08.000\",\n    \"origin\": \"app\"\n  },\n  {\n    \"id\": 5,\n    \"event_name\": \"app_exception\",\n    \"params\": {\n      \"ga_screen\": \"demoapp:conta:perfil\",\n      \"fatal\": \"1\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 17:30:09.000  4321  4400 V FA-SVC : Logging event: origin=app,name=app_exception(_ae),params=Bundle[{ga_screen(_sn)=demoapp:conta:perfil, fatal=1}]\",\n    \"time_str\": \"17:30:09.000\",\n    \"origin\": \"app\"\n  },\n  {\n    \"id\": 6,\n    \"event_name\": \"error_view\",\n    \"params\": {\n      \"flow_name\": \"conta\",\n      \"screen_name\": \"demoapp:conta:perfil\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 17:30:10.000  4321  4400 V FA-SVC : Logging event: origin=app,name=error_view,params=Bundle[{flow_name=conta, screen_name=demoapp:conta:perfil}]\",\n    \"time_str\": \"17:30:10.000\",\n    \"origin\": \"app\"\n  }\n]"
+}

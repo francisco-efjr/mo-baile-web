@@ -1,0 +1,25 @@
+{
+  "platform": "android",
+  "stats": {
+    "total_lidos": 4,
+    "da_plataforma": 1,
+    "duplicados": 0,
+    "uteis": 1
+  },
+  "events": [
+    {
+      "id": 0,
+      "event_name": "login",
+      "params": {
+        "flow_name": "login",
+        "method": "senha"
+      },
+      "platform": "android",
+      "raw_log": "11-16 09:00:00.000  4321  4400 V FA-SVC  : Logging event: origin=app,name=login,params=Bundle[{flow_name=login, method=senha}]",
+      "time_str": "09:00:00.000",
+      "origin": "app"
+    }
+  ],
+  "tsv": "Hora\tPlataforma\tOrigem\tNome do Evento\tParâmetros Principais\tJSON dos Parâmetros\n09:00:00.000\tANDROID\tapp\tlogin\tflow_name: login, method: senha\t{\"flow_name\": \"login\", \"method\": \"senha\"}",
+  "json": "[\n  {\n    \"id\": 0,\n    \"event_name\": \"login\",\n    \"params\": {\n      \"flow_name\": \"login\",\n      \"method\": \"senha\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 09:00:00.000  4321  4400 V FA-SVC  : Logging event: origin=app,name=login,params=Bundle[{flow_name=login, method=senha}]\",\n    \"time_str\": \"09:00:00.000\",\n    \"origin\": \"app\"\n  }\n]"
+}

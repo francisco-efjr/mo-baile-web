@@ -1,0 +1,7 @@
+{
+  "error": {
+    "stage": "spec",
+    "code": "invalid_input",
+    "message": "A spec precisa ser um objeto JSON com 'projeto' e 'cards'."
+  }
+}

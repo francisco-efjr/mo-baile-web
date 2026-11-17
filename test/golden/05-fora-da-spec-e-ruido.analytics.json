@@ -1,0 +1,179 @@
+{
+  "platform": "android",
+  "stats": {
+    "total_lidos": 13,
+    "da_plataforma": 13,
+    "duplicados": 0,
+    "uteis": 13
+  },
+  "events": [
+    {
+      "id": 0,
+      "event_name": "view_item",
+      "params": {
+        "screen_name": "demoapp:vitrine:produto",
+        "flow_name": "vitrine",
+        "item_id": "SKU-1"
+      },
+      "platform": "android",
+      "raw_log": "11-16 16:00:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=view_item,params=Bundle[{screen_name=demoapp:vitrine:produto, flow_name=vitrine, item_id=SKU-1}]",
+      "time_str": "16:00:00.000",
+      "origin": "app"
+    },
+    {
+      "id": 1,
+      "event_name": "select_promotion",
+      "params": {
+        "screen_name": "demoapp:vitrine:home",
+        "flow_name": "vitrine",
+        "component": "banner",
+        "detail": "promo-verao"
+      },
+      "platform": "android",
+      "raw_log": "11-16 16:00:01.000  4321  4400 V FA-SVC : Logging event: origin=app,name=select_promotion,params=Bundle[{screen_name=demoapp:vitrine:home, flow_name=vitrine, component=banner, detail=promo-verao}]",
+      "time_str": "16:00:01.000",
+      "origin": "app"
+    },
+    {
+      "id": 2,
+      "event_name": "select_promotion",
+      "params": {
+        "screen_name": "demoapp:vitrine:home",
+        "flow_name": "vitrine",
+        "component": "banner",
+        "detail": "promo-verao"
+      },
+      "platform": "android",
+      "raw_log": "11-16 16:00:02.000  4321  4400 V FA-SVC : Logging event: origin=app,name=select_promotion,params=Bundle[{screen_name=demoapp:vitrine:home, flow_name=vitrine, component=banner, detail=promo-verao}]",
+      "time_str": "16:00:02.000",
+      "origin": "app"
+    },
+    {
+      "id": 3,
+      "event_name": "select_promotion",
+      "params": {
+        "screen_name": "demoapp:vitrine:home",
+        "flow_name": "vitrine",
+        "component": "banner",
+        "detail": "promo-verao"
+      },
+      "platform": "android",
+      "raw_log": "11-16 16:00:03.000  4321  4400 V FA-SVC : Logging event: origin=app,name=select_promotion,params=Bundle[{screen_name=demoapp:vitrine:home, flow_name=vitrine, component=banner, detail=promo-verao}]",
+      "time_str": "16:00:03.000",
+      "origin": "app"
+    },
+    {
+      "id": 4,
+      "event_name": "select_promotion",
+      "params": {
+        "screen_name": "demoapp:vitrine:home",
+        "flow_name": "vitrine",
+        "component": "banner",
+        "detail": "promo-inverno"
+      },
+      "platform": "android",
+      "raw_log": "11-16 16:00:05.000  4321  4400 V FA-SVC : Logging event: origin=app,name=select_promotion,params=Bundle[{screen_name=demoapp:vitrine:home, flow_name=vitrine, component=banner, detail=promo-inverno}]",
+      "time_str": "16:00:05.000",
+      "origin": "app"
+    },
+    {
+      "id": 5,
+      "event_name": "user_engagement",
+      "params": {
+        "flow_name": "vitrine",
+        "ga_event_origin": "auto",
+        "engagement_time_msec": "1500"
+      },
+      "platform": "android",
+      "raw_log": "11-16 16:00:06.000  4321  4400 V FA-SVC : Logging event: origin=auto,name=user_engagement(_e),params=Bundle[{flow_name=vitrine, ga_event_origin(_o)=auto, engagement_time_msec(_et)=1500}]",
+      "time_str": "16:00:06.000",
+      "origin": "auto"
+    },
+    {
+      "id": 6,
+      "event_name": "user_engagement",
+      "params": {
+        "flow_name": "vitrine",
+        "ga_event_origin": "app"
+      },
+      "platform": "android",
+      "raw_log": "11-16 16:00:07.000  4321  4400 V FA-SVC : Logging event: origin=app,name=user_engagement(_e),params=Bundle[{flow_name=vitrine, ga_event_origin(_o)=app}]",
+      "time_str": "16:00:07.000",
+      "origin": "app"
+    },
+    {
+      "id": 7,
+      "event_name": "CAROUSEL_SWIPE",
+      "params": {
+        "flow_name": "vitrine",
+        "screen_name": "demoapp:vitrine:home"
+      },
+      "platform": "android",
+      "raw_log": "11-16 16:00:08.000  4321  4400 V FA-SVC : Logging event: origin=app,name=CAROUSEL_SWIPE,params=Bundle[{flow_name=vitrine, screen_name=demoapp:vitrine:home}]",
+      "time_str": "16:00:08.000",
+      "origin": "app"
+    },
+    {
+      "id": 8,
+      "event_name": "ls_cache_hit",
+      "params": {
+        "flow_name": "vitrine"
+      },
+      "platform": "android",
+      "raw_log": "11-16 16:00:09.000  4321  4400 V FA-SVC : Logging event: origin=app,name=ls_cache_hit,params=Bundle[{flow_name=vitrine}]",
+      "time_str": "16:00:09.000",
+      "origin": "app"
+    },
+    {
+      "id": 9,
+      "event_name": "screen_view",
+      "params": {
+        "flow_name": "vitrine",
+        "ga_event_origin": "auto",
+        "ga_screen": "demoapp:vitrine:home"
+      },
+      "platform": "android",
+      "raw_log": "11-16 16:00:10.000  4321  4400 V FA-SVC : Logging event: origin=auto,name=screen_view(_vs),params=Bundle[{flow_name=vitrine, ga_event_origin(_o)=auto, ga_screen(_sn)=demoapp:vitrine:home}]",
+      "time_str": "16:00:10.000",
+      "origin": "auto"
+    },
+    {
+      "id": 10,
+      "event_name": "fiam_impression",
+      "params": {
+        "flow_name": "vitrine",
+        "ga_event_origin": "fiam"
+      },
+      "platform": "android",
+      "raw_log": "11-16 16:00:11.000  4321  4400 V FA-SVC : Logging event: origin=fiam,name=fiam_impression,params=Bundle[{flow_name=vitrine, ga_event_origin(_o)=fiam}]",
+      "time_str": "16:00:11.000",
+      "origin": "fiam"
+    },
+    {
+      "id": 11,
+      "event_name": "share",
+      "params": {
+        "flow_name": "vitrine",
+        "method": "link"
+      },
+      "platform": "android",
+      "raw_log": "11-16 16:00:12.000  4321  4400 V FA-SVC : Logging event: origin=app,name=share,params=Bundle[{flow_name=vitrine, method=link}]",
+      "time_str": "16:00:12.000",
+      "origin": "app"
+    },
+    {
+      "id": 12,
+      "event_name": "share",
+      "params": {
+        "flow_name": "checkout",
+        "method": "link"
+      },
+      "platform": "android",
+      "raw_log": "11-16 16:00:13.000  4321  4400 V FA-SVC : Logging event: origin=app,name=share,params=Bundle[{flow_name=checkout, method=link}]",
+      "time_str": "16:00:13.000",
+      "origin": "app"
+    }
+  ],
+  "tsv": "Hora\tPlataforma\tOrigem\tNome do Evento\tParâmetros Principais\tJSON dos Parâmetros\n16:00:00.000\tANDROID\tapp\tview_item\tscreen_name: demoapp:vitrine:produto, flow_name: vitrine, item_id: SKU-1\t{\"screen_name\": \"demoapp:vitrine:produto\", \"flow_name\": \"vitrine\", \"item_id\": \"SKU-1\"}\n16:00:01.000\tANDROID\tapp\tselect_promotion\tscreen_name: demoapp:vitrine:home, flow_name: vitrine, component: banner, detail: promo-verao\t{\"screen_name\": \"demoapp:vitrine:home\", \"flow_name\": \"vitrine\", \"component\": \"banner\", \"detail\": \"promo-verao\"}\n16:00:02.000\tANDROID\tapp\tselect_promotion\tscreen_name: demoapp:vitrine:home, flow_name: vitrine, component: banner, detail: promo-verao\t{\"screen_name\": \"demoapp:vitrine:home\", \"flow_name\": \"vitrine\", \"component\": \"banner\", \"detail\": \"promo-verao\"}\n16:00:03.000\tANDROID\tapp\tselect_promotion\tscreen_name: demoapp:vitrine:home, flow_name: vitrine, component: banner, detail: promo-verao\t{\"screen_name\": \"demoapp:vitrine:home\", \"flow_name\": \"vitrine\", \"component\": \"banner\", \"detail\": \"promo-verao\"}\n16:00:05.000\tANDROID\tapp\tselect_promotion\tscreen_name: demoapp:vitrine:home, flow_name: vitrine, component: banner, detail: promo-inverno\t{\"screen_name\": \"demoapp:vitrine:home\", \"flow_name\": \"vitrine\", \"component\": \"banner\", \"detail\": \"promo-inverno\"}\n16:00:06.000\tANDROID\tauto\tuser_engagement\tflow_name: vitrine, ga_event_origin: auto, engagement_time_msec: 1500\t{\"flow_name\": \"vitrine\", \"ga_event_origin\": \"auto\", \"engagement_time_msec\": \"1500\"}\n16:00:07.000\tANDROID\tapp\tuser_engagement\tflow_name: vitrine, ga_event_origin: app\t{\"flow_name\": \"vitrine\", \"ga_event_origin\": \"app\"}\n16:00:08.000\tANDROID\tapp\tCAROUSEL_SWIPE\tflow_name: vitrine, screen_name: demoapp:vitrine:home\t{\"flow_name\": \"vitrine\", \"screen_name\": \"demoapp:vitrine:home\"}\n16:00:09.000\tANDROID\tapp\tls_cache_hit\tflow_name: vitrine\t{\"flow_name\": \"vitrine\"}\n16:00:10.000\tANDROID\tauto\tscreen_view\tflow_name: vitrine, ga_event_origin: auto, ga_screen: demoapp:vitrine:home\t{\"flow_name\": \"vitrine\", \"ga_event_origin\": \"auto\", \"ga_screen\": \"demoapp:vitrine:home\"}\n16:00:11.000\tANDROID\tfiam\tfiam_impression\tflow_name: vitrine, ga_event_origin: fiam\t{\"flow_name\": \"vitrine\", \"ga_event_origin\": \"fiam\"}\n16:00:12.000\tANDROID\tapp\tshare\tflow_name: vitrine, method: link\t{\"flow_name\": \"vitrine\", \"method\": \"link\"}\n16:00:13.000\tANDROID\tapp\tshare\tflow_name: checkout, method: link\t{\"flow_name\": \"checkout\", \"method\": \"link\"}",
+  "json": "[\n  {\n    \"id\": 0,\n    \"event_name\": \"view_item\",\n    \"params\": {\n      \"screen_name\": \"demoapp:vitrine:produto\",\n      \"flow_name\": \"vitrine\",\n      \"item_id\": \"SKU-1\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 16:00:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=view_item,params=Bundle[{screen_name=demoapp:vitrine:produto, flow_name=vitrine, item_id=SKU-1}]\",\n    \"time_str\": \"16:00:00.000\",\n    \"origin\": \"app\"\n  },\n  {\n    \"id\": 1,\n    \"event_name\": \"select_promotion\",\n    \"params\": {\n      \"screen_name\": \"demoapp:vitrine:home\",\n      \"flow_name\": \"vitrine\",\n      \"component\": \"banner\",\n      \"detail\": \"promo-verao\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 16:00:01.000  4321  4400 V FA-SVC : Logging event: origin=app,name=select_promotion,params=Bundle[{screen_name=demoapp:vitrine:home, flow_name=vitrine, component=banner, detail=promo-verao}]\",\n    \"time_str\": \"16:00:01.000\",\n    \"origin\": \"app\"\n  },\n  {\n    \"id\": 2,\n    \"event_name\": \"select_promotion\",\n    \"params\": {\n      \"screen_name\": \"demoapp:vitrine:home\",\n      \"flow_name\": \"vitrine\",\n      \"component\": \"banner\",\n      \"detail\": \"promo-verao\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 16:00:02.000  4321  4400 V FA-SVC : Logging event: origin=app,name=select_promotion,params=Bundle[{screen_name=demoapp:vitrine:home, flow_name=vitrine, component=banner, detail=promo-verao}]\",\n    \"time_str\": \"16:00:02.000\",\n    \"origin\": \"app\"\n  },\n  {\n    \"id\": 3,\n    \"event_name\": \"select_promotion\",\n    \"params\": {\n      \"screen_name\": \"demoapp:vitrine:home\",\n      \"flow_name\": \"vitrine\",\n      \"component\": \"banner\",\n      \"detail\": \"promo-verao\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 16:00:03.000  4321  4400 V FA-SVC : Logging event: origin=app,name=select_promotion,params=Bundle[{screen_name=demoapp:vitrine:home, flow_name=vitrine, component=banner, detail=promo-verao}]\",\n    \"time_str\": \"16:00:03.000\",\n    \"origin\": \"app\"\n  },\n  {\n    \"id\": 4,\n    \"event_name\": \"select_promotion\",\n    \"params\": {\n      \"screen_name\": \"demoapp:vitrine:home\",\n      \"flow_name\": \"vitrine\",\n      \"component\": \"banner\",\n      \"detail\": \"promo-inverno\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 16:00:05.000  4321  4400 V FA-SVC : Logging event: origin=app,name=select_promotion,params=Bundle[{screen_name=demoapp:vitrine:home, flow_name=vitrine, component=banner, detail=promo-inverno}]\",\n    \"time_str\": \"16:00:05.000\",\n    \"origin\": \"app\"\n  },\n  {\n    \"id\": 5,\n    \"event_name\": \"user_engagement\",\n    \"params\": {\n      \"flow_name\": \"vitrine\",\n      \"ga_event_origin\": \"auto\",\n      \"engagement_time_msec\": \"1500\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 16:00:06.000  4321  4400 V FA-SVC : Logging event: origin=auto,name=user_engagement(_e),params=Bundle[{flow_name=vitrine, ga_event_origin(_o)=auto, engagement_time_msec(_et)=1500}]\",\n    \"time_str\": \"16:00:06.000\",\n    \"origin\": \"auto\"\n  },\n  {\n    \"id\": 6,\n    \"event_name\": \"user_engagement\",\n    \"params\": {\n      \"flow_name\": \"vitrine\",\n      \"ga_event_origin\": \"app\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 16:00:07.000  4321  4400 V FA-SVC : Logging event: origin=app,name=user_engagement(_e),params=Bundle[{flow_name=vitrine, ga_event_origin(_o)=app}]\",\n    \"time_str\": \"16:00:07.000\",\n    \"origin\": \"app\"\n  },\n  {\n    \"id\": 7,\n    \"event_name\": \"CAROUSEL_SWIPE\",\n    \"params\": {\n      \"flow_name\": \"vitrine\",\n      \"screen_name\": \"demoapp:vitrine:home\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 16:00:08.000  4321  4400 V FA-SVC : Logging event: origin=app,name=CAROUSEL_SWIPE,params=Bundle[{flow_name=vitrine, screen_name=demoapp:vitrine:home}]\",\n    \"time_str\": \"16:00:08.000\",\n    \"origin\": \"app\"\n  },\n  {\n    \"id\": 8,\n    \"event_name\": \"ls_cache_hit\",\n    \"params\": {\n      \"flow_name\": \"vitrine\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 16:00:09.000  4321  4400 V FA-SVC : Logging event: origin=app,name=ls_cache_hit,params=Bundle[{flow_name=vitrine}]\",\n    \"time_str\": \"16:00:09.000\",\n    \"origin\": \"app\"\n  },\n  {\n    \"id\": 9,\n    \"event_name\": \"screen_view\",\n    \"params\": {\n      \"flow_name\": \"vitrine\",\n      \"ga_event_origin\": \"auto\",\n      \"ga_screen\": \"demoapp:vitrine:home\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 16:00:10.000  4321  4400 V FA-SVC : Logging event: origin=auto,name=screen_view(_vs),params=Bundle[{flow_name=vitrine, ga_event_origin(_o)=auto, ga_screen(_sn)=demoapp:vitrine:home}]\",\n    \"time_str\": \"16:00:10.000\",\n    \"origin\": \"auto\"\n  },\n  {\n    \"id\": 10,\n    \"event_name\": \"fiam_impression\",\n    \"params\": {\n      \"flow_name\": \"vitrine\",\n      \"ga_event_origin\": \"fiam\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 16:00:11.000  4321  4400 V FA-SVC : Logging event: origin=fiam,name=fiam_impression,params=Bundle[{flow_name=vitrine, ga_event_origin(_o)=fiam}]\",\n    \"time_str\": \"16:00:11.000\",\n    \"origin\": \"fiam\"\n  },\n  {\n    \"id\": 11,\n    \"event_name\": \"share\",\n    \"params\": {\n      \"flow_name\": \"vitrine\",\n      \"method\": \"link\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 16:00:12.000  4321  4400 V FA-SVC : Logging event: origin=app,name=share,params=Bundle[{flow_name=vitrine, method=link}]\",\n    \"time_str\": \"16:00:12.000\",\n    \"origin\": \"app\"\n  },\n  {\n    \"id\": 12,\n    \"event_name\": \"share\",\n    \"params\": {\n      \"flow_name\": \"checkout\",\n      \"method\": \"link\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 16:00:13.000  4321  4400 V FA-SVC : Logging event: origin=app,name=share,params=Bundle[{flow_name=checkout, method=link}]\",\n    \"time_str\": \"16:00:13.000\",\n    \"origin\": \"app\"\n  }\n]"
+}

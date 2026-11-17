@@ -1,0 +1,101 @@
+{
+  "spec": {
+    "name": "spec.json",
+    "projeto": "DemoApp Favoritos",
+    "versao_especificacao": null,
+    "plataforma": "android",
+    "fluxos": [],
+    "cards": 1,
+    "variants": 1,
+    "sections": [
+      "Favoritos"
+    ]
+  },
+  "platform": "android",
+  "source": "file",
+  "log_name": "log.txt",
+  "log_stats": {
+    "total_lidos": 7,
+    "da_plataforma": 7,
+    "duplicados": 3,
+    "uteis": 4
+  },
+  "summary": {
+    "total": 1,
+    "ok": 1,
+    "divergent": 0,
+    "missing": 0,
+    "compliance_rate": 100.0,
+    "extras": 0,
+    "alerts": 0
+  },
+  "results": [
+    {
+      "id": 0,
+      "card_index": 0,
+      "section": "Favoritos",
+      "card_title": "add_to_wishlist",
+      "flow": null,
+      "flow_label": null,
+      "event": "add_to_wishlist",
+      "variation": "demoapp:favoritos:lista",
+      "status": "ok",
+      "checks": [
+        {
+          "field": "screen_name",
+          "expected": "demoapp:favoritos:lista",
+          "obtained": "demoapp:favoritos:lista",
+          "ok": true
+        },
+        {
+          "field": "flow_name",
+          "expected": "favoritos",
+          "obtained": "favoritos",
+          "ok": true
+        },
+        {
+          "field": "item_id",
+          "expected": "[preenchido]",
+          "obtained": "SKU-11",
+          "ok": true
+        }
+      ],
+      "expected": [
+        {
+          "key": "screen_name",
+          "value": "demoapp:favoritos:lista"
+        },
+        {
+          "key": "flow_name",
+          "value": "favoritos"
+        },
+        {
+          "key": "item_id",
+          "value": "[preenchido]"
+        }
+      ],
+      "matched": {
+        "id": 6,
+        "time": "00:00:05.000",
+        "event_name": "add_to_wishlist",
+        "params": {
+          "screen_name": "demoapp:favoritos:lista",
+          "flow_name": "favoritos",
+          "item_id": "SKU-11"
+        }
+      },
+      "occurrences": 4,
+      "older_divergent": 0,
+      "older_divergences": [],
+      "ga_screen": null,
+      "note": null,
+      "divergences": "",
+      "block": "// add_to_wishlist [OK]\n// log 00:00:05.000 · 4 disparo(s)\n{\n  \"screen_name\": \"demoapp:favoritos:lista\",  ✓\n  \"flow_name\": \"favoritos\",  ✓\n  \"item_id\": \"SKU-11\"  ✓\n}"
+    }
+  ],
+  "extras": [],
+  "alerts": [],
+  "observations": "Eventos dos fluxos da spec que nenhum card cobre:\n  (nenhum)\n\nAlertas (app_exception / error_view nas telas da spec):\n  (nenhum)\n\nRegra: cada variação é validada pelo disparo mais recente; '⚠' indica disparos anteriores com divergência diferente.",
+  "markdown": "# Auditoria de Tagueamento — DemoApp Favoritos (ANDROID)\n\n- Período do log: 16/11 18:00:00 até 17/11 00:00:05 (6 h 00 min)\n- 1 cards · 1 validações · OK: 1 · Erro: 0 (sendo 0 não disparadas) · Conformidade: 100.0%\n- Plataforma: ANDROID · 4 eventos únicos (3 duplicados removidos de 7 da plataforma; 7 lidos no arquivo)\n\n| Seção | Card | Fluxo | Evento | Variação | Status | Divergências | Horário | Disparos |\n|---|---|---|---|---|---|---|---|---|\n| Favoritos | add_to_wishlist | - | add_to_wishlist | demoapp:favoritos:lista | OK |  | 00:00:05.000 | 4 |\n\n## Fora da spec / Observações\n\nEventos dos fluxos da spec que nenhum card cobre:\n  (nenhum)\n\nAlertas (app_exception / error_view nas telas da spec):\n  (nenhum)\n\nRegra: cada variação é validada pelo disparo mais recente; '⚠' indica disparos anteriores com divergência diferente.\n",
+  "tsv": "Seção\tCard\tFluxo\tEvento\tVariação\tStatus\tDivergências\tHorário\tDisparos\nFavoritos\tadd_to_wishlist\t-\tadd_to_wishlist\tdemoapp:favoritos:lista\tOK\t\t00:00:05.000\t4\n"
+}

@@ -1,0 +1,37 @@
+{
+  "projeto": "DemoApp Cadastro",
+  "plataforma": "android",
+  "cards": [
+    {
+      "secao": "Cadastro",
+      "titulo": "Tela de cadastro",
+      "evento": "screen_view",
+      "params": {
+        "screen_name": "demoapp:cadastro:dados",
+        "flow_name": "cadastro"
+      }
+    },
+    {
+      "secao": "Cadastro",
+      "titulo": "Data de nascimento",
+      "evento": "form_field",
+      "params": {
+        "screen_name": "demoapp:cadastro:dados",
+        "flow_name": "cadastro",
+        "field": "nascimento",
+        "value": "[data]"
+      }
+    },
+    {
+      "secao": "Cadastro",
+      "titulo": "Código enviado",
+      "evento": "sign_up",
+      "params": {
+        "flow_name": "cadastro",
+        "method": "[email|telefone]",
+        "user_hash": "re:[0-9a-f]{8}",
+        "promo": "[preenchido]"
+      }
+    }
+  ]
+}

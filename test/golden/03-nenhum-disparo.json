@@ -1,0 +1,155 @@
+{
+  "spec": {
+    "name": "spec.json",
+    "projeto": "DemoApp Busca",
+    "versao_especificacao": null,
+    "plataforma": "android",
+    "fluxos": [],
+    "cards": 3,
+    "variants": 3,
+    "sections": [
+      "Busca",
+      "Filtros"
+    ]
+  },
+  "platform": "android",
+  "source": "file",
+  "log_name": "log.txt",
+  "log_stats": {
+    "total_lidos": 5,
+    "da_plataforma": 5,
+    "duplicados": 0,
+    "uteis": 5
+  },
+  "summary": {
+    "total": 3,
+    "ok": 0,
+    "divergent": 0,
+    "missing": 3,
+    "compliance_rate": 0.0,
+    "extras": 2,
+    "alerts": 0
+  },
+  "results": [
+    {
+      "id": 0,
+      "card_index": 0,
+      "section": "Busca",
+      "card_title": "search",
+      "flow": null,
+      "flow_label": null,
+      "event": "search",
+      "variation": "demoapp:busca:resultado",
+      "status": "missing",
+      "checks": [],
+      "expected": [
+        {
+          "key": "screen_name",
+          "value": "demoapp:busca:resultado"
+        },
+        {
+          "key": "flow_name",
+          "value": "busca"
+        },
+        {
+          "key": "search_term",
+          "value": "[preenchido]"
+        }
+      ],
+      "matched": null,
+      "occurrences": 0,
+      "older_divergent": 0,
+      "older_divergences": [],
+      "ga_screen": null,
+      "note": null,
+      "divergences": "Não disparado no log",
+      "block": "// search [ERRO]\n// NÃO DISPARADO no log\n{\n  \"screen_name\": \"demoapp:busca:resultado\",\n  \"flow_name\": \"busca\",\n  \"search_term\": \"[preenchido]\"\n}  // esperado (spec)"
+    },
+    {
+      "id": 1,
+      "card_index": 1,
+      "section": "Busca",
+      "card_title": "view_item_list",
+      "flow": null,
+      "flow_label": null,
+      "event": "view_item_list",
+      "variation": "demoapp:busca:resultado",
+      "status": "missing",
+      "checks": [],
+      "expected": [
+        {
+          "key": "screen_name",
+          "value": "demoapp:busca:resultado"
+        },
+        {
+          "key": "flow_name",
+          "value": "busca"
+        },
+        {
+          "key": "item_list_name",
+          "value": "busca"
+        }
+      ],
+      "matched": null,
+      "occurrences": 0,
+      "older_divergent": 0,
+      "older_divergences": [],
+      "ga_screen": null,
+      "note": null,
+      "divergences": "Não disparado no log",
+      "block": "// view_item_list [ERRO]\n// NÃO DISPARADO no log\n{\n  \"screen_name\": \"demoapp:busca:resultado\",\n  \"flow_name\": \"busca\",\n  \"item_list_name\": \"busca\"\n}  // esperado (spec)"
+    },
+    {
+      "id": 2,
+      "card_index": 2,
+      "section": "Filtros",
+      "card_title": "interaction_busca",
+      "flow": null,
+      "flow_label": null,
+      "event": "interaction_busca",
+      "variation": "click:filtrar",
+      "status": "missing",
+      "checks": [],
+      "expected": [
+        {
+          "key": "flow_name",
+          "value": "busca"
+        },
+        {
+          "key": "detail",
+          "value": "click:filtrar"
+        }
+      ],
+      "matched": null,
+      "occurrences": 0,
+      "older_divergent": 0,
+      "older_divergences": [],
+      "ga_screen": null,
+      "note": null,
+      "divergences": "Não disparado no log",
+      "block": "// interaction_busca [ERRO]\n// NÃO DISPARADO no log\n{\n  \"flow_name\": \"busca\",\n  \"detail\": \"click:filtrar\"\n}  // esperado (spec)"
+    }
+  ],
+  "extras": [
+    {
+      "event": "search",
+      "screen": "demoapp:busca:inicio",
+      "flow_name": "busca",
+      "component": null,
+      "detail": null,
+      "count": 2
+    },
+    {
+      "event": "interaction_busca",
+      "screen": null,
+      "flow_name": "busca",
+      "component": null,
+      "detail": "click:ordenar",
+      "count": 1
+    }
+  ],
+  "alerts": [],
+  "observations": "Eventos dos fluxos da spec que nenhum card cobre:\n  • search · demoapp:busca:inicio — 2x\n  • interaction_busca · - · detail=click:ordenar — 1x\n\nAlertas (app_exception / error_view nas telas da spec):\n  (nenhum)\n\nRegra: cada variação é validada pelo disparo mais recente; '⚠' indica disparos anteriores com divergência diferente.",
+  "markdown": "# Auditoria de Tagueamento — DemoApp Busca (ANDROID)\n\n- Período do log: 16/11 08:00:00 até 09:15:30 (1 h 15 min)\n- 3 cards · 3 validações · OK: 0 · Erro: 3 (sendo 3 não disparadas) · Conformidade: 0.0%\n- Plataforma: ANDROID · 5 eventos únicos (0 duplicados removidos de 5 da plataforma; 5 lidos no arquivo)\n\n| Seção | Card | Fluxo | Evento | Variação | Status | Divergências | Horário | Disparos |\n|---|---|---|---|---|---|---|---|---|\n| Busca | search | - | search | demoapp:busca:resultado | NÃO DISPARADO | Não disparado no log |  | 0 |\n| Busca | view_item_list | - | view_item_list | demoapp:busca:resultado | NÃO DISPARADO | Não disparado no log |  | 0 |\n| Filtros | interaction_busca | - | interaction_busca | click:filtrar | NÃO DISPARADO | Não disparado no log |  | 0 |\n\n## Fora da spec / Observações\n\nEventos dos fluxos da spec que nenhum card cobre:\n  • search · demoapp:busca:inicio — 2x\n  • interaction_busca · - · detail=click:ordenar — 1x\n\nAlertas (app_exception / error_view nas telas da spec):\n  (nenhum)\n\nRegra: cada variação é validada pelo disparo mais recente; '⚠' indica disparos anteriores com divergência diferente.\n",
+  "tsv": "Seção\tCard\tFluxo\tEvento\tVariação\tStatus\tDivergências\tHorário\tDisparos\nBusca\tsearch\t-\tsearch\tdemoapp:busca:resultado\tNÃO DISPARADO\tNão disparado no log\t\t0\nBusca\tview_item_list\t-\tview_item_list\tdemoapp:busca:resultado\tNÃO DISPARADO\tNão disparado no log\t\t0\nFiltros\tinteraction_busca\t-\tinteraction_busca\tclick:filtrar\tNÃO DISPARADO\tNão disparado no log\t\t0\n"
+}

@@ -1,0 +1,14 @@
+{
+  "projeto": "DemoApp Híbrido",
+  "plataforma": "android",
+  "cards": [
+    {
+      "secao": "Login",
+      "evento": "login",
+      "params": {
+        "flow_name": "login",
+        "method": "[senha|biometria]"
+      }
+    }
+  ]
+}

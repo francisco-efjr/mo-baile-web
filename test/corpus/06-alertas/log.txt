@@ -1,0 +1,7 @@
+11-16 17:30:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=add_payment_info,params=Bundle[{screen_name=demoapp:checkout:pagamento, flow_name=checkout, payment_type=boleto}]
+11-16 17:30:05.000  4321  4400 V FA-SVC : Logging event: origin=app,name=app_exception(_ae),params=Bundle[{ga_screen(_sn)=demoapp:checkout:pagamento, fatal=0}]
+11-16 17:30:06.000  4321  4400 V FA-SVC : Logging event: origin=app,name=app_exception(_ae),params=Bundle[{ga_screen(_sn)=demoapp:checkout:pagamento, fatal=0}]
+11-16 17:30:07.000  4321  4400 V FA-SVC : Logging event: origin=app,name=error_view,params=Bundle[{flow_name=checkout, screen_name=demoapp:checkout:revisao, error_code=E42}]
+11-16 17:30:08.000  4321  4400 V FA-SVC : Logging event: origin=app,name=error_view,params=Bundle[{screen_name=demoapp:checkout:pagamento, error_code=E13}]
+11-16 17:30:09.000  4321  4400 V FA-SVC : Logging event: origin=app,name=app_exception(_ae),params=Bundle[{ga_screen(_sn)=demoapp:conta:perfil, fatal=1}]
+11-16 17:30:10.000  4321  4400 V FA-SVC : Logging event: origin=app,name=error_view,params=Bundle[{flow_name=conta, screen_name=demoapp:conta:perfil}]

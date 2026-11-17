@@ -1,0 +1,7 @@
+{
+  "error": {
+    "stage": "spec",
+    "code": "invalid_input",
+    "message": "card 2: expressão regular inválida 're:(abc' (missing ), unterminated subpattern at position 0)."
+  }
+}

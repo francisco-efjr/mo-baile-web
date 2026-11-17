@@ -1,0 +1,23 @@
+﻿{
+  "projeto": "DemoApp Café ☕",
+  "plataforma": "android",
+  "versao_especificacao": "Versão ação/reação",
+  "fluxos": {
+    "balcao": "BAL · pedido-balcão",
+    "mesa": "MES · pedido-mesa 🍽"
+  },
+  "cards": [
+    {
+      "secao": "Promoções 🎉",
+      "titulo": "Cupom de ação",
+      "evento": "select_promotion",
+      "params": {
+        "screen_name": "demoapp:promoções:{fluxo}",
+        "flow_name": "pedido-{fluxo}",
+        "detail": "click:🎁-presente",
+        "promotion_name": "Ação de verão"
+      },
+      "obs": "Emoji 🎉🎉🎉 conta como um caractere só 🎉🎉🎉 então a quebra do comentário tem que cair no mesmo lugar"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "projeto": "DemoApp Frete",
+  "plataforma": "android",
+  "fluxos": {
+    "expresso": "EXP · frete-expresso",
+    "economico": "ECO · frete-economico",
+    "agendado": "AGD · frete-agendado"
+  },
+  "cards": [
+    {
+      "secao": "Frete",
+      "titulo": "Escolha do frete",
+      "evento": "select_shipping",
+      "params": {
+        "screen_name": "demoapp:frete:{fluxo}:opcoes",
+        "flow_name": "frete-{fluxo}",
+        "shipping_tier": "{fluxo}"
+      },
+      "variacoes": [
+        {
+          "detail": "click:confirmar"
+        },
+        {
+          "detail": "click:[numero]-dias",
+          "screen_name": "demoapp:frete:{fluxo}:prazo"
+        }
+      ],
+      "params_por_fluxo": {
+        "agendado": {
+          "date": "[data]"
+        }
+      },
+      "obs": {
+        "expresso": "Só aparece para CEP atendido",
+        "agendado": "Data no formato dd/mm/aaaa"
+      }
+    },
+    {
+      "secao": "Frete",
+      "titulo": "Sem fluxo apesar do texto",
+      "evento": "shipping_info",
+      "por_fluxo": false,
+      "params": {
+        "flow_name": "frete-{fluxo}"
+      }
+    },
+    {
+      "secao": "Resumo",
+      "titulo": "Resumo por fluxo",
+      "evento": "view_cart",
+      "por_fluxo": true,
+      "params": {
+        "screen_name": "demoapp:frete:resumo",
+        "flow_name": "re:frete-(expresso|economico|agendado)",
+        "items": [
+          {
+            "item_id": "[preenchido]",
+            "quantity": "[numero]"
+          }
+        ]
+      },
+      "variacoes": [
+        {
+          "items": [
+            {
+              "item_category": "[livros|games]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

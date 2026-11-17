@@ -1,0 +1,35 @@
+[
+  {
+    "id": 0,
+    "event_name": "select_promotion",
+    "params": {
+      "ignorado": "sim"
+    },
+    "platform": "android",
+    "raw_log": "11-16 21:00:00.000  4321  4400 V FA-SVC  : Logging event: origin=app,name=select_promotion,params=Bundle[{screen_name=demoapp:promoções:balcao, flow_name=pedido-balcao, detail=click:🎁-presente, promotion_name=Ação de verão}]",
+    "tag": "FA-SVC",
+    "time_str": "21:00:00.000"
+  },
+  {
+    "id": 0,
+    "event_name": "select_promotion",
+    "params": {
+      "ignorado": "sim"
+    },
+    "platform": "android",
+    "raw_log": "11-16 21:00:05.000  4321  4400 V FA-SVC  : Logging event: origin=app,name=select_promotion,params=Bundle[{screen_name=demoapp:promoções:mesa, flow_name=pedido-mesa, detail=click:🎁-presente, promotion_name=AÇÃO DE VERÃO}]",
+    "tag": "FA-SVC",
+    "time_str": "21:00:05.000"
+  },
+  {
+    "id": 0,
+    "event_name": "select_promotion",
+    "params": {
+      "ignorado": "sim"
+    },
+    "platform": "android",
+    "raw_log": "11-16 21:00:06.000  4321  4400 V FA-SVC  : Logging event: origin=app,name=select_promotion,params=Bundle[{screen_name=demoapp:promoções:mesa, flow_name=pedido-mesa, detail=click:☕-café, promotion_name=Café grátis}]",
+    "tag": "FA-SVC",
+    "time_str": "21:00:06.000"
+  }
+]

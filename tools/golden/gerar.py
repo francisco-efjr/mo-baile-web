@@ -37,7 +37,7 @@ import tempfile
 import textwrap
 from pathlib import Path
 
-from mobaile.domain.errors import EngineError
+from mobaile.domain.errors import EngineError, InvalidInputError
 from mobaile.domain.report import PLATFORMS
 from mobaile.security import safe_file_stem
 from mobaile.services.report import html_report
@@ -123,17 +123,19 @@ def caso(pasta: Path) -> None:
                 gravar(log_path, log_texto or "")
                 items, log_path = servico.read_log(str(log_path))
                 if not items:
-                    raise EngineError(f"O log {log_path.name} não tem eventos do Firebase Analytics.")
+                    raise InvalidInputError(f"O log {log_path.name} não tem eventos do Firebase Analytics.")
             except EngineError as exc:
                 resultado = erro("log", exc)
             else:
                 plataforma = meta.get("platform")
                 try:
                     if plataforma is not None and plataforma not in PLATFORMS:
-                        raise EngineError("platform precisa ser android ou ios.")
+                        raise InvalidInputError("platform precisa ser android ou ios.")
                     payload = servico.audit(str(spec_path), items, source="file", log_path=log_path, platform=plataforma)
                 except EngineError as exc:
                     resultado = erro("audit", exc)
+                except Exception:  # noqa: BLE001 - igual à versão web: sem trace, "Erro interno no motor."
+                    resultado = {"error": {"stage": "audit", "code": "internal_error", "message": "Erro interno no motor."}}
                 else:
                     resultado = normalizar(payload)
                     relatorio = servico._last[0]

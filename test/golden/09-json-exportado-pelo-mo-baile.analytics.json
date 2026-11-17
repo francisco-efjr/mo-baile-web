@@ -1,0 +1,51 @@
+{
+  "platform": "android",
+  "stats": {
+    "total_lidos": 4,
+    "da_plataforma": 3,
+    "duplicados": 0,
+    "uteis": 3
+  },
+  "events": [
+    {
+      "id": 9,
+      "event_name": "notification_dismiss",
+      "params": {
+        "flow_name": "notificacoes",
+        "campaign": "black-week"
+      },
+      "platform": "android",
+      "raw_log": "12:00:06.000 sem a linha do SDK",
+      "time_str": "12:00:06.000",
+      "origin": null
+    },
+    {
+      "id": 7,
+      "event_name": "notification_open",
+      "params": {
+        "screen_name": "demoapp:notificacoes:central",
+        "flow_name": "notificacoes",
+        "campaign": "black-week"
+      },
+      "platform": "android",
+      "raw_log": "11-16 12:00:00.000  4321  4400 V FA-SVC  : Logging event: origin=app,name=notification_open,params=Bundle[{screen_name=demoapp:notificacoes:central, flow_name=notificacoes, campaign=black-week}]",
+      "time_str": "12:00:00.000",
+      "origin": "app"
+    },
+    {
+      "id": "ev-8",
+      "event_name": "notification_open",
+      "params": {
+        "screen_name": "demoapp:notificacoes:central",
+        "flow_name": "notificacoes",
+        "campaign": ""
+      },
+      "platform": "android",
+      "raw_log": "11-16 12:00:05.000  4321  4400 V FA-SVC  : Logging event: origin=app,name=notification_open,params=Bundle[{screen_name=demoapp:notificacoes:central, flow_name=notificacoes, campaign=}]",
+      "time_str": "12:00:05.000",
+      "origin": "app"
+    }
+  ],
+  "tsv": "Hora\tPlataforma\tOrigem\tNome do Evento\tParâmetros Principais\tJSON dos Parâmetros\n12:00:06.000\tANDROID\t\tnotification_dismiss\tflow_name: notificacoes, campaign: black-week\t{\"flow_name\": \"notificacoes\", \"campaign\": \"black-week\"}\n12:00:00.000\tANDROID\tapp\tnotification_open\tscreen_name: demoapp:notificacoes:central, flow_name: notificacoes, campaign: black-week\t{\"screen_name\": \"demoapp:notificacoes:central\", \"flow_name\": \"notificacoes\", \"campaign\": \"black-week\"}\n12:00:05.000\tANDROID\tapp\tnotification_open\tscreen_name: demoapp:notificacoes:central, flow_name: notificacoes, campaign: \t{\"screen_name\": \"demoapp:notificacoes:central\", \"flow_name\": \"notificacoes\", \"campaign\": \"\"}",
+  "json": "[\n  {\n    \"id\": 9,\n    \"event_name\": \"notification_dismiss\",\n    \"params\": {\n      \"flow_name\": \"notificacoes\",\n      \"campaign\": \"black-week\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"12:00:06.000 sem a linha do SDK\",\n    \"time_str\": \"12:00:06.000\",\n    \"origin\": null\n  },\n  {\n    \"id\": 7,\n    \"event_name\": \"notification_open\",\n    \"params\": {\n      \"screen_name\": \"demoapp:notificacoes:central\",\n      \"flow_name\": \"notificacoes\",\n      \"campaign\": \"black-week\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 12:00:00.000  4321  4400 V FA-SVC  : Logging event: origin=app,name=notification_open,params=Bundle[{screen_name=demoapp:notificacoes:central, flow_name=notificacoes, campaign=black-week}]\",\n    \"time_str\": \"12:00:00.000\",\n    \"origin\": \"app\"\n  },\n  {\n    \"id\": \"ev-8\",\n    \"event_name\": \"notification_open\",\n    \"params\": {\n      \"screen_name\": \"demoapp:notificacoes:central\",\n      \"flow_name\": \"notificacoes\",\n      \"campaign\": \"\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 12:00:05.000  4321  4400 V FA-SVC  : Logging event: origin=app,name=notification_open,params=Bundle[{screen_name=demoapp:notificacoes:central, flow_name=notificacoes, campaign=}]\",\n    \"time_str\": \"12:00:05.000\",\n    \"origin\": \"app\"\n  }\n]"
+}

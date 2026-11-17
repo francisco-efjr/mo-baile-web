@@ -1,0 +1,7 @@
+11-16 18:00:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=add_to_wishlist,params=Bundle[{screen_name=demoapp:favoritos:lista, flow_name=favoritos, item_id=SKU-9}]
+11-16 18:00:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=add_to_wishlist,params=Bundle[{screen_name=demoapp:favoritos:lista, flow_name=favoritos, item_id=SKU-9}]
+11-16 18:00:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=add_to_wishlist,params=Bundle[{screen_name=demoapp:favoritos:lista, flow_name=favoritos, item_id=SKU-9}]
+11-16 18:00:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=add_to_wishlist,params=Bundle[{item_id=SKU-9, flow_name=favoritos, screen_name=demoapp:favoritos:lista}]
+11-16 18:00:01.000  4321  4400 V FA-SVC : Logging event: origin=app,name=add_to_wishlist,params=Bundle[{screen_name=demoapp:favoritos:lista, flow_name=favoritos, item_id=SKU-9}]
+11-16 18:00:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=add_to_wishlist,params=Bundle[{screen_name=demoapp:favoritos:lista, flow_name=favoritos, item_id=SKU-10}]
+11-17 00:00:05.000  4321  4400 V FA-SVC : Logging event: origin=app,name=add_to_wishlist,params=Bundle[{screen_name=demoapp:favoritos:lista, flow_name=favoritos, item_id=SKU-11}]

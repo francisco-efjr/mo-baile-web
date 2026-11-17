@@ -1,0 +1,15 @@
+{
+  "projeto": "DemoApp Pagamento",
+  "plataforma": "android",
+  "cards": [
+    {
+      "secao": "Pagamento",
+      "evento": "add_payment_info",
+      "params": {
+        "screen_name": "demoapp:checkout:pagamento",
+        "flow_name": "checkout",
+        "payment_type": "[cartao|boleto]"
+      }
+    }
+  ]
+}

@@ -1,0 +1,237 @@
+{
+  "spec": {
+    "name": "spec.json",
+    "projeto": "DemoApp Cadastro",
+    "versao_especificacao": null,
+    "plataforma": "android",
+    "fluxos": [],
+    "cards": 3,
+    "variants": 3,
+    "sections": [
+      "Cadastro"
+    ]
+  },
+  "platform": "android",
+  "source": "file",
+  "log_name": "log.txt",
+  "log_stats": {
+    "total_lidos": 3,
+    "da_plataforma": 3,
+    "duplicados": 0,
+    "uteis": 3
+  },
+  "summary": {
+    "total": 3,
+    "ok": 3,
+    "divergent": 0,
+    "missing": 0,
+    "compliance_rate": 100.0,
+    "extras": 0,
+    "alerts": 0
+  },
+  "results": [
+    {
+      "id": 0,
+      "card_index": 0,
+      "section": "Cadastro",
+      "card_title": "Tela de cadastro",
+      "flow": null,
+      "flow_label": null,
+      "event": "screen_view",
+      "variation": "demoapp:cadastro:dados",
+      "status": "ok",
+      "checks": [
+        {
+          "field": "screen_name",
+          "expected": "demoapp:cadastro:dados",
+          "obtained": "demoapp:cadastro:dados",
+          "ok": true
+        },
+        {
+          "field": "flow_name",
+          "expected": "cadastro",
+          "obtained": "cadastro",
+          "ok": true
+        }
+      ],
+      "expected": [
+        {
+          "key": "screen_name",
+          "value": "demoapp:cadastro:dados"
+        },
+        {
+          "key": "flow_name",
+          "value": "cadastro"
+        }
+      ],
+      "matched": {
+        "id": 0,
+        "time": "14:20:00.100",
+        "event_name": "screen_view",
+        "params": {
+          "flow_name": "cadastro",
+          "ga_event_origin": "app",
+          "ga_screen": "demoapp:cadastro:dados"
+        }
+      },
+      "occurrences": 1,
+      "older_divergent": 0,
+      "older_divergences": [],
+      "ga_screen": null,
+      "note": null,
+      "divergences": "",
+      "block": "// screen_view [OK]\n// log 14:20:00.100 · 1 disparo(s)\n{\n  \"screen_name\": \"demoapp:cadastro:dados\",  ✓\n  \"flow_name\": \"cadastro\"  ✓\n}"
+    },
+    {
+      "id": 1,
+      "card_index": 1,
+      "section": "Cadastro",
+      "card_title": "Data de nascimento",
+      "flow": null,
+      "flow_label": null,
+      "event": "form_field",
+      "variation": "demoapp:cadastro:dados",
+      "status": "ok",
+      "checks": [
+        {
+          "field": "screen_name",
+          "expected": "demoapp:cadastro:dados",
+          "obtained": "demoapp:cadastro:dados",
+          "ok": true
+        },
+        {
+          "field": "flow_name",
+          "expected": "cadastro",
+          "obtained": "cadastro",
+          "ok": true
+        },
+        {
+          "field": "field",
+          "expected": "nascimento",
+          "obtained": "nascimento",
+          "ok": true
+        },
+        {
+          "field": "value",
+          "expected": "[data]",
+          "obtained": "29/02/2000",
+          "ok": true
+        }
+      ],
+      "expected": [
+        {
+          "key": "screen_name",
+          "value": "demoapp:cadastro:dados"
+        },
+        {
+          "key": "flow_name",
+          "value": "cadastro"
+        },
+        {
+          "key": "field",
+          "value": "nascimento"
+        },
+        {
+          "key": "value",
+          "value": "[data]"
+        }
+      ],
+      "matched": {
+        "id": 1,
+        "time": "14:20:15.250",
+        "event_name": "form_field",
+        "params": {
+          "screen_name": "demoapp:cadastro:dados",
+          "flow_name": "cadastro",
+          "field": "nascimento",
+          "value": "29/02/2000"
+        }
+      },
+      "occurrences": 1,
+      "older_divergent": 0,
+      "older_divergences": [],
+      "ga_screen": null,
+      "note": null,
+      "divergences": "",
+      "block": "// form_field [OK]\n// log 14:20:15.250 · 1 disparo(s)\n{\n  \"screen_name\": \"demoapp:cadastro:dados\",  ✓\n  \"flow_name\": \"cadastro\",  ✓\n  \"field\": \"nascimento\",  ✓\n  \"value\": \"29/02/2000\"  ✓\n}"
+    },
+    {
+      "id": 2,
+      "card_index": 2,
+      "section": "Cadastro",
+      "card_title": "Código enviado",
+      "flow": null,
+      "flow_label": null,
+      "event": "sign_up",
+      "variation": "",
+      "status": "ok",
+      "checks": [
+        {
+          "field": "flow_name",
+          "expected": "cadastro",
+          "obtained": "cadastro",
+          "ok": true
+        },
+        {
+          "field": "method",
+          "expected": "[email|telefone]",
+          "obtained": "telefone",
+          "ok": true
+        },
+        {
+          "field": "user_hash",
+          "expected": "[0-9a-f]{8}",
+          "obtained": "a1b2c3d4",
+          "ok": true
+        },
+        {
+          "field": "promo",
+          "expected": "[preenchido]",
+          "obtained": "BEMVINDO",
+          "ok": true
+        }
+      ],
+      "expected": [
+        {
+          "key": "flow_name",
+          "value": "cadastro"
+        },
+        {
+          "key": "method",
+          "value": "[email|telefone]"
+        },
+        {
+          "key": "user_hash",
+          "value": "re:[0-9a-f]{8}"
+        },
+        {
+          "key": "promo",
+          "value": "[preenchido]"
+        }
+      ],
+      "matched": {
+        "id": 2,
+        "time": "14:20:45.900",
+        "event_name": "sign_up",
+        "params": {
+          "flow_name": "cadastro",
+          "method": "telefone",
+          "user_hash": "a1b2c3d4",
+          "promo": "BEMVINDO"
+        }
+      },
+      "occurrences": 1,
+      "older_divergent": 0,
+      "older_divergences": [],
+      "ga_screen": null,
+      "note": null,
+      "divergences": "",
+      "block": "// sign_up [OK]\n// log 14:20:45.900 · 1 disparo(s)\n{\n  \"flow_name\": \"cadastro\",  ✓\n  \"method\": \"telefone\",  ✓\n  \"user_hash\": \"a1b2c3d4\",  ✓\n  \"promo\": \"BEMVINDO\"  ✓\n}"
+    }
+  ],
+  "extras": [],
+  "alerts": [],
+  "observations": "Eventos dos fluxos da spec que nenhum card cobre:\n  (nenhum)\n\nAlertas (app_exception / error_view nas telas da spec):\n  (nenhum)\n\nRegra: cada variação é validada pelo disparo mais recente; '⚠' indica disparos anteriores com divergência diferente.",
+  "markdown": "# Auditoria de Tagueamento — DemoApp Cadastro (ANDROID)\n\n- Período do log: 16/11 14:20:00 até 14:20:45 (45 s)\n- 3 cards · 3 validações · OK: 3 · Erro: 0 (sendo 0 não disparadas) · Conformidade: 100.0%\n- Plataforma: ANDROID · 3 eventos únicos (0 duplicados removidos de 3 da plataforma; 3 lidos no arquivo)\n\n| Seção | Card | Fluxo | Evento | Variação | Status | Divergências | Horário | Disparos |\n|---|---|---|---|---|---|---|---|---|\n| Cadastro | Tela de cadastro | - | screen_view | demoapp:cadastro:dados | OK |  | 14:20:00.100 | 1 |\n| Cadastro | Data de nascimento | - | form_field | demoapp:cadastro:dados | OK |  | 14:20:15.250 | 1 |\n| Cadastro | Código enviado | - | sign_up |  | OK |  | 14:20:45.900 | 1 |\n\n## Fora da spec / Observações\n\nEventos dos fluxos da spec que nenhum card cobre:\n  (nenhum)\n\nAlertas (app_exception / error_view nas telas da spec):\n  (nenhum)\n\nRegra: cada variação é validada pelo disparo mais recente; '⚠' indica disparos anteriores com divergência diferente.\n",
+  "tsv": "Seção\tCard\tFluxo\tEvento\tVariação\tStatus\tDivergências\tHorário\tDisparos\nCadastro\tTela de cadastro\t-\tscreen_view\tdemoapp:cadastro:dados\tOK\t\t14:20:00.100\t1\nCadastro\tData de nascimento\t-\tform_field\tdemoapp:cadastro:dados\tOK\t\t14:20:15.250\t1\nCadastro\tCódigo enviado\t-\tsign_up\t\tOK\t\t14:20:45.900\t1\n"
+}

@@ -1,0 +1,132 @@
+{
+  "spec": {
+    "name": "spec.json",
+    "projeto": "DemoApp Avaliações",
+    "versao_especificacao": null,
+    "plataforma": "android",
+    "fluxos": [],
+    "cards": 1,
+    "variants": 1,
+    "sections": [
+      "Avaliações"
+    ]
+  },
+  "platform": "android",
+  "source": "file",
+  "log_name": "log.txt",
+  "log_stats": {
+    "total_lidos": 6,
+    "da_plataforma": 6,
+    "duplicados": 0,
+    "uteis": 6
+  },
+  "summary": {
+    "total": 1,
+    "ok": 1,
+    "divergent": 0,
+    "missing": 0,
+    "compliance_rate": 100.0,
+    "extras": 0,
+    "alerts": 0
+  },
+  "results": [
+    {
+      "id": 0,
+      "card_index": 0,
+      "section": "Avaliações",
+      "card_title": "Enviar avaliação",
+      "flow": null,
+      "flow_label": null,
+      "event": "interaction_avaliacao_produto_com_um_nome_de_evento_muito_comprido_e_sem_espacos_no_meio",
+      "variation": "click:enviar",
+      "status": "ok",
+      "checks": [
+        {
+          "field": "screen_name",
+          "expected": "demoapp:avaliacoes:formulario",
+          "obtained": "demoapp:avaliacoes:formulario",
+          "ok": true
+        },
+        {
+          "field": "flow_name",
+          "expected": "avaliacoes",
+          "obtained": "avaliacoes",
+          "ok": true
+        },
+        {
+          "field": "rating",
+          "expected": "[1|2|3|4|5]",
+          "obtained": "4",
+          "ok": true
+        },
+        {
+          "field": "component",
+          "expected": "button",
+          "obtained": "button",
+          "ok": true
+        },
+        {
+          "field": "detail",
+          "expected": "click:enviar",
+          "obtained": "click:enviar",
+          "ok": true
+        }
+      ],
+      "expected": [
+        {
+          "key": "screen_name",
+          "value": "demoapp:avaliacoes:formulario"
+        },
+        {
+          "key": "flow_name",
+          "value": "avaliacoes"
+        },
+        {
+          "key": "rating",
+          "value": "[1|2|3|4|5]"
+        },
+        {
+          "key": "component",
+          "value": "button"
+        },
+        {
+          "key": "detail",
+          "value": "click:enviar"
+        }
+      ],
+      "matched": {
+        "id": 5,
+        "time": "20:05:00.000",
+        "event_name": "interaction_avaliacao_produto_com_um_nome_de_evento_muito_comprido_e_sem_espacos_no_meio",
+        "params": {
+          "screen_name": "demoapp:avaliacoes:formulario",
+          "flow_name": "avaliacoes",
+          "rating": "4",
+          "component": "button",
+          "detail": "click:enviar"
+        }
+      },
+      "occurrences": 6,
+      "older_divergent": 5,
+      "older_divergences": [
+        "component=card",
+        "component=chip",
+        "component=link",
+        "component=tab",
+        "rating=0",
+        "rating=6",
+        "rating=7",
+        "rating=9"
+      ],
+      "ga_screen": null,
+      "note": "Conferir com o time de produto -- a nota precisa ir como texto e o componente-com-hifen-bem-comprido-no-meio precisa sair igual no painel",
+      "divergences": "⚠ 5 disparo(s) anterior(es): component=card, component=chip, component=link, component=tab, rating=0, rating=6, rating=7, rating=9",
+      "block": "// interaction_avaliacao_produto_com_um_nome_de_evento_muito_comprido_e_sem_es\n//   pacos_no_meio [OK]\n// log 20:05:00.000 · 6 disparo(s)\n{\n  \"screen_name\": \"demoapp:avaliacoes:formulario\",  ✓\n  \"flow_name\": \"avaliacoes\",  ✓\n  \"rating\": \"4\",  ✓\n  \"component\": \"button\",  ✓\n  \"detail\": \"click:enviar\"  ✓\n}\n// ⚠ 5 disparo(s) anterior(es) divergente(s):\n//   component=card\n//   component=chip\n//   component=link\n//   component=tab\n// obs: Conferir com o time de produto -- a nota precisa ir como texto e o\n//   componente-com-hifen-bem-comprido-no-meio precisa sair igual no painel"
+    }
+  ],
+  "extras": [],
+  "alerts": [],
+  "observations": "Eventos dos fluxos da spec que nenhum card cobre:\n  (nenhum)\n\nAlertas (app_exception / error_view nas telas da spec):\n  (nenhum)\n\nRegra: cada variação é validada pelo disparo mais recente; '⚠' indica disparos anteriores com divergência diferente.",
+  "markdown": "# Auditoria de Tagueamento — DemoApp Avaliações (ANDROID)\n\n- Período do log: 16/11 20:00:00 até 20:05:00 (5 min)\n- 1 cards · 1 validações · OK: 1 · Erro: 0 (sendo 0 não disparadas) · Conformidade: 100.0%\n- Plataforma: ANDROID · 6 eventos únicos (0 duplicados removidos de 6 da plataforma; 6 lidos no arquivo)\n\n| Seção | Card | Fluxo | Evento | Variação | Status | Divergências | Horário | Disparos |\n|---|---|---|---|---|---|---|---|---|\n| Avaliações | Enviar avaliação | - | interaction_avaliacao_produto_com_um_nome_de_evento_muito_comprido_e_sem_espacos_no_meio | click:enviar | OK | ⚠ 5 disparo(s) anterior(es): component=card, component=chip, component=link, component=tab, rating=0, rating=6, rating=7, rating=9 | 20:05:00.000 | 6 |\n\n## Fora da spec / Observações\n\nEventos dos fluxos da spec que nenhum card cobre:\n  (nenhum)\n\nAlertas (app_exception / error_view nas telas da spec):\n  (nenhum)\n\nRegra: cada variação é validada pelo disparo mais recente; '⚠' indica disparos anteriores com divergência diferente.\n",
+  "tsv": "Seção\tCard\tFluxo\tEvento\tVariação\tStatus\tDivergências\tHorário\tDisparos\nAvaliações\tEnviar avaliação\t-\tinteraction_avaliacao_produto_com_um_nome_de_evento_muito_comprido_e_sem_espacos_no_meio\tclick:enviar\tOK\t⚠ 5 disparo(s) anterior(es): component=card, component=chip, component=link, component=tab, rating=0, rating=6, rating=7, rating=9\t20:05:00.000\t6\n"
+}

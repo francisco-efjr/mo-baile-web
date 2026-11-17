@@ -1,0 +1,15 @@
+{
+  "projeto": "DemoApp Vitrine",
+  "plataforma": "android",
+  "cards": [
+    {
+      "secao": "Vitrine",
+      "evento": "view_item",
+      "params": {
+        "screen_name": "demoapp:vitrine:produto",
+        "flow_name": "vitrine",
+        "item_id": "[preenchido]"
+      }
+    }
+  ]
+}

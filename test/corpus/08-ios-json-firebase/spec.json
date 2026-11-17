@@ -1,0 +1,31 @@
+{
+  "projeto": "DemoApp iOS",
+  "plataforma": "ios",
+  "versao_especificacao": "iOS 3.0",
+  "cards": [
+    {
+      "secao": "Checkout",
+      "evento": "begin_checkout",
+      "params": {
+        "screen_name": "demoapp:checkout:resumo",
+        "flow_name": "checkout",
+        "value": "[numero]",
+        "items": [
+          {
+            "item_id": "SKU-1",
+            "price": "[numero]"
+          }
+        ]
+      }
+    },
+    {
+      "secao": "Checkout",
+      "evento": "purchase",
+      "params": {
+        "screen_name": "demoapp:checkout:sucesso",
+        "flow_name": "checkout",
+        "transaction_id": "re:T-\\d{6}"
+      }
+    }
+  ]
+}

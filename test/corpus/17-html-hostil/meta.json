@@ -1,0 +1,9 @@
+{
+  "platform": null,
+  "descricao": "Texto hostil na spec e no log (<script>, aspas, &): tudo escapado no HTML, nada vira marcação.",
+  "info": {
+    "versao": "<b>1.0</b>",
+    "conta": "  conta \"x\"  ",
+    "codigo_usuario": "uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu"
+  }
+}

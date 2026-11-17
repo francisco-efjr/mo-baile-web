@@ -1,0 +1,203 @@
+{
+  "spec": {
+    "name": "spec.json",
+    "projeto": "DemoApp Café ☕",
+    "versao_especificacao": "Versão ação/reação",
+    "plataforma": "android",
+    "fluxos": [
+      {
+        "key": "balcao",
+        "label": "BAL · pedido-balcão"
+      },
+      {
+        "key": "mesa",
+        "label": "MES · pedido-mesa 🍽"
+      }
+    ],
+    "cards": 1,
+    "variants": 2,
+    "sections": [
+      "Promoções 🎉"
+    ]
+  },
+  "platform": "android",
+  "source": "file",
+  "log_name": "log.json",
+  "log_stats": {
+    "total_lidos": 3,
+    "da_plataforma": 3,
+    "duplicados": 0,
+    "uteis": 3
+  },
+  "summary": {
+    "total": 2,
+    "ok": 1,
+    "divergent": 1,
+    "missing": 0,
+    "compliance_rate": 50.0,
+    "extras": 1,
+    "alerts": 0
+  },
+  "results": [
+    {
+      "id": 0,
+      "card_index": 0,
+      "section": "Promoções 🎉",
+      "card_title": "Cupom de ação",
+      "flow": "balcao",
+      "flow_label": "BAL · pedido-balcão",
+      "event": "select_promotion",
+      "variation": "click:🎁-presente",
+      "status": "ok",
+      "checks": [
+        {
+          "field": "screen_name",
+          "expected": "demoapp:promoções:balcao",
+          "obtained": "demoapp:promoções:balcao",
+          "ok": true
+        },
+        {
+          "field": "flow_name",
+          "expected": "pedido-balcao",
+          "obtained": "pedido-balcao",
+          "ok": true
+        },
+        {
+          "field": "detail",
+          "expected": "click:🎁-presente",
+          "obtained": "click:🎁-presente",
+          "ok": true
+        },
+        {
+          "field": "promotion_name",
+          "expected": "Ação de verão",
+          "obtained": "Ação de verão",
+          "ok": true
+        }
+      ],
+      "expected": [
+        {
+          "key": "screen_name",
+          "value": "demoapp:promoções:balcao"
+        },
+        {
+          "key": "flow_name",
+          "value": "pedido-balcao"
+        },
+        {
+          "key": "detail",
+          "value": "click:🎁-presente"
+        },
+        {
+          "key": "promotion_name",
+          "value": "Ação de verão"
+        }
+      ],
+      "matched": {
+        "id": 0,
+        "time": "21:00:00.000",
+        "event_name": "select_promotion",
+        "params": {
+          "screen_name": "demoapp:promoções:balcao",
+          "flow_name": "pedido-balcao",
+          "detail": "click:🎁-presente",
+          "promotion_name": "Ação de verão"
+        }
+      },
+      "occurrences": 1,
+      "older_divergent": 0,
+      "older_divergences": [],
+      "ga_screen": null,
+      "note": "Emoji 🎉🎉🎉 conta como um caractere só 🎉🎉🎉 então a quebra do comentário tem que cair no mesmo lugar",
+      "divergences": "",
+      "block": "// BAL · select_promotion [OK]\n// log 21:00:00.000 · 1 disparo(s)\n{\n  \"screen_name\": \"demoapp:promoções:balcao\",  ✓\n  \"flow_name\": \"pedido-balcao\",  ✓\n  \"detail\": \"click:🎁-presente\",  ✓\n  \"promotion_name\": \"Ação de verão\"  ✓\n}\n// obs: Emoji 🎉🎉🎉 conta como um caractere só 🎉🎉🎉 então a quebra do comentário\n//   tem que cair no mesmo lugar"
+    },
+    {
+      "id": 1,
+      "card_index": 0,
+      "section": "Promoções 🎉",
+      "card_title": "Cupom de ação",
+      "flow": "mesa",
+      "flow_label": "MES · pedido-mesa 🍽",
+      "event": "select_promotion",
+      "variation": "click:🎁-presente",
+      "status": "error",
+      "checks": [
+        {
+          "field": "screen_name",
+          "expected": "demoapp:promoções:mesa",
+          "obtained": "demoapp:promoções:mesa",
+          "ok": true
+        },
+        {
+          "field": "flow_name",
+          "expected": "pedido-mesa",
+          "obtained": "pedido-mesa",
+          "ok": true
+        },
+        {
+          "field": "detail",
+          "expected": "click:🎁-presente",
+          "obtained": "click:🎁-presente",
+          "ok": true
+        },
+        {
+          "field": "promotion_name",
+          "expected": "Ação de verão",
+          "obtained": "AÇÃO DE VERÃO",
+          "ok": false
+        }
+      ],
+      "expected": [
+        {
+          "key": "screen_name",
+          "value": "demoapp:promoções:mesa"
+        },
+        {
+          "key": "flow_name",
+          "value": "pedido-mesa"
+        },
+        {
+          "key": "detail",
+          "value": "click:🎁-presente"
+        },
+        {
+          "key": "promotion_name",
+          "value": "Ação de verão"
+        }
+      ],
+      "matched": {
+        "id": 0,
+        "time": "21:00:05.000",
+        "event_name": "select_promotion",
+        "params": {
+          "screen_name": "demoapp:promoções:mesa",
+          "flow_name": "pedido-mesa",
+          "detail": "click:🎁-presente",
+          "promotion_name": "AÇÃO DE VERÃO"
+        }
+      },
+      "occurrences": 1,
+      "older_divergent": 0,
+      "older_divergences": [],
+      "ga_screen": null,
+      "note": "Emoji 🎉🎉🎉 conta como um caractere só 🎉🎉🎉 então a quebra do comentário tem que cair no mesmo lugar",
+      "divergences": "promotion_name: obtido AÇÃO DE VERÃO, esperado Ação de verão",
+      "block": "// MES · select_promotion [ERRO]\n// log 21:00:05.000 · 1 disparo(s)\n{\n  \"screen_name\": \"demoapp:promoções:mesa\",  ✓\n  \"flow_name\": \"pedido-mesa\",  ✓\n  \"detail\": \"click:🎁-presente\",  ✓\n  \"promotion_name\": \"AÇÃO DE VERÃO\"  ✗\n    // ↳ esperado: Ação de verão\n}\n// obs: Emoji 🎉🎉🎉 conta como um caractere só 🎉🎉🎉 então a quebra do comentário\n//   tem que cair no mesmo lugar"
+    }
+  ],
+  "extras": [
+    {
+      "event": "select_promotion",
+      "screen": "demoapp:promoções:mesa",
+      "flow_name": "pedido-mesa",
+      "component": null,
+      "detail": "click:☕-café",
+      "count": 1
+    }
+  ],
+  "alerts": [],
+  "observations": "Eventos dos fluxos da spec que nenhum card cobre:\n  • select_promotion · demoapp:promoções:mesa · detail=click:☕-café — 1x\n\nAlertas (app_exception / error_view nas telas da spec):\n  (nenhum)\n\nRegra: cada variação é validada pelo disparo mais recente; '⚠' indica disparos anteriores com divergência diferente.",
+  "markdown": "# Auditoria de Tagueamento — DemoApp Café ☕ (ANDROID)\n\nSpec: Versão ação/reação\n- Período do log: 16/11 21:00:00 até 21:00:06 (6 s)\n- 1 cards · 2 validações · OK: 1 · Erro: 1 (sendo 0 não disparadas) · Conformidade: 50.0%\n- Plataforma: ANDROID · 3 eventos únicos (0 duplicados removidos de 3 da plataforma; 3 lidos no arquivo)\n\n| Seção | Card | Fluxo | Evento | Variação | Status | Divergências | Horário | Disparos |\n|---|---|---|---|---|---|---|---|---|\n| Promoções 🎉 | Cupom de ação | BAL · pedido-balcão | select_promotion | click:🎁-presente | OK |  | 21:00:00.000 | 1 |\n| Promoções 🎉 | Cupom de ação | MES · pedido-mesa 🍽 | select_promotion | click:🎁-presente | ERRO | promotion_name: obtido AÇÃO DE VERÃO, esperado Ação de verão | 21:00:05.000 | 1 |\n\n## Fora da spec / Observações\n\nEventos dos fluxos da spec que nenhum card cobre:\n  • select_promotion · demoapp:promoções:mesa · detail=click:☕-café — 1x\n\nAlertas (app_exception / error_view nas telas da spec):\n  (nenhum)\n\nRegra: cada variação é validada pelo disparo mais recente; '⚠' indica disparos anteriores com divergência diferente.\n",
+  "tsv": "Seção\tCard\tFluxo\tEvento\tVariação\tStatus\tDivergências\tHorário\tDisparos\nPromoções 🎉\tCupom de ação\tBAL · pedido-balcão\tselect_promotion\tclick:🎁-presente\tOK\t\t21:00:00.000\t1\nPromoções 🎉\tCupom de ação\tMES · pedido-mesa 🍽\tselect_promotion\tclick:🎁-presente\tERRO\tpromotion_name: obtido AÇÃO DE VERÃO, esperado Ação de verão\t21:00:05.000\t1\n"
+}

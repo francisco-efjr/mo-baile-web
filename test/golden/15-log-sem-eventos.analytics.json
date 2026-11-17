@@ -1,0 +1,12 @@
+{
+  "platform": "android",
+  "stats": {
+    "total_lidos": 0,
+    "da_plataforma": 0,
+    "duplicados": 0,
+    "uteis": 0
+  },
+  "events": [],
+  "tsv": "Hora\tPlataforma\tOrigem\tNome do Evento\tParâmetros Principais\tJSON dos Parâmetros",
+  "json": "[]"
+}

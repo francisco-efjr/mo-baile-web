@@ -1,0 +1,6 @@
+11-16 19:00:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=select_shipping,params=Bundle[{screen_name=demoapp:frete:expresso:opcoes, flow_name=frete-expresso, shipping_tier=expresso, detail=click:confirmar}]
+11-16 19:00:10.000  4321  4400 V FA-SVC : Logging event: origin=app,name=select_shipping,params=Bundle[{screen_name=demoapp:frete:expresso:prazo, flow_name=frete-expresso, shipping_tier=expresso, detail=click:2-dias}]
+11-16 19:00:20.000  4321  4400 V FA-SVC : Logging event: origin=app,name=select_shipping,params=Bundle[{screen_name=demoapp:frete:economico:opcoes, flow_name=frete-economico, shipping_tier=normal, detail=click:confirmar}]
+11-16 19:00:30.000  4321  4400 V FA-SVC : Logging event: origin=app,name=select_shipping,params=Bundle[{screen_name=demoapp:frete:agendado:opcoes, flow_name=frete-agendado, shipping_tier=agendado, detail=click:confirmar, date=2026-11-20}]
+11-16 19:00:40.000  4321  4400 V FA-SVC : Logging event: origin=app,name=shipping_info,params=Bundle[{flow_name=frete-expresso}]
+11-16 19:00:50.000  4321  4400 V FA-SVC : Logging event: origin=app,name=view_cart,params=Bundle[{screen_name=demoapp:frete:resumo, flow_name=frete-economico, items=[Bundle[{item_id=SKU-5, quantity=2, item_category=games}], Bundle[{item_id=SKU-6, quantity=1}]]}]

@@ -1,0 +1,54 @@
+{
+  "platform": "android",
+  "stats": {
+    "total_lidos": 3,
+    "da_plataforma": 3,
+    "duplicados": 0,
+    "uteis": 3
+  },
+  "events": [
+    {
+      "id": 0,
+      "event_name": "screen_view",
+      "params": {
+        "flow_name": "cadastro",
+        "ga_event_origin": "app",
+        "ga_screen": "demoapp:cadastro:dados"
+      },
+      "platform": "android",
+      "raw_log": "11-16 14:20:00.100  4321  4400 V FA-SVC : Logging event: origin=app,name=screen_view(_vs),params=Bundle[{flow_name=cadastro, ga_event_origin(_o)=app, ga_screen(_sn)=demoapp:cadastro:dados}]",
+      "time_str": "14:20:00.100",
+      "origin": "app"
+    },
+    {
+      "id": 1,
+      "event_name": "form_field",
+      "params": {
+        "screen_name": "demoapp:cadastro:dados",
+        "flow_name": "cadastro",
+        "field": "nascimento",
+        "value": "29/02/2000"
+      },
+      "platform": "android",
+      "raw_log": "11-16 14:20:15.250  4321  4400 V FA-SVC : Logging event: origin=app,name=form_field,params=Bundle[{screen_name=demoapp: cadastro : dados, flow_name=cadastro, field=nascimento, value=29/02/2000}]",
+      "time_str": "14:20:15.250",
+      "origin": "app"
+    },
+    {
+      "id": 2,
+      "event_name": "sign_up",
+      "params": {
+        "flow_name": "cadastro",
+        "method": "telefone",
+        "user_hash": "a1b2c3d4",
+        "promo": "BEMVINDO"
+      },
+      "platform": "android",
+      "raw_log": "11-16 14:20:45.900  4321  4400 V FA-SVC : Logging event: origin=app,name=sign_up,params=Bundle[{flow_name=cadastro, method=telefone, user_hash=a1b2c3d4, promo=BEMVINDO}]",
+      "time_str": "14:20:45.900",
+      "origin": "app"
+    }
+  ],
+  "tsv": "Hora\tPlataforma\tOrigem\tNome do Evento\tParâmetros Principais\tJSON dos Parâmetros\n14:20:00.100\tANDROID\tapp\tscreen_view\tflow_name: cadastro, ga_event_origin: app, ga_screen: demoapp:cadastro:dados\t{\"flow_name\": \"cadastro\", \"ga_event_origin\": \"app\", \"ga_screen\": \"demoapp:cadastro:dados\"}\n14:20:15.250\tANDROID\tapp\tform_field\tscreen_name: demoapp:cadastro:dados, flow_name: cadastro, field: nascimento, value: 29/02/2000\t{\"screen_name\": \"demoapp:cadastro:dados\", \"flow_name\": \"cadastro\", \"field\": \"nascimento\", \"value\": \"29/02/2000\"}\n14:20:45.900\tANDROID\tapp\tsign_up\tflow_name: cadastro, method: telefone, user_hash: a1b2c3d4, promo: BEMVINDO\t{\"flow_name\": \"cadastro\", \"method\": \"telefone\", \"user_hash\": \"a1b2c3d4\", \"promo\": \"BEMVINDO\"}",
+  "json": "[\n  {\n    \"id\": 0,\n    \"event_name\": \"screen_view\",\n    \"params\": {\n      \"flow_name\": \"cadastro\",\n      \"ga_event_origin\": \"app\",\n      \"ga_screen\": \"demoapp:cadastro:dados\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 14:20:00.100  4321  4400 V FA-SVC : Logging event: origin=app,name=screen_view(_vs),params=Bundle[{flow_name=cadastro, ga_event_origin(_o)=app, ga_screen(_sn)=demoapp:cadastro:dados}]\",\n    \"time_str\": \"14:20:00.100\",\n    \"origin\": \"app\"\n  },\n  {\n    \"id\": 1,\n    \"event_name\": \"form_field\",\n    \"params\": {\n      \"screen_name\": \"demoapp:cadastro:dados\",\n      \"flow_name\": \"cadastro\",\n      \"field\": \"nascimento\",\n      \"value\": \"29/02/2000\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 14:20:15.250  4321  4400 V FA-SVC : Logging event: origin=app,name=form_field,params=Bundle[{screen_name=demoapp: cadastro : dados, flow_name=cadastro, field=nascimento, value=29/02/2000}]\",\n    \"time_str\": \"14:20:15.250\",\n    \"origin\": \"app\"\n  },\n  {\n    \"id\": 2,\n    \"event_name\": \"sign_up\",\n    \"params\": {\n      \"flow_name\": \"cadastro\",\n      \"method\": \"telefone\",\n      \"user_hash\": \"a1b2c3d4\",\n      \"promo\": \"BEMVINDO\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 14:20:45.900  4321  4400 V FA-SVC : Logging event: origin=app,name=sign_up,params=Bundle[{flow_name=cadastro, method=telefone, user_hash=a1b2c3d4, promo=BEMVINDO}]\",\n    \"time_str\": \"14:20:45.900\",\n    \"origin\": \"app\"\n  }\n]"
+}

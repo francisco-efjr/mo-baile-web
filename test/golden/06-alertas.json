@@ -1,0 +1,126 @@
+{
+  "spec": {
+    "name": "spec.json",
+    "projeto": "DemoApp Pagamento",
+    "versao_especificacao": null,
+    "plataforma": "android",
+    "fluxos": [],
+    "cards": 1,
+    "variants": 1,
+    "sections": [
+      "Pagamento"
+    ]
+  },
+  "platform": "android",
+  "source": "file",
+  "log_name": "log.txt",
+  "log_stats": {
+    "total_lidos": 7,
+    "da_plataforma": 7,
+    "duplicados": 0,
+    "uteis": 7
+  },
+  "summary": {
+    "total": 1,
+    "ok": 1,
+    "divergent": 0,
+    "missing": 0,
+    "compliance_rate": 100.0,
+    "extras": 0,
+    "alerts": 3
+  },
+  "results": [
+    {
+      "id": 0,
+      "card_index": 0,
+      "section": "Pagamento",
+      "card_title": "add_payment_info",
+      "flow": null,
+      "flow_label": null,
+      "event": "add_payment_info",
+      "variation": "demoapp:checkout:pagamento",
+      "status": "ok",
+      "checks": [
+        {
+          "field": "screen_name",
+          "expected": "demoapp:checkout:pagamento",
+          "obtained": "demoapp:checkout:pagamento",
+          "ok": true
+        },
+        {
+          "field": "flow_name",
+          "expected": "checkout",
+          "obtained": "checkout",
+          "ok": true
+        },
+        {
+          "field": "payment_type",
+          "expected": "[cartao|boleto]",
+          "obtained": "boleto",
+          "ok": true
+        }
+      ],
+      "expected": [
+        {
+          "key": "screen_name",
+          "value": "demoapp:checkout:pagamento"
+        },
+        {
+          "key": "flow_name",
+          "value": "checkout"
+        },
+        {
+          "key": "payment_type",
+          "value": "[cartao|boleto]"
+        }
+      ],
+      "matched": {
+        "id": 0,
+        "time": "17:30:00.000",
+        "event_name": "add_payment_info",
+        "params": {
+          "screen_name": "demoapp:checkout:pagamento",
+          "flow_name": "checkout",
+          "payment_type": "boleto"
+        }
+      },
+      "occurrences": 1,
+      "older_divergent": 0,
+      "older_divergences": [],
+      "ga_screen": null,
+      "note": null,
+      "divergences": "",
+      "block": "// add_payment_info [OK]\n// log 17:30:00.000 · 1 disparo(s)\n{\n  \"screen_name\": \"demoapp:checkout:pagamento\",  ✓\n  \"flow_name\": \"checkout\",  ✓\n  \"payment_type\": \"boleto\"  ✓\n}"
+    }
+  ],
+  "extras": [],
+  "alerts": [
+    {
+      "event": "app_exception",
+      "screen": "demoapp:checkout:pagamento",
+      "flow_name": null,
+      "component": null,
+      "detail": null,
+      "count": 2
+    },
+    {
+      "event": "error_view",
+      "screen": "demoapp:checkout:revisao",
+      "flow_name": "checkout",
+      "component": null,
+      "detail": null,
+      "count": 1
+    },
+    {
+      "event": "error_view",
+      "screen": "demoapp:checkout:pagamento",
+      "flow_name": null,
+      "component": null,
+      "detail": null,
+      "count": 1
+    }
+  ],
+  "observations": "Eventos dos fluxos da spec que nenhum card cobre:\n  (nenhum)\n\nAlertas (app_exception / error_view nas telas da spec):\n  • app_exception · demoapp:checkout:pagamento — 2x\n  • error_view · demoapp:checkout:revisao — 1x\n  • error_view · demoapp:checkout:pagamento — 1x\n\nRegra: cada variação é validada pelo disparo mais recente; '⚠' indica disparos anteriores com divergência diferente.",
+  "markdown": "# Auditoria de Tagueamento — DemoApp Pagamento (ANDROID)\n\n- Período do log: 16/11 17:30:00 até 17:30:10 (10 s)\n- 1 cards · 1 validações · OK: 1 · Erro: 0 (sendo 0 não disparadas) · Conformidade: 100.0%\n- Plataforma: ANDROID · 7 eventos únicos (0 duplicados removidos de 7 da plataforma; 7 lidos no arquivo)\n\n| Seção | Card | Fluxo | Evento | Variação | Status | Divergências | Horário | Disparos |\n|---|---|---|---|---|---|---|---|---|\n| Pagamento | add_payment_info | - | add_payment_info | demoapp:checkout:pagamento | OK |  | 17:30:00.000 | 1 |\n\n## Fora da spec / Observações\n\nEventos dos fluxos da spec que nenhum card cobre:\n  (nenhum)\n\nAlertas (app_exception / error_view nas telas da spec):\n  • app_exception · demoapp:checkout:pagamento — 2x\n  • error_view · demoapp:checkout:revisao — 1x\n  • error_view · demoapp:checkout:pagamento — 1x\n\nRegra: cada variação é validada pelo disparo mais recente; '⚠' indica disparos anteriores com divergência diferente.\n",
+  "tsv": "Seção\tCard\tFluxo\tEvento\tVariação\tStatus\tDivergências\tHorário\tDisparos\nPagamento\tadd_payment_info\t-\tadd_payment_info\tdemoapp:checkout:pagamento\tOK\t\t17:30:00.000\t1\n"
+}

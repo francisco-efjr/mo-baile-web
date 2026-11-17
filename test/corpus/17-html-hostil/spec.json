@@ -1,0 +1,21 @@
+{
+  "projeto": "<script>alert(\"x\")</script> & 'Demo'",
+  "plataforma": "android",
+  "versao_especificacao": "v\"1\" <b>",
+  "fluxos": {
+    "a": "<img src=x onerror=alert(1)> · fluxo-a"
+  },
+  "cards": [
+    {
+      "secao": "\"Seção\" & <b>negrito</b>",
+      "titulo": "Título com 'aspas' e </h3><script>",
+      "evento": "interaction_{fluxo}",
+      "params": {
+        "screen_name": "demoapp:<tela>:{fluxo}",
+        "flow_name": "fluxo-{fluxo}",
+        "detail": "click:\"ok\" & 'sair'"
+      },
+      "obs": "</pre><script>alert('obs')</script>"
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "spec": {
+    "name": "spec.json",
+    "projeto": "<script>alert(\"x\")</script> & 'Demo'",
+    "versao_especificacao": "v\"1\" <b>",
+    "plataforma": "android",
+    "fluxos": [
+      {
+        "key": "a",
+        "label": "<img src=x onerror=alert(1)> · fluxo-a"
+      }
+    ],
+    "cards": 1,
+    "variants": 1,
+    "sections": [
+      "\"Seção\" & <b>negrito</b>"
+    ]
+  },
+  "platform": "android",
+  "source": "file",
+  "log_name": "log.txt",
+  "log_stats": {
+    "total_lidos": 3,
+    "da_plataforma": 3,
+    "duplicados": 0,
+    "uteis": 3
+  },
+  "summary": {
+    "total": 1,
+    "ok": 1,
+    "divergent": 0,
+    "missing": 0,
+    "compliance_rate": 100.0,
+    "extras": 2,
+    "alerts": 0
+  },
+  "results": [
+    {
+      "id": 0,
+      "card_index": 0,
+      "section": "\"Seção\" & <b>negrito</b>",
+      "card_title": "Título com 'aspas' e </h3><script>",
+      "flow": "a",
+      "flow_label": "<img src=x onerror=alert(1)> · fluxo-a",
+      "event": "interaction_a",
+      "variation": "click:\"ok\" & 'sair'",
+      "status": "ok",
+      "checks": [
+        {
+          "field": "screen_name",
+          "expected": "demoapp:<tela>:a",
+          "obtained": "demoapp:<tela>:a",
+          "ok": true
+        },
+        {
+          "field": "flow_name",
+          "expected": "fluxo-a",
+          "obtained": "fluxo-a",
+          "ok": true
+        },
+        {
+          "field": "detail",
+          "expected": "click:\"ok\" & 'sair'",
+          "obtained": "click:\"ok\" & 'sair'",
+          "ok": true
+        }
+      ],
+      "expected": [
+        {
+          "key": "screen_name",
+          "value": "demoapp:<tela>:a"
+        },
+        {
+          "key": "flow_name",
+          "value": "fluxo-a"
+        },
+        {
+          "key": "detail",
+          "value": "click:\"ok\" & 'sair'"
+        }
+      ],
+      "matched": {
+        "id": 1,
+        "time": "22:00:01.000",
+        "event_name": "interaction_a",
+        "params": {
+          "screen_name": "demoapp:<tela>:a",
+          "flow_name": "fluxo-a",
+          "detail": "click:\"ok\" & 'sair'",
+          "component": "&amp;"
+        }
+      },
+      "occurrences": 1,
+      "older_divergent": 0,
+      "older_divergences": [],
+      "ga_screen": null,
+      "note": "</pre><script>alert('obs')</script>",
+      "divergences": "",
+      "block": "// <img src=x onerror=alert(1)> · interaction_a [OK]\n// log 22:00:01.000 · 1 disparo(s)\n{\n  \"screen_name\": \"demoapp:<tela>:a\",  ✓\n  \"flow_name\": \"fluxo-a\",  ✓\n  \"detail\": \"click:\\\"ok\\\" & 'sair'\"  ✓\n}\n// obs: </pre><script>alert('obs')</script>"
+    }
+  ],
+  "extras": [
+    {
+      "event": "interaction_a",
+      "screen": "demoapp:<tela>:a",
+      "flow_name": "fluxo-a",
+      "component": null,
+      "detail": "<svg onload=alert(1)>",
+      "count": 1
+    },
+    {
+      "event": "<b>evento</b>",
+      "screen": "\"><script>alert(2)</script>",
+      "flow_name": "fluxo-a",
+      "component": null,
+      "detail": null,
+      "count": 1
+    }
+  ],
+  "alerts": [],
+  "observations": "Eventos dos fluxos da spec que nenhum card cobre:\n  • interaction_a · demoapp:<tela>:a · detail=<svg onload=alert(1)> — 1x\n  • <b>evento</b> · \"><script>alert(2)</script> — 1x\n\nAlertas (app_exception / error_view nas telas da spec):\n  (nenhum)\n\nRegra: cada variação é validada pelo disparo mais recente; '⚠' indica disparos anteriores com divergência diferente.",
+  "markdown": "# Auditoria de Tagueamento — <script>alert(\"x\")</script> & 'Demo' (ANDROID)\n\nSpec: v\"1\" <b>\n- Período do log: 16/11 22:00:00 até 22:00:02 (2 s)\n- 1 cards · 1 validações · OK: 1 · Erro: 0 (sendo 0 não disparadas) · Conformidade: 100.0%\n- Plataforma: ANDROID · 3 eventos únicos (0 duplicados removidos de 3 da plataforma; 3 lidos no arquivo)\n\n| Seção | Card | Fluxo | Evento | Variação | Status | Divergências | Horário | Disparos |\n|---|---|---|---|---|---|---|---|---|\n| \"Seção\" & <b>negrito</b> | Título com 'aspas' e </h3><script> | <img src=x onerror=alert(1)> · fluxo-a | interaction_a | click:\"ok\" & 'sair' | OK |  | 22:00:01.000 | 1 |\n\n## Fora da spec / Observações\n\nEventos dos fluxos da spec que nenhum card cobre:\n  • interaction_a · demoapp:<tela>:a · detail=<svg onload=alert(1)> — 1x\n  • <b>evento</b> · \"><script>alert(2)</script> — 1x\n\nAlertas (app_exception / error_view nas telas da spec):\n  (nenhum)\n\nRegra: cada variação é validada pelo disparo mais recente; '⚠' indica disparos anteriores com divergência diferente.\n",
+  "tsv": "Seção\tCard\tFluxo\tEvento\tVariação\tStatus\tDivergências\tHorário\tDisparos\n\"Seção\" & <b>negrito</b>\tTítulo com 'aspas' e </h3><script>\t<img src=x onerror=alert(1)> · fluxo-a\tinteraction_a\tclick:\"ok\" & 'sair'\tOK\t\t22:00:01.000\t1\n"
+}

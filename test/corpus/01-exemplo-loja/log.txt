@@ -1,0 +1,16 @@
+--------- beginning of main
+11-16 09:59:58.120  4321  4321 I ActivityManager: Start proc 4321:test.demoapp/u0a123 for activity
+11-16 09:59:59.004  4321  4400 V FA      : Logging event (FE): Screen view, Bundle[{ga_screen_class(_sc)=Inicio}]
+11-16 10:00:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=screen_view(_vs),params=Bundle[{flow_name=loja, ga_event_origin(_o)=app, ga_screen(_sn)=demoapp:loja:inicio}]
+11-16 10:00:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=screen_view(_vs),params=Bundle[{flow_name=loja, ga_event_origin(_o)=app, ga_screen(_sn)=demoapp:loja:inicio}]
+11-16 10:00:00.500  4321  4400 V FA-SVC : Logging event: origin=auto,name=session_start(_s),params=Bundle[{ga_event_origin(_o)=auto, ga_session_id(_sid)=1763290800}]
+11-16 10:01:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=interaction_pedido_retirada,params=Bundle[{screen_name=demoapp:pedido:retirada:sacola, flow_name=pedido-retirada, component=button, detail=click:finalizar, ga_screen(_sn)=demoapp:pedido:retirada:sacola}]
+11-16 10:01:30.000  4321  4400 V FA-SVC : Logging event: origin=app,name=interaction_pedido_retirada,params=Bundle[{screen_name=demoapp:pedido:retirada:detalhes, flow_name=pedido-retirada, component=button, detail=click:finalizar}]
+11-16 10:01:45.000  4321  4400 V FA-SVC : Logging event: origin=app,name=add_to_cart,params=Bundle[{screen_name=demoapp:pedido:entrega:pagamento, flow_name=pedido-entrega, gift=1, value=1, items=[Bundle[{item_name=produto-entrega, item_id=SKU-2002}]], ga_screen(_sn)=demoapp:pedido:entrega:sacola}]
+11-16 10:01:50.000  4321  4400 V FA-SVC : Logging event: origin=app,name=screen_view(_vs),params=Bundle[{flow_name=loja, ga_event_origin(_o)=app, ga_screen(_sn)=demoapp:loja:ofertas}]
+11-16 10:02:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=interaction_pedido_entrega,params=Bundle[{screen_name=demoapp:pedido:entrega:sacola, flow_name=pedido-entrega, component=toggle, detail=click:finalizar}]
+11-16 10:03:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=add_to_cart,params=Bundle[{screen_name=demoapp:pedido:retirada:sacola, flow_name=pedido-retirada, gift=1, value=100.0, items=[Bundle[{item_name=produto-errado, item_id=SKU-1001}]]}]
+11-16 10:04:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=add_to_cart,params=Bundle[{screen_name=demoapp:pedido:retirada:sacola, flow_name=pedido-retirada, gift=0, value=59,90, items=[Bundle[{item_name=produto-retirada, item_category=lanches, item_id=SKU-1001}]]}]
+11-16 10:05:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=modal_view,params=Bundle[{screen_name=demoapp:pedido:retirada:sacola, flow_name=pedido-retirada, component=modal, detail=horarios}]
+11-16 10:06:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=app_exception(_ae),params=Bundle[{ga_screen(_sn)=demoapp:pedido:retirada:sacola, fatal=1}]
+11-16 10:06:30.411  4321  4400 V FA      : Logging event (FE): app_exception(_ae), Bundle[{fatal=1}]

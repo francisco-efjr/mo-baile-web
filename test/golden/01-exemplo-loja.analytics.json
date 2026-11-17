@@ -1,0 +1,182 @@
+{
+  "platform": "android",
+  "stats": {
+    "total_lidos": 12,
+    "da_plataforma": 12,
+    "duplicados": 1,
+    "uteis": 11
+  },
+  "events": [
+    {
+      "id": 0,
+      "event_name": "screen_view",
+      "params": {
+        "flow_name": "loja",
+        "ga_event_origin": "app",
+        "ga_screen": "demoapp:loja:inicio"
+      },
+      "platform": "android",
+      "raw_log": "11-16 10:00:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=screen_view(_vs),params=Bundle[{flow_name=loja, ga_event_origin(_o)=app, ga_screen(_sn)=demoapp:loja:inicio}]",
+      "time_str": "10:00:00.000",
+      "origin": "app"
+    },
+    {
+      "id": 2,
+      "event_name": "session_start",
+      "params": {
+        "ga_event_origin": "auto",
+        "ga_session_id": "1763290800"
+      },
+      "platform": "android",
+      "raw_log": "11-16 10:00:00.500  4321  4400 V FA-SVC : Logging event: origin=auto,name=session_start(_s),params=Bundle[{ga_event_origin(_o)=auto, ga_session_id(_sid)=1763290800}]",
+      "time_str": "10:00:00.500",
+      "origin": "auto"
+    },
+    {
+      "id": 3,
+      "event_name": "interaction_pedido_retirada",
+      "params": {
+        "screen_name": "demoapp:pedido:retirada:sacola",
+        "flow_name": "pedido-retirada",
+        "component": "button",
+        "detail": "click:finalizar",
+        "ga_screen": "demoapp:pedido:retirada:sacola"
+      },
+      "platform": "android",
+      "raw_log": "11-16 10:01:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=interaction_pedido_retirada,params=Bundle[{screen_name=demoapp:pedido:retirada:sacola, flow_name=pedido-retirada, component=button, detail=click:finalizar, ga_screen(_sn)=demoapp:pedido:retirada:sacola}]",
+      "time_str": "10:01:00.000",
+      "origin": "app"
+    },
+    {
+      "id": 4,
+      "event_name": "interaction_pedido_retirada",
+      "params": {
+        "screen_name": "demoapp:pedido:retirada:detalhes",
+        "flow_name": "pedido-retirada",
+        "component": "button",
+        "detail": "click:finalizar"
+      },
+      "platform": "android",
+      "raw_log": "11-16 10:01:30.000  4321  4400 V FA-SVC : Logging event: origin=app,name=interaction_pedido_retirada,params=Bundle[{screen_name=demoapp:pedido:retirada:detalhes, flow_name=pedido-retirada, component=button, detail=click:finalizar}]",
+      "time_str": "10:01:30.000",
+      "origin": "app"
+    },
+    {
+      "id": 5,
+      "event_name": "add_to_cart",
+      "params": {
+        "screen_name": "demoapp:pedido:entrega:pagamento",
+        "flow_name": "pedido-entrega",
+        "gift": "1",
+        "value": "1",
+        "items": [
+          {
+            "item_name": "produto-entrega",
+            "item_id": "SKU-2002"
+          }
+        ],
+        "ga_screen": "demoapp:pedido:entrega:sacola"
+      },
+      "platform": "android",
+      "raw_log": "11-16 10:01:45.000  4321  4400 V FA-SVC : Logging event: origin=app,name=add_to_cart,params=Bundle[{screen_name=demoapp:pedido:entrega:pagamento, flow_name=pedido-entrega, gift=1, value=1, items=[Bundle[{item_name=produto-entrega, item_id=SKU-2002}]], ga_screen(_sn)=demoapp:pedido:entrega:sacola}]",
+      "time_str": "10:01:45.000",
+      "origin": "app"
+    },
+    {
+      "id": 6,
+      "event_name": "screen_view",
+      "params": {
+        "flow_name": "loja",
+        "ga_event_origin": "app",
+        "ga_screen": "demoapp:loja:ofertas"
+      },
+      "platform": "android",
+      "raw_log": "11-16 10:01:50.000  4321  4400 V FA-SVC : Logging event: origin=app,name=screen_view(_vs),params=Bundle[{flow_name=loja, ga_event_origin(_o)=app, ga_screen(_sn)=demoapp:loja:ofertas}]",
+      "time_str": "10:01:50.000",
+      "origin": "app"
+    },
+    {
+      "id": 7,
+      "event_name": "interaction_pedido_entrega",
+      "params": {
+        "screen_name": "demoapp:pedido:entrega:sacola",
+        "flow_name": "pedido-entrega",
+        "component": "toggle",
+        "detail": "click:finalizar"
+      },
+      "platform": "android",
+      "raw_log": "11-16 10:02:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=interaction_pedido_entrega,params=Bundle[{screen_name=demoapp:pedido:entrega:sacola, flow_name=pedido-entrega, component=toggle, detail=click:finalizar}]",
+      "time_str": "10:02:00.000",
+      "origin": "app"
+    },
+    {
+      "id": 8,
+      "event_name": "add_to_cart",
+      "params": {
+        "screen_name": "demoapp:pedido:retirada:sacola",
+        "flow_name": "pedido-retirada",
+        "gift": "1",
+        "value": "100.0",
+        "items": [
+          {
+            "item_name": "produto-errado",
+            "item_id": "SKU-1001"
+          }
+        ]
+      },
+      "platform": "android",
+      "raw_log": "11-16 10:03:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=add_to_cart,params=Bundle[{screen_name=demoapp:pedido:retirada:sacola, flow_name=pedido-retirada, gift=1, value=100.0, items=[Bundle[{item_name=produto-errado, item_id=SKU-1001}]]}]",
+      "time_str": "10:03:00.000",
+      "origin": "app"
+    },
+    {
+      "id": 9,
+      "event_name": "add_to_cart",
+      "params": {
+        "screen_name": "demoapp:pedido:retirada:sacola",
+        "flow_name": "pedido-retirada",
+        "gift": "0",
+        "value": "59",
+        "items": [
+          {
+            "item_name": "produto-retirada",
+            "item_category": "lanches",
+            "item_id": "SKU-1001"
+          }
+        ]
+      },
+      "platform": "android",
+      "raw_log": "11-16 10:04:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=add_to_cart,params=Bundle[{screen_name=demoapp:pedido:retirada:sacola, flow_name=pedido-retirada, gift=0, value=59,90, items=[Bundle[{item_name=produto-retirada, item_category=lanches, item_id=SKU-1001}]]}]",
+      "time_str": "10:04:00.000",
+      "origin": "app"
+    },
+    {
+      "id": 10,
+      "event_name": "modal_view",
+      "params": {
+        "screen_name": "demoapp:pedido:retirada:sacola",
+        "flow_name": "pedido-retirada",
+        "component": "modal",
+        "detail": "horarios"
+      },
+      "platform": "android",
+      "raw_log": "11-16 10:05:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=modal_view,params=Bundle[{screen_name=demoapp:pedido:retirada:sacola, flow_name=pedido-retirada, component=modal, detail=horarios}]",
+      "time_str": "10:05:00.000",
+      "origin": "app"
+    },
+    {
+      "id": 11,
+      "event_name": "app_exception",
+      "params": {
+        "ga_screen": "demoapp:pedido:retirada:sacola",
+        "fatal": "1"
+      },
+      "platform": "android",
+      "raw_log": "11-16 10:06:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=app_exception(_ae),params=Bundle[{ga_screen(_sn)=demoapp:pedido:retirada:sacola, fatal=1}]",
+      "time_str": "10:06:00.000",
+      "origin": "app"
+    }
+  ],
+  "tsv": "Hora\tPlataforma\tOrigem\tNome do Evento\tParâmetros Principais\tJSON dos Parâmetros\n10:00:00.000\tANDROID\tapp\tscreen_view\tflow_name: loja, ga_event_origin: app, ga_screen: demoapp:loja:inicio\t{\"flow_name\": \"loja\", \"ga_event_origin\": \"app\", \"ga_screen\": \"demoapp:loja:inicio\"}\n10:00:00.500\tANDROID\tauto\tsession_start\tga_event_origin: auto, ga_session_id: 1763290800\t{\"ga_event_origin\": \"auto\", \"ga_session_id\": \"1763290800\"}\n10:01:00.000\tANDROID\tapp\tinteraction_pedido_retirada\tscreen_name: demoapp:pedido:retirada:sacola, flow_name: pedido-retirada, component: button, detail: click:finalizar\t{\"screen_name\": \"demoapp:pedido:retirada:sacola\", \"flow_name\": \"pedido-retirada\", \"component\": \"button\", \"detail\": \"click:finalizar\", \"ga_screen\": \"demoapp:pedido:retirada:sacola\"}\n10:01:30.000\tANDROID\tapp\tinteraction_pedido_retirada\tscreen_name: demoapp:pedido:retirada:detalhes, flow_name: pedido-retirada, component: button, detail: click:finalizar\t{\"screen_name\": \"demoapp:pedido:retirada:detalhes\", \"flow_name\": \"pedido-retirada\", \"component\": \"button\", \"detail\": \"click:finalizar\"}\n10:01:45.000\tANDROID\tapp\tadd_to_cart\tscreen_name: demoapp:pedido:entrega:pagamento, flow_name: pedido-entrega, gift: 1, value: 1\t{\"screen_name\": \"demoapp:pedido:entrega:pagamento\", \"flow_name\": \"pedido-entrega\", \"gift\": \"1\", \"value\": \"1\", \"items\": [{\"item_name\": \"produto-entrega\", \"item_id\": \"SKU-2002\"}], \"ga_screen\": \"demoapp:pedido:entrega:sacola\"}\n10:01:50.000\tANDROID\tapp\tscreen_view\tflow_name: loja, ga_event_origin: app, ga_screen: demoapp:loja:ofertas\t{\"flow_name\": \"loja\", \"ga_event_origin\": \"app\", \"ga_screen\": \"demoapp:loja:ofertas\"}\n10:02:00.000\tANDROID\tapp\tinteraction_pedido_entrega\tscreen_name: demoapp:pedido:entrega:sacola, flow_name: pedido-entrega, component: toggle, detail: click:finalizar\t{\"screen_name\": \"demoapp:pedido:entrega:sacola\", \"flow_name\": \"pedido-entrega\", \"component\": \"toggle\", \"detail\": \"click:finalizar\"}\n10:03:00.000\tANDROID\tapp\tadd_to_cart\tscreen_name: demoapp:pedido:retirada:sacola, flow_name: pedido-retirada, gift: 1, value: 100.0\t{\"screen_name\": \"demoapp:pedido:retirada:sacola\", \"flow_name\": \"pedido-retirada\", \"gift\": \"1\", \"value\": \"100.0\", \"items\": [{\"item_name\": \"produto-errado\", \"item_id\": \"SKU-1001\"}]}\n10:04:00.000\tANDROID\tapp\tadd_to_cart\tscreen_name: demoapp:pedido:retirada:sacola, flow_name: pedido-retirada, gift: 0, value: 59\t{\"screen_name\": \"demoapp:pedido:retirada:sacola\", \"flow_name\": \"pedido-retirada\", \"gift\": \"0\", \"value\": \"59\", \"items\": [{\"item_name\": \"produto-retirada\", \"item_category\": \"lanches\", \"item_id\": \"SKU-1001\"}]}\n10:05:00.000\tANDROID\tapp\tmodal_view\tscreen_name: demoapp:pedido:retirada:sacola, flow_name: pedido-retirada, component: modal, detail: horarios\t{\"screen_name\": \"demoapp:pedido:retirada:sacola\", \"flow_name\": \"pedido-retirada\", \"component\": \"modal\", \"detail\": \"horarios\"}\n10:06:00.000\tANDROID\tapp\tapp_exception\tga_screen: demoapp:pedido:retirada:sacola, fatal: 1\t{\"ga_screen\": \"demoapp:pedido:retirada:sacola\", \"fatal\": \"1\"}",
+  "json": "[\n  {\n    \"id\": 0,\n    \"event_name\": \"screen_view\",\n    \"params\": {\n      \"flow_name\": \"loja\",\n      \"ga_event_origin\": \"app\",\n      \"ga_screen\": \"demoapp:loja:inicio\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 10:00:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=screen_view(_vs),params=Bundle[{flow_name=loja, ga_event_origin(_o)=app, ga_screen(_sn)=demoapp:loja:inicio}]\",\n    \"time_str\": \"10:00:00.000\",\n    \"origin\": \"app\"\n  },\n  {\n    \"id\": 2,\n    \"event_name\": \"session_start\",\n    \"params\": {\n      \"ga_event_origin\": \"auto\",\n      \"ga_session_id\": \"1763290800\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 10:00:00.500  4321  4400 V FA-SVC : Logging event: origin=auto,name=session_start(_s),params=Bundle[{ga_event_origin(_o)=auto, ga_session_id(_sid)=1763290800}]\",\n    \"time_str\": \"10:00:00.500\",\n    \"origin\": \"auto\"\n  },\n  {\n    \"id\": 3,\n    \"event_name\": \"interaction_pedido_retirada\",\n    \"params\": {\n      \"screen_name\": \"demoapp:pedido:retirada:sacola\",\n      \"flow_name\": \"pedido-retirada\",\n      \"component\": \"button\",\n      \"detail\": \"click:finalizar\",\n      \"ga_screen\": \"demoapp:pedido:retirada:sacola\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 10:01:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=interaction_pedido_retirada,params=Bundle[{screen_name=demoapp:pedido:retirada:sacola, flow_name=pedido-retirada, component=button, detail=click:finalizar, ga_screen(_sn)=demoapp:pedido:retirada:sacola}]\",\n    \"time_str\": \"10:01:00.000\",\n    \"origin\": \"app\"\n  },\n  {\n    \"id\": 4,\n    \"event_name\": \"interaction_pedido_retirada\",\n    \"params\": {\n      \"screen_name\": \"demoapp:pedido:retirada:detalhes\",\n      \"flow_name\": \"pedido-retirada\",\n      \"component\": \"button\",\n      \"detail\": \"click:finalizar\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 10:01:30.000  4321  4400 V FA-SVC : Logging event: origin=app,name=interaction_pedido_retirada,params=Bundle[{screen_name=demoapp:pedido:retirada:detalhes, flow_name=pedido-retirada, component=button, detail=click:finalizar}]\",\n    \"time_str\": \"10:01:30.000\",\n    \"origin\": \"app\"\n  },\n  {\n    \"id\": 5,\n    \"event_name\": \"add_to_cart\",\n    \"params\": {\n      \"screen_name\": \"demoapp:pedido:entrega:pagamento\",\n      \"flow_name\": \"pedido-entrega\",\n      \"gift\": \"1\",\n      \"value\": \"1\",\n      \"items\": [\n        {\n          \"item_name\": \"produto-entrega\",\n          \"item_id\": \"SKU-2002\"\n        }\n      ],\n      \"ga_screen\": \"demoapp:pedido:entrega:sacola\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 10:01:45.000  4321  4400 V FA-SVC : Logging event: origin=app,name=add_to_cart,params=Bundle[{screen_name=demoapp:pedido:entrega:pagamento, flow_name=pedido-entrega, gift=1, value=1, items=[Bundle[{item_name=produto-entrega, item_id=SKU-2002}]], ga_screen(_sn)=demoapp:pedido:entrega:sacola}]\",\n    \"time_str\": \"10:01:45.000\",\n    \"origin\": \"app\"\n  },\n  {\n    \"id\": 6,\n    \"event_name\": \"screen_view\",\n    \"params\": {\n      \"flow_name\": \"loja\",\n      \"ga_event_origin\": \"app\",\n      \"ga_screen\": \"demoapp:loja:ofertas\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 10:01:50.000  4321  4400 V FA-SVC : Logging event: origin=app,name=screen_view(_vs),params=Bundle[{flow_name=loja, ga_event_origin(_o)=app, ga_screen(_sn)=demoapp:loja:ofertas}]\",\n    \"time_str\": \"10:01:50.000\",\n    \"origin\": \"app\"\n  },\n  {\n    \"id\": 7,\n    \"event_name\": \"interaction_pedido_entrega\",\n    \"params\": {\n      \"screen_name\": \"demoapp:pedido:entrega:sacola\",\n      \"flow_name\": \"pedido-entrega\",\n      \"component\": \"toggle\",\n      \"detail\": \"click:finalizar\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 10:02:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=interaction_pedido_entrega,params=Bundle[{screen_name=demoapp:pedido:entrega:sacola, flow_name=pedido-entrega, component=toggle, detail=click:finalizar}]\",\n    \"time_str\": \"10:02:00.000\",\n    \"origin\": \"app\"\n  },\n  {\n    \"id\": 8,\n    \"event_name\": \"add_to_cart\",\n    \"params\": {\n      \"screen_name\": \"demoapp:pedido:retirada:sacola\",\n      \"flow_name\": \"pedido-retirada\",\n      \"gift\": \"1\",\n      \"value\": \"100.0\",\n      \"items\": [\n        {\n          \"item_name\": \"produto-errado\",\n          \"item_id\": \"SKU-1001\"\n        }\n      ]\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 10:03:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=add_to_cart,params=Bundle[{screen_name=demoapp:pedido:retirada:sacola, flow_name=pedido-retirada, gift=1, value=100.0, items=[Bundle[{item_name=produto-errado, item_id=SKU-1001}]]}]\",\n    \"time_str\": \"10:03:00.000\",\n    \"origin\": \"app\"\n  },\n  {\n    \"id\": 9,\n    \"event_name\": \"add_to_cart\",\n    \"params\": {\n      \"screen_name\": \"demoapp:pedido:retirada:sacola\",\n      \"flow_name\": \"pedido-retirada\",\n      \"gift\": \"0\",\n      \"value\": \"59\",\n      \"items\": [\n        {\n          \"item_name\": \"produto-retirada\",\n          \"item_category\": \"lanches\",\n          \"item_id\": \"SKU-1001\"\n        }\n      ]\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 10:04:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=add_to_cart,params=Bundle[{screen_name=demoapp:pedido:retirada:sacola, flow_name=pedido-retirada, gift=0, value=59,90, items=[Bundle[{item_name=produto-retirada, item_category=lanches, item_id=SKU-1001}]]}]\",\n    \"time_str\": \"10:04:00.000\",\n    \"origin\": \"app\"\n  },\n  {\n    \"id\": 10,\n    \"event_name\": \"modal_view\",\n    \"params\": {\n      \"screen_name\": \"demoapp:pedido:retirada:sacola\",\n      \"flow_name\": \"pedido-retirada\",\n      \"component\": \"modal\",\n      \"detail\": \"horarios\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 10:05:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=modal_view,params=Bundle[{screen_name=demoapp:pedido:retirada:sacola, flow_name=pedido-retirada, component=modal, detail=horarios}]\",\n    \"time_str\": \"10:05:00.000\",\n    \"origin\": \"app\"\n  },\n  {\n    \"id\": 11,\n    \"event_name\": \"app_exception\",\n    \"params\": {\n      \"ga_screen\": \"demoapp:pedido:retirada:sacola\",\n      \"fatal\": \"1\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 10:06:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=app_exception(_ae),params=Bundle[{ga_screen(_sn)=demoapp:pedido:retirada:sacola, fatal=1}]\",\n    \"time_str\": \"10:06:00.000\",\n    \"origin\": \"app\"\n  }\n]"
+}
