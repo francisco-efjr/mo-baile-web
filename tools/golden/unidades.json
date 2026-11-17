@@ -1,0 +1,53 @@
+{
+  "float_repr": ["1.0", "0.0", "-0.0", "1e16", "1e15", "1e-05", "0.0001", "0.1", "2.675", "1e22", "5e-324", "1.7976931348623157e308",
+                 "123456.789", "100.0", "42.857142857142854", "1.5e-7", "12345678901234567.0", "0.30000000000000004", "1E5", "-2.5e-10"],
+  "fixed": [["0.125", 2], ["0.375", 2], ["2.675", 2], ["-0.0", 2], ["402.1238596594935", 2], ["42.857142857142854", 1],
+            ["66.65", 1], ["0.05", 1], ["0.25", 1], ["0.35", 1], ["99.95", 1], ["100.0", 1], ["0.0", 1], ["57.42", 2], ["1.005", 2],
+            ["229.78506266256772", 2], ["-114.89253133128386", 2]],
+  "round1": ["42.857142857142854", "66.65", "0.05", "0.25", "0.35", "99.95", "14.285714285714286", "28.57142857142857",
+             "85.71428571428571", "0.15", "33.33333333333333", "16.666666666666664"],
+  "json": ["{\"a\": 1,}", "[1,2,]", "{\"a\" 1}", "{\"a\": }", "[1 2]", "{\"a\":1", "\"abc", "{\"a\":\"x\ny\"}", "01", "{} x", "", "  ",
+           "{\"a\": tru}", "-", "[-]", "{\"a\":1,\"b\"}", "[1,]", "\"\\q\"", "\"\\u12x4\"", "{,}", "{\"a\":1,,}", "[", "{", "[ ", "{ ",
+           "{\"a\"", "{\"a\":", "[1,", "\"\\u123", "\"\\ud800\\udc00x\"", "nul", "NaN", "-Infinity",
+           "[1e5, 1E+2, -0, -0.0, 1.5e-7, 12345678901234567890, 1e400, 9007199254740993]", "\ufeff{}", "{\"a\":1}\n\n  x",
+           "\"a\u0001\"", "[1,\n  2,\n]", "{\n  \"projeto\": \"x\",\n  \"cards\": [\n    {\"evento\": \"a\",},\n  ]\n}",
+           "{\"🎉\": \"emoji\", \"b\": [1, 2, }", "{\"z\": 1, \"a\": 2, \"10\": 3, \"2\": 4, \"z\": 5}", "1e", "1e+", "1.", ".5",
+           "[true, false, null, \"\\\"\\\\\\/\\b\\f\\n\\r\\t\"]", "{\"a\": [1, {\"b\": [1.0, 2.50, 1e2]}]}"],
+  "str": ["\"texto\"", "null", "true", "false", "1", "1.0", "1e-05", "[\"a\", 1, null, true, 1.5]", "{\"k\": \"v\", \"n\": [1, {\"x\": null}]}",
+          "\"it's\"", "\"aspas \\\" e 'simples'\"", "[\"tab\\tbarra\\\\nova\\nlinha\\u0001\\u007f\\u00a0\\u200b\\u2028é😀\"]", "[]", "{}", "12345678901234567890", "-0", "[1e16, 1e15, -0.0]"],
+  "regex": [
+    ["\\d+", "123"], ["\\d+", "١٢٣"], ["\\d+", "12a"], ["\\w+", "ação_1"], ["\\w+", "a-b"], ["\\s+", "\u00a0\u2003\t"], ["\\s", "\ufeff"],
+    [".+", "a\rb"], [".+", "a\nb"], ["(?s).+", "a\nb"], ["a$", "a"], ["card-[0-9a-f]{4}", "card-1a2b"], ["card-[0-9a-f]{4}", "card-xyz"],
+    ["[^a-c]+", "xyz"], ["[\\d-]+", "1-2"], ["(?i)ABC", "abc"], ["(?i)[a-c]+", "ABC"], ["a(?i:b)c", "aBc"], ["a(?i:b)c", "ABc"],
+    ["(?x) a  b # comentário\n c", "abc"], ["x{,3}", "xxx"], ["x{2,}", "x"], ["{", "{"], ["a{b}", "a{b}"], ["a{1,2", "a{1,2"],
+    ["(?P<g>ab)(?P=g)", "abab"], ["(a)\\1", "aa"], ["(?<=ab)c", "c"], ["(?:a|bc)+", "abca"], ["\\bfoo\\b", "foo"],
+    ["[\\w.-]+@[\\w.-]+", "qa@demoapp.test"], ["\\$\\d+", "$10"], ["[]a]+", "]a]"], ["[^]a]+", "bc"], ["\\x41\\u00e9\\U0001F600", "Aé😀"],
+    ["\\101", "A"], ["a|", ""], ["^(?:a|ab)$", "ab"], ["(?>a+)b", "aab"], ["a++b", "aab"], ["a*?b", "aab"],
+    ["(abc", "abc"], ["abc)", "abc"], ["[abc", "a"], ["*a", "a"], ["a**", "a"], ["\\q", "q"], ["a{3,1}", "a"],
+    ["[z-a]", "a"], ["[\\d-z]", "a"], ["(?P<1>a)", "a"], ["(?P=nome)", "a"], ["\\2(a)", "a"], ["(?<=a+)b", "ab"], ["abc\\", "abc"],
+    ["(?Q)", "a"], ["a(?i)b", "ab"], ["x\n(y", "x"], ["\\x4", "a"], ["[\\A]", "a"], ["(?#comentário", "a"], ["^*", "a"],
+    ["\\d{2}/\\d{2}/\\d{4}", "01/12/2026"], ["-?\\d+(?:[.,]\\d+)?", "200,50"], ["\\(_[a-zA-Z0-9]+\\)$", "x(_vs)"]
+  ],
+  "search": [
+    ["Logging event:\\s*origin=([^,]+),name=([^,]+),params=(Bundle\\[.*\\])\\s*$", "11-16 10:00:00.000 V FA-SVC : Logging event: origin=app,name=screen_view(_vs),params=Bundle[{a=1, b=[Bundle[{c=2}]]}]"],
+    ["^(?:\\d{2}-\\d{2}\\s+)?(\\d{2}:\\d{2}:\\d{2}\\.\\d{3})", "11-16 10:00:00.000 V FA-SVC"],
+    ["^(?:(\\d{4})-)?(\\d{2}-\\d{2})\\s", "2026-11-16 10:00"],
+    ["^\\s*(?:(?:(\\d{4})-)?(\\d{2})-(\\d{2})[ T]+)?(\\d{2}):(\\d{2}):(\\d{2})", "  2026-11-16T23:59:01.5"],
+    ["\\[[^\\[\\]]*\\|[^\\[\\]]*\\]|\\[numero\\]|\\[data\\]|\\[preenchido\\]", "click:[numero]-[a|b]"],
+    ["(a)|(b)", "b"]
+  ],
+  "textwrap": [
+    "// ⚠ 5 disparo(s) anterior(es) divergente(s): componente-com-hifen e mais um texto bem comprido para quebrar a linha",
+    "// obs: Conferir o item_id com o catálogo da loja e também a ordem dos parâmetros no painel do Firebase antes de aprovar",
+    "// RET · interaction_pedido_retirada_com_um_nome_de_evento_muito_comprido_que_nao_tem_espaco_nenhum_no_meio [ERRO]",
+    "// obs: texto -- com travessão duplo -- e palavras-compostas-bem-longas-que-podem-quebrar-no-hifen-quando-precisar",
+    "// obs: 🎉🎉🎉 emoji conta como um caractere só 🎉🎉🎉 então a quebra precisa cair no mesmo lugar do Python mesmo",
+    "// obs:\ttabulação\tno meio\tdo texto e mais palavras para passar de setenta e oito caracteres no total, ok",
+    "// obs: \u00a0\u00a0 espaço duro no meio de um comentário longo que precisa ser quebrado em mais de uma linha aqui",
+    "// --------------------------------------------------------------------------------------------------------------",
+    "// a"
+  ],
+  "strip": [" a ", "\u00a0a\u3000", "\ufeffa\ufeff", "\u001ca\u0085", "\t\n x \r\u000b\u000c"],
+  "splitlines": ["a\nb\r\nc\rd", "a\u2028b\u0085c\u000bd\u000ce\u001cf", "fim\n", "\n\n", "x\r\n"],
+  "repr_float_fmt": ["1.6", "2.2", "2", "1.4"]
+}

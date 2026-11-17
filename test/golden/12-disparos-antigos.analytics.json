@@ -1,0 +1,103 @@
+{
+  "platform": "android",
+  "stats": {
+    "total_lidos": 6,
+    "da_plataforma": 6,
+    "duplicados": 0,
+    "uteis": 6
+  },
+  "events": [
+    {
+      "id": 0,
+      "event_name": "interaction_avaliacao_produto_com_um_nome_de_evento_muito_comprido_e_sem_espacos_no_meio",
+      "params": {
+        "screen_name": "demoapp:avaliacoes:formulario",
+        "flow_name": "avaliacoes",
+        "rating": "0",
+        "component": "link",
+        "detail": "click:enviar"
+      },
+      "platform": "android",
+      "raw_log": "11-16 20:00:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=interaction_avaliacao_produto_com_um_nome_de_evento_muito_comprido_e_sem_espacos_no_meio,params=Bundle[{screen_name=demoapp:avaliacoes:formulario, flow_name=avaliacoes, rating=0, component=link, detail=click:enviar}]",
+      "time_str": "20:00:00.000",
+      "origin": "app"
+    },
+    {
+      "id": 1,
+      "event_name": "interaction_avaliacao_produto_com_um_nome_de_evento_muito_comprido_e_sem_espacos_no_meio",
+      "params": {
+        "screen_name": "demoapp:avaliacoes:formulario",
+        "flow_name": "avaliacoes",
+        "rating": "6",
+        "component": "button",
+        "detail": "click:enviar"
+      },
+      "platform": "android",
+      "raw_log": "11-16 20:01:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=interaction_avaliacao_produto_com_um_nome_de_evento_muito_comprido_e_sem_espacos_no_meio,params=Bundle[{screen_name=demoapp:avaliacoes:formulario, flow_name=avaliacoes, rating=6, component=button, detail=click:enviar}]",
+      "time_str": "20:01:00.000",
+      "origin": "app"
+    },
+    {
+      "id": 2,
+      "event_name": "interaction_avaliacao_produto_com_um_nome_de_evento_muito_comprido_e_sem_espacos_no_meio",
+      "params": {
+        "screen_name": "demoapp:avaliacoes:formulario",
+        "flow_name": "avaliacoes",
+        "rating": "5",
+        "component": "chip",
+        "detail": "click:enviar"
+      },
+      "platform": "android",
+      "raw_log": "11-16 20:02:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=interaction_avaliacao_produto_com_um_nome_de_evento_muito_comprido_e_sem_espacos_no_meio,params=Bundle[{screen_name=demoapp:avaliacoes:formulario, flow_name=avaliacoes, rating=5, component=chip, detail=click:enviar}]",
+      "time_str": "20:02:00.000",
+      "origin": "app"
+    },
+    {
+      "id": 3,
+      "event_name": "interaction_avaliacao_produto_com_um_nome_de_evento_muito_comprido_e_sem_espacos_no_meio",
+      "params": {
+        "screen_name": "demoapp:avaliacoes:formulario",
+        "flow_name": "avaliacoes",
+        "rating": "7",
+        "component": "tab",
+        "detail": "click:enviar"
+      },
+      "platform": "android",
+      "raw_log": "11-16 20:03:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=interaction_avaliacao_produto_com_um_nome_de_evento_muito_comprido_e_sem_espacos_no_meio,params=Bundle[{screen_name=demoapp:avaliacoes:formulario, flow_name=avaliacoes, rating=7, component=tab, detail=click:enviar}]",
+      "time_str": "20:03:00.000",
+      "origin": "app"
+    },
+    {
+      "id": 4,
+      "event_name": "interaction_avaliacao_produto_com_um_nome_de_evento_muito_comprido_e_sem_espacos_no_meio",
+      "params": {
+        "screen_name": "demoapp:avaliacoes:formulario",
+        "flow_name": "avaliacoes",
+        "rating": "9",
+        "component": "card",
+        "detail": "click:enviar"
+      },
+      "platform": "android",
+      "raw_log": "11-16 20:04:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=interaction_avaliacao_produto_com_um_nome_de_evento_muito_comprido_e_sem_espacos_no_meio,params=Bundle[{screen_name=demoapp:avaliacoes:formulario, flow_name=avaliacoes, rating=9, component=card, detail=click:enviar}]",
+      "time_str": "20:04:00.000",
+      "origin": "app"
+    },
+    {
+      "id": 5,
+      "event_name": "interaction_avaliacao_produto_com_um_nome_de_evento_muito_comprido_e_sem_espacos_no_meio",
+      "params": {
+        "screen_name": "demoapp:avaliacoes:formulario",
+        "flow_name": "avaliacoes",
+        "rating": "4",
+        "component": "button",
+        "detail": "click:enviar"
+      },
+      "platform": "android",
+      "raw_log": "11-16 20:05:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=interaction_avaliacao_produto_com_um_nome_de_evento_muito_comprido_e_sem_espacos_no_meio,params=Bundle[{screen_name=demoapp:avaliacoes:formulario, flow_name=avaliacoes, rating=4, component=button, detail=click:enviar}]",
+      "time_str": "20:05:00.000",
+      "origin": "app"
+    }
+  ],
+  "tsv": "Hora\tPlataforma\tOrigem\tNome do Evento\tParâmetros Principais\tJSON dos Parâmetros\n20:00:00.000\tANDROID\tapp\tinteraction_avaliacao_produto_com_um_nome_de_evento_muito_comprido_e_sem_espacos_no_meio\tscreen_name: demoapp:avaliacoes:formulario, flow_name: avaliacoes, rating: 0, component: link\t{\"screen_name\": \"demoapp:avaliacoes:formulario\", \"flow_name\": \"avaliacoes\", \"rating\": \"0\", \"component\": \"link\", \"detail\": \"click:enviar\"}\n20:01:00.000\tANDROID\tapp\tinteraction_avaliacao_produto_com_um_nome_de_evento_muito_comprido_e_sem_espacos_no_meio\tscreen_name: demoapp:avaliacoes:formulario, flow_name: avaliacoes, rating: 6, component: button\t{\"screen_name\": \"demoapp:avaliacoes:formulario\", \"flow_name\": \"avaliacoes\", \"rating\": \"6\", \"component\": \"button\", \"detail\": \"click:enviar\"}\n20:02:00.000\tANDROID\tapp\tinteraction_avaliacao_produto_com_um_nome_de_evento_muito_comprido_e_sem_espacos_no_meio\tscreen_name: demoapp:avaliacoes:formulario, flow_name: avaliacoes, rating: 5, component: chip\t{\"screen_name\": \"demoapp:avaliacoes:formulario\", \"flow_name\": \"avaliacoes\", \"rating\": \"5\", \"component\": \"chip\", \"detail\": \"click:enviar\"}\n20:03:00.000\tANDROID\tapp\tinteraction_avaliacao_produto_com_um_nome_de_evento_muito_comprido_e_sem_espacos_no_meio\tscreen_name: demoapp:avaliacoes:formulario, flow_name: avaliacoes, rating: 7, component: tab\t{\"screen_name\": \"demoapp:avaliacoes:formulario\", \"flow_name\": \"avaliacoes\", \"rating\": \"7\", \"component\": \"tab\", \"detail\": \"click:enviar\"}\n20:04:00.000\tANDROID\tapp\tinteraction_avaliacao_produto_com_um_nome_de_evento_muito_comprido_e_sem_espacos_no_meio\tscreen_name: demoapp:avaliacoes:formulario, flow_name: avaliacoes, rating: 9, component: card\t{\"screen_name\": \"demoapp:avaliacoes:formulario\", \"flow_name\": \"avaliacoes\", \"rating\": \"9\", \"component\": \"card\", \"detail\": \"click:enviar\"}\n20:05:00.000\tANDROID\tapp\tinteraction_avaliacao_produto_com_um_nome_de_evento_muito_comprido_e_sem_espacos_no_meio\tscreen_name: demoapp:avaliacoes:formulario, flow_name: avaliacoes, rating: 4, component: button\t{\"screen_name\": \"demoapp:avaliacoes:formulario\", \"flow_name\": \"avaliacoes\", \"rating\": \"4\", \"component\": \"button\", \"detail\": \"click:enviar\"}",
+  "json": "[\n  {\n    \"id\": 0,\n    \"event_name\": \"interaction_avaliacao_produto_com_um_nome_de_evento_muito_comprido_e_sem_espacos_no_meio\",\n    \"params\": {\n      \"screen_name\": \"demoapp:avaliacoes:formulario\",\n      \"flow_name\": \"avaliacoes\",\n      \"rating\": \"0\",\n      \"component\": \"link\",\n      \"detail\": \"click:enviar\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 20:00:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=interaction_avaliacao_produto_com_um_nome_de_evento_muito_comprido_e_sem_espacos_no_meio,params=Bundle[{screen_name=demoapp:avaliacoes:formulario, flow_name=avaliacoes, rating=0, component=link, detail=click:enviar}]\",\n    \"time_str\": \"20:00:00.000\",\n    \"origin\": \"app\"\n  },\n  {\n    \"id\": 1,\n    \"event_name\": \"interaction_avaliacao_produto_com_um_nome_de_evento_muito_comprido_e_sem_espacos_no_meio\",\n    \"params\": {\n      \"screen_name\": \"demoapp:avaliacoes:formulario\",\n      \"flow_name\": \"avaliacoes\",\n      \"rating\": \"6\",\n      \"component\": \"button\",\n      \"detail\": \"click:enviar\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 20:01:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=interaction_avaliacao_produto_com_um_nome_de_evento_muito_comprido_e_sem_espacos_no_meio,params=Bundle[{screen_name=demoapp:avaliacoes:formulario, flow_name=avaliacoes, rating=6, component=button, detail=click:enviar}]\",\n    \"time_str\": \"20:01:00.000\",\n    \"origin\": \"app\"\n  },\n  {\n    \"id\": 2,\n    \"event_name\": \"interaction_avaliacao_produto_com_um_nome_de_evento_muito_comprido_e_sem_espacos_no_meio\",\n    \"params\": {\n      \"screen_name\": \"demoapp:avaliacoes:formulario\",\n      \"flow_name\": \"avaliacoes\",\n      \"rating\": \"5\",\n      \"component\": \"chip\",\n      \"detail\": \"click:enviar\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 20:02:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=interaction_avaliacao_produto_com_um_nome_de_evento_muito_comprido_e_sem_espacos_no_meio,params=Bundle[{screen_name=demoapp:avaliacoes:formulario, flow_name=avaliacoes, rating=5, component=chip, detail=click:enviar}]\",\n    \"time_str\": \"20:02:00.000\",\n    \"origin\": \"app\"\n  },\n  {\n    \"id\": 3,\n    \"event_name\": \"interaction_avaliacao_produto_com_um_nome_de_evento_muito_comprido_e_sem_espacos_no_meio\",\n    \"params\": {\n      \"screen_name\": \"demoapp:avaliacoes:formulario\",\n      \"flow_name\": \"avaliacoes\",\n      \"rating\": \"7\",\n      \"component\": \"tab\",\n      \"detail\": \"click:enviar\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 20:03:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=interaction_avaliacao_produto_com_um_nome_de_evento_muito_comprido_e_sem_espacos_no_meio,params=Bundle[{screen_name=demoapp:avaliacoes:formulario, flow_name=avaliacoes, rating=7, component=tab, detail=click:enviar}]\",\n    \"time_str\": \"20:03:00.000\",\n    \"origin\": \"app\"\n  },\n  {\n    \"id\": 4,\n    \"event_name\": \"interaction_avaliacao_produto_com_um_nome_de_evento_muito_comprido_e_sem_espacos_no_meio\",\n    \"params\": {\n      \"screen_name\": \"demoapp:avaliacoes:formulario\",\n      \"flow_name\": \"avaliacoes\",\n      \"rating\": \"9\",\n      \"component\": \"card\",\n      \"detail\": \"click:enviar\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 20:04:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=interaction_avaliacao_produto_com_um_nome_de_evento_muito_comprido_e_sem_espacos_no_meio,params=Bundle[{screen_name=demoapp:avaliacoes:formulario, flow_name=avaliacoes, rating=9, component=card, detail=click:enviar}]\",\n    \"time_str\": \"20:04:00.000\",\n    \"origin\": \"app\"\n  },\n  {\n    \"id\": 5,\n    \"event_name\": \"interaction_avaliacao_produto_com_um_nome_de_evento_muito_comprido_e_sem_espacos_no_meio\",\n    \"params\": {\n      \"screen_name\": \"demoapp:avaliacoes:formulario\",\n      \"flow_name\": \"avaliacoes\",\n      \"rating\": \"4\",\n      \"component\": \"button\",\n      \"detail\": \"click:enviar\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 20:05:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=interaction_avaliacao_produto_com_um_nome_de_evento_muito_comprido_e_sem_espacos_no_meio,params=Bundle[{screen_name=demoapp:avaliacoes:formulario, flow_name=avaliacoes, rating=4, component=button, detail=click:enviar}]\",\n    \"time_str\": \"20:05:00.000\",\n    \"origin\": \"app\"\n  }\n]"
+}

@@ -1,0 +1,52 @@
+{
+  "platform": "android",
+  "stats": {
+    "total_lidos": 3,
+    "da_plataforma": 3,
+    "duplicados": 0,
+    "uteis": 3
+  },
+  "events": [
+    {
+      "id": 0,
+      "event_name": "interaction_a",
+      "params": {
+        "screen_name": "demoapp:<tela>:a",
+        "flow_name": "fluxo-a",
+        "detail": "<svg onload=alert(1)>"
+      },
+      "platform": "android",
+      "raw_log": "11-16 22:00:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=interaction_a,params=Bundle[{screen_name=demoapp:<tela>:a, flow_name=fluxo-a, detail=<svg onload=alert(1)>}]",
+      "time_str": "22:00:00.000",
+      "origin": "app"
+    },
+    {
+      "id": 1,
+      "event_name": "interaction_a",
+      "params": {
+        "screen_name": "demoapp:<tela>:a",
+        "flow_name": "fluxo-a",
+        "detail": "click:\"ok\" & 'sair'",
+        "component": "&amp;"
+      },
+      "platform": "android",
+      "raw_log": "11-16 22:00:01.000  4321  4400 V FA-SVC : Logging event: origin=app,name=interaction_a,params=Bundle[{screen_name=demoapp:<tela>:a, flow_name=fluxo-a, detail=click:\"ok\" & 'sair', component=&amp;}]",
+      "time_str": "22:00:01.000",
+      "origin": "app"
+    },
+    {
+      "id": 2,
+      "event_name": "<b>evento</b>",
+      "params": {
+        "screen_name": "\"><script>alert(2)</script>",
+        "flow_name": "fluxo-a"
+      },
+      "platform": "android",
+      "raw_log": "11-16 22:00:02.000  4321  4400 V FA-SVC : Logging event: origin=app,name=<b>evento</b>,params=Bundle[{screen_name=\"><script>alert(2)</script>, flow_name=fluxo-a}]",
+      "time_str": "22:00:02.000",
+      "origin": "app"
+    }
+  ],
+  "tsv": "Hora\tPlataforma\tOrigem\tNome do Evento\tParâmetros Principais\tJSON dos Parâmetros\n22:00:00.000\tANDROID\tapp\tinteraction_a\tscreen_name: demoapp:<tela>:a, flow_name: fluxo-a, detail: <svg onload=alert(1)>\t{\"screen_name\": \"demoapp:<tela>:a\", \"flow_name\": \"fluxo-a\", \"detail\": \"<svg onload=alert(1)>\"}\n22:00:01.000\tANDROID\tapp\tinteraction_a\tscreen_name: demoapp:<tela>:a, flow_name: fluxo-a, detail: click:\"ok\" & 'sair', component: &amp;\t{\"screen_name\": \"demoapp:<tela>:a\", \"flow_name\": \"fluxo-a\", \"detail\": \"click:\\\"ok\\\" & 'sair'\", \"component\": \"&amp;\"}\n22:00:02.000\tANDROID\tapp\t<b>evento</b>\tscreen_name: \"><script>alert(2)</script>, flow_name: fluxo-a\t{\"screen_name\": \"\\\"><script>alert(2)</script>\", \"flow_name\": \"fluxo-a\"}",
+  "json": "[\n  {\n    \"id\": 0,\n    \"event_name\": \"interaction_a\",\n    \"params\": {\n      \"screen_name\": \"demoapp:<tela>:a\",\n      \"flow_name\": \"fluxo-a\",\n      \"detail\": \"<svg onload=alert(1)>\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 22:00:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=interaction_a,params=Bundle[{screen_name=demoapp:<tela>:a, flow_name=fluxo-a, detail=<svg onload=alert(1)>}]\",\n    \"time_str\": \"22:00:00.000\",\n    \"origin\": \"app\"\n  },\n  {\n    \"id\": 1,\n    \"event_name\": \"interaction_a\",\n    \"params\": {\n      \"screen_name\": \"demoapp:<tela>:a\",\n      \"flow_name\": \"fluxo-a\",\n      \"detail\": \"click:\\\"ok\\\" & 'sair'\",\n      \"component\": \"&amp;\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 22:00:01.000  4321  4400 V FA-SVC : Logging event: origin=app,name=interaction_a,params=Bundle[{screen_name=demoapp:<tela>:a, flow_name=fluxo-a, detail=click:\\\"ok\\\" & 'sair', component=&amp;}]\",\n    \"time_str\": \"22:00:01.000\",\n    \"origin\": \"app\"\n  },\n  {\n    \"id\": 2,\n    \"event_name\": \"<b>evento</b>\",\n    \"params\": {\n      \"screen_name\": \"\\\"><script>alert(2)</script>\",\n      \"flow_name\": \"fluxo-a\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 22:00:02.000  4321  4400 V FA-SVC : Logging event: origin=app,name=<b>evento</b>,params=Bundle[{screen_name=\\\"><script>alert(2)</script>, flow_name=fluxo-a}]\",\n    \"time_str\": \"22:00:02.000\",\n    \"origin\": \"app\"\n  }\n]"
+}

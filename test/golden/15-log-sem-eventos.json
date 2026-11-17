@@ -1,0 +1,7 @@
+{
+  "error": {
+    "stage": "log",
+    "code": "invalid_input",
+    "message": "O log log.txt não tem eventos do Firebase Analytics."
+  }
+}

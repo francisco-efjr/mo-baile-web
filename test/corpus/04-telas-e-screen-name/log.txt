@@ -1,0 +1,5 @@
+11-16 11:00:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=screen_view(_vs),params=Bundle[{screen_name=demoapp:conta:perfil, flow_name=conta, ga_event_origin(_o)=app, ga_screen(_sn)=demoapp:conta:perfil-v2}]
+11-16 11:00:10.000  4321  4400 V FA-SVC : Logging event: origin=app,name=interaction_conta,params=Bundle[{screen_name=demoapp:conta:resumo, flow_name=conta, component=button, detail=click:salvar, ga_screen(_sn)=demoapp:conta:editar}]
+11-16 11:00:20.000  4321  4400 V FA-SVC : Logging event: origin=app,name=interaction_conta,params=Bundle[{screen_name=demoapp:conta:menu, flow_name=conta, detail=click:sair}]
+11-16 11:00:30.000  4321  4400 V FA-SVC : Logging event: origin=app,name=interaction_conta,params=Bundle[{screen_name=demoapp:conta:seguranca, flow_name=conta, detail=click:biometria, component=switch}]
+11-16 11:00:40.000  4321  4400 V FA-SVC : Logging event: origin=app,name=interaction_conta,params=Bundle[{screen_name=demoapp:conta:seguranca, flow_name=conta, detail=click:pin}]

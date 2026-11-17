@@ -1,0 +1,13 @@
+[
+  {
+    "event_name": "login_hint",
+    "platform": "android",
+    "time_str": "09:00:00.000",
+    "params": {
+      "flow_name": "login",
+      "screen_name": [
+        "lista"
+      ]
+    }
+  }
+]

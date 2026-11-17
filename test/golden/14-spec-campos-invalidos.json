@@ -1,0 +1,7 @@
+{
+  "error": {
+    "stage": "spec",
+    "code": "invalid_input",
+    "message": "Campo obrigatório ausente na spec: 'card 2.evento'."
+  }
+}

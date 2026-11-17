@@ -1,0 +1,55 @@
+{
+  "platform": "android",
+  "stats": {
+    "total_lidos": 3,
+    "da_plataforma": 3,
+    "duplicados": 0,
+    "uteis": 3
+  },
+  "events": [
+    {
+      "id": 0,
+      "event_name": "select_promotion",
+      "params": {
+        "screen_name": "demoapp:promoções:balcao",
+        "flow_name": "pedido-balcao",
+        "detail": "click:🎁-presente",
+        "promotion_name": "Ação de verão"
+      },
+      "platform": "android",
+      "raw_log": "11-16 21:00:00.000  4321  4400 V FA-SVC  : Logging event: origin=app,name=select_promotion,params=Bundle[{screen_name=demoapp:promoções:balcao, flow_name=pedido-balcao, detail=click:🎁-presente, promotion_name=Ação de verão}]",
+      "time_str": "21:00:00.000",
+      "origin": "app"
+    },
+    {
+      "id": 0,
+      "event_name": "select_promotion",
+      "params": {
+        "screen_name": "demoapp:promoções:mesa",
+        "flow_name": "pedido-mesa",
+        "detail": "click:🎁-presente",
+        "promotion_name": "AÇÃO DE VERÃO"
+      },
+      "platform": "android",
+      "raw_log": "11-16 21:00:05.000  4321  4400 V FA-SVC  : Logging event: origin=app,name=select_promotion,params=Bundle[{screen_name=demoapp:promoções:mesa, flow_name=pedido-mesa, detail=click:🎁-presente, promotion_name=AÇÃO DE VERÃO}]",
+      "time_str": "21:00:05.000",
+      "origin": "app"
+    },
+    {
+      "id": 0,
+      "event_name": "select_promotion",
+      "params": {
+        "screen_name": "demoapp:promoções:mesa",
+        "flow_name": "pedido-mesa",
+        "detail": "click:☕-café",
+        "promotion_name": "Café grátis"
+      },
+      "platform": "android",
+      "raw_log": "11-16 21:00:06.000  4321  4400 V FA-SVC  : Logging event: origin=app,name=select_promotion,params=Bundle[{screen_name=demoapp:promoções:mesa, flow_name=pedido-mesa, detail=click:☕-café, promotion_name=Café grátis}]",
+      "time_str": "21:00:06.000",
+      "origin": "app"
+    }
+  ],
+  "tsv": "Hora\tPlataforma\tOrigem\tNome do Evento\tParâmetros Principais\tJSON dos Parâmetros\n21:00:00.000\tANDROID\tapp\tselect_promotion\tscreen_name: demoapp:promoções:balcao, flow_name: pedido-balcao, detail: click:🎁-presente, promotion_name: Ação de verão\t{\"screen_name\": \"demoapp:promoções:balcao\", \"flow_name\": \"pedido-balcao\", \"detail\": \"click:🎁-presente\", \"promotion_name\": \"Ação de verão\"}\n21:00:05.000\tANDROID\tapp\tselect_promotion\tscreen_name: demoapp:promoções:mesa, flow_name: pedido-mesa, detail: click:🎁-presente, promotion_name: AÇÃO DE VERÃO\t{\"screen_name\": \"demoapp:promoções:mesa\", \"flow_name\": \"pedido-mesa\", \"detail\": \"click:🎁-presente\", \"promotion_name\": \"AÇÃO DE VERÃO\"}\n21:00:06.000\tANDROID\tapp\tselect_promotion\tscreen_name: demoapp:promoções:mesa, flow_name: pedido-mesa, detail: click:☕-café, promotion_name: Café grátis\t{\"screen_name\": \"demoapp:promoções:mesa\", \"flow_name\": \"pedido-mesa\", \"detail\": \"click:☕-café\", \"promotion_name\": \"Café grátis\"}",
+  "json": "[\n  {\n    \"id\": 0,\n    \"event_name\": \"select_promotion\",\n    \"params\": {\n      \"screen_name\": \"demoapp:promoções:balcao\",\n      \"flow_name\": \"pedido-balcao\",\n      \"detail\": \"click:🎁-presente\",\n      \"promotion_name\": \"Ação de verão\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 21:00:00.000  4321  4400 V FA-SVC  : Logging event: origin=app,name=select_promotion,params=Bundle[{screen_name=demoapp:promoções:balcao, flow_name=pedido-balcao, detail=click:🎁-presente, promotion_name=Ação de verão}]\",\n    \"time_str\": \"21:00:00.000\",\n    \"origin\": \"app\"\n  },\n  {\n    \"id\": 0,\n    \"event_name\": \"select_promotion\",\n    \"params\": {\n      \"screen_name\": \"demoapp:promoções:mesa\",\n      \"flow_name\": \"pedido-mesa\",\n      \"detail\": \"click:🎁-presente\",\n      \"promotion_name\": \"AÇÃO DE VERÃO\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 21:00:05.000  4321  4400 V FA-SVC  : Logging event: origin=app,name=select_promotion,params=Bundle[{screen_name=demoapp:promoções:mesa, flow_name=pedido-mesa, detail=click:🎁-presente, promotion_name=AÇÃO DE VERÃO}]\",\n    \"time_str\": \"21:00:05.000\",\n    \"origin\": \"app\"\n  },\n  {\n    \"id\": 0,\n    \"event_name\": \"select_promotion\",\n    \"params\": {\n      \"screen_name\": \"demoapp:promoções:mesa\",\n      \"flow_name\": \"pedido-mesa\",\n      \"detail\": \"click:☕-café\",\n      \"promotion_name\": \"Café grátis\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 21:00:06.000  4321  4400 V FA-SVC  : Logging event: origin=app,name=select_promotion,params=Bundle[{screen_name=demoapp:promoções:mesa, flow_name=pedido-mesa, detail=click:☕-café, promotion_name=Café grátis}]\",\n    \"time_str\": \"21:00:06.000\",\n    \"origin\": \"app\"\n  }\n]"
+}

@@ -1,0 +1,7 @@
+{
+  "error": {
+    "stage": "audit",
+    "code": "internal_error",
+    "message": "Erro interno no motor."
+  }
+}

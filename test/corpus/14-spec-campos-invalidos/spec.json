@@ -1,0 +1,14 @@
+{
+  "projeto": "DemoApp",
+  "cards": [
+    {
+      "evento": "screen_view"
+    },
+    {
+      "secao": "Sacola",
+      "params": {
+        "screen_name": "demoapp:sacola"
+      }
+    }
+  ]
+}

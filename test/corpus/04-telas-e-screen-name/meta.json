@@ -1,0 +1,4 @@
+{
+  "platform": null,
+  "descricao": "Tela certa com screen_name errado vira erro de screen_name; ga_screen diferente aparece como nota; outra tela fica não disparada e vai para fora da spec."
+}

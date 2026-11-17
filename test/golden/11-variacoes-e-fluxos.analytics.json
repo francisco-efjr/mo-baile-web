@@ -1,0 +1,104 @@
+{
+  "platform": "android",
+  "stats": {
+    "total_lidos": 6,
+    "da_plataforma": 6,
+    "duplicados": 0,
+    "uteis": 6
+  },
+  "events": [
+    {
+      "id": 0,
+      "event_name": "select_shipping",
+      "params": {
+        "screen_name": "demoapp:frete:expresso:opcoes",
+        "flow_name": "frete-expresso",
+        "shipping_tier": "expresso",
+        "detail": "click:confirmar"
+      },
+      "platform": "android",
+      "raw_log": "11-16 19:00:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=select_shipping,params=Bundle[{screen_name=demoapp:frete:expresso:opcoes, flow_name=frete-expresso, shipping_tier=expresso, detail=click:confirmar}]",
+      "time_str": "19:00:00.000",
+      "origin": "app"
+    },
+    {
+      "id": 1,
+      "event_name": "select_shipping",
+      "params": {
+        "screen_name": "demoapp:frete:expresso:prazo",
+        "flow_name": "frete-expresso",
+        "shipping_tier": "expresso",
+        "detail": "click:2-dias"
+      },
+      "platform": "android",
+      "raw_log": "11-16 19:00:10.000  4321  4400 V FA-SVC : Logging event: origin=app,name=select_shipping,params=Bundle[{screen_name=demoapp:frete:expresso:prazo, flow_name=frete-expresso, shipping_tier=expresso, detail=click:2-dias}]",
+      "time_str": "19:00:10.000",
+      "origin": "app"
+    },
+    {
+      "id": 2,
+      "event_name": "select_shipping",
+      "params": {
+        "screen_name": "demoapp:frete:economico:opcoes",
+        "flow_name": "frete-economico",
+        "shipping_tier": "normal",
+        "detail": "click:confirmar"
+      },
+      "platform": "android",
+      "raw_log": "11-16 19:00:20.000  4321  4400 V FA-SVC : Logging event: origin=app,name=select_shipping,params=Bundle[{screen_name=demoapp:frete:economico:opcoes, flow_name=frete-economico, shipping_tier=normal, detail=click:confirmar}]",
+      "time_str": "19:00:20.000",
+      "origin": "app"
+    },
+    {
+      "id": 3,
+      "event_name": "select_shipping",
+      "params": {
+        "screen_name": "demoapp:frete:agendado:opcoes",
+        "flow_name": "frete-agendado",
+        "shipping_tier": "agendado",
+        "detail": "click:confirmar",
+        "date": "2026-11-20"
+      },
+      "platform": "android",
+      "raw_log": "11-16 19:00:30.000  4321  4400 V FA-SVC : Logging event: origin=app,name=select_shipping,params=Bundle[{screen_name=demoapp:frete:agendado:opcoes, flow_name=frete-agendado, shipping_tier=agendado, detail=click:confirmar, date=2026-11-20}]",
+      "time_str": "19:00:30.000",
+      "origin": "app"
+    },
+    {
+      "id": 4,
+      "event_name": "shipping_info",
+      "params": {
+        "flow_name": "frete-expresso"
+      },
+      "platform": "android",
+      "raw_log": "11-16 19:00:40.000  4321  4400 V FA-SVC : Logging event: origin=app,name=shipping_info,params=Bundle[{flow_name=frete-expresso}]",
+      "time_str": "19:00:40.000",
+      "origin": "app"
+    },
+    {
+      "id": 5,
+      "event_name": "view_cart",
+      "params": {
+        "screen_name": "demoapp:frete:resumo",
+        "flow_name": "frete-economico",
+        "items": [
+          {
+            "item_id": "SKU-5",
+            "quantity": "2",
+            "item_category": "games"
+          },
+          {
+            "item_id": "SKU-6",
+            "quantity": "1"
+          }
+        ]
+      },
+      "platform": "android",
+      "raw_log": "11-16 19:00:50.000  4321  4400 V FA-SVC : Logging event: origin=app,name=view_cart,params=Bundle[{screen_name=demoapp:frete:resumo, flow_name=frete-economico, items=[Bundle[{item_id=SKU-5, quantity=2, item_category=games}], Bundle[{item_id=SKU-6, quantity=1}]]}]",
+      "time_str": "19:00:50.000",
+      "origin": "app"
+    }
+  ],
+  "tsv": "Hora\tPlataforma\tOrigem\tNome do Evento\tParâmetros Principais\tJSON dos Parâmetros\n19:00:00.000\tANDROID\tapp\tselect_shipping\tscreen_name: demoapp:frete:expresso:opcoes, flow_name: frete-expresso, shipping_tier: expresso, detail: click:confirmar\t{\"screen_name\": \"demoapp:frete:expresso:opcoes\", \"flow_name\": \"frete-expresso\", \"shipping_tier\": \"expresso\", \"detail\": \"click:confirmar\"}\n19:00:10.000\tANDROID\tapp\tselect_shipping\tscreen_name: demoapp:frete:expresso:prazo, flow_name: frete-expresso, shipping_tier: expresso, detail: click:2-dias\t{\"screen_name\": \"demoapp:frete:expresso:prazo\", \"flow_name\": \"frete-expresso\", \"shipping_tier\": \"expresso\", \"detail\": \"click:2-dias\"}\n19:00:20.000\tANDROID\tapp\tselect_shipping\tscreen_name: demoapp:frete:economico:opcoes, flow_name: frete-economico, shipping_tier: normal, detail: click:confirmar\t{\"screen_name\": \"demoapp:frete:economico:opcoes\", \"flow_name\": \"frete-economico\", \"shipping_tier\": \"normal\", \"detail\": \"click:confirmar\"}\n19:00:30.000\tANDROID\tapp\tselect_shipping\tscreen_name: demoapp:frete:agendado:opcoes, flow_name: frete-agendado, shipping_tier: agendado, detail: click:confirmar\t{\"screen_name\": \"demoapp:frete:agendado:opcoes\", \"flow_name\": \"frete-agendado\", \"shipping_tier\": \"agendado\", \"detail\": \"click:confirmar\", \"date\": \"2026-11-20\"}\n19:00:40.000\tANDROID\tapp\tshipping_info\tflow_name: frete-expresso\t{\"flow_name\": \"frete-expresso\"}\n19:00:50.000\tANDROID\tapp\tview_cart\tscreen_name: demoapp:frete:resumo, flow_name: frete-economico, items: [{'item_id': 'SKU-5', 'quantity': '2', 'item_category': 'games'}, {'item_id': 'SKU-6', 'quantity': '1'}]\t{\"screen_name\": \"demoapp:frete:resumo\", \"flow_name\": \"frete-economico\", \"items\": [{\"item_id\": \"SKU-5\", \"quantity\": \"2\", \"item_category\": \"games\"}, {\"item_id\": \"SKU-6\", \"quantity\": \"1\"}]}",
+  "json": "[\n  {\n    \"id\": 0,\n    \"event_name\": \"select_shipping\",\n    \"params\": {\n      \"screen_name\": \"demoapp:frete:expresso:opcoes\",\n      \"flow_name\": \"frete-expresso\",\n      \"shipping_tier\": \"expresso\",\n      \"detail\": \"click:confirmar\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 19:00:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=select_shipping,params=Bundle[{screen_name=demoapp:frete:expresso:opcoes, flow_name=frete-expresso, shipping_tier=expresso, detail=click:confirmar}]\",\n    \"time_str\": \"19:00:00.000\",\n    \"origin\": \"app\"\n  },\n  {\n    \"id\": 1,\n    \"event_name\": \"select_shipping\",\n    \"params\": {\n      \"screen_name\": \"demoapp:frete:expresso:prazo\",\n      \"flow_name\": \"frete-expresso\",\n      \"shipping_tier\": \"expresso\",\n      \"detail\": \"click:2-dias\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 19:00:10.000  4321  4400 V FA-SVC : Logging event: origin=app,name=select_shipping,params=Bundle[{screen_name=demoapp:frete:expresso:prazo, flow_name=frete-expresso, shipping_tier=expresso, detail=click:2-dias}]\",\n    \"time_str\": \"19:00:10.000\",\n    \"origin\": \"app\"\n  },\n  {\n    \"id\": 2,\n    \"event_name\": \"select_shipping\",\n    \"params\": {\n      \"screen_name\": \"demoapp:frete:economico:opcoes\",\n      \"flow_name\": \"frete-economico\",\n      \"shipping_tier\": \"normal\",\n      \"detail\": \"click:confirmar\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 19:00:20.000  4321  4400 V FA-SVC : Logging event: origin=app,name=select_shipping,params=Bundle[{screen_name=demoapp:frete:economico:opcoes, flow_name=frete-economico, shipping_tier=normal, detail=click:confirmar}]\",\n    \"time_str\": \"19:00:20.000\",\n    \"origin\": \"app\"\n  },\n  {\n    \"id\": 3,\n    \"event_name\": \"select_shipping\",\n    \"params\": {\n      \"screen_name\": \"demoapp:frete:agendado:opcoes\",\n      \"flow_name\": \"frete-agendado\",\n      \"shipping_tier\": \"agendado\",\n      \"detail\": \"click:confirmar\",\n      \"date\": \"2026-11-20\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 19:00:30.000  4321  4400 V FA-SVC : Logging event: origin=app,name=select_shipping,params=Bundle[{screen_name=demoapp:frete:agendado:opcoes, flow_name=frete-agendado, shipping_tier=agendado, detail=click:confirmar, date=2026-11-20}]\",\n    \"time_str\": \"19:00:30.000\",\n    \"origin\": \"app\"\n  },\n  {\n    \"id\": 4,\n    \"event_name\": \"shipping_info\",\n    \"params\": {\n      \"flow_name\": \"frete-expresso\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 19:00:40.000  4321  4400 V FA-SVC : Logging event: origin=app,name=shipping_info,params=Bundle[{flow_name=frete-expresso}]\",\n    \"time_str\": \"19:00:40.000\",\n    \"origin\": \"app\"\n  },\n  {\n    \"id\": 5,\n    \"event_name\": \"view_cart\",\n    \"params\": {\n      \"screen_name\": \"demoapp:frete:resumo\",\n      \"flow_name\": \"frete-economico\",\n      \"items\": [\n        {\n          \"item_id\": \"SKU-5\",\n          \"quantity\": \"2\",\n          \"item_category\": \"games\"\n        },\n        {\n          \"item_id\": \"SKU-6\",\n          \"quantity\": \"1\"\n        }\n      ]\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 19:00:50.000  4321  4400 V FA-SVC : Logging event: origin=app,name=view_cart,params=Bundle[{screen_name=demoapp:frete:resumo, flow_name=frete-economico, items=[Bundle[{item_id=SKU-5, quantity=2, item_category=games}], Bundle[{item_id=SKU-6, quantity=1}]]}]\",\n    \"time_str\": \"19:00:50.000\",\n    \"origin\": \"app\"\n  }\n]"
+}

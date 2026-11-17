@@ -1,0 +1,39 @@
+{
+  "platform": "android",
+  "stats": {
+    "total_lidos": 2,
+    "da_plataforma": 2,
+    "duplicados": 0,
+    "uteis": 2
+  },
+  "events": [
+    {
+      "id": 0,
+      "event_name": "interaction_config",
+      "params": {
+        "flow_name": "configuracoes",
+        "detail": "click:notificações",
+        "screen_name": "demoapp:configurações"
+      },
+      "platform": "android",
+      "raw_log": "11-16 07:00:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=interaction_config,params=Bundle[{flow_name=configuracoes, detail=click:notificações, screen_name=demoapp:configurações}]",
+      "time_str": "07:00:00.000",
+      "origin": "app"
+    },
+    {
+      "id": 1,
+      "event_name": "interaction_config",
+      "params": {
+        "flow_name": "configuracoes",
+        "detail": "click:idioma",
+        "screen_name": "demoapp:configurações"
+      },
+      "platform": "android",
+      "raw_log": "11-16 07:00:01.000  4321  4400 V FA-SVC : Logging event: origin=app,name=interaction_config,params=Bundle[{flow_name=configuracoes, detail=click:idioma, screen_name=demoapp:configurações}]",
+      "time_str": "07:00:01.000",
+      "origin": "app"
+    }
+  ],
+  "tsv": "Hora\tPlataforma\tOrigem\tNome do Evento\tParâmetros Principais\tJSON dos Parâmetros\n07:00:00.000\tANDROID\tapp\tinteraction_config\tflow_name: configuracoes, detail: click:notificações, screen_name: demoapp:configurações\t{\"flow_name\": \"configuracoes\", \"detail\": \"click:notificações\", \"screen_name\": \"demoapp:configurações\"}\n07:00:01.000\tANDROID\tapp\tinteraction_config\tflow_name: configuracoes, detail: click:idioma, screen_name: demoapp:configurações\t{\"flow_name\": \"configuracoes\", \"detail\": \"click:idioma\", \"screen_name\": \"demoapp:configurações\"}",
+  "json": "[\n  {\n    \"id\": 0,\n    \"event_name\": \"interaction_config\",\n    \"params\": {\n      \"flow_name\": \"configuracoes\",\n      \"detail\": \"click:notificações\",\n      \"screen_name\": \"demoapp:configurações\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 07:00:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=interaction_config,params=Bundle[{flow_name=configuracoes, detail=click:notificações, screen_name=demoapp:configurações}]\",\n    \"time_str\": \"07:00:00.000\",\n    \"origin\": \"app\"\n  },\n  {\n    \"id\": 1,\n    \"event_name\": \"interaction_config\",\n    \"params\": {\n      \"flow_name\": \"configuracoes\",\n      \"detail\": \"click:idioma\",\n      \"screen_name\": \"demoapp:configurações\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 07:00:01.000  4321  4400 V FA-SVC : Logging event: origin=app,name=interaction_config,params=Bundle[{flow_name=configuracoes, detail=click:idioma, screen_name=demoapp:configurações}]\",\n    \"time_str\": \"07:00:01.000\",\n    \"origin\": \"app\"\n  }\n]"
+}

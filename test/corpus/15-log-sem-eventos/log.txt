@@ -1,0 +1,4 @@
+--------- beginning of main
+11-16 09:59:58.120  4321  4321 I ActivityManager: Start proc 4321:test.demoapp/u0a123 for activity
+11-16 09:59:59.004  4321  4400 V FA      : Logging event (FE): Screen view, Bundle[{ga_screen_class(_sc)=Inicio}]
+11-16 10:00:00.000  4321  4400 I DemoApp : abriu a tela inicial

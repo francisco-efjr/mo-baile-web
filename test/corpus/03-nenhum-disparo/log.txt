@@ -1,0 +1,5 @@
+11-16 08:00:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=search,params=Bundle[{screen_name=demoapp:busca:inicio, flow_name=busca, search_term=tenis}]
+11-16 08:00:05.000  4321  4400 V FA-SVC : Logging event: origin=app,name=search,params=Bundle[{screen_name=demoapp:busca:inicio, flow_name=busca, search_term=tenis}]
+11-16 08:00:10.000  4321  4400 V FA-SVC : Logging event: origin=app,name=interaction_busca,params=Bundle[{flow_name=busca, detail=click:ordenar}]
+11-16 08:01:00.000  4321  4400 V FA-SVC : Logging event: origin=app,name=screen_view(_vs),params=Bundle[{flow_name=conta, ga_screen(_sn)=demoapp:conta:perfil}]
+11-16 09:15:30.000  4321  4400 V FA-SVC : Logging event: origin=app,name=view_item_list,params=Bundle[{screen_name=demoapp:vitrine:home, flow_name=vitrine, item_list_name=destaques}]

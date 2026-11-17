@@ -1,0 +1,126 @@
+{
+  "spec": {
+    "name": "spec.json",
+    "projeto": "DemoApp Vitrine",
+    "versao_especificacao": null,
+    "plataforma": "android",
+    "fluxos": [],
+    "cards": 1,
+    "variants": 1,
+    "sections": [
+      "Vitrine"
+    ]
+  },
+  "platform": "android",
+  "source": "file",
+  "log_name": "log.txt",
+  "log_stats": {
+    "total_lidos": 13,
+    "da_plataforma": 13,
+    "duplicados": 0,
+    "uteis": 13
+  },
+  "summary": {
+    "total": 1,
+    "ok": 1,
+    "divergent": 0,
+    "missing": 0,
+    "compliance_rate": 100.0,
+    "extras": 3,
+    "alerts": 0
+  },
+  "results": [
+    {
+      "id": 0,
+      "card_index": 0,
+      "section": "Vitrine",
+      "card_title": "view_item",
+      "flow": null,
+      "flow_label": null,
+      "event": "view_item",
+      "variation": "demoapp:vitrine:produto",
+      "status": "ok",
+      "checks": [
+        {
+          "field": "screen_name",
+          "expected": "demoapp:vitrine:produto",
+          "obtained": "demoapp:vitrine:produto",
+          "ok": true
+        },
+        {
+          "field": "flow_name",
+          "expected": "vitrine",
+          "obtained": "vitrine",
+          "ok": true
+        },
+        {
+          "field": "item_id",
+          "expected": "[preenchido]",
+          "obtained": "SKU-1",
+          "ok": true
+        }
+      ],
+      "expected": [
+        {
+          "key": "screen_name",
+          "value": "demoapp:vitrine:produto"
+        },
+        {
+          "key": "flow_name",
+          "value": "vitrine"
+        },
+        {
+          "key": "item_id",
+          "value": "[preenchido]"
+        }
+      ],
+      "matched": {
+        "id": 0,
+        "time": "16:00:00.000",
+        "event_name": "view_item",
+        "params": {
+          "screen_name": "demoapp:vitrine:produto",
+          "flow_name": "vitrine",
+          "item_id": "SKU-1"
+        }
+      },
+      "occurrences": 1,
+      "older_divergent": 0,
+      "older_divergences": [],
+      "ga_screen": null,
+      "note": null,
+      "divergences": "",
+      "block": "// view_item [OK]\n// log 16:00:00.000 · 1 disparo(s)\n{\n  \"screen_name\": \"demoapp:vitrine:produto\",  ✓\n  \"flow_name\": \"vitrine\",  ✓\n  \"item_id\": \"SKU-1\"  ✓\n}"
+    }
+  ],
+  "extras": [
+    {
+      "event": "select_promotion",
+      "screen": "demoapp:vitrine:home",
+      "flow_name": "vitrine",
+      "component": "banner",
+      "detail": "promo-verao",
+      "count": 3
+    },
+    {
+      "event": "select_promotion",
+      "screen": "demoapp:vitrine:home",
+      "flow_name": "vitrine",
+      "component": "banner",
+      "detail": "promo-inverno",
+      "count": 1
+    },
+    {
+      "event": "share",
+      "screen": null,
+      "flow_name": "vitrine",
+      "component": null,
+      "detail": null,
+      "count": 1
+    }
+  ],
+  "alerts": [],
+  "observations": "Eventos dos fluxos da spec que nenhum card cobre:\n  • select_promotion · demoapp:vitrine:home · component=banner · detail=promo-verao — 3x\n  • select_promotion · demoapp:vitrine:home · component=banner · detail=promo-inverno — 1x\n  • share · - — 1x\n\nAlertas (app_exception / error_view nas telas da spec):\n  (nenhum)\n\nRegra: cada variação é validada pelo disparo mais recente; '⚠' indica disparos anteriores com divergência diferente.",
+  "markdown": "# Auditoria de Tagueamento — DemoApp Vitrine (ANDROID)\n\n- Período do log: 16/11 16:00:00 até 16:00:13 (13 s)\n- 1 cards · 1 validações · OK: 1 · Erro: 0 (sendo 0 não disparadas) · Conformidade: 100.0%\n- Plataforma: ANDROID · 13 eventos únicos (0 duplicados removidos de 13 da plataforma; 13 lidos no arquivo)\n\n| Seção | Card | Fluxo | Evento | Variação | Status | Divergências | Horário | Disparos |\n|---|---|---|---|---|---|---|---|---|\n| Vitrine | view_item | - | view_item | demoapp:vitrine:produto | OK |  | 16:00:00.000 | 1 |\n\n## Fora da spec / Observações\n\nEventos dos fluxos da spec que nenhum card cobre:\n  • select_promotion · demoapp:vitrine:home · component=banner · detail=promo-verao — 3x\n  • select_promotion · demoapp:vitrine:home · component=banner · detail=promo-inverno — 1x\n  • share · - — 1x\n\nAlertas (app_exception / error_view nas telas da spec):\n  (nenhum)\n\nRegra: cada variação é validada pelo disparo mais recente; '⚠' indica disparos anteriores com divergência diferente.\n",
+  "tsv": "Seção\tCard\tFluxo\tEvento\tVariação\tStatus\tDivergências\tHorário\tDisparos\nVitrine\tview_item\t-\tview_item\tdemoapp:vitrine:produto\tOK\t\t16:00:00.000\t1\n"
+}

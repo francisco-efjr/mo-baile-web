@@ -1,0 +1,4 @@
+{
+  "platform": null,
+  "descricao": "iOS em JSON com 'eventos': items no formato texto do iOS, ano no horário, regex com \\d, Android e web filtrados."
+}

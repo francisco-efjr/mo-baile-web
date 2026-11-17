@@ -1,0 +1,192 @@
+{
+  "spec": {
+    "name": "spec.json",
+    "projeto": "DemoApp iOS",
+    "versao_especificacao": "iOS 3.0",
+    "plataforma": "ios",
+    "fluxos": [],
+    "cards": 2,
+    "variants": 2,
+    "sections": [
+      "Checkout"
+    ]
+  },
+  "platform": "ios",
+  "source": "file",
+  "log_name": "log.json",
+  "log_stats": {
+    "total_lidos": 5,
+    "da_plataforma": 3,
+    "duplicados": 0,
+    "uteis": 3
+  },
+  "summary": {
+    "total": 2,
+    "ok": 2,
+    "divergent": 0,
+    "missing": 0,
+    "compliance_rate": 100.0,
+    "extras": 0,
+    "alerts": 0
+  },
+  "results": [
+    {
+      "id": 0,
+      "card_index": 0,
+      "section": "Checkout",
+      "card_title": "begin_checkout",
+      "flow": null,
+      "flow_label": null,
+      "event": "begin_checkout",
+      "variation": "demoapp:checkout:resumo",
+      "status": "ok",
+      "checks": [
+        {
+          "field": "screen_name",
+          "expected": "demoapp:checkout:resumo",
+          "obtained": "demoapp:checkout:resumo",
+          "ok": true
+        },
+        {
+          "field": "flow_name",
+          "expected": "checkout",
+          "obtained": "checkout",
+          "ok": true
+        },
+        {
+          "field": "value",
+          "expected": "[numero]",
+          "obtained": "89.90",
+          "ok": true
+        },
+        {
+          "field": "items[0].item_id",
+          "expected": "SKU-1",
+          "obtained": "SKU-1",
+          "ok": true
+        },
+        {
+          "field": "items[0].price",
+          "expected": "[numero]",
+          "obtained": "89.90",
+          "ok": true
+        }
+      ],
+      "expected": [
+        {
+          "key": "screen_name",
+          "value": "demoapp:checkout:resumo"
+        },
+        {
+          "key": "flow_name",
+          "value": "checkout"
+        },
+        {
+          "key": "value",
+          "value": "[numero]"
+        },
+        {
+          "key": "items",
+          "value": "[{\"item_id\": \"SKU-1\", \"price\": \"[numero]\"}]"
+        }
+      ],
+      "matched": {
+        "id": 1,
+        "time": "2026-11-16 10:00:00.123",
+        "event_name": "begin_checkout",
+        "params": {
+          "ga_screen": "demoapp:checkout:resumo",
+          "flow_name": "checkout",
+          "value": "89.90",
+          "items": [
+            {
+              "item_id": "SKU-1",
+              "price": "89.90"
+            },
+            {
+              "item_id": "SKU-2",
+              "price": "10"
+            }
+          ]
+        }
+      },
+      "occurrences": 1,
+      "older_divergent": 0,
+      "older_divergences": [],
+      "ga_screen": null,
+      "note": null,
+      "divergences": "",
+      "block": "// begin_checkout [OK]\n// log 2026-11-16 10:00:00.123 · 1 disparo(s)\n{\n  \"screen_name\": \"demoapp:checkout:resumo\",  ✓\n  \"flow_name\": \"checkout\",  ✓\n  \"value\": \"89.90\",  ✓\n  \"items[0].item_id\": \"SKU-1\",  ✓\n  \"items[0].price\": \"89.90\"  ✓\n}"
+    },
+    {
+      "id": 1,
+      "card_index": 1,
+      "section": "Checkout",
+      "card_title": "purchase",
+      "flow": null,
+      "flow_label": null,
+      "event": "purchase",
+      "variation": "demoapp:checkout:sucesso",
+      "status": "ok",
+      "checks": [
+        {
+          "field": "screen_name",
+          "expected": "demoapp:checkout:sucesso",
+          "obtained": "demoapp:checkout:sucesso",
+          "ok": true
+        },
+        {
+          "field": "flow_name",
+          "expected": "checkout",
+          "obtained": "checkout",
+          "ok": true
+        },
+        {
+          "field": "transaction_id",
+          "expected": "T-\\d{6}",
+          "obtained": "T-123456",
+          "ok": true
+        }
+      ],
+      "expected": [
+        {
+          "key": "screen_name",
+          "value": "demoapp:checkout:sucesso"
+        },
+        {
+          "key": "flow_name",
+          "value": "checkout"
+        },
+        {
+          "key": "transaction_id",
+          "value": "re:T-\\d{6}"
+        }
+      ],
+      "matched": {
+        "id": 3,
+        "time": "2026-11-16 10:03:00.000",
+        "event_name": "purchase",
+        "params": {
+          "screen_name": "demoapp:checkout:sucesso",
+          "flow_name": "checkout",
+          "transaction_id": "T-123456",
+          "ga_event_origin": "app"
+        }
+      },
+      "occurrences": 2,
+      "older_divergent": 1,
+      "older_divergences": [
+        "transaction_id=T-12345"
+      ],
+      "ga_screen": null,
+      "note": null,
+      "divergences": "⚠ 1 disparo(s) anterior(es): transaction_id=T-12345",
+      "block": "// purchase [OK]\n// log 2026-11-16 10:03:00.000 · 2 disparo(s)\n{\n  \"screen_name\": \"demoapp:checkout:sucesso\",  ✓\n  \"flow_name\": \"checkout\",  ✓\n  \"transaction_id\": \"T-123456\"  ✓\n}\n// ⚠ 1 disparo(s) anterior(es) divergente(s):\n//   transaction_id=T-12345"
+    }
+  ],
+  "extras": [],
+  "alerts": [],
+  "observations": "Eventos dos fluxos da spec que nenhum card cobre:\n  (nenhum)\n\nAlertas (app_exception / error_view nas telas da spec):\n  (nenhum)\n\nRegra: cada variação é validada pelo disparo mais recente; '⚠' indica disparos anteriores com divergência diferente.",
+  "markdown": "# Auditoria de Tagueamento — DemoApp iOS (IOS)\n\nSpec: iOS 3.0\n- Período do log: 16/11/2026 10:00:00 até 10:03:00 (3 min)\n- 2 cards · 2 validações · OK: 2 · Erro: 0 (sendo 0 não disparadas) · Conformidade: 100.0%\n- Plataforma: IOS · 3 eventos únicos (0 duplicados removidos de 3 da plataforma; 5 lidos no arquivo)\n\n| Seção | Card | Fluxo | Evento | Variação | Status | Divergências | Horário | Disparos |\n|---|---|---|---|---|---|---|---|---|\n| Checkout | begin_checkout | - | begin_checkout | demoapp:checkout:resumo | OK |  | 2026-11-16 10:00:00.123 | 1 |\n| Checkout | purchase | - | purchase | demoapp:checkout:sucesso | OK | ⚠ 1 disparo(s) anterior(es): transaction_id=T-12345 | 2026-11-16 10:03:00.000 | 2 |\n\n## Fora da spec / Observações\n\nEventos dos fluxos da spec que nenhum card cobre:\n  (nenhum)\n\nAlertas (app_exception / error_view nas telas da spec):\n  (nenhum)\n\nRegra: cada variação é validada pelo disparo mais recente; '⚠' indica disparos anteriores com divergência diferente.\n",
+  "tsv": "Seção\tCard\tFluxo\tEvento\tVariação\tStatus\tDivergências\tHorário\tDisparos\nCheckout\tbegin_checkout\t-\tbegin_checkout\tdemoapp:checkout:resumo\tOK\t\t2026-11-16 10:00:00.123\t1\nCheckout\tpurchase\t-\tpurchase\tdemoapp:checkout:sucesso\tOK\t⚠ 1 disparo(s) anterior(es): transaction_id=T-12345\t2026-11-16 10:03:00.000\t2\n"
+}

@@ -1,0 +1,110 @@
+{
+  "spec": {
+    "name": "spec.json",
+    "projeto": "DemoApp Windows",
+    "versao_especificacao": null,
+    "plataforma": "android",
+    "fluxos": [],
+    "cards": 1,
+    "variants": 1,
+    "sections": [
+      "Configurações"
+    ]
+  },
+  "platform": "android",
+  "source": "file",
+  "log_name": "log.txt",
+  "log_stats": {
+    "total_lidos": 2,
+    "da_plataforma": 2,
+    "duplicados": 0,
+    "uteis": 2
+  },
+  "summary": {
+    "total": 1,
+    "ok": 1,
+    "divergent": 0,
+    "missing": 0,
+    "compliance_rate": 100.0,
+    "extras": 1,
+    "alerts": 0
+  },
+  "results": [
+    {
+      "id": 0,
+      "card_index": 0,
+      "section": "Configurações",
+      "card_title": "interaction_config",
+      "flow": null,
+      "flow_label": null,
+      "event": "interaction_config",
+      "variation": "click:notificações",
+      "status": "ok",
+      "checks": [
+        {
+          "field": "flow_name",
+          "expected": "configuracoes",
+          "obtained": "configuracoes",
+          "ok": true
+        },
+        {
+          "field": "detail",
+          "expected": "click:notificações",
+          "obtained": "click:notificações",
+          "ok": true
+        },
+        {
+          "field": "screen_name",
+          "expected": "demoapp:configurações",
+          "obtained": "demoapp:configurações",
+          "ok": true
+        }
+      ],
+      "expected": [
+        {
+          "key": "flow_name",
+          "value": "configuracoes"
+        },
+        {
+          "key": "detail",
+          "value": "click:notificações"
+        },
+        {
+          "key": "screen_name",
+          "value": "demoapp:configurações"
+        }
+      ],
+      "matched": {
+        "id": 0,
+        "time": "07:00:00.000",
+        "event_name": "interaction_config",
+        "params": {
+          "flow_name": "configuracoes",
+          "detail": "click:notificações",
+          "screen_name": "demoapp:configurações"
+        }
+      },
+      "occurrences": 1,
+      "older_divergent": 0,
+      "older_divergences": [],
+      "ga_screen": null,
+      "note": null,
+      "divergences": "",
+      "block": "// interaction_config [OK]\n// log 07:00:00.000 · 1 disparo(s)\n{\n  \"flow_name\": \"configuracoes\",  ✓\n  \"detail\": \"click:notificações\",  ✓\n  \"screen_name\": \"demoapp:configurações\"  ✓\n}"
+    }
+  ],
+  "extras": [
+    {
+      "event": "interaction_config",
+      "screen": "demoapp:configurações",
+      "flow_name": "configuracoes",
+      "component": null,
+      "detail": "click:idioma",
+      "count": 1
+    }
+  ],
+  "alerts": [],
+  "observations": "Eventos dos fluxos da spec que nenhum card cobre:\n  • interaction_config · demoapp:configurações · detail=click:idioma — 1x\n\nAlertas (app_exception / error_view nas telas da spec):\n  (nenhum)\n\nRegra: cada variação é validada pelo disparo mais recente; '⚠' indica disparos anteriores com divergência diferente.",
+  "markdown": "# Auditoria de Tagueamento — DemoApp Windows (ANDROID)\n\n- Período do log: 16/11 07:00:00 até 07:00:01 (1 s)\n- 1 cards · 1 validações · OK: 1 · Erro: 0 (sendo 0 não disparadas) · Conformidade: 100.0%\n- Plataforma: ANDROID · 2 eventos únicos (0 duplicados removidos de 2 da plataforma; 2 lidos no arquivo)\n\n| Seção | Card | Fluxo | Evento | Variação | Status | Divergências | Horário | Disparos |\n|---|---|---|---|---|---|---|---|---|\n| Configurações | interaction_config | - | interaction_config | click:notificações | OK |  | 07:00:00.000 | 1 |\n\n## Fora da spec / Observações\n\nEventos dos fluxos da spec que nenhum card cobre:\n  • interaction_config · demoapp:configurações · detail=click:idioma — 1x\n\nAlertas (app_exception / error_view nas telas da spec):\n  (nenhum)\n\nRegra: cada variação é validada pelo disparo mais recente; '⚠' indica disparos anteriores com divergência diferente.\n",
+  "tsv": "Seção\tCard\tFluxo\tEvento\tVariação\tStatus\tDivergências\tHorário\tDisparos\nConfigurações\tinteraction_config\t-\tinteraction_config\tclick:notificações\tOK\t\t07:00:00.000\t1\n"
+}

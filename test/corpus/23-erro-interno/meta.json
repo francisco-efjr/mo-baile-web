@@ -1,0 +1,4 @@
+{
+  "platform": null,
+  "descricao": "Parâmetro em lista num evento fora da spec: o Python quebra (unhashable) e a versão web responde 'Erro interno no motor.'; o site responde igual."
+}

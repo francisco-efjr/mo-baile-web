@@ -1,0 +1,32 @@
+{
+  "projeto": "DemoApp Busca",
+  "plataforma": "android",
+  "cards": [
+    {
+      "secao": "Busca",
+      "evento": "search",
+      "params": {
+        "screen_name": "demoapp:busca:resultado",
+        "flow_name": "busca",
+        "search_term": "[preenchido]"
+      }
+    },
+    {
+      "secao": "Busca",
+      "evento": "view_item_list",
+      "params": {
+        "screen_name": "demoapp:busca:resultado",
+        "flow_name": "busca",
+        "item_list_name": "busca"
+      }
+    },
+    {
+      "secao": "Filtros",
+      "evento": "interaction_busca",
+      "params": {
+        "flow_name": "busca",
+        "detail": "click:filtrar"
+      }
+    }
+  ]
+}

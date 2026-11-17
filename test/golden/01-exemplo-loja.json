@@ -1,0 +1,552 @@
+{
+  "spec": {
+    "name": "spec.json",
+    "projeto": "DemoApp",
+    "versao_especificacao": "Spec de tagueamento v1.2",
+    "plataforma": "android",
+    "fluxos": [
+      {
+        "key": "retirada",
+        "label": "RET · pedido-retirada"
+      },
+      {
+        "key": "entrega",
+        "label": "ENT · pedido-entrega"
+      }
+    ],
+    "cards": 3,
+    "variants": 7,
+    "sections": [
+      "Início",
+      "Sacola"
+    ]
+  },
+  "platform": "android",
+  "source": "file",
+  "log_name": "log.txt",
+  "log_stats": {
+    "total_lidos": 12,
+    "da_plataforma": 12,
+    "duplicados": 1,
+    "uteis": 11
+  },
+  "summary": {
+    "total": 7,
+    "ok": 3,
+    "divergent": 2,
+    "missing": 2,
+    "compliance_rate": 42.9,
+    "extras": 3,
+    "alerts": 1
+  },
+  "results": [
+    {
+      "id": 0,
+      "card_index": 0,
+      "section": "Início",
+      "card_title": "Tela inicial",
+      "flow": null,
+      "flow_label": null,
+      "event": "screen_view",
+      "variation": "demoapp:loja:inicio",
+      "status": "ok",
+      "checks": [
+        {
+          "field": "screen_name",
+          "expected": "demoapp:loja:inicio",
+          "obtained": "demoapp:loja:inicio",
+          "ok": true
+        },
+        {
+          "field": "flow_name",
+          "expected": "loja",
+          "obtained": "loja",
+          "ok": true
+        }
+      ],
+      "expected": [
+        {
+          "key": "screen_name",
+          "value": "demoapp:loja:inicio"
+        },
+        {
+          "key": "flow_name",
+          "value": "loja"
+        }
+      ],
+      "matched": {
+        "id": 0,
+        "time": "10:00:00.000",
+        "event_name": "screen_view",
+        "params": {
+          "flow_name": "loja",
+          "ga_event_origin": "app",
+          "ga_screen": "demoapp:loja:inicio"
+        }
+      },
+      "occurrences": 1,
+      "older_divergent": 0,
+      "older_divergences": [],
+      "ga_screen": null,
+      "note": null,
+      "divergences": "",
+      "block": "// screen_view [OK]\n// log 10:00:00.000 · 1 disparo(s)\n{\n  \"screen_name\": \"demoapp:loja:inicio\",  ✓\n  \"flow_name\": \"loja\"  ✓\n}"
+    },
+    {
+      "id": 1,
+      "card_index": 1,
+      "section": "Sacola",
+      "card_title": "Botões da sacola",
+      "flow": "retirada",
+      "flow_label": "RET · pedido-retirada",
+      "event": "interaction_pedido_retirada",
+      "variation": "click:finalizar",
+      "status": "ok",
+      "checks": [
+        {
+          "field": "screen_name",
+          "expected": "demoapp:pedido:retirada:sacola",
+          "obtained": "demoapp:pedido:retirada:sacola",
+          "ok": true
+        },
+        {
+          "field": "flow_name",
+          "expected": "pedido-retirada",
+          "obtained": "pedido-retirada",
+          "ok": true
+        },
+        {
+          "field": "component",
+          "expected": "button",
+          "obtained": "button",
+          "ok": true
+        },
+        {
+          "field": "detail",
+          "expected": "click:finalizar",
+          "obtained": "click:finalizar",
+          "ok": true
+        }
+      ],
+      "expected": [
+        {
+          "key": "screen_name",
+          "value": "demoapp:pedido:retirada:sacola"
+        },
+        {
+          "key": "flow_name",
+          "value": "pedido-retirada"
+        },
+        {
+          "key": "component",
+          "value": "button"
+        },
+        {
+          "key": "detail",
+          "value": "click:finalizar"
+        }
+      ],
+      "matched": {
+        "id": 3,
+        "time": "10:01:00.000",
+        "event_name": "interaction_pedido_retirada",
+        "params": {
+          "screen_name": "demoapp:pedido:retirada:sacola",
+          "flow_name": "pedido-retirada",
+          "component": "button",
+          "detail": "click:finalizar",
+          "ga_screen": "demoapp:pedido:retirada:sacola"
+        }
+      },
+      "occurrences": 1,
+      "older_divergent": 0,
+      "older_divergences": [],
+      "ga_screen": null,
+      "note": null,
+      "divergences": "",
+      "block": "// RET · interaction_pedido_retirada [OK]\n// log 10:01:00.000 · 1 disparo(s)\n{\n  \"screen_name\": \"demoapp:pedido:retirada:sacola\",  ✓\n  \"flow_name\": \"pedido-retirada\",  ✓\n  \"component\": \"button\",  ✓\n  \"detail\": \"click:finalizar\"  ✓\n}"
+    },
+    {
+      "id": 2,
+      "card_index": 1,
+      "section": "Sacola",
+      "card_title": "Botões da sacola",
+      "flow": "retirada",
+      "flow_label": "RET · pedido-retirada",
+      "event": "interaction_pedido_retirada",
+      "variation": "click:[numero]-itens",
+      "status": "missing",
+      "checks": [],
+      "expected": [
+        {
+          "key": "screen_name",
+          "value": "demoapp:pedido:retirada:sacola"
+        },
+        {
+          "key": "flow_name",
+          "value": "pedido-retirada"
+        },
+        {
+          "key": "component",
+          "value": "button"
+        },
+        {
+          "key": "detail",
+          "value": "click:[numero]-itens"
+        }
+      ],
+      "matched": null,
+      "occurrences": 0,
+      "older_divergent": 0,
+      "older_divergences": [],
+      "ga_screen": null,
+      "note": null,
+      "divergences": "Não disparado no log",
+      "block": "// RET · interaction_pedido_retirada [ERRO]\n// NÃO DISPARADO no log\n{\n  \"screen_name\": \"demoapp:pedido:retirada:sacola\",\n  \"flow_name\": \"pedido-retirada\",\n  \"component\": \"button\",\n  \"detail\": \"click:[numero]-itens\"\n}  // esperado (spec)"
+    },
+    {
+      "id": 3,
+      "card_index": 1,
+      "section": "Sacola",
+      "card_title": "Botões da sacola",
+      "flow": "entrega",
+      "flow_label": "ENT · pedido-entrega",
+      "event": "interaction_pedido_entrega",
+      "variation": "click:finalizar",
+      "status": "error",
+      "checks": [
+        {
+          "field": "screen_name",
+          "expected": "demoapp:pedido:entrega:sacola",
+          "obtained": "demoapp:pedido:entrega:sacola",
+          "ok": true
+        },
+        {
+          "field": "flow_name",
+          "expected": "pedido-entrega",
+          "obtained": "pedido-entrega",
+          "ok": true
+        },
+        {
+          "field": "component",
+          "expected": "button",
+          "obtained": "toggle",
+          "ok": false
+        },
+        {
+          "field": "detail",
+          "expected": "click:finalizar",
+          "obtained": "click:finalizar",
+          "ok": true
+        }
+      ],
+      "expected": [
+        {
+          "key": "screen_name",
+          "value": "demoapp:pedido:entrega:sacola"
+        },
+        {
+          "key": "flow_name",
+          "value": "pedido-entrega"
+        },
+        {
+          "key": "component",
+          "value": "button"
+        },
+        {
+          "key": "detail",
+          "value": "click:finalizar"
+        }
+      ],
+      "matched": {
+        "id": 7,
+        "time": "10:02:00.000",
+        "event_name": "interaction_pedido_entrega",
+        "params": {
+          "screen_name": "demoapp:pedido:entrega:sacola",
+          "flow_name": "pedido-entrega",
+          "component": "toggle",
+          "detail": "click:finalizar"
+        }
+      },
+      "occurrences": 1,
+      "older_divergent": 0,
+      "older_divergences": [],
+      "ga_screen": null,
+      "note": null,
+      "divergences": "component: obtido toggle, esperado button",
+      "block": "// ENT · interaction_pedido_entrega [ERRO]\n// log 10:02:00.000 · 1 disparo(s)\n{\n  \"screen_name\": \"demoapp:pedido:entrega:sacola\",  ✓\n  \"flow_name\": \"pedido-entrega\",  ✓\n  \"component\": \"toggle\",  ✗\n    // ↳ esperado: button\n  \"detail\": \"click:finalizar\"  ✓\n}"
+    },
+    {
+      "id": 4,
+      "card_index": 1,
+      "section": "Sacola",
+      "card_title": "Botões da sacola",
+      "flow": "entrega",
+      "flow_label": "ENT · pedido-entrega",
+      "event": "interaction_pedido_entrega",
+      "variation": "click:[numero]-itens",
+      "status": "missing",
+      "checks": [],
+      "expected": [
+        {
+          "key": "screen_name",
+          "value": "demoapp:pedido:entrega:sacola"
+        },
+        {
+          "key": "flow_name",
+          "value": "pedido-entrega"
+        },
+        {
+          "key": "component",
+          "value": "button"
+        },
+        {
+          "key": "detail",
+          "value": "click:[numero]-itens"
+        }
+      ],
+      "matched": null,
+      "occurrences": 0,
+      "older_divergent": 0,
+      "older_divergences": [],
+      "ga_screen": null,
+      "note": null,
+      "divergences": "Não disparado no log",
+      "block": "// ENT · interaction_pedido_entrega [ERRO]\n// NÃO DISPARADO no log\n{\n  \"screen_name\": \"demoapp:pedido:entrega:sacola\",\n  \"flow_name\": \"pedido-entrega\",\n  \"component\": \"button\",\n  \"detail\": \"click:[numero]-itens\"\n}  // esperado (spec)"
+    },
+    {
+      "id": 5,
+      "card_index": 2,
+      "section": "Sacola",
+      "card_title": "add_to_cart",
+      "flow": "retirada",
+      "flow_label": "RET · pedido-retirada",
+      "event": "add_to_cart",
+      "variation": "demoapp:pedido:retirada:sacola",
+      "status": "ok",
+      "checks": [
+        {
+          "field": "screen_name",
+          "expected": "demoapp:pedido:retirada:sacola",
+          "obtained": "demoapp:pedido:retirada:sacola",
+          "ok": true
+        },
+        {
+          "field": "flow_name",
+          "expected": "pedido-retirada",
+          "obtained": "pedido-retirada",
+          "ok": true
+        },
+        {
+          "field": "gift",
+          "expected": "[0|1]",
+          "obtained": "0",
+          "ok": true
+        },
+        {
+          "field": "value",
+          "expected": "[numero]",
+          "obtained": "59",
+          "ok": true
+        },
+        {
+          "field": "items[0].item_id",
+          "expected": "SKU-1001",
+          "obtained": "SKU-1001",
+          "ok": true
+        },
+        {
+          "field": "items[0].item_name",
+          "expected": "produto-retirada",
+          "obtained": "produto-retirada",
+          "ok": true
+        }
+      ],
+      "expected": [
+        {
+          "key": "screen_name",
+          "value": "demoapp:pedido:retirada:sacola"
+        },
+        {
+          "key": "flow_name",
+          "value": "pedido-retirada"
+        },
+        {
+          "key": "gift",
+          "value": "[0|1]"
+        },
+        {
+          "key": "value",
+          "value": "[numero]"
+        },
+        {
+          "key": "items",
+          "value": "[{\"item_id\": \"SKU-1001\", \"item_name\": \"produto-retirada\"}]"
+        }
+      ],
+      "matched": {
+        "id": 9,
+        "time": "10:04:00.000",
+        "event_name": "add_to_cart",
+        "params": {
+          "screen_name": "demoapp:pedido:retirada:sacola",
+          "flow_name": "pedido-retirada",
+          "gift": "0",
+          "value": "59",
+          "items": [
+            {
+              "item_name": "produto-retirada",
+              "item_category": "lanches",
+              "item_id": "SKU-1001"
+            }
+          ]
+        }
+      },
+      "occurrences": 2,
+      "older_divergent": 1,
+      "older_divergences": [
+        "items[0].item_name=produto-errado"
+      ],
+      "ga_screen": null,
+      "note": "Conferir o item_id com o catálogo da loja",
+      "divergences": "⚠ 1 disparo(s) anterior(es): items[0].item_name=produto-errado",
+      "block": "// RET · add_to_cart [OK]\n// log 10:04:00.000 · 2 disparo(s)\n{\n  \"screen_name\": \"demoapp:pedido:retirada:sacola\",  ✓\n  \"flow_name\": \"pedido-retirada\",  ✓\n  \"gift\": \"0\",  ✓\n  \"value\": \"59\",  ✓\n  \"items[0].item_id\": \"SKU-1001\",  ✓\n  \"items[0].item_name\": \"produto-retirada\"  ✓\n}\n// ⚠ 1 disparo(s) anterior(es) divergente(s):\n//   items[0].item_name=produto-errado\n// obs: Conferir o item_id com o catálogo da loja"
+    },
+    {
+      "id": 6,
+      "card_index": 2,
+      "section": "Sacola",
+      "card_title": "add_to_cart",
+      "flow": "entrega",
+      "flow_label": "ENT · pedido-entrega",
+      "event": "add_to_cart",
+      "variation": "demoapp:pedido:entrega:sacola",
+      "status": "error",
+      "checks": [
+        {
+          "field": "screen_name",
+          "expected": "demoapp:pedido:entrega:sacola",
+          "obtained": "demoapp:pedido:entrega:pagamento",
+          "ok": false
+        },
+        {
+          "field": "flow_name",
+          "expected": "pedido-entrega",
+          "obtained": "pedido-entrega",
+          "ok": true
+        },
+        {
+          "field": "gift",
+          "expected": "[0|1]",
+          "obtained": "1",
+          "ok": true
+        },
+        {
+          "field": "value",
+          "expected": "[numero]",
+          "obtained": "1",
+          "ok": true
+        },
+        {
+          "field": "items[0].item_id",
+          "expected": "[preenchido]",
+          "obtained": "SKU-2002",
+          "ok": true
+        },
+        {
+          "field": "items[0].item_name",
+          "expected": "produto-entrega",
+          "obtained": "produto-entrega",
+          "ok": true
+        }
+      ],
+      "expected": [
+        {
+          "key": "screen_name",
+          "value": "demoapp:pedido:entrega:sacola"
+        },
+        {
+          "key": "flow_name",
+          "value": "pedido-entrega"
+        },
+        {
+          "key": "gift",
+          "value": "[0|1]"
+        },
+        {
+          "key": "value",
+          "value": "[numero]"
+        },
+        {
+          "key": "items",
+          "value": "[{\"item_id\": \"[preenchido]\", \"item_name\": \"produto-entrega\"}]"
+        }
+      ],
+      "matched": {
+        "id": 5,
+        "time": "10:01:45.000",
+        "event_name": "add_to_cart",
+        "params": {
+          "screen_name": "demoapp:pedido:entrega:pagamento",
+          "flow_name": "pedido-entrega",
+          "gift": "1",
+          "value": "1",
+          "items": [
+            {
+              "item_name": "produto-entrega",
+              "item_id": "SKU-2002"
+            }
+          ],
+          "ga_screen": "demoapp:pedido:entrega:sacola"
+        }
+      },
+      "occurrences": 1,
+      "older_divergent": 0,
+      "older_divergences": [],
+      "ga_screen": "demoapp:pedido:entrega:sacola",
+      "note": "Conferir o item_id com o catálogo da loja",
+      "divergences": "screen_name: obtido demoapp:pedido:entrega:pagamento, esperado demoapp:pedido:entrega:sacola",
+      "block": "// ENT · add_to_cart [ERRO]\n// log 10:01:45.000 · 1 disparo(s)\n{\n  \"screen_name\": \"demoapp:pedido:entrega:pagamento\",  ✗\n    // ↳ esperado: demoapp:pedido:entrega:sacola\n  \"flow_name\": \"pedido-entrega\",  ✓\n  \"gift\": \"1\",  ✓\n  \"value\": \"1\",  ✓\n  \"items[0].item_id\": \"SKU-2002\",  ✓\n  \"items[0].item_name\": \"produto-entrega\"  ✓\n}\n// ga_screen: demoapp:pedido:entrega:sacola\n// obs: Conferir o item_id com o catálogo da loja"
+    }
+  ],
+  "extras": [
+    {
+      "event": "interaction_pedido_retirada",
+      "screen": "demoapp:pedido:retirada:detalhes",
+      "flow_name": "pedido-retirada",
+      "component": "button",
+      "detail": "click:finalizar",
+      "count": 1
+    },
+    {
+      "event": "screen_view",
+      "screen": "demoapp:loja:ofertas",
+      "flow_name": "loja",
+      "component": null,
+      "detail": null,
+      "count": 1
+    },
+    {
+      "event": "modal_view",
+      "screen": "demoapp:pedido:retirada:sacola",
+      "flow_name": "pedido-retirada",
+      "component": "modal",
+      "detail": "horarios",
+      "count": 1
+    }
+  ],
+  "alerts": [
+    {
+      "event": "app_exception",
+      "screen": "demoapp:pedido:retirada:sacola",
+      "flow_name": null,
+      "component": null,
+      "detail": null,
+      "count": 1
+    }
+  ],
+  "observations": "Eventos dos fluxos da spec que nenhum card cobre:\n  • interaction_pedido_retirada · demoapp:pedido:retirada:detalhes · component=button · detail=click:finalizar — 1x\n  • screen_view · demoapp:loja:ofertas — 1x\n  • modal_view · demoapp:pedido:retirada:sacola · component=modal · detail=horarios — 1x\n\nAlertas (app_exception / error_view nas telas da spec):\n  • app_exception · demoapp:pedido:retirada:sacola — 1x\n\nRegra: cada variação é validada pelo disparo mais recente; '⚠' indica disparos anteriores com divergência diferente.",
+  "markdown": "# Auditoria de Tagueamento — DemoApp (ANDROID)\n\nSpec: Spec de tagueamento v1.2\n- Período do log: 16/11 10:00:00 até 10:06:00 (6 min)\n- 3 cards · 7 validações · OK: 3 · Erro: 4 (sendo 2 não disparadas) · Conformidade: 42.9%\n- Plataforma: ANDROID · 11 eventos únicos (1 duplicados removidos de 12 da plataforma; 12 lidos no arquivo)\n\n| Seção | Card | Fluxo | Evento | Variação | Status | Divergências | Horário | Disparos |\n|---|---|---|---|---|---|---|---|---|\n| Início | Tela inicial | - | screen_view | demoapp:loja:inicio | OK |  | 10:00:00.000 | 1 |\n| Sacola | Botões da sacola | RET · pedido-retirada | interaction_pedido_retirada | click:finalizar | OK |  | 10:01:00.000 | 1 |\n| Sacola | Botões da sacola | RET · pedido-retirada | interaction_pedido_retirada | click:[numero]-itens | NÃO DISPARADO | Não disparado no log |  | 0 |\n| Sacola | Botões da sacola | ENT · pedido-entrega | interaction_pedido_entrega | click:finalizar | ERRO | component: obtido toggle, esperado button | 10:02:00.000 | 1 |\n| Sacola | Botões da sacola | ENT · pedido-entrega | interaction_pedido_entrega | click:[numero]-itens | NÃO DISPARADO | Não disparado no log |  | 0 |\n| Sacola | add_to_cart | RET · pedido-retirada | add_to_cart | demoapp:pedido:retirada:sacola | OK | ⚠ 1 disparo(s) anterior(es): items[0].item_name=produto-errado | 10:04:00.000 | 2 |\n| Sacola | add_to_cart | ENT · pedido-entrega | add_to_cart | demoapp:pedido:entrega:sacola | ERRO | screen_name: obtido demoapp:pedido:entrega:pagamento, esperado demoapp:pedido:entrega:sacola | 10:01:45.000 | 1 |\n\n## Fora da spec / Observações\n\nEventos dos fluxos da spec que nenhum card cobre:\n  • interaction_pedido_retirada · demoapp:pedido:retirada:detalhes · component=button · detail=click:finalizar — 1x\n  • screen_view · demoapp:loja:ofertas — 1x\n  • modal_view · demoapp:pedido:retirada:sacola · component=modal · detail=horarios — 1x\n\nAlertas (app_exception / error_view nas telas da spec):\n  • app_exception · demoapp:pedido:retirada:sacola — 1x\n\nRegra: cada variação é validada pelo disparo mais recente; '⚠' indica disparos anteriores com divergência diferente.\n",
+  "tsv": "Seção\tCard\tFluxo\tEvento\tVariação\tStatus\tDivergências\tHorário\tDisparos\nInício\tTela inicial\t-\tscreen_view\tdemoapp:loja:inicio\tOK\t\t10:00:00.000\t1\nSacola\tBotões da sacola\tRET · pedido-retirada\tinteraction_pedido_retirada\tclick:finalizar\tOK\t\t10:01:00.000\t1\nSacola\tBotões da sacola\tRET · pedido-retirada\tinteraction_pedido_retirada\tclick:[numero]-itens\tNÃO DISPARADO\tNão disparado no log\t\t0\nSacola\tBotões da sacola\tENT · pedido-entrega\tinteraction_pedido_entrega\tclick:finalizar\tERRO\tcomponent: obtido toggle, esperado button\t10:02:00.000\t1\nSacola\tBotões da sacola\tENT · pedido-entrega\tinteraction_pedido_entrega\tclick:[numero]-itens\tNÃO DISPARADO\tNão disparado no log\t\t0\nSacola\tadd_to_cart\tRET · pedido-retirada\tadd_to_cart\tdemoapp:pedido:retirada:sacola\tOK\t⚠ 1 disparo(s) anterior(es): items[0].item_name=produto-errado\t10:04:00.000\t2\nSacola\tadd_to_cart\tENT · pedido-entrega\tadd_to_cart\tdemoapp:pedido:entrega:sacola\tERRO\tscreen_name: obtido demoapp:pedido:entrega:pagamento, esperado demoapp:pedido:entrega:sacola\t10:01:45.000\t1\n"
+}

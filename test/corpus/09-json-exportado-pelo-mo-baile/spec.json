@@ -1,0 +1,23 @@
+{
+  "projeto": "DemoApp Notificações",
+  "plataforma": "android",
+  "cards": [
+    {
+      "secao": "Notificações",
+      "evento": "notification_open",
+      "params": {
+        "screen_name": "demoapp:notificacoes:central",
+        "flow_name": "notificacoes",
+        "campaign": "[preenchido]"
+      }
+    },
+    {
+      "secao": "Notificações",
+      "evento": "notification_dismiss",
+      "params": {
+        "flow_name": "notificacoes",
+        "campaign": "[preenchido]"
+      }
+    }
+  ]
+}

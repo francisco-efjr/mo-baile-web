@@ -1,0 +1,3 @@
+11-16 14:20:00.100  4321  4400 V FA-SVC : Logging event: origin=app,name=screen_view(_vs),params=Bundle[{flow_name=cadastro, ga_event_origin(_o)=app, ga_screen(_sn)=demoapp:cadastro:dados}]
+11-16 14:20:15.250  4321  4400 V FA-SVC : Logging event: origin=app,name=form_field,params=Bundle[{screen_name=demoapp: cadastro : dados, flow_name=cadastro, field=nascimento, value=29/02/2000}]
+11-16 14:20:45.900  4321  4400 V FA-SVC : Logging event: origin=app,name=sign_up,params=Bundle[{flow_name=cadastro, method=telefone, user_hash=a1b2c3d4, promo=BEMVINDO}]

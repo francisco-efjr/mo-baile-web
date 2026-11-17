@@ -1,0 +1,61 @@
+{
+  "eventos": [
+    {
+      "time_str": "2026-11-16 10:00:00.123",
+      "event_name": "begin_checkout",
+      "params": {
+        "ga_screen": "demoapp:checkout:resumo",
+        "flow_name": "checkout",
+        "value": "89.90",
+        "items": "[ { item_id = SKU-1; price = \"89.90\"; }, { item_id = SKU-2; price = 10; } ]"
+      },
+      "platform": "ios",
+      "tag": "iOS (Firebase)",
+      "raw_log": "2026-11-16 10:00:00.123 DemoApp[812:4410] [FirebaseAnalytics][I-ACS023073] Logging event: origin, name, params: app, begin_checkout, {...}",
+      "id": 1
+    },
+    {
+      "time_str": "2026-11-16 10:02:30.000",
+      "event_name": "purchase",
+      "params": {
+        "screen_name": "demoapp: checkout :sucesso",
+        "flow_name": "checkout",
+        "transaction_id": "T-12345"
+      },
+      "platform": "ios",
+      "tag": "iOS (Firebase)",
+      "raw_log": "2026-11-16 10:02:30.000 DemoApp[812:4410] [FirebaseAnalytics][I-ACS023073] Logging event: origin, name, params: app, purchase, {...}",
+      "id": 2
+    },
+    {
+      "time_str": "2026-11-16 10:03:00.000",
+      "event_name": "purchase",
+      "params": {
+        "screen_name": "demoapp:checkout:sucesso",
+        "flow_name": "checkout",
+        "transaction_id": "T-123456",
+        "ga_event_origin": "app"
+      },
+      "platform": "ios",
+      "tag": "iOS (Firebase)",
+      "raw_log": "2026-11-16 10:03:00.000 DemoApp[812:4410] [FirebaseAnalytics][I-ACS023073] Logging event: origin, name, params: app, purchase, {...}",
+      "id": 3
+    },
+    {
+      "id": 0,
+      "event_name": "purchase",
+      "params": {
+        "ignorado": "sim"
+      },
+      "platform": "android",
+      "raw_log": "11-16 10:01:00.000  4321  4400 V FA-SVC  : Logging event: origin=app,name=purchase,params=Bundle[{screen_name=demoapp:checkout:sucesso, flow_name=checkout, transaction_id=T-999999}]",
+      "tag": "FA-SVC",
+      "time_str": "10:01:00.000"
+    },
+    {
+      "event_name": "ad_impression",
+      "platform": "web",
+      "params": {}
+    }
+  ]
+}

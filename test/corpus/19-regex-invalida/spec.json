@@ -1,0 +1,14 @@
+{
+  "projeto": "DemoApp",
+  "cards": [
+    {
+      "evento": "screen_view"
+    },
+    {
+      "evento": "search",
+      "params": {
+        "search_term": "re:(abc"
+      }
+    }
+  ]
+}

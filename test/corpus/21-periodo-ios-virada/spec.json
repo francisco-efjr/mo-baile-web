@@ -1,0 +1,13 @@
+{
+  "projeto": "DemoApp Noite",
+  "plataforma": "ios",
+  "cards": [
+    {
+      "secao": "Sessão",
+      "evento": "app_open",
+      "params": {
+        "flow_name": "sessao"
+      }
+    }
+  ]
+}

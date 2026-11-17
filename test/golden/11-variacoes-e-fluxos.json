@@ -1,0 +1,723 @@
+{
+  "spec": {
+    "name": "spec.json",
+    "projeto": "DemoApp Frete",
+    "versao_especificacao": null,
+    "plataforma": "android",
+    "fluxos": [
+      {
+        "key": "expresso",
+        "label": "EXP · frete-expresso"
+      },
+      {
+        "key": "economico",
+        "label": "ECO · frete-economico"
+      },
+      {
+        "key": "agendado",
+        "label": "AGD · frete-agendado"
+      }
+    ],
+    "cards": 3,
+    "variants": 10,
+    "sections": [
+      "Frete",
+      "Resumo"
+    ]
+  },
+  "platform": "android",
+  "source": "file",
+  "log_name": "log.txt",
+  "log_stats": {
+    "total_lidos": 6,
+    "da_plataforma": 6,
+    "duplicados": 0,
+    "uteis": 6
+  },
+  "summary": {
+    "total": 10,
+    "ok": 5,
+    "divergent": 2,
+    "missing": 3,
+    "compliance_rate": 50.0,
+    "extras": 1,
+    "alerts": 0
+  },
+  "results": [
+    {
+      "id": 0,
+      "card_index": 0,
+      "section": "Frete",
+      "card_title": "Escolha do frete",
+      "flow": "expresso",
+      "flow_label": "EXP · frete-expresso",
+      "event": "select_shipping",
+      "variation": "click:confirmar",
+      "status": "ok",
+      "checks": [
+        {
+          "field": "screen_name",
+          "expected": "demoapp:frete:expresso:opcoes",
+          "obtained": "demoapp:frete:expresso:opcoes",
+          "ok": true
+        },
+        {
+          "field": "flow_name",
+          "expected": "frete-expresso",
+          "obtained": "frete-expresso",
+          "ok": true
+        },
+        {
+          "field": "shipping_tier",
+          "expected": "expresso",
+          "obtained": "expresso",
+          "ok": true
+        },
+        {
+          "field": "detail",
+          "expected": "click:confirmar",
+          "obtained": "click:confirmar",
+          "ok": true
+        }
+      ],
+      "expected": [
+        {
+          "key": "screen_name",
+          "value": "demoapp:frete:expresso:opcoes"
+        },
+        {
+          "key": "flow_name",
+          "value": "frete-expresso"
+        },
+        {
+          "key": "shipping_tier",
+          "value": "expresso"
+        },
+        {
+          "key": "detail",
+          "value": "click:confirmar"
+        }
+      ],
+      "matched": {
+        "id": 0,
+        "time": "19:00:00.000",
+        "event_name": "select_shipping",
+        "params": {
+          "screen_name": "demoapp:frete:expresso:opcoes",
+          "flow_name": "frete-expresso",
+          "shipping_tier": "expresso",
+          "detail": "click:confirmar"
+        }
+      },
+      "occurrences": 1,
+      "older_divergent": 0,
+      "older_divergences": [],
+      "ga_screen": null,
+      "note": "Só aparece para CEP atendido",
+      "divergences": "",
+      "block": "// EXP · select_shipping [OK]\n// log 19:00:00.000 · 1 disparo(s)\n{\n  \"screen_name\": \"demoapp:frete:expresso:opcoes\",  ✓\n  \"flow_name\": \"frete-expresso\",  ✓\n  \"shipping_tier\": \"expresso\",  ✓\n  \"detail\": \"click:confirmar\"  ✓\n}\n// obs: Só aparece para CEP atendido"
+    },
+    {
+      "id": 1,
+      "card_index": 0,
+      "section": "Frete",
+      "card_title": "Escolha do frete",
+      "flow": "expresso",
+      "flow_label": "EXP · frete-expresso",
+      "event": "select_shipping",
+      "variation": "click:[numero]-dias",
+      "status": "ok",
+      "checks": [
+        {
+          "field": "screen_name",
+          "expected": "demoapp:frete:expresso:prazo",
+          "obtained": "demoapp:frete:expresso:prazo",
+          "ok": true
+        },
+        {
+          "field": "flow_name",
+          "expected": "frete-expresso",
+          "obtained": "frete-expresso",
+          "ok": true
+        },
+        {
+          "field": "shipping_tier",
+          "expected": "expresso",
+          "obtained": "expresso",
+          "ok": true
+        },
+        {
+          "field": "detail",
+          "expected": "click:[numero]-dias",
+          "obtained": "click:2-dias",
+          "ok": true
+        }
+      ],
+      "expected": [
+        {
+          "key": "screen_name",
+          "value": "demoapp:frete:expresso:prazo"
+        },
+        {
+          "key": "flow_name",
+          "value": "frete-expresso"
+        },
+        {
+          "key": "shipping_tier",
+          "value": "expresso"
+        },
+        {
+          "key": "detail",
+          "value": "click:[numero]-dias"
+        }
+      ],
+      "matched": {
+        "id": 1,
+        "time": "19:00:10.000",
+        "event_name": "select_shipping",
+        "params": {
+          "screen_name": "demoapp:frete:expresso:prazo",
+          "flow_name": "frete-expresso",
+          "shipping_tier": "expresso",
+          "detail": "click:2-dias"
+        }
+      },
+      "occurrences": 1,
+      "older_divergent": 0,
+      "older_divergences": [],
+      "ga_screen": null,
+      "note": "Só aparece para CEP atendido",
+      "divergences": "",
+      "block": "// EXP · select_shipping [OK]\n// log 19:00:10.000 · 1 disparo(s)\n{\n  \"screen_name\": \"demoapp:frete:expresso:prazo\",  ✓\n  \"flow_name\": \"frete-expresso\",  ✓\n  \"shipping_tier\": \"expresso\",  ✓\n  \"detail\": \"click:2-dias\"  ✓\n}\n// obs: Só aparece para CEP atendido"
+    },
+    {
+      "id": 2,
+      "card_index": 0,
+      "section": "Frete",
+      "card_title": "Escolha do frete",
+      "flow": "economico",
+      "flow_label": "ECO · frete-economico",
+      "event": "select_shipping",
+      "variation": "click:confirmar",
+      "status": "error",
+      "checks": [
+        {
+          "field": "screen_name",
+          "expected": "demoapp:frete:economico:opcoes",
+          "obtained": "demoapp:frete:economico:opcoes",
+          "ok": true
+        },
+        {
+          "field": "flow_name",
+          "expected": "frete-economico",
+          "obtained": "frete-economico",
+          "ok": true
+        },
+        {
+          "field": "shipping_tier",
+          "expected": "economico",
+          "obtained": "normal",
+          "ok": false
+        },
+        {
+          "field": "detail",
+          "expected": "click:confirmar",
+          "obtained": "click:confirmar",
+          "ok": true
+        }
+      ],
+      "expected": [
+        {
+          "key": "screen_name",
+          "value": "demoapp:frete:economico:opcoes"
+        },
+        {
+          "key": "flow_name",
+          "value": "frete-economico"
+        },
+        {
+          "key": "shipping_tier",
+          "value": "economico"
+        },
+        {
+          "key": "detail",
+          "value": "click:confirmar"
+        }
+      ],
+      "matched": {
+        "id": 2,
+        "time": "19:00:20.000",
+        "event_name": "select_shipping",
+        "params": {
+          "screen_name": "demoapp:frete:economico:opcoes",
+          "flow_name": "frete-economico",
+          "shipping_tier": "normal",
+          "detail": "click:confirmar"
+        }
+      },
+      "occurrences": 1,
+      "older_divergent": 0,
+      "older_divergences": [],
+      "ga_screen": null,
+      "note": null,
+      "divergences": "shipping_tier: obtido normal, esperado economico",
+      "block": "// ECO · select_shipping [ERRO]\n// log 19:00:20.000 · 1 disparo(s)\n{\n  \"screen_name\": \"demoapp:frete:economico:opcoes\",  ✓\n  \"flow_name\": \"frete-economico\",  ✓\n  \"shipping_tier\": \"normal\",  ✗\n    // ↳ esperado: economico\n  \"detail\": \"click:confirmar\"  ✓\n}"
+    },
+    {
+      "id": 3,
+      "card_index": 0,
+      "section": "Frete",
+      "card_title": "Escolha do frete",
+      "flow": "economico",
+      "flow_label": "ECO · frete-economico",
+      "event": "select_shipping",
+      "variation": "click:[numero]-dias",
+      "status": "missing",
+      "checks": [],
+      "expected": [
+        {
+          "key": "screen_name",
+          "value": "demoapp:frete:economico:prazo"
+        },
+        {
+          "key": "flow_name",
+          "value": "frete-economico"
+        },
+        {
+          "key": "shipping_tier",
+          "value": "economico"
+        },
+        {
+          "key": "detail",
+          "value": "click:[numero]-dias"
+        }
+      ],
+      "matched": null,
+      "occurrences": 0,
+      "older_divergent": 0,
+      "older_divergences": [],
+      "ga_screen": null,
+      "note": null,
+      "divergences": "Não disparado no log",
+      "block": "// ECO · select_shipping [ERRO]\n// NÃO DISPARADO no log\n{\n  \"screen_name\": \"demoapp:frete:economico:prazo\",\n  \"flow_name\": \"frete-economico\",\n  \"shipping_tier\": \"economico\",\n  \"detail\": \"click:[numero]-dias\"\n}  // esperado (spec)"
+    },
+    {
+      "id": 4,
+      "card_index": 0,
+      "section": "Frete",
+      "card_title": "Escolha do frete",
+      "flow": "agendado",
+      "flow_label": "AGD · frete-agendado",
+      "event": "select_shipping",
+      "variation": "click:confirmar",
+      "status": "error",
+      "checks": [
+        {
+          "field": "screen_name",
+          "expected": "demoapp:frete:agendado:opcoes",
+          "obtained": "demoapp:frete:agendado:opcoes",
+          "ok": true
+        },
+        {
+          "field": "flow_name",
+          "expected": "frete-agendado",
+          "obtained": "frete-agendado",
+          "ok": true
+        },
+        {
+          "field": "shipping_tier",
+          "expected": "agendado",
+          "obtained": "agendado",
+          "ok": true
+        },
+        {
+          "field": "detail",
+          "expected": "click:confirmar",
+          "obtained": "click:confirmar",
+          "ok": true
+        },
+        {
+          "field": "date",
+          "expected": "[data]",
+          "obtained": "2026-11-20",
+          "ok": false
+        }
+      ],
+      "expected": [
+        {
+          "key": "screen_name",
+          "value": "demoapp:frete:agendado:opcoes"
+        },
+        {
+          "key": "flow_name",
+          "value": "frete-agendado"
+        },
+        {
+          "key": "shipping_tier",
+          "value": "agendado"
+        },
+        {
+          "key": "detail",
+          "value": "click:confirmar"
+        },
+        {
+          "key": "date",
+          "value": "[data]"
+        }
+      ],
+      "matched": {
+        "id": 3,
+        "time": "19:00:30.000",
+        "event_name": "select_shipping",
+        "params": {
+          "screen_name": "demoapp:frete:agendado:opcoes",
+          "flow_name": "frete-agendado",
+          "shipping_tier": "agendado",
+          "detail": "click:confirmar",
+          "date": "2026-11-20"
+        }
+      },
+      "occurrences": 1,
+      "older_divergent": 0,
+      "older_divergences": [],
+      "ga_screen": null,
+      "note": "Data no formato dd/mm/aaaa",
+      "divergences": "date: obtido 2026-11-20, esperado [data]",
+      "block": "// AGD · select_shipping [ERRO]\n// log 19:00:30.000 · 1 disparo(s)\n{\n  \"screen_name\": \"demoapp:frete:agendado:opcoes\",  ✓\n  \"flow_name\": \"frete-agendado\",  ✓\n  \"shipping_tier\": \"agendado\",  ✓\n  \"detail\": \"click:confirmar\",  ✓\n  \"date\": \"2026-11-20\"  ✗\n    // ↳ esperado: [data]\n}\n// obs: Data no formato dd/mm/aaaa"
+    },
+    {
+      "id": 5,
+      "card_index": 0,
+      "section": "Frete",
+      "card_title": "Escolha do frete",
+      "flow": "agendado",
+      "flow_label": "AGD · frete-agendado",
+      "event": "select_shipping",
+      "variation": "click:[numero]-dias",
+      "status": "missing",
+      "checks": [],
+      "expected": [
+        {
+          "key": "screen_name",
+          "value": "demoapp:frete:agendado:prazo"
+        },
+        {
+          "key": "flow_name",
+          "value": "frete-agendado"
+        },
+        {
+          "key": "shipping_tier",
+          "value": "agendado"
+        },
+        {
+          "key": "detail",
+          "value": "click:[numero]-dias"
+        },
+        {
+          "key": "date",
+          "value": "[data]"
+        }
+      ],
+      "matched": null,
+      "occurrences": 0,
+      "older_divergent": 0,
+      "older_divergences": [],
+      "ga_screen": null,
+      "note": "Data no formato dd/mm/aaaa",
+      "divergences": "Não disparado no log",
+      "block": "// AGD · select_shipping [ERRO]\n// NÃO DISPARADO no log\n{\n  \"screen_name\": \"demoapp:frete:agendado:prazo\",\n  \"flow_name\": \"frete-agendado\",\n  \"shipping_tier\": \"agendado\",\n  \"detail\": \"click:[numero]-dias\",\n  \"date\": \"[data]\"\n}  // esperado (spec)\n// obs: Data no formato dd/mm/aaaa"
+    },
+    {
+      "id": 6,
+      "card_index": 1,
+      "section": "Frete",
+      "card_title": "Sem fluxo apesar do texto",
+      "flow": null,
+      "flow_label": null,
+      "event": "shipping_info",
+      "variation": "",
+      "status": "missing",
+      "checks": [],
+      "expected": [
+        {
+          "key": "flow_name",
+          "value": "frete-{fluxo}"
+        }
+      ],
+      "matched": null,
+      "occurrences": 0,
+      "older_divergent": 0,
+      "older_divergences": [],
+      "ga_screen": null,
+      "note": null,
+      "divergences": "Não disparado no log",
+      "block": "// shipping_info [ERRO]\n// NÃO DISPARADO no log\n{\n  \"flow_name\": \"frete-{fluxo}\"\n}  // esperado (spec)"
+    },
+    {
+      "id": 7,
+      "card_index": 2,
+      "section": "Resumo",
+      "card_title": "Resumo por fluxo",
+      "flow": "expresso",
+      "flow_label": "EXP · frete-expresso",
+      "event": "view_cart",
+      "variation": "demoapp:frete:resumo",
+      "status": "ok",
+      "checks": [
+        {
+          "field": "screen_name",
+          "expected": "demoapp:frete:resumo",
+          "obtained": "demoapp:frete:resumo",
+          "ok": true
+        },
+        {
+          "field": "flow_name",
+          "expected": "frete-(expresso|economico|agendado)",
+          "obtained": "frete-economico",
+          "ok": true
+        },
+        {
+          "field": "items[0].item_id",
+          "expected": "[preenchido]",
+          "obtained": "SKU-5",
+          "ok": true
+        },
+        {
+          "field": "items[0].quantity",
+          "expected": "[numero]",
+          "obtained": "2",
+          "ok": true
+        },
+        {
+          "field": "items[0].item_category",
+          "expected": "[livros|games]",
+          "obtained": "games",
+          "ok": true
+        }
+      ],
+      "expected": [
+        {
+          "key": "screen_name",
+          "value": "demoapp:frete:resumo"
+        },
+        {
+          "key": "flow_name",
+          "value": "re:frete-(expresso|economico|agendado)"
+        },
+        {
+          "key": "items",
+          "value": "[{\"item_id\": \"[preenchido]\", \"quantity\": \"[numero]\", \"item_category\": \"[livros|games]\"}]"
+        }
+      ],
+      "matched": {
+        "id": 5,
+        "time": "19:00:50.000",
+        "event_name": "view_cart",
+        "params": {
+          "screen_name": "demoapp:frete:resumo",
+          "flow_name": "frete-economico",
+          "items": [
+            {
+              "item_id": "SKU-5",
+              "quantity": "2",
+              "item_category": "games"
+            },
+            {
+              "item_id": "SKU-6",
+              "quantity": "1"
+            }
+          ]
+        }
+      },
+      "occurrences": 1,
+      "older_divergent": 0,
+      "older_divergences": [],
+      "ga_screen": null,
+      "note": null,
+      "divergences": "",
+      "block": "// EXP · view_cart [OK]\n// log 19:00:50.000 · 1 disparo(s)\n{\n  \"screen_name\": \"demoapp:frete:resumo\",  ✓\n  \"flow_name\": \"frete-economico\",  ✓\n  \"items[0].item_id\": \"SKU-5\",  ✓\n  \"items[0].quantity\": \"2\",  ✓\n  \"items[0].item_category\": \"games\"  ✓\n}"
+    },
+    {
+      "id": 8,
+      "card_index": 2,
+      "section": "Resumo",
+      "card_title": "Resumo por fluxo",
+      "flow": "economico",
+      "flow_label": "ECO · frete-economico",
+      "event": "view_cart",
+      "variation": "demoapp:frete:resumo",
+      "status": "ok",
+      "checks": [
+        {
+          "field": "screen_name",
+          "expected": "demoapp:frete:resumo",
+          "obtained": "demoapp:frete:resumo",
+          "ok": true
+        },
+        {
+          "field": "flow_name",
+          "expected": "frete-(expresso|economico|agendado)",
+          "obtained": "frete-economico",
+          "ok": true
+        },
+        {
+          "field": "items[0].item_id",
+          "expected": "[preenchido]",
+          "obtained": "SKU-5",
+          "ok": true
+        },
+        {
+          "field": "items[0].quantity",
+          "expected": "[numero]",
+          "obtained": "2",
+          "ok": true
+        },
+        {
+          "field": "items[0].item_category",
+          "expected": "[livros|games]",
+          "obtained": "games",
+          "ok": true
+        }
+      ],
+      "expected": [
+        {
+          "key": "screen_name",
+          "value": "demoapp:frete:resumo"
+        },
+        {
+          "key": "flow_name",
+          "value": "re:frete-(expresso|economico|agendado)"
+        },
+        {
+          "key": "items",
+          "value": "[{\"item_id\": \"[preenchido]\", \"quantity\": \"[numero]\", \"item_category\": \"[livros|games]\"}]"
+        }
+      ],
+      "matched": {
+        "id": 5,
+        "time": "19:00:50.000",
+        "event_name": "view_cart",
+        "params": {
+          "screen_name": "demoapp:frete:resumo",
+          "flow_name": "frete-economico",
+          "items": [
+            {
+              "item_id": "SKU-5",
+              "quantity": "2",
+              "item_category": "games"
+            },
+            {
+              "item_id": "SKU-6",
+              "quantity": "1"
+            }
+          ]
+        }
+      },
+      "occurrences": 1,
+      "older_divergent": 0,
+      "older_divergences": [],
+      "ga_screen": null,
+      "note": null,
+      "divergences": "",
+      "block": "// ECO · view_cart [OK]\n// log 19:00:50.000 · 1 disparo(s)\n{\n  \"screen_name\": \"demoapp:frete:resumo\",  ✓\n  \"flow_name\": \"frete-economico\",  ✓\n  \"items[0].item_id\": \"SKU-5\",  ✓\n  \"items[0].quantity\": \"2\",  ✓\n  \"items[0].item_category\": \"games\"  ✓\n}"
+    },
+    {
+      "id": 9,
+      "card_index": 2,
+      "section": "Resumo",
+      "card_title": "Resumo por fluxo",
+      "flow": "agendado",
+      "flow_label": "AGD · frete-agendado",
+      "event": "view_cart",
+      "variation": "demoapp:frete:resumo",
+      "status": "ok",
+      "checks": [
+        {
+          "field": "screen_name",
+          "expected": "demoapp:frete:resumo",
+          "obtained": "demoapp:frete:resumo",
+          "ok": true
+        },
+        {
+          "field": "flow_name",
+          "expected": "frete-(expresso|economico|agendado)",
+          "obtained": "frete-economico",
+          "ok": true
+        },
+        {
+          "field": "items[0].item_id",
+          "expected": "[preenchido]",
+          "obtained": "SKU-5",
+          "ok": true
+        },
+        {
+          "field": "items[0].quantity",
+          "expected": "[numero]",
+          "obtained": "2",
+          "ok": true
+        },
+        {
+          "field": "items[0].item_category",
+          "expected": "[livros|games]",
+          "obtained": "games",
+          "ok": true
+        }
+      ],
+      "expected": [
+        {
+          "key": "screen_name",
+          "value": "demoapp:frete:resumo"
+        },
+        {
+          "key": "flow_name",
+          "value": "re:frete-(expresso|economico|agendado)"
+        },
+        {
+          "key": "items",
+          "value": "[{\"item_id\": \"[preenchido]\", \"quantity\": \"[numero]\", \"item_category\": \"[livros|games]\"}]"
+        }
+      ],
+      "matched": {
+        "id": 5,
+        "time": "19:00:50.000",
+        "event_name": "view_cart",
+        "params": {
+          "screen_name": "demoapp:frete:resumo",
+          "flow_name": "frete-economico",
+          "items": [
+            {
+              "item_id": "SKU-5",
+              "quantity": "2",
+              "item_category": "games"
+            },
+            {
+              "item_id": "SKU-6",
+              "quantity": "1"
+            }
+          ]
+        }
+      },
+      "occurrences": 1,
+      "older_divergent": 0,
+      "older_divergences": [],
+      "ga_screen": null,
+      "note": null,
+      "divergences": "",
+      "block": "// AGD · view_cart [OK]\n// log 19:00:50.000 · 1 disparo(s)\n{\n  \"screen_name\": \"demoapp:frete:resumo\",  ✓\n  \"flow_name\": \"frete-economico\",  ✓\n  \"items[0].item_id\": \"SKU-5\",  ✓\n  \"items[0].quantity\": \"2\",  ✓\n  \"items[0].item_category\": \"games\"  ✓\n}"
+    }
+  ],
+  "extras": [
+    {
+      "event": "shipping_info",
+      "screen": null,
+      "flow_name": "frete-expresso",
+      "component": null,
+      "detail": null,
+      "count": 1
+    }
+  ],
+  "alerts": [],
+  "observations": "Eventos dos fluxos da spec que nenhum card cobre:\n  • shipping_info · - — 1x\n\nAlertas (app_exception / error_view nas telas da spec):\n  (nenhum)\n\nRegra: cada variação é validada pelo disparo mais recente; '⚠' indica disparos anteriores com divergência diferente.",
+  "markdown": "# Auditoria de Tagueamento — DemoApp Frete (ANDROID)\n\n- Período do log: 16/11 19:00:00 até 19:00:50 (50 s)\n- 3 cards · 10 validações · OK: 5 · Erro: 5 (sendo 3 não disparadas) · Conformidade: 50.0%\n- Plataforma: ANDROID · 6 eventos únicos (0 duplicados removidos de 6 da plataforma; 6 lidos no arquivo)\n\n| Seção | Card | Fluxo | Evento | Variação | Status | Divergências | Horário | Disparos |\n|---|---|---|---|---|---|---|---|---|\n| Frete | Escolha do frete | EXP · frete-expresso | select_shipping | click:confirmar | OK |  | 19:00:00.000 | 1 |\n| Frete | Escolha do frete | EXP · frete-expresso | select_shipping | click:[numero]-dias | OK |  | 19:00:10.000 | 1 |\n| Frete | Escolha do frete | ECO · frete-economico | select_shipping | click:confirmar | ERRO | shipping_tier: obtido normal, esperado economico | 19:00:20.000 | 1 |\n| Frete | Escolha do frete | ECO · frete-economico | select_shipping | click:[numero]-dias | NÃO DISPARADO | Não disparado no log |  | 0 |\n| Frete | Escolha do frete | AGD · frete-agendado | select_shipping | click:confirmar | ERRO | date: obtido 2026-11-20, esperado [data] | 19:00:30.000 | 1 |\n| Frete | Escolha do frete | AGD · frete-agendado | select_shipping | click:[numero]-dias | NÃO DISPARADO | Não disparado no log |  | 0 |\n| Frete | Sem fluxo apesar do texto | - | shipping_info |  | NÃO DISPARADO | Não disparado no log |  | 0 |\n| Resumo | Resumo por fluxo | EXP · frete-expresso | view_cart | demoapp:frete:resumo | OK |  | 19:00:50.000 | 1 |\n| Resumo | Resumo por fluxo | ECO · frete-economico | view_cart | demoapp:frete:resumo | OK |  | 19:00:50.000 | 1 |\n| Resumo | Resumo por fluxo | AGD · frete-agendado | view_cart | demoapp:frete:resumo | OK |  | 19:00:50.000 | 1 |\n\n## Fora da spec / Observações\n\nEventos dos fluxos da spec que nenhum card cobre:\n  • shipping_info · - — 1x\n\nAlertas (app_exception / error_view nas telas da spec):\n  (nenhum)\n\nRegra: cada variação é validada pelo disparo mais recente; '⚠' indica disparos anteriores com divergência diferente.\n",
+  "tsv": "Seção\tCard\tFluxo\tEvento\tVariação\tStatus\tDivergências\tHorário\tDisparos\nFrete\tEscolha do frete\tEXP · frete-expresso\tselect_shipping\tclick:confirmar\tOK\t\t19:00:00.000\t1\nFrete\tEscolha do frete\tEXP · frete-expresso\tselect_shipping\tclick:[numero]-dias\tOK\t\t19:00:10.000\t1\nFrete\tEscolha do frete\tECO · frete-economico\tselect_shipping\tclick:confirmar\tERRO\tshipping_tier: obtido normal, esperado economico\t19:00:20.000\t1\nFrete\tEscolha do frete\tECO · frete-economico\tselect_shipping\tclick:[numero]-dias\tNÃO DISPARADO\tNão disparado no log\t\t0\nFrete\tEscolha do frete\tAGD · frete-agendado\tselect_shipping\tclick:confirmar\tERRO\tdate: obtido 2026-11-20, esperado [data]\t19:00:30.000\t1\nFrete\tEscolha do frete\tAGD · frete-agendado\tselect_shipping\tclick:[numero]-dias\tNÃO DISPARADO\tNão disparado no log\t\t0\nFrete\tSem fluxo apesar do texto\t-\tshipping_info\t\tNÃO DISPARADO\tNão disparado no log\t\t0\nResumo\tResumo por fluxo\tEXP · frete-expresso\tview_cart\tdemoapp:frete:resumo\tOK\t\t19:00:50.000\t1\nResumo\tResumo por fluxo\tECO · frete-economico\tview_cart\tdemoapp:frete:resumo\tOK\t\t19:00:50.000\t1\nResumo\tResumo por fluxo\tAGD · frete-agendado\tview_cart\tdemoapp:frete:resumo\tOK\t\t19:00:50.000\t1\n"
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "time_str": "2026-11-17 00:10:00.000",
+    "event_name": "app_open",
+    "params": {
+      "flow_name": "sessao"
+    },
+    "platform": "ios",
+    "tag": "iOS (Firebase)",
+    "raw_log": "2026-11-17 00:10:00.000 DemoApp[812:4410] [FirebaseAnalytics][I-ACS023073] Logging event: origin, name, params: app, app_open, {...}"
+  },
+  {
+    "time_str": "2026-11-16 23:58:30.000",
+    "event_name": "app_open",
+    "params": {
+      "flow_name": "sessao",
+      "source": "push"
+    },
+    "platform": "ios",
+    "tag": "iOS (Firebase)",
+    "raw_log": "2026-11-16 23:58:30.000 DemoApp[812:4410] [FirebaseAnalytics][I-ACS023073] Logging event: origin, name, params: app, app_open, {...}"
+  },
+  {
+    "time_str": "2026-11-17 00:05:00.000",
+    "event_name": "screen_view",
+    "params": {
+      "flow_name": "sessao",
+      "ga_screen": "demoapp:inicio"
+    },
+    "platform": "ios",
+    "tag": "iOS (Firebase)",
+    "raw_log": "2026-11-17 00:05:00.000 DemoApp[812:4410] [FirebaseAnalytics][I-ACS023073] Logging event: origin, name, params: app, screen_view, {...}"
+  }
+]

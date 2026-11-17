@@ -1,0 +1,15 @@
+{
+  "projeto": "DemoApp Favoritos",
+  "plataforma": "android",
+  "cards": [
+    {
+      "secao": "Favoritos",
+      "evento": "add_to_wishlist",
+      "params": {
+        "screen_name": "demoapp:favoritos:lista",
+        "flow_name": "favoritos",
+        "item_id": "[preenchido]"
+      }
+    }
+  ]
+}

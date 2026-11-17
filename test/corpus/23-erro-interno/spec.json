@@ -1,0 +1,12 @@
+{
+  "projeto": "DemoApp",
+  "plataforma": "android",
+  "cards": [
+    {
+      "evento": "login",
+      "params": {
+        "flow_name": "login"
+      }
+    }
+  ]
+}

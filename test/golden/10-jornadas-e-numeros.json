@@ -1,0 +1,214 @@
+{
+  "spec": {
+    "name": "spec.json",
+    "projeto": "DemoApp Carteira",
+    "versao_especificacao": null,
+    "plataforma": "android",
+    "fluxos": [],
+    "cards": 2,
+    "variants": 2,
+    "sections": [
+      "Carteira"
+    ]
+  },
+  "platform": "android",
+  "source": "file",
+  "log_name": "log.json",
+  "log_stats": {
+    "total_lidos": 4,
+    "da_plataforma": 4,
+    "duplicados": 0,
+    "uteis": 4
+  },
+  "summary": {
+    "total": 2,
+    "ok": 1,
+    "divergent": 1,
+    "missing": 0,
+    "compliance_rate": 50.0,
+    "extras": 1,
+    "alerts": 0
+  },
+  "results": [
+    {
+      "id": 0,
+      "card_index": 0,
+      "section": "Carteira",
+      "card_title": "wallet_balance",
+      "flow": null,
+      "flow_label": null,
+      "event": "wallet_balance",
+      "variation": "",
+      "status": "ok",
+      "checks": [
+        {
+          "field": "flow_name",
+          "expected": "carteira",
+          "obtained": "carteira",
+          "ok": true
+        },
+        {
+          "field": "value",
+          "expected": "10.0",
+          "obtained": "10.0",
+          "ok": true
+        },
+        {
+          "field": "count",
+          "expected": "3",
+          "obtained": "3",
+          "ok": true
+        },
+        {
+          "field": "rate",
+          "expected": "1e-05",
+          "obtained": "1e-05",
+          "ok": true
+        },
+        {
+          "field": "limit",
+          "expected": "1e+16",
+          "obtained": "1e+16",
+          "ok": true
+        }
+      ],
+      "expected": [
+        {
+          "key": "flow_name",
+          "value": "carteira"
+        },
+        {
+          "key": "value",
+          "value": "10.0"
+        },
+        {
+          "key": "count",
+          "value": "3"
+        },
+        {
+          "key": "rate",
+          "value": "1e-05"
+        },
+        {
+          "key": "limit",
+          "value": "1e+16"
+        }
+      ],
+      "matched": {
+        "id": null,
+        "time": "13:00:00.000",
+        "event_name": "wallet_balance",
+        "params": {
+          "flow_name": "carteira",
+          "value": 10.0,
+          "count": 3,
+          "rate": 1e-05,
+          "limit": 1e+16,
+          "big": 12345678901234567890,
+          "nested": {
+            "a": [
+              1,
+              2.5,
+              null,
+              true
+            ]
+          }
+        }
+      },
+      "occurrences": 1,
+      "older_divergent": 0,
+      "older_divergences": [],
+      "ga_screen": null,
+      "note": null,
+      "divergences": "",
+      "block": "// wallet_balance [OK]\n// log 13:00:00.000 · 1 disparo(s)\n{\n  \"flow_name\": \"carteira\",  ✓\n  \"value\": 10.0,  ✓\n  \"count\": 3,  ✓\n  \"rate\": 1e-05,  ✓\n  \"limit\": 1e+16  ✓\n}"
+    },
+    {
+      "id": 1,
+      "card_index": 1,
+      "section": "Carteira",
+      "card_title": "wallet_topup",
+      "flow": null,
+      "flow_label": null,
+      "event": "wallet_topup",
+      "variation": "",
+      "status": "error",
+      "checks": [
+        {
+          "field": "flow_name",
+          "expected": "carteira",
+          "obtained": "carteira",
+          "ok": true
+        },
+        {
+          "field": "value",
+          "expected": "[numero]",
+          "obtained": "25,5",
+          "ok": true
+        },
+        {
+          "field": "approved",
+          "expected": "True",
+          "obtained": "true",
+          "ok": false
+        },
+        {
+          "field": "meta",
+          "expected": "None",
+          "obtained": null,
+          "ok": false
+        }
+      ],
+      "expected": [
+        {
+          "key": "flow_name",
+          "value": "carteira"
+        },
+        {
+          "key": "value",
+          "value": "[numero]"
+        },
+        {
+          "key": "approved",
+          "value": "True"
+        },
+        {
+          "key": "meta",
+          "value": "None"
+        }
+      ],
+      "matched": {
+        "id": 3,
+        "time": "13:00:02.000",
+        "event_name": "wallet_topup",
+        "params": {
+          "flow_name": "carteira",
+          "value": "25,5",
+          "approved": "true",
+          "extra": "a:b"
+        }
+      },
+      "occurrences": 2,
+      "older_divergent": 0,
+      "older_divergences": [],
+      "ga_screen": null,
+      "note": null,
+      "divergences": "approved: obtido true, esperado True; meta: obtido AUSENTE, esperado None",
+      "block": "// wallet_topup [ERRO]\n// log 13:00:02.000 · 2 disparo(s)\n{\n  \"flow_name\": \"carteira\",  ✓\n  \"value\": \"25,5\",  ✓\n  \"approved\": \"true\",  ✗\n    // ↳ esperado: True\n  \"meta\": AUSENTE  ✗\n    // ↳ esperado: None\n}"
+    }
+  ],
+  "extras": [
+    {
+      "event": "wallet_history",
+      "screen": null,
+      "flow_name": "carteira",
+      "component": "7.5",
+      "detail": null,
+      "count": 1
+    }
+  ],
+  "alerts": [],
+  "observations": "Eventos dos fluxos da spec que nenhum card cobre:\n  • wallet_history · - · component=7.5 — 1x\n\nAlertas (app_exception / error_view nas telas da spec):\n  (nenhum)\n\nRegra: cada variação é validada pelo disparo mais recente; '⚠' indica disparos anteriores com divergência diferente.",
+  "markdown": "# Auditoria de Tagueamento — DemoApp Carteira (ANDROID)\n\n- Período do log: 13:00:00 até 13:00:03 (3 s)\n- 2 cards · 2 validações · OK: 1 · Erro: 1 (sendo 0 não disparadas) · Conformidade: 50.0%\n- Plataforma: ANDROID · 4 eventos únicos (0 duplicados removidos de 4 da plataforma; 4 lidos no arquivo)\n\n| Seção | Card | Fluxo | Evento | Variação | Status | Divergências | Horário | Disparos |\n|---|---|---|---|---|---|---|---|---|\n| Carteira | wallet_balance | - | wallet_balance |  | OK |  | 13:00:00.000 | 1 |\n| Carteira | wallet_topup | - | wallet_topup |  | ERRO | approved: obtido true, esperado True; meta: obtido AUSENTE, esperado None | 13:00:02.000 | 2 |\n\n## Fora da spec / Observações\n\nEventos dos fluxos da spec que nenhum card cobre:\n  • wallet_history · - · component=7.5 — 1x\n\nAlertas (app_exception / error_view nas telas da spec):\n  (nenhum)\n\nRegra: cada variação é validada pelo disparo mais recente; '⚠' indica disparos anteriores com divergência diferente.\n",
+  "tsv": "Seção\tCard\tFluxo\tEvento\tVariação\tStatus\tDivergências\tHorário\tDisparos\nCarteira\twallet_balance\t-\twallet_balance\t\tOK\t\t13:00:00.000\t1\nCarteira\twallet_topup\t-\twallet_topup\t\tERRO\tapproved: obtido true, esperado True; meta: obtido AUSENTE, esperado None\t13:00:02.000\t2\n"
+}

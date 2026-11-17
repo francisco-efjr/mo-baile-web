@@ -1,0 +1,65 @@
+{
+  "projeto": "DemoApp",
+  "versao_especificacao": "Spec de tagueamento v1.2",
+  "plataforma": "android",
+  "fluxos": {
+    "retirada": "RET · pedido-retirada",
+    "entrega": "ENT · pedido-entrega"
+  },
+  "cards": [
+    {
+      "secao": "Início",
+      "titulo": "Tela inicial",
+      "evento": "screen_view",
+      "print": "inicio.png",
+      "params": {
+        "screen_name": "demoapp:loja:inicio",
+        "flow_name": "loja"
+      }
+    },
+    {
+      "secao": "Sacola",
+      "titulo": "Botões da sacola",
+      "evento": "interaction_pedido_{fluxo}",
+      "params": {
+        "screen_name": "demoapp:pedido:{fluxo}:sacola",
+        "flow_name": "pedido-{fluxo}",
+        "component": "button"
+      },
+      "variacoes": [
+        {
+          "detail": "click:finalizar"
+        },
+        {
+          "detail": "click:[numero]-itens"
+        }
+      ]
+    },
+    {
+      "secao": "Sacola",
+      "evento": "add_to_cart",
+      "params": {
+        "screen_name": "demoapp:pedido:{fluxo}:sacola",
+        "flow_name": "pedido-{fluxo}",
+        "gift": "[0|1]",
+        "value": "[numero]",
+        "items": [
+          {
+            "item_id": "[preenchido]",
+            "item_name": "produto-{fluxo}"
+          }
+        ]
+      },
+      "params_por_fluxo": {
+        "retirada": {
+          "items": [
+            {
+              "item_id": "SKU-1001"
+            }
+          ]
+        }
+      },
+      "obs": "Conferir o item_id com o catálogo da loja"
+    }
+  ]
+}

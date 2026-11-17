@@ -1,0 +1,10 @@
+{
+  "platform": null,
+  "descricao": "Exemplo do site: OK, divergente, não disparada, fora da spec, alerta, duplicado e disparo antigo, em logcat cru do Android.",
+  "info": {
+    "versao": "2.5.0",
+    "conta": "conta-demo",
+    "cooperativa": "coop-demo",
+    "codigo_usuario": "qa-01"
+  }
+}

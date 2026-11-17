@@ -1,0 +1,4 @@
+{
+  "platform": null,
+  "descricao": "Disparos repetidos (mesmo horário, nome e parâmetros, inclusive em outra ordem) contam uma vez; horário ou valor diferente não é duplicado; virada de dia no logcat."
+}

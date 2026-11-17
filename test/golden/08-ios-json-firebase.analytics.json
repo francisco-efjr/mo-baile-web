@@ -1,0 +1,26 @@
+{
+  "platform": "android",
+  "stats": {
+    "total_lidos": 5,
+    "da_plataforma": 1,
+    "duplicados": 0,
+    "uteis": 1
+  },
+  "events": [
+    {
+      "id": 0,
+      "event_name": "purchase",
+      "params": {
+        "screen_name": "demoapp:checkout:sucesso",
+        "flow_name": "checkout",
+        "transaction_id": "T-999999"
+      },
+      "platform": "android",
+      "raw_log": "11-16 10:01:00.000  4321  4400 V FA-SVC  : Logging event: origin=app,name=purchase,params=Bundle[{screen_name=demoapp:checkout:sucesso, flow_name=checkout, transaction_id=T-999999}]",
+      "time_str": "10:01:00.000",
+      "origin": "app"
+    }
+  ],
+  "tsv": "Hora\tPlataforma\tOrigem\tNome do Evento\tParâmetros Principais\tJSON dos Parâmetros\n10:01:00.000\tANDROID\tapp\tpurchase\tscreen_name: demoapp:checkout:sucesso, flow_name: checkout, transaction_id: T-999999\t{\"screen_name\": \"demoapp:checkout:sucesso\", \"flow_name\": \"checkout\", \"transaction_id\": \"T-999999\"}",
+  "json": "[\n  {\n    \"id\": 0,\n    \"event_name\": \"purchase\",\n    \"params\": {\n      \"screen_name\": \"demoapp:checkout:sucesso\",\n      \"flow_name\": \"checkout\",\n      \"transaction_id\": \"T-999999\"\n    },\n    \"platform\": \"android\",\n    \"raw_log\": \"11-16 10:01:00.000  4321  4400 V FA-SVC  : Logging event: origin=app,name=purchase,params=Bundle[{screen_name=demoapp:checkout:sucesso, flow_name=checkout, transaction_id=T-999999}]\",\n    \"time_str\": \"10:01:00.000\",\n    \"origin\": \"app\"\n  }\n]"
+}

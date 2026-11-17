@@ -1,0 +1,88 @@
+{
+  "spec": {
+    "name": "spec.json",
+    "projeto": "DemoApp Noite",
+    "versao_especificacao": null,
+    "plataforma": "ios",
+    "fluxos": [],
+    "cards": 1,
+    "variants": 1,
+    "sections": [
+      "Sessão"
+    ]
+  },
+  "platform": "ios",
+  "source": "file",
+  "log_name": "log.json",
+  "log_stats": {
+    "total_lidos": 3,
+    "da_plataforma": 3,
+    "duplicados": 0,
+    "uteis": 3
+  },
+  "summary": {
+    "total": 1,
+    "ok": 1,
+    "divergent": 0,
+    "missing": 0,
+    "compliance_rate": 100.0,
+    "extras": 1,
+    "alerts": 0
+  },
+  "results": [
+    {
+      "id": 0,
+      "card_index": 0,
+      "section": "Sessão",
+      "card_title": "app_open",
+      "flow": null,
+      "flow_label": null,
+      "event": "app_open",
+      "variation": "",
+      "status": "ok",
+      "checks": [
+        {
+          "field": "flow_name",
+          "expected": "sessao",
+          "obtained": "sessao",
+          "ok": true
+        }
+      ],
+      "expected": [
+        {
+          "key": "flow_name",
+          "value": "sessao"
+        }
+      ],
+      "matched": {
+        "id": 0,
+        "time": "2026-11-17 00:10:00.000",
+        "event_name": "app_open",
+        "params": {
+          "flow_name": "sessao"
+        }
+      },
+      "occurrences": 2,
+      "older_divergent": 0,
+      "older_divergences": [],
+      "ga_screen": null,
+      "note": null,
+      "divergences": "",
+      "block": "// app_open [OK]\n// log 2026-11-17 00:10:00.000 · 2 disparo(s)\n{\n  \"flow_name\": \"sessao\"  ✓\n}"
+    }
+  ],
+  "extras": [
+    {
+      "event": "screen_view",
+      "screen": "demoapp:inicio",
+      "flow_name": "sessao",
+      "component": null,
+      "detail": null,
+      "count": 1
+    }
+  ],
+  "alerts": [],
+  "observations": "Eventos dos fluxos da spec que nenhum card cobre:\n  • screen_view · demoapp:inicio — 1x\n\nAlertas (app_exception / error_view nas telas da spec):\n  (nenhum)\n\nRegra: cada variação é validada pelo disparo mais recente; '⚠' indica disparos anteriores com divergência diferente.",
+  "markdown": "# Auditoria de Tagueamento — DemoApp Noite (IOS)\n\n- Período do log: 16/11/2026 23:58:30 até 17/11/2026 00:10:00 (11 min)\n- 1 cards · 1 validações · OK: 1 · Erro: 0 (sendo 0 não disparadas) · Conformidade: 100.0%\n- Plataforma: IOS · 3 eventos únicos (0 duplicados removidos de 3 da plataforma; 3 lidos no arquivo)\n\n| Seção | Card | Fluxo | Evento | Variação | Status | Divergências | Horário | Disparos |\n|---|---|---|---|---|---|---|---|---|\n| Sessão | app_open | - | app_open |  | OK |  | 2026-11-17 00:10:00.000 | 2 |\n\n## Fora da spec / Observações\n\nEventos dos fluxos da spec que nenhum card cobre:\n  • screen_view · demoapp:inicio — 1x\n\nAlertas (app_exception / error_view nas telas da spec):\n  (nenhum)\n\nRegra: cada variação é validada pelo disparo mais recente; '⚠' indica disparos anteriores com divergência diferente.\n",
+  "tsv": "Seção\tCard\tFluxo\tEvento\tVariação\tStatus\tDivergências\tHorário\tDisparos\nSessão\tapp_open\t-\tapp_open\t\tOK\t\t2026-11-17 00:10:00.000\t2\n"
+}

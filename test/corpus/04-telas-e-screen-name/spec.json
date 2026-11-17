@@ -1,0 +1,45 @@
+{
+  "projeto": "DemoApp Conta",
+  "plataforma": "android",
+  "cards": [
+    {
+      "secao": "Conta",
+      "titulo": "Perfil",
+      "evento": "screen_view",
+      "params": {
+        "screen_name": "demoapp:conta:perfil",
+        "flow_name": "conta"
+      }
+    },
+    {
+      "secao": "Conta",
+      "titulo": "Salvar perfil",
+      "evento": "interaction_conta",
+      "params": {
+        "screen_name": "demoapp:conta:editar",
+        "flow_name": "conta",
+        "component": "button",
+        "detail": "click:salvar"
+      }
+    },
+    {
+      "secao": "Conta",
+      "titulo": "Sair",
+      "evento": "interaction_conta",
+      "params": {
+        "screen_name": "demoapp:conta:perfil",
+        "flow_name": "conta",
+        "detail": "click:sair"
+      }
+    },
+    {
+      "secao": "Segurança",
+      "evento": "interaction_conta",
+      "params": {
+        "screen_name": "demoapp:conta:seguranca",
+        "flow_name": "conta",
+        "detail": "click:[trocar-senha|biometria]"
+      }
+    }
+  ]
+}

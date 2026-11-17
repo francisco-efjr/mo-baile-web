@@ -1,0 +1,42 @@
+[
+  {
+    "id": 0,
+    "event_name": "login",
+    "params": {
+      "ignorado": "sim"
+    },
+    "platform": "android",
+    "raw_log": "11-16 09:00:00.000  4321  4400 V FA-SVC  : Logging event: origin=app,name=login,params=Bundle[{flow_name=login, method=senha}]",
+    "tag": "FA-SVC",
+    "time_str": "09:00:00.000"
+  },
+  {
+    "time_str": "2026-11-16 09:00:02.000",
+    "event_name": "login",
+    "params": {
+      "flow_name": "login",
+      "method": "biometria"
+    },
+    "platform": "ios",
+    "tag": "iOS (Firebase)",
+    "raw_log": "2026-11-16 09:00:02.000 DemoApp[812:4410] [FirebaseAnalytics][I-ACS023073] Logging event: origin, name, params: app, login, {...}"
+  },
+  {
+    "time_str": "2026-11-16 09:00:03.000",
+    "event_name": "login",
+    "params": {
+      "flow_name": "login",
+      "method": "pin"
+    },
+    "platform": "ios",
+    "tag": "iOS (Firebase)",
+    "raw_log": "2026-11-16 09:00:03.000 DemoApp[812:4410] [FirebaseAnalytics][I-ACS023073] Logging event: origin, name, params: app, login, {...}"
+  },
+  {
+    "event_name": "login",
+    "platform": "unknown",
+    "params": {
+      "flow_name": "login"
+    }
+  }
+]

@@ -1,0 +1,90 @@
+{
+  "spec": {
+    "name": "spec.json",
+    "projeto": "DemoApp Híbrido",
+    "versao_especificacao": null,
+    "plataforma": "android",
+    "fluxos": [],
+    "cards": 1,
+    "variants": 1,
+    "sections": [
+      "Login"
+    ]
+  },
+  "platform": "ios",
+  "source": "file",
+  "log_name": "log.json",
+  "log_stats": {
+    "total_lidos": 4,
+    "da_plataforma": 2,
+    "duplicados": 0,
+    "uteis": 2
+  },
+  "summary": {
+    "total": 1,
+    "ok": 0,
+    "divergent": 1,
+    "missing": 0,
+    "compliance_rate": 0.0,
+    "extras": 0,
+    "alerts": 0
+  },
+  "results": [
+    {
+      "id": 0,
+      "card_index": 0,
+      "section": "Login",
+      "card_title": "login",
+      "flow": null,
+      "flow_label": null,
+      "event": "login",
+      "variation": "",
+      "status": "error",
+      "checks": [
+        {
+          "field": "flow_name",
+          "expected": "login",
+          "obtained": "login",
+          "ok": true
+        },
+        {
+          "field": "method",
+          "expected": "[senha|biometria]",
+          "obtained": "pin",
+          "ok": false
+        }
+      ],
+      "expected": [
+        {
+          "key": "flow_name",
+          "value": "login"
+        },
+        {
+          "key": "method",
+          "value": "[senha|biometria]"
+        }
+      ],
+      "matched": {
+        "id": 2,
+        "time": "2026-11-16 09:00:03.000",
+        "event_name": "login",
+        "params": {
+          "flow_name": "login",
+          "method": "pin"
+        }
+      },
+      "occurrences": 2,
+      "older_divergent": 0,
+      "older_divergences": [],
+      "ga_screen": null,
+      "note": null,
+      "divergences": "method: obtido pin, esperado [senha|biometria]",
+      "block": "// login [ERRO]\n// log 2026-11-16 09:00:03.000 · 2 disparo(s)\n{\n  \"flow_name\": \"login\",  ✓\n  \"method\": \"pin\"  ✗\n    // ↳ esperado: [senha|biometria]\n}"
+    }
+  ],
+  "extras": [],
+  "alerts": [],
+  "observations": "Eventos dos fluxos da spec que nenhum card cobre:\n  (nenhum)\n\nAlertas (app_exception / error_view nas telas da spec):\n  (nenhum)\n\nRegra: cada variação é validada pelo disparo mais recente; '⚠' indica disparos anteriores com divergência diferente.",
+  "markdown": "# Auditoria de Tagueamento — DemoApp Híbrido (IOS)\n\n- Período do log: 16/11/2026 09:00:02 até 09:00:03 (1 s)\n- 1 cards · 1 validações · OK: 0 · Erro: 1 (sendo 0 não disparadas) · Conformidade: 0.0%\n- Plataforma: IOS · 2 eventos únicos (0 duplicados removidos de 2 da plataforma; 4 lidos no arquivo)\n\n| Seção | Card | Fluxo | Evento | Variação | Status | Divergências | Horário | Disparos |\n|---|---|---|---|---|---|---|---|---|\n| Login | login | - | login |  | ERRO | method: obtido pin, esperado [senha\\|biometria] | 2026-11-16 09:00:03.000 | 2 |\n\n## Fora da spec / Observações\n\nEventos dos fluxos da spec que nenhum card cobre:\n  (nenhum)\n\nAlertas (app_exception / error_view nas telas da spec):\n  (nenhum)\n\nRegra: cada variação é validada pelo disparo mais recente; '⚠' indica disparos anteriores com divergência diferente.\n",
+  "tsv": "Seção\tCard\tFluxo\tEvento\tVariação\tStatus\tDivergências\tHorário\tDisparos\nLogin\tlogin\t-\tlogin\t\tERRO\tmethod: obtido pin, esperado [senha|biometria]\t2026-11-16 09:00:03.000\t2\n"
+}

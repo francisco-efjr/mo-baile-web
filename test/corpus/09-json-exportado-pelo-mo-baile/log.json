@@ -1,0 +1,50 @@
+[
+  {
+    "id": 7,
+    "event_name": "notification_open",
+    "params": {
+      "ignorado": "sim"
+    },
+    "platform": "android",
+    "raw_log": "11-16 12:00:00.000  4321  4400 V FA-SVC  : Logging event: origin=app,name=notification_open,params=Bundle[{screen_name=demoapp:notificacoes:central, flow_name=notificacoes, campaign=black-week}]",
+    "tag": "FA-SVC",
+    "time": "12:00:00.000"
+  },
+  {
+    "id": "ev-8",
+    "event_name": "notification_open",
+    "params": {
+      "ignorado": "sim"
+    },
+    "platform": "android",
+    "raw_log": "11-16 12:00:05.000  4321  4400 V FA-SVC  : Logging event: origin=app,name=notification_open,params=Bundle[{screen_name=demoapp:notificacoes:central, flow_name=notificacoes, campaign=}]",
+    "tag": "FA-SVC",
+    "time": "12:00:05.000",
+    "timestamp": 1763301605.0
+  },
+  {
+    "id": 9,
+    "time": "12:00:06.000",
+    "timestamp": 1763301606.5,
+    "platform": "android",
+    "tag": "FA",
+    "event_name": "notification_dismiss(_nd)",
+    "params": {
+      "flow_name(_fn)": "notificacoes",
+      "campaign": " black-week "
+    },
+    "raw_log": "12:00:06.000 sem a linha do SDK"
+  },
+  {
+    "time_str": "2026-11-16 12:00:07.000",
+    "event_name": "notification_open",
+    "params": {
+      "flow_name": "notificacoes",
+      "campaign": "ios"
+    },
+    "platform": "ios",
+    "tag": "iOS (Firebase)",
+    "raw_log": "2026-11-16 12:00:07.000 DemoApp[812:4410] [FirebaseAnalytics][I-ACS023073] Logging event: origin, name, params: app, notification_open, {...}",
+    "id": 10
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "projeto": "DemoApp Windows",
+  "plataforma": "android",
+  "cards": [
+    {
+      "secao": "Configurações",
+      "evento": "interaction_config",
+      "params": {
+        "flow_name": "configuracoes",
+        "detail": "click:notificações",
+        "screen_name": "demoapp:configurações"
+      }
+    }
+  ]
+}

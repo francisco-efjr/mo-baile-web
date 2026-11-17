@@ -1,0 +1,152 @@
+{
+  "spec": {
+    "name": "spec.json",
+    "projeto": "DemoApp Notificações",
+    "versao_especificacao": null,
+    "plataforma": "android",
+    "fluxos": [],
+    "cards": 2,
+    "variants": 2,
+    "sections": [
+      "Notificações"
+    ]
+  },
+  "platform": "android",
+  "source": "file",
+  "log_name": "log.json",
+  "log_stats": {
+    "total_lidos": 4,
+    "da_plataforma": 3,
+    "duplicados": 0,
+    "uteis": 3
+  },
+  "summary": {
+    "total": 2,
+    "ok": 1,
+    "divergent": 1,
+    "missing": 0,
+    "compliance_rate": 50.0,
+    "extras": 0,
+    "alerts": 0
+  },
+  "results": [
+    {
+      "id": 0,
+      "card_index": 0,
+      "section": "Notificações",
+      "card_title": "notification_open",
+      "flow": null,
+      "flow_label": null,
+      "event": "notification_open",
+      "variation": "demoapp:notificacoes:central",
+      "status": "error",
+      "checks": [
+        {
+          "field": "screen_name",
+          "expected": "demoapp:notificacoes:central",
+          "obtained": "demoapp:notificacoes:central",
+          "ok": true
+        },
+        {
+          "field": "flow_name",
+          "expected": "notificacoes",
+          "obtained": "notificacoes",
+          "ok": true
+        },
+        {
+          "field": "campaign",
+          "expected": "[preenchido]",
+          "obtained": "",
+          "ok": false
+        }
+      ],
+      "expected": [
+        {
+          "key": "screen_name",
+          "value": "demoapp:notificacoes:central"
+        },
+        {
+          "key": "flow_name",
+          "value": "notificacoes"
+        },
+        {
+          "key": "campaign",
+          "value": "[preenchido]"
+        }
+      ],
+      "matched": {
+        "id": null,
+        "time": "12:00:05.000",
+        "event_name": "notification_open",
+        "params": {
+          "screen_name": "demoapp:notificacoes:central",
+          "flow_name": "notificacoes",
+          "campaign": ""
+        }
+      },
+      "occurrences": 2,
+      "older_divergent": 0,
+      "older_divergences": [],
+      "ga_screen": null,
+      "note": null,
+      "divergences": "campaign: obtido , esperado [preenchido]",
+      "block": "// notification_open [ERRO]\n// log 12:00:05.000 · 2 disparo(s)\n{\n  \"screen_name\": \"demoapp:notificacoes:central\",  ✓\n  \"flow_name\": \"notificacoes\",  ✓\n  \"campaign\": \"\"  ✗\n    // ↳ esperado: [preenchido]\n}"
+    },
+    {
+      "id": 1,
+      "card_index": 1,
+      "section": "Notificações",
+      "card_title": "notification_dismiss",
+      "flow": null,
+      "flow_label": null,
+      "event": "notification_dismiss",
+      "variation": "",
+      "status": "ok",
+      "checks": [
+        {
+          "field": "flow_name",
+          "expected": "notificacoes",
+          "obtained": "notificacoes",
+          "ok": true
+        },
+        {
+          "field": "campaign",
+          "expected": "[preenchido]",
+          "obtained": "black-week",
+          "ok": true
+        }
+      ],
+      "expected": [
+        {
+          "key": "flow_name",
+          "value": "notificacoes"
+        },
+        {
+          "key": "campaign",
+          "value": "[preenchido]"
+        }
+      ],
+      "matched": {
+        "id": 9,
+        "time": "12:00:06.000",
+        "event_name": "notification_dismiss",
+        "params": {
+          "flow_name": "notificacoes",
+          "campaign": "black-week"
+        }
+      },
+      "occurrences": 1,
+      "older_divergent": 0,
+      "older_divergences": [],
+      "ga_screen": null,
+      "note": null,
+      "divergences": "",
+      "block": "// notification_dismiss [OK]\n// log 12:00:06.000 · 1 disparo(s)\n{\n  \"flow_name\": \"notificacoes\",  ✓\n  \"campaign\": \"black-week\"  ✓\n}"
+    }
+  ],
+  "extras": [],
+  "alerts": [],
+  "observations": "Eventos dos fluxos da spec que nenhum card cobre:\n  (nenhum)\n\nAlertas (app_exception / error_view nas telas da spec):\n  (nenhum)\n\nRegra: cada variação é validada pelo disparo mais recente; '⚠' indica disparos anteriores com divergência diferente.",
+  "markdown": "# Auditoria de Tagueamento — DemoApp Notificações (ANDROID)\n\n- Período do log: 12:00:06 até 16/11 12:00:05\n- 2 cards · 2 validações · OK: 1 · Erro: 1 (sendo 0 não disparadas) · Conformidade: 50.0%\n- Plataforma: ANDROID · 3 eventos únicos (0 duplicados removidos de 3 da plataforma; 4 lidos no arquivo)\n\n| Seção | Card | Fluxo | Evento | Variação | Status | Divergências | Horário | Disparos |\n|---|---|---|---|---|---|---|---|---|\n| Notificações | notification_open | - | notification_open | demoapp:notificacoes:central | ERRO | campaign: obtido , esperado [preenchido] | 12:00:05.000 | 2 |\n| Notificações | notification_dismiss | - | notification_dismiss |  | OK |  | 12:00:06.000 | 1 |\n\n## Fora da spec / Observações\n\nEventos dos fluxos da spec que nenhum card cobre:\n  (nenhum)\n\nAlertas (app_exception / error_view nas telas da spec):\n  (nenhum)\n\nRegra: cada variação é validada pelo disparo mais recente; '⚠' indica disparos anteriores com divergência diferente.\n",
+  "tsv": "Seção\tCard\tFluxo\tEvento\tVariação\tStatus\tDivergências\tHorário\tDisparos\nNotificações\tnotification_open\t-\tnotification_open\tdemoapp:notificacoes:central\tERRO\tcampaign: obtido , esperado [preenchido]\t12:00:05.000\t2\nNotificações\tnotification_dismiss\t-\tnotification_dismiss\t\tOK\t\t12:00:06.000\t1\n"
+}

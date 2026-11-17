@@ -1,0 +1,4 @@
+{
+  "platform": null,
+  "descricao": "JSON com 'jornadas' e valores que não são texto: float 10.0, 1e-05, 1e16, inteiro grande, bool, null e objeto, como o str() e o json.dumps do Python mostram."
+}

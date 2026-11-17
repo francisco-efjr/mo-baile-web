@@ -1,0 +1,7 @@
+{
+  "error": {
+    "stage": "spec",
+    "code": "invalid_input",
+    "message": "A spec spec.json não é um JSON válido (linha 4, coluna 29)."
+  }
+}

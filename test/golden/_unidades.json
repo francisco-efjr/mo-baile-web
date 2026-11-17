@@ -1,0 +1,1501 @@
+{
+  "float_repr": [
+    [
+      "1.0",
+      "1.0"
+    ],
+    [
+      "0.0",
+      "0.0"
+    ],
+    [
+      "-0.0",
+      "-0.0"
+    ],
+    [
+      "1e16",
+      "1e+16"
+    ],
+    [
+      "1e15",
+      "1000000000000000.0"
+    ],
+    [
+      "1e-05",
+      "1e-05"
+    ],
+    [
+      "0.0001",
+      "0.0001"
+    ],
+    [
+      "0.1",
+      "0.1"
+    ],
+    [
+      "2.675",
+      "2.675"
+    ],
+    [
+      "1e22",
+      "1e+22"
+    ],
+    [
+      "5e-324",
+      "5e-324"
+    ],
+    [
+      "1.7976931348623157e308",
+      "1.7976931348623157e+308"
+    ],
+    [
+      "123456.789",
+      "123456.789"
+    ],
+    [
+      "100.0",
+      "100.0"
+    ],
+    [
+      "42.857142857142854",
+      "42.857142857142854"
+    ],
+    [
+      "1.5e-7",
+      "1.5e-07"
+    ],
+    [
+      "12345678901234567.0",
+      "1.2345678901234568e+16"
+    ],
+    [
+      "0.30000000000000004",
+      "0.30000000000000004"
+    ],
+    [
+      "1E5",
+      "100000.0"
+    ],
+    [
+      "-2.5e-10",
+      "-2.5e-10"
+    ]
+  ],
+  "fixed": [
+    [
+      "0.125",
+      2,
+      "0.12"
+    ],
+    [
+      "0.375",
+      2,
+      "0.38"
+    ],
+    [
+      "2.675",
+      2,
+      "2.67"
+    ],
+    [
+      "-0.0",
+      2,
+      "-0.00"
+    ],
+    [
+      "402.1238596594935",
+      2,
+      "402.12"
+    ],
+    [
+      "42.857142857142854",
+      1,
+      "42.9"
+    ],
+    [
+      "66.65",
+      1,
+      "66.7"
+    ],
+    [
+      "0.05",
+      1,
+      "0.1"
+    ],
+    [
+      "0.25",
+      1,
+      "0.2"
+    ],
+    [
+      "0.35",
+      1,
+      "0.3"
+    ],
+    [
+      "99.95",
+      1,
+      "100.0"
+    ],
+    [
+      "100.0",
+      1,
+      "100.0"
+    ],
+    [
+      "0.0",
+      1,
+      "0.0"
+    ],
+    [
+      "57.42",
+      2,
+      "57.42"
+    ],
+    [
+      "1.005",
+      2,
+      "1.00"
+    ],
+    [
+      "229.78506266256772",
+      2,
+      "229.79"
+    ],
+    [
+      "-114.89253133128386",
+      2,
+      "-114.89"
+    ]
+  ],
+  "round1": [
+    [
+      "42.857142857142854",
+      "42.9"
+    ],
+    [
+      "66.65",
+      "66.7"
+    ],
+    [
+      "0.05",
+      "0.1"
+    ],
+    [
+      "0.25",
+      "0.2"
+    ],
+    [
+      "0.35",
+      "0.3"
+    ],
+    [
+      "99.95",
+      "100.0"
+    ],
+    [
+      "14.285714285714286",
+      "14.3"
+    ],
+    [
+      "28.57142857142857",
+      "28.6"
+    ],
+    [
+      "85.71428571428571",
+      "85.7"
+    ],
+    [
+      "0.15",
+      "0.1"
+    ],
+    [
+      "33.33333333333333",
+      "33.3"
+    ],
+    [
+      "16.666666666666664",
+      "16.7"
+    ]
+  ],
+  "json": [
+    [
+      "{\"a\": 1,}",
+      {
+        "msg": "Illegal trailing comma before end of object",
+        "pos": 7,
+        "lineno": 1,
+        "colno": 8
+      }
+    ],
+    [
+      "[1,2,]",
+      {
+        "msg": "Illegal trailing comma before end of array",
+        "pos": 4,
+        "lineno": 1,
+        "colno": 5
+      }
+    ],
+    [
+      "{\"a\" 1}",
+      {
+        "msg": "Expecting ':' delimiter",
+        "pos": 5,
+        "lineno": 1,
+        "colno": 6
+      }
+    ],
+    [
+      "{\"a\": }",
+      {
+        "msg": "Expecting value",
+        "pos": 6,
+        "lineno": 1,
+        "colno": 7
+      }
+    ],
+    [
+      "[1 2]",
+      {
+        "msg": "Expecting ',' delimiter",
+        "pos": 3,
+        "lineno": 1,
+        "colno": 4
+      }
+    ],
+    [
+      "{\"a\":1",
+      {
+        "msg": "Expecting ',' delimiter",
+        "pos": 6,
+        "lineno": 1,
+        "colno": 7
+      }
+    ],
+    [
+      "\"abc",
+      {
+        "msg": "Unterminated string starting at",
+        "pos": 0,
+        "lineno": 1,
+        "colno": 1
+      }
+    ],
+    [
+      "{\"a\":\"x\ny\"}",
+      {
+        "msg": "Invalid control character at",
+        "pos": 7,
+        "lineno": 1,
+        "colno": 8
+      }
+    ],
+    [
+      "01",
+      {
+        "msg": "Extra data",
+        "pos": 1,
+        "lineno": 1,
+        "colno": 2
+      }
+    ],
+    [
+      "{} x",
+      {
+        "msg": "Extra data",
+        "pos": 3,
+        "lineno": 1,
+        "colno": 4
+      }
+    ],
+    [
+      "",
+      {
+        "msg": "Expecting value",
+        "pos": 0,
+        "lineno": 1,
+        "colno": 1
+      }
+    ],
+    [
+      "  ",
+      {
+        "msg": "Expecting value",
+        "pos": 2,
+        "lineno": 1,
+        "colno": 3
+      }
+    ],
+    [
+      "{\"a\": tru}",
+      {
+        "msg": "Expecting value",
+        "pos": 6,
+        "lineno": 1,
+        "colno": 7
+      }
+    ],
+    [
+      "-",
+      {
+        "msg": "Expecting value",
+        "pos": 0,
+        "lineno": 1,
+        "colno": 1
+      }
+    ],
+    [
+      "[-]",
+      {
+        "msg": "Expecting value",
+        "pos": 1,
+        "lineno": 1,
+        "colno": 2
+      }
+    ],
+    [
+      "{\"a\":1,\"b\"}",
+      {
+        "msg": "Expecting ':' delimiter",
+        "pos": 10,
+        "lineno": 1,
+        "colno": 11
+      }
+    ],
+    [
+      "[1,]",
+      {
+        "msg": "Illegal trailing comma before end of array",
+        "pos": 2,
+        "lineno": 1,
+        "colno": 3
+      }
+    ],
+    [
+      "\"\\q\"",
+      {
+        "msg": "Invalid \\escape",
+        "pos": 1,
+        "lineno": 1,
+        "colno": 2
+      }
+    ],
+    [
+      "\"\\u12x4\"",
+      {
+        "msg": "Invalid \\uXXXX escape",
+        "pos": 2,
+        "lineno": 1,
+        "colno": 3
+      }
+    ],
+    [
+      "{,}",
+      {
+        "msg": "Expecting property name enclosed in double quotes",
+        "pos": 1,
+        "lineno": 1,
+        "colno": 2
+      }
+    ],
+    [
+      "{\"a\":1,,}",
+      {
+        "msg": "Expecting property name enclosed in double quotes",
+        "pos": 7,
+        "lineno": 1,
+        "colno": 8
+      }
+    ],
+    [
+      "[",
+      {
+        "msg": "Expecting value",
+        "pos": 1,
+        "lineno": 1,
+        "colno": 2
+      }
+    ],
+    [
+      "{",
+      {
+        "msg": "Expecting property name enclosed in double quotes",
+        "pos": 1,
+        "lineno": 1,
+        "colno": 2
+      }
+    ],
+    [
+      "[ ",
+      {
+        "msg": "Expecting value",
+        "pos": 2,
+        "lineno": 1,
+        "colno": 3
+      }
+    ],
+    [
+      "{ ",
+      {
+        "msg": "Expecting property name enclosed in double quotes",
+        "pos": 2,
+        "lineno": 1,
+        "colno": 3
+      }
+    ],
+    [
+      "{\"a\"",
+      {
+        "msg": "Expecting ':' delimiter",
+        "pos": 4,
+        "lineno": 1,
+        "colno": 5
+      }
+    ],
+    [
+      "{\"a\":",
+      {
+        "msg": "Expecting value",
+        "pos": 5,
+        "lineno": 1,
+        "colno": 6
+      }
+    ],
+    [
+      "[1,",
+      {
+        "msg": "Expecting value",
+        "pos": 3,
+        "lineno": 1,
+        "colno": 4
+      }
+    ],
+    [
+      "\"\\u123",
+      {
+        "msg": "Invalid \\uXXXX escape",
+        "pos": 2,
+        "lineno": 1,
+        "colno": 3
+      }
+    ],
+    [
+      "\"\\ud800\\udc00x\"",
+      {
+        "ok": "\"𐀀x\"",
+        "indent": "\"𐀀x\"",
+        "sorted": "\"𐀀x\""
+      }
+    ],
+    [
+      "nul",
+      {
+        "msg": "Expecting value",
+        "pos": 0,
+        "lineno": 1,
+        "colno": 1
+      }
+    ],
+    [
+      "NaN",
+      {
+        "ok": "NaN",
+        "indent": "NaN",
+        "sorted": "NaN"
+      }
+    ],
+    [
+      "-Infinity",
+      {
+        "ok": "-Infinity",
+        "indent": "-Infinity",
+        "sorted": "-Infinity"
+      }
+    ],
+    [
+      "[1e5, 1E+2, -0, -0.0, 1.5e-7, 12345678901234567890, 1e400, 9007199254740993]",
+      {
+        "ok": "[100000.0, 100.0, 0, -0.0, 1.5e-07, 12345678901234567890, Infinity, 9007199254740993]",
+        "indent": "[\n  100000.0,\n  100.0,\n  0,\n  -0.0,\n  1.5e-07,\n  12345678901234567890,\n  Infinity,\n  9007199254740993\n]",
+        "sorted": "[100000.0, 100.0, 0, -0.0, 1.5e-07, 12345678901234567890, Infinity, 9007199254740993]"
+      }
+    ],
+    [
+      "﻿{}",
+      {
+        "msg": "Unexpected UTF-8 BOM (decode using utf-8-sig)",
+        "pos": 0,
+        "lineno": 1,
+        "colno": 1
+      }
+    ],
+    [
+      "{\"a\":1}\n\n  x",
+      {
+        "msg": "Extra data",
+        "pos": 11,
+        "lineno": 3,
+        "colno": 3
+      }
+    ],
+    [
+      "\"a\u0001\"",
+      {
+        "msg": "Invalid control character at",
+        "pos": 2,
+        "lineno": 1,
+        "colno": 3
+      }
+    ],
+    [
+      "[1,\n  2,\n]",
+      {
+        "msg": "Illegal trailing comma before end of array",
+        "pos": 7,
+        "lineno": 2,
+        "colno": 4
+      }
+    ],
+    [
+      "{\n  \"projeto\": \"x\",\n  \"cards\": [\n    {\"evento\": \"a\",},\n  ]\n}",
+      {
+        "msg": "Illegal trailing comma before end of object",
+        "pos": 51,
+        "lineno": 4,
+        "colno": 19
+      }
+    ],
+    [
+      "{\"🎉\": \"emoji\", \"b\": [1, 2, }",
+      {
+        "msg": "Expecting value",
+        "pos": 27,
+        "lineno": 1,
+        "colno": 28
+      }
+    ],
+    [
+      "{\"z\": 1, \"a\": 2, \"10\": 3, \"2\": 4, \"z\": 5}",
+      {
+        "ok": "{\"z\": 5, \"a\": 2, \"10\": 3, \"2\": 4}",
+        "indent": "{\n  \"z\": 5,\n  \"a\": 2,\n  \"10\": 3,\n  \"2\": 4\n}",
+        "sorted": "{\"10\": 3, \"2\": 4, \"a\": 2, \"z\": 5}"
+      }
+    ],
+    [
+      "1e",
+      {
+        "msg": "Extra data",
+        "pos": 1,
+        "lineno": 1,
+        "colno": 2
+      }
+    ],
+    [
+      "1e+",
+      {
+        "msg": "Extra data",
+        "pos": 1,
+        "lineno": 1,
+        "colno": 2
+      }
+    ],
+    [
+      "1.",
+      {
+        "msg": "Extra data",
+        "pos": 1,
+        "lineno": 1,
+        "colno": 2
+      }
+    ],
+    [
+      ".5",
+      {
+        "msg": "Expecting value",
+        "pos": 0,
+        "lineno": 1,
+        "colno": 1
+      }
+    ],
+    [
+      "[true, false, null, \"\\\"\\\\\\/\\b\\f\\n\\r\\t\"]",
+      {
+        "ok": "[true, false, null, \"\\\"\\\\/\\b\\f\\n\\r\\t\"]",
+        "indent": "[\n  true,\n  false,\n  null,\n  \"\\\"\\\\/\\b\\f\\n\\r\\t\"\n]",
+        "sorted": "[true, false, null, \"\\\"\\\\/\\b\\f\\n\\r\\t\"]"
+      }
+    ],
+    [
+      "{\"a\": [1, {\"b\": [1.0, 2.50, 1e2]}]}",
+      {
+        "ok": "{\"a\": [1, {\"b\": [1.0, 2.5, 100.0]}]}",
+        "indent": "{\n  \"a\": [\n    1,\n    {\n      \"b\": [\n        1.0,\n        2.5,\n        100.0\n      ]\n    }\n  ]\n}",
+        "sorted": "{\"a\": [1, {\"b\": [1.0, 2.5, 100.0]}]}"
+      }
+    ]
+  ],
+  "str": [
+    [
+      "\"texto\"",
+      "texto"
+    ],
+    [
+      "null",
+      "None"
+    ],
+    [
+      "true",
+      "True"
+    ],
+    [
+      "false",
+      "False"
+    ],
+    [
+      "1",
+      "1"
+    ],
+    [
+      "1.0",
+      "1.0"
+    ],
+    [
+      "1e-05",
+      "1e-05"
+    ],
+    [
+      "[\"a\", 1, null, true, 1.5]",
+      "['a', 1, None, True, 1.5]"
+    ],
+    [
+      "{\"k\": \"v\", \"n\": [1, {\"x\": null}]}",
+      "{'k': 'v', 'n': [1, {'x': None}]}"
+    ],
+    [
+      "\"it's\"",
+      "it's"
+    ],
+    [
+      "\"aspas \\\" e 'simples'\"",
+      "aspas \" e 'simples'"
+    ],
+    [
+      "[\"tab\\tbarra\\\\nova\\nlinha\\u0001\\u007f\\u00a0\\u200b\\u2028é😀\"]",
+      "['tab\\tbarra\\\\nova\\nlinha\\x01\\x7f\\xa0\\u200b\\u2028é😀']"
+    ],
+    [
+      "[]",
+      "[]"
+    ],
+    [
+      "{}",
+      "{}"
+    ],
+    [
+      "12345678901234567890",
+      "12345678901234567890"
+    ],
+    [
+      "-0",
+      "0"
+    ],
+    [
+      "[1e16, 1e15, -0.0]",
+      "[1e+16, 1000000000000000.0, -0.0]"
+    ]
+  ],
+  "regex": [
+    [
+      "\\d+",
+      "123",
+      {
+        "full": true,
+        "search": [
+          "123"
+        ]
+      }
+    ],
+    [
+      "\\d+",
+      "١٢٣",
+      {
+        "full": true,
+        "search": [
+          "١٢٣"
+        ]
+      }
+    ],
+    [
+      "\\d+",
+      "12a",
+      {
+        "full": false,
+        "search": [
+          "12"
+        ]
+      }
+    ],
+    [
+      "\\w+",
+      "ação_1",
+      {
+        "full": true,
+        "search": [
+          "ação_1"
+        ]
+      }
+    ],
+    [
+      "\\w+",
+      "a-b",
+      {
+        "full": false,
+        "search": [
+          "a"
+        ]
+      }
+    ],
+    [
+      "\\s+",
+      "  \t",
+      {
+        "full": true,
+        "search": [
+          "  \t"
+        ]
+      }
+    ],
+    [
+      "\\s",
+      "﻿",
+      {
+        "full": false,
+        "search": null
+      }
+    ],
+    [
+      ".+",
+      "a\rb",
+      {
+        "full": true,
+        "search": [
+          "a\rb"
+        ]
+      }
+    ],
+    [
+      ".+",
+      "a\nb",
+      {
+        "full": false,
+        "search": [
+          "a"
+        ]
+      }
+    ],
+    [
+      "(?s).+",
+      "a\nb",
+      {
+        "full": true,
+        "search": [
+          "a\nb"
+        ]
+      }
+    ],
+    [
+      "a$",
+      "a",
+      {
+        "full": true,
+        "search": [
+          "a"
+        ]
+      }
+    ],
+    [
+      "card-[0-9a-f]{4}",
+      "card-1a2b",
+      {
+        "full": true,
+        "search": [
+          "card-1a2b"
+        ]
+      }
+    ],
+    [
+      "card-[0-9a-f]{4}",
+      "card-xyz",
+      {
+        "full": false,
+        "search": null
+      }
+    ],
+    [
+      "[^a-c]+",
+      "xyz",
+      {
+        "full": true,
+        "search": [
+          "xyz"
+        ]
+      }
+    ],
+    [
+      "[\\d-]+",
+      "1-2",
+      {
+        "full": true,
+        "search": [
+          "1-2"
+        ]
+      }
+    ],
+    [
+      "(?i)ABC",
+      "abc",
+      {
+        "full": true,
+        "search": [
+          "abc"
+        ]
+      }
+    ],
+    [
+      "(?i)[a-c]+",
+      "ABC",
+      {
+        "full": true,
+        "search": [
+          "ABC"
+        ]
+      }
+    ],
+    [
+      "a(?i:b)c",
+      "aBc",
+      {
+        "full": true,
+        "search": [
+          "aBc"
+        ]
+      }
+    ],
+    [
+      "a(?i:b)c",
+      "ABc",
+      {
+        "full": false,
+        "search": null
+      }
+    ],
+    [
+      "(?x) a  b # comentário\n c",
+      "abc",
+      {
+        "full": true,
+        "search": [
+          "abc"
+        ]
+      }
+    ],
+    [
+      "x{,3}",
+      "xxx",
+      {
+        "full": true,
+        "search": [
+          "xxx"
+        ]
+      }
+    ],
+    [
+      "x{2,}",
+      "x",
+      {
+        "full": false,
+        "search": null
+      }
+    ],
+    [
+      "{",
+      "{",
+      {
+        "full": true,
+        "search": [
+          "{"
+        ]
+      }
+    ],
+    [
+      "a{b}",
+      "a{b}",
+      {
+        "full": true,
+        "search": [
+          "a{b}"
+        ]
+      }
+    ],
+    [
+      "a{1,2",
+      "a{1,2",
+      {
+        "full": true,
+        "search": [
+          "a{1,2"
+        ]
+      }
+    ],
+    [
+      "(?P<g>ab)(?P=g)",
+      "abab",
+      {
+        "full": true,
+        "search": [
+          "abab",
+          "ab"
+        ]
+      }
+    ],
+    [
+      "(a)\\1",
+      "aa",
+      {
+        "full": true,
+        "search": [
+          "aa",
+          "a"
+        ]
+      }
+    ],
+    [
+      "(?<=ab)c",
+      "c",
+      {
+        "full": false,
+        "search": null
+      }
+    ],
+    [
+      "(?:a|bc)+",
+      "abca",
+      {
+        "full": true,
+        "search": [
+          "abca"
+        ]
+      }
+    ],
+    [
+      "\\bfoo\\b",
+      "foo",
+      {
+        "full": true,
+        "search": [
+          "foo"
+        ]
+      }
+    ],
+    [
+      "[\\w.-]+@[\\w.-]+",
+      "qa@demoapp.test",
+      {
+        "full": true,
+        "search": [
+          "qa@demoapp.test"
+        ]
+      }
+    ],
+    [
+      "\\$\\d+",
+      "$10",
+      {
+        "full": true,
+        "search": [
+          "$10"
+        ]
+      }
+    ],
+    [
+      "[]a]+",
+      "]a]",
+      {
+        "full": true,
+        "search": [
+          "]a]"
+        ]
+      }
+    ],
+    [
+      "[^]a]+",
+      "bc",
+      {
+        "full": true,
+        "search": [
+          "bc"
+        ]
+      }
+    ],
+    [
+      "\\x41\\u00e9\\U0001F600",
+      "Aé😀",
+      {
+        "full": true,
+        "search": [
+          "Aé😀"
+        ]
+      }
+    ],
+    [
+      "\\101",
+      "A",
+      {
+        "full": true,
+        "search": [
+          "A"
+        ]
+      }
+    ],
+    [
+      "a|",
+      "",
+      {
+        "full": true,
+        "search": [
+          ""
+        ]
+      }
+    ],
+    [
+      "^(?:a|ab)$",
+      "ab",
+      {
+        "full": true,
+        "search": [
+          "ab"
+        ]
+      }
+    ],
+    [
+      "(?>a+)b",
+      "aab",
+      {
+        "full": true,
+        "search": [
+          "aab"
+        ]
+      }
+    ],
+    [
+      "a++b",
+      "aab",
+      {
+        "full": true,
+        "search": [
+          "aab"
+        ]
+      }
+    ],
+    [
+      "a*?b",
+      "aab",
+      {
+        "full": true,
+        "search": [
+          "aab"
+        ]
+      }
+    ],
+    [
+      "(abc",
+      "abc",
+      {
+        "erro": "missing ), unterminated subpattern at position 0"
+      }
+    ],
+    [
+      "abc)",
+      "abc",
+      {
+        "erro": "unbalanced parenthesis at position 3"
+      }
+    ],
+    [
+      "[abc",
+      "a",
+      {
+        "erro": "unterminated character set at position 0"
+      }
+    ],
+    [
+      "*a",
+      "a",
+      {
+        "erro": "nothing to repeat at position 0"
+      }
+    ],
+    [
+      "a**",
+      "a",
+      {
+        "erro": "multiple repeat at position 2"
+      }
+    ],
+    [
+      "\\q",
+      "q",
+      {
+        "erro": "bad escape \\q at position 0"
+      }
+    ],
+    [
+      "a{3,1}",
+      "a",
+      {
+        "erro": "min repeat greater than max repeat at position 2"
+      }
+    ],
+    [
+      "[z-a]",
+      "a",
+      {
+        "erro": "bad character range z-a at position 1"
+      }
+    ],
+    [
+      "[\\d-z]",
+      "a",
+      {
+        "erro": "bad character range \\d-z at position 1"
+      }
+    ],
+    [
+      "(?P<1>a)",
+      "a",
+      {
+        "erro": "bad character in group name '1' at position 4"
+      }
+    ],
+    [
+      "(?P=nome)",
+      "a",
+      {
+        "erro": "unknown group name 'nome' at position 4"
+      }
+    ],
+    [
+      "\\2(a)",
+      "a",
+      {
+        "erro": "invalid group reference 2 at position 1"
+      }
+    ],
+    [
+      "(?<=a+)b",
+      "ab",
+      {
+        "erro": "look-behind requires fixed-width pattern"
+      }
+    ],
+    [
+      "abc\\",
+      "abc",
+      {
+        "erro": "bad escape (end of pattern) at position 3"
+      }
+    ],
+    [
+      "(?Q)",
+      "a",
+      {
+        "erro": "unknown extension ?Q at position 1"
+      }
+    ],
+    [
+      "a(?i)b",
+      "ab",
+      {
+        "erro": "global flags not at the start of the expression at position 1"
+      }
+    ],
+    [
+      "x\n(y",
+      "x",
+      {
+        "erro": "missing ), unterminated subpattern at position 2 (line 2, column 1)"
+      }
+    ],
+    [
+      "\\x4",
+      "a",
+      {
+        "erro": "incomplete escape \\x4 at position 0"
+      }
+    ],
+    [
+      "[\\A]",
+      "a",
+      {
+        "erro": "bad escape \\A at position 1"
+      }
+    ],
+    [
+      "(?#comentário",
+      "a",
+      {
+        "erro": "missing ), unterminated comment at position 0"
+      }
+    ],
+    [
+      "^*",
+      "a",
+      {
+        "erro": "nothing to repeat at position 1"
+      }
+    ],
+    [
+      "\\d{2}/\\d{2}/\\d{4}",
+      "01/12/2026",
+      {
+        "full": true,
+        "search": [
+          "01/12/2026"
+        ]
+      }
+    ],
+    [
+      "-?\\d+(?:[.,]\\d+)?",
+      "200,50",
+      {
+        "full": true,
+        "search": [
+          "200,50"
+        ]
+      }
+    ],
+    [
+      "\\(_[a-zA-Z0-9]+\\)$",
+      "x(_vs)",
+      {
+        "full": false,
+        "search": [
+          "(_vs)"
+        ]
+      }
+    ]
+  ],
+  "search": [
+    [
+      "Logging event:\\s*origin=([^,]+),name=([^,]+),params=(Bundle\\[.*\\])\\s*$",
+      "11-16 10:00:00.000 V FA-SVC : Logging event: origin=app,name=screen_view(_vs),params=Bundle[{a=1, b=[Bundle[{c=2}]]}]",
+      [
+        "Logging event: origin=app,name=screen_view(_vs),params=Bundle[{a=1, b=[Bundle[{c=2}]]}]",
+        "app",
+        "screen_view(_vs)",
+        "Bundle[{a=1, b=[Bundle[{c=2}]]}]"
+      ]
+    ],
+    [
+      "^(?:\\d{2}-\\d{2}\\s+)?(\\d{2}:\\d{2}:\\d{2}\\.\\d{3})",
+      "11-16 10:00:00.000 V FA-SVC",
+      [
+        "11-16 10:00:00.000",
+        "10:00:00.000"
+      ]
+    ],
+    [
+      "^(?:(\\d{4})-)?(\\d{2}-\\d{2})\\s",
+      "2026-11-16 10:00",
+      [
+        "2026-11-16 ",
+        "2026",
+        "11-16"
+      ]
+    ],
+    [
+      "^\\s*(?:(?:(\\d{4})-)?(\\d{2})-(\\d{2})[ T]+)?(\\d{2}):(\\d{2}):(\\d{2})",
+      "  2026-11-16T23:59:01.5",
+      [
+        "  2026-11-16T23:59:01",
+        "2026",
+        "11",
+        "16",
+        "23",
+        "59",
+        "01"
+      ]
+    ],
+    [
+      "\\[[^\\[\\]]*\\|[^\\[\\]]*\\]|\\[numero\\]|\\[data\\]|\\[preenchido\\]",
+      "click:[numero]-[a|b]",
+      [
+        "[numero]"
+      ]
+    ],
+    [
+      "(a)|(b)",
+      "b",
+      [
+        "b",
+        null,
+        "b"
+      ]
+    ]
+  ],
+  "textwrap": [
+    [
+      "// ⚠ 5 disparo(s) anterior(es) divergente(s): componente-com-hifen e mais um texto bem comprido para quebrar a linha",
+      [
+        "// ⚠ 5 disparo(s) anterior(es) divergente(s): componente-com-hifen e mais um",
+        "//   texto bem comprido para quebrar a linha"
+      ]
+    ],
+    [
+      "// obs: Conferir o item_id com o catálogo da loja e também a ordem dos parâmetros no painel do Firebase antes de aprovar",
+      [
+        "// obs: Conferir o item_id com o catálogo da loja e também a ordem dos",
+        "//   parâmetros no painel do Firebase antes de aprovar"
+      ]
+    ],
+    [
+      "// RET · interaction_pedido_retirada_com_um_nome_de_evento_muito_comprido_que_nao_tem_espaco_nenhum_no_meio [ERRO]",
+      [
+        "// RET · interaction_pedido_retirada_com_um_nome_de_evento_muito_comprido_que_",
+        "//   nao_tem_espaco_nenhum_no_meio [ERRO]"
+      ]
+    ],
+    [
+      "// obs: texto -- com travessão duplo -- e palavras-compostas-bem-longas-que-podem-quebrar-no-hifen-quando-precisar",
+      [
+        "// obs: texto -- com travessão duplo -- e palavras-compostas-bem-longas-que-",
+        "//   podem-quebrar-no-hifen-quando-precisar"
+      ]
+    ],
+    [
+      "// obs: 🎉🎉🎉 emoji conta como um caractere só 🎉🎉🎉 então a quebra precisa cair no mesmo lugar do Python mesmo",
+      [
+        "// obs: 🎉🎉🎉 emoji conta como um caractere só 🎉🎉🎉 então a quebra precisa cair",
+        "//   no mesmo lugar do Python mesmo"
+      ]
+    ],
+    [
+      "// obs:\ttabulação\tno meio\tdo texto e mais palavras para passar de setenta e oito caracteres no total, ok",
+      [
+        "// obs: tabulação       no meio do texto e mais palavras para passar de",
+        "//   setenta e oito caracteres no total, ok"
+      ]
+    ],
+    [
+      "// obs:    espaço duro no meio de um comentário longo que precisa ser quebrado em mais de uma linha aqui",
+      [
+        "// obs:    espaço duro no meio de um comentário longo que precisa ser quebrado",
+        "//   em mais de uma linha aqui"
+      ]
+    ],
+    [
+      "// --------------------------------------------------------------------------------------------------------------",
+      [
+        "// ---------------------------------------------------------------------------",
+        "//   -----------------------------------"
+      ]
+    ],
+    [
+      "// a",
+      [
+        "// a"
+      ]
+    ]
+  ],
+  "strip": [
+    [
+      " a ",
+      "a"
+    ],
+    [
+      " a　",
+      "a"
+    ],
+    [
+      "﻿a﻿",
+      "﻿a﻿"
+    ],
+    [
+      "\u001ca",
+      "a"
+    ],
+    [
+      "\t\n x \r\u000b\f",
+      "x"
+    ]
+  ],
+  "splitlines": [
+    [
+      "a\nb\r\nc\rd",
+      [
+        "a",
+        "b",
+        "c",
+        "d"
+      ]
+    ],
+    [
+      "a bc\u000bd\fe\u001cf",
+      [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f"
+      ]
+    ],
+    [
+      "fim\n",
+      [
+        "fim"
+      ]
+    ],
+    [
+      "\n\n",
+      [
+        "",
+        ""
+      ]
+    ],
+    [
+      "x\r\n",
+      [
+        "x"
+      ]
+    ]
+  ],
+  "safe_file_stem": [
+    [
+      "DemoApp",
+      "demoapp"
+    ],
+    [
+      "DemoApp Café ☕",
+      "demoapp-cafe"
+    ],
+    [
+      "  ",
+      "spec"
+    ],
+    [
+      "<script>alert(\"x\")</script>",
+      "script-alert-x-script"
+    ],
+    [
+      "Ação & Reação!",
+      "acao-reacao"
+    ],
+    [
+      "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    ]
+  ]
+}
