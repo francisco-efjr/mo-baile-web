@@ -6,7 +6,9 @@
   "license": "MIT",
   "author": "Francisco Edson Ferreira Junior",
   "type": "module",
-  "engines": { "node": ">=20" },
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "build": "vite build",
@@ -14,13 +16,22 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "version:check": "node tools/version.mjs check",
-    "check": "node tools/version.mjs check && tsc --noEmit && vitest run && vite build",
-    "e2e": "playwright test"
+    "check": "node tools/version.mjs check && node tools/ocr/ativos.mjs && tsc --noEmit && vitest run && vite build",
+    "e2e": "playwright test",
+    "ocr:ativos": "node tools/ocr/ativos.mjs",
+    "ocr:cards": "node tools/ocr/cards-ficticios.mjs"
   },
   "devDependencies": {
     "@playwright/test": "1.64.1",
     "typescript": "7.0.2",
     "vite": "7.3.6",
     "vitest": "5.0.5"
+  },
+  "overrides": {
+    "ppu-ocv": "4.0.0"
+  },
+  "dependencies": {
+    "onnxruntime-web": "1.31.1",
+    "ppu-paddle-ocr": "6.6.1"
   }
 }

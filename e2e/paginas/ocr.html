@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<!--CSP-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Teste do OCR</title>
+</head>
+<body>
+<!-- Página só do build de testes (MOBAILE_E2E=1), com a mesma CSP do site. -->
+<input type="file" id="arquivos" multiple accept=".png,.jpg,.jpeg">
+<pre id="estado">aguardando</pre>
+<script type="module" src="./ocr.ts"></script>
+</body>
+</html>

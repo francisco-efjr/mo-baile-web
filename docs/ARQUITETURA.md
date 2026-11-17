@@ -18,6 +18,12 @@ index.html ─ src/main.ts ─ src/ui/        interface (abas Relatório e Analy
   system do Mo baile. Exportar gera um Blob e baixa no navegador.
 - **Relatório HTML exportado:** autocontido, com o mesmo CSS e JS do relatório
   do Mo baile (`src/engine/assets/`), e o conteúdo do log sempre escapado.
+- **OCR dos prints (`src/ocr/`, ADR 0002):** um worker roda o PaddleOCR v6
+  small (ONNX Runtime em WebAssembly) com os modelos servidos pelo próprio
+  site e conferidos pelo sha256. Ele devolve as caixas de texto. Na página, a
+  camada de ajustes (`src/engine/prints/adaptador.ts`) e o leitor de cards
+  (`src/engine/prints/`, com paridade com o Mo baile) montam o rascunho da
+  spec com `rascunhoDosPrints`.
 - **Publicação:** `vite build` gera `dist/`, que a workflow `pages.yml` envia
   ao GitHub Pages quando a tag `vX.Y.Z` sobe.
 

@@ -74,6 +74,15 @@ O resultado só sai igual se o motor guardar o que o Python guarda. Por isso
    macOS: é o PaddleOCR no navegador (ADR 0002), e a mesma pasta pode gerar
    linhas um pouco diferentes. A pasta não tem caminho de disco: `prints_dir`
    e as mensagens de recusa ("Nenhuma imagem em …") usam o nome da pasta.
+   Entram só PNG e JPG, porque o navegador não abre HEIC nem TIFF; esses
+   arquivos ficam de fora, e o motivo aparece na tela.
+
+   Entre o OCR e o leitor de cards, o site tem uma camada que o Mo baile não
+   tem, porque o Vision não precisa dela: os ajustes do PaddleOCR
+   (`src/engine/prints/adaptador.ts`, ADR 0002). Essa camada não é coberta pela
+   paridade com o Mo baile. Ela foi conferida contra o protótipo da fase 0, com
+   linhas idênticas nos 129 prints reais, e `test/ocr.test.ts` cobre cada
+   ajuste.
    Ficam fora o board Excalidraw (`board_auditoria.excalidraw`), o checklist
    em HTML e a edição de cards.
 3. **`source` é sempre `file`.** Não há escuta de Analytics ao vivo nesta versão.

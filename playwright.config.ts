@@ -22,7 +22,8 @@ export default defineConfig({
     { name: "celular", use: { ...devices["Pixel 7"], ...(process.env.CI ? {} : { channel: "chrome" }) } },
   ],
   webServer: {
-    command: `node_modules/.bin/vite build && node_modules/.bin/vite preview --host 127.0.0.1 --port ${porta} --strictPort`,
+    // MOBAILE_E2E=1 inclui a página de teste do OCR; os modelos vêm de tools/ocr/ativos.mjs.
+    command: `node tools/ocr/ativos.mjs && MOBAILE_E2E=1 node_modules/.bin/vite build && node_modules/.bin/vite preview --host 127.0.0.1 --port ${porta} --strictPort`,
     url: `http://127.0.0.1:${porta}/`,
     reuseExistingServer: false,
     timeout: 120_000,

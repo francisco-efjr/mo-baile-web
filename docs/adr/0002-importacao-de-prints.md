@@ -1,7 +1,7 @@
 # ADR 0002 — Importação de prints no navegador
 
 Data: 2026-11-17
-Status: aceito (fase 1 entregue; fases 2 e 3 planejadas)
+Status: aceito (fases 1 e 2 entregues; fase 3, a tela, planejada)
 
 ## Contexto
 
@@ -51,14 +51,46 @@ e em 0,36 s com quatro, sem nenhuma requisição para fora.
    - descartar caixas de ruído.
 
    As dependências novas entram com a aprovação do dono, como pede o AGENTS.md.
-3. **CSP na fase 2:** o OCR precisa buscar os modelos e o runtime no próprio
-   endereço e rodar WebAssembly. Por isso, `connect-src 'none'` passa a
-   `connect-src 'self'`, e `script-src` ganha `'wasm-unsafe-eval'`. A página
-   continua sem terceiros e sem mandar arquivo para lugar nenhum, e o teste da
-   CSP passa a exigir isso.
+3. **CSP:** fica como está. O plano era abrir `connect-src 'self'` e
+   `'wasm-unsafe-eval'` na página, mas a fase 2 mostrou que não é preciso. Um
+   worker carregado de um arquivo do próprio site segue a política que chega
+   com o arquivo dele, não a `<meta>` da página. Isso foi conferido no
+   Chrome, no Firefox e no WebKit: o OCR roda com a página em
+   `connect-src 'none'` e sem `'wasm-unsafe-eval'`.
+
+   O GitHub Pages não manda cabeçalho, então o worker roda sem CSP. Para
+   compensar:
+   - o worker só aceita endereço da mesma origem;
+   - confere o sha256 de cada arquivo antes de usar;
+   - aponta o runtime para o próprio site antes de a biblioteca carregar (ela
+     apontaria para o jsDelivr);
+   - o teste F-10 exige zero requisições para fora.
+
+   Detalhes em `docs/revisao/seguranca-ocr-fase2.md`.
 4. **Fase 3:** tela "Importar prints" na aba Relatório. A pessoa escolhe ou
    arrasta a pasta, revisa as dúvidas com o print ao lado, baixa os três
    arquivos ou audita direto.
+
+## Fase 2, como ficou (17/11/2026)
+
+- **Dependências fixadas:** `ppu-paddle-ocr` 6.6.1, `ppu-ocv` 4.0.0 (por
+  `overrides`) e `onnxruntime-web` 1.31.1, todas publicadas há mais de duas
+  semanas. A 6.6.1 dá as mesmas caixas e o mesmo texto da 6.7.1 medida na
+  fase 0, nos 129 prints.
+- **Modelos:** `src/ocr/manifesto.json` fixa a fonte num commit e cada arquivo
+  pelo sha256. `tools/ocr/ativos.mjs` baixa e confere no build, e o worker
+  confere de novo antes de usar. Os modelos não entram no git.
+- **Runtime:** o `onnxruntime-web` usa o build só de WebAssembly (14,8 MB, sem
+  WebGPU). O binário passa pela mesma conferência.
+- **No navegador (Chrome, um núcleo):**
+  - os 129 prints reais deram 96,8% dos campos iguais aos do Vision, com 91
+    dúvidas contra 109;
+  - cada print levou 1,65 s na mediana e 2,1 s nos 10% mais pesados;
+  - 126 dos 129 cards saíram iguais aos da leitura em Node.
+- **Teste F-10:** nos cards fictícios, a spec do OCR é igual à da leitura
+  perfeita. Passa no Chrome e no Firefox. No WebKit do Playwright, que roda
+  como sessão temporária, a leitura passa, mas o cache não guarda os modelos:
+  eles são baixados de novo a cada vez.
 
 ## Consequências
 
@@ -66,11 +98,14 @@ e em 0,36 s com quatro, sem nenhuma requisição para fora.
   porque o OCR é outro. A revisão das dúvidas continua obrigatória, como já é
   no Mo baile. A regra que monta a spec é a mesma, provada por gabarito.
 - A primeira importação baixa cerca de 46 MB (31 MB de modelo e 15 MB de
-  runtime), guardados pelo navegador para as próximas. Vale testar o modelo
-  compactado (int8) na fase 2.
+  runtime), guardados pelo navegador para as próximas. Comprimido em gzip, o
+  runtime cai para 3,8 MB, mas falta conferir se o GitHub Pages o envia assim.
+  O modelo compactado (int8) fica como melhoria futura.
 - O GitHub Pages não envia os cabeçalhos que liberam vários núcleos no
-  WebAssembly. Sem eles, o OCR roda em um núcleo, a cerca de 1 s por print.
-  Usar um service worker para isolar a página fica para decidir na fase 2.
+  WebAssembly, e por isso o OCR roda em um núcleo, a cerca de 1,65 s por
+  print. Um service worker que isola a página poderia triplicar a velocidade,
+  mas mexe na segurança da página. A decisão fica para depois da tela (fase
+  3), com o tempo medido por quem usa.
 - Uma regra nova no leitor de cards precisa ser medida nos dois OCRs antes de
   entrar. Na fase 0, uma regra testada (linha recuada vira item) piorou um card
   que o Vision acertava.

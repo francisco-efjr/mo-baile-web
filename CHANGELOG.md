@@ -17,6 +17,23 @@ e a numeração segue o [Versionamento Semântico](https://semver.org/lang/pt-BR
   - Conferido também, fora do repositório, sobre 129 prints reais lidos pelo
     Vision e pelo PaddleOCR: o resultado foi idêntico.
   - A tela vem na fase 3, e o OCR no navegador na fase 2 (ADR 0002).
+- **Importação de prints, fase 2 (OCR no navegador):** o PaddleOCR v6 small
+  lê os prints num worker, sem servidor (`src/ocr/`).
+  - Dependências novas, com versão exata: `ppu-paddle-ocr` 6.6.1, `ppu-ocv`
+    4.0.0 e `onnxruntime-web` 1.31.1.
+  - Os modelos (31 MB) e o runtime (15 MB) vêm do próprio site, são
+    conferidos pelo sha256 e ficam guardados no navegador depois da primeira
+    vez.
+  - A biblioteca apontaria o runtime para uma CDN; o site aponta para o
+    próprio endereço.
+  - A CSP da página não mudou.
+  - A camada de ajustes do PaddleOCR (`adaptador.ts`) corrige a margem das
+    caixas, o marcador lido como espaço, os espaços que sobram, o `|` perdido
+    e as caixas de ruído.
+  - O teste F-10 lê cards fictícios no navegador e exige a mesma spec de uma
+    leitura perfeita, sem nenhuma requisição externa. Passa no Chrome e no
+    Firefox; no WebKit, a leitura passa, mas o cache não guarda os modelos.
+  - Revisão de segurança em `docs/revisao/seguranca-ocr-fase2.md`.
 
 ## [0.1.0] - 2026-11-16
 
