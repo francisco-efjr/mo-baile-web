@@ -6,11 +6,17 @@
   <!-- Nada sai do navegador: sem rede (connect-src 'none'), sem CDN. Ver AGENTS.md e SECURITY.md. -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; font-src 'self'; connect-src 'none'; frame-src blob:; worker-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
   <meta name="referrer" content="no-referrer">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Mo baile Web (beta): audite o tagueamento do Firebase Analytics contra a spec, direto no navegador. Seus arquivos não saem dele.">
   <title>Mo baile Web</title>
   <link rel="icon" type="image/png" href="./icon.png">
+  <!-- Estilo em arquivo (sem 'unsafe-inline'), também no servidor de desenvolvimento. -->
+  <link rel="stylesheet" href="./src/styles/app.css">
 </head>
-<body>
-  <div id="app"></div>
+<body class="mb-root">
+  <div id="app">
+    <noscript><p class="mw-sem-js">O Mo baile Web roda no seu navegador e precisa do JavaScript ligado.</p></noscript>
+  </div>
   <script type="module" src="./src/main.ts"></script>
 </body>
 </html>

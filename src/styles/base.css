@@ -1,0 +1,120 @@
+/* Base do site: ajustes de escala para a web, fontes, foco e utilitários. */
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/JetBrainsMono-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/JetBrainsMono-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* O design system mede como um app de Mac (corpo de 13 pt). No navegador, e
+   em Windows e Linux sem SF Pro, o corpo sobe um ponto e as fontes do sistema
+   de cada plataforma entram como reserva. Hierarquia e proporções ficam. */
+:root {
+  --font-ui: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Noto Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, "Noto Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --text-body: 14px; --lh-body: 20px;
+  --text-callout: 13px; --lh-callout: 18px;
+  --text-subheadline: 12px; --lh-subheadline: 16px;
+  --text-footnote: 11px; --lh-footnote: 14px;
+  --text-code: 12.5px; --lh-code: 19px;
+
+  --control-height-regular: 28px;
+  --control-height-small: 24px;
+  --control-height-large: 32px;
+
+  /* O anel de foco do Mo baile, em cor sólida: 3:1 contra o fundo (WCAG 1.4.11). */
+  --focus-ring: #C2456E;
+
+  --mw-max: 1320px;
+  --mw-gutter: clamp(16px, 3vw, 40px);
+  --mw-topo-h: 0px;
+
+  color-scheme: light;
+}
+[data-theme="dark"] { --focus-ring: #F389A9; color-scheme: dark; }
+[data-contrast="high"] { --focus-ring: #8E2A4C; }
+[data-theme="dark"][data-contrast="high"] { --focus-ring: #FFB3C9; }
+
+@media (min-width: 761px) {
+  :root { --mw-topo-h: 92px; }
+  html { scroll-padding-top: calc(var(--mw-topo-h) + 12px); }
+}
+
+/* Alvos maiores para dedo (WCAG 2.5.8 pede 24 px; aqui vai a 40). */
+@media (pointer: coarse) {
+  :root {
+    --control-height-regular: 40px;
+    --control-height-small: 36px;
+    --control-height-large: 44px;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { background: var(--bg-content); -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body { margin: 0; min-height: 100vh; background: var(--bg-content); color: var(--label-primary); }
+.mb-root { user-select: text; cursor: auto; }
+.mb-root [hidden] { display: none !important; }
+h1, h2, h3, h4, p { margin: 0; }
+button { cursor: pointer; }
+button:disabled { cursor: default; }
+img { max-width: 100%; }
+
+.mb-root code {
+  font-family: var(--font-mono);
+  font-size: .9em;
+  padding: 1px 5px;
+  border-radius: var(--radius-chip);
+  background: var(--fill-secondary);
+  overflow-wrap: anywhere;
+}
+
+/* Link dentro de texto corrido: sublinhado, para não depender só da cor (1.4.1). */
+.mb-root p a, .mb-root li a { text-decoration: underline; text-underline-offset: 2px; }
+
+/* Foco: o anel de 3 px do design system, sempre visível pelo teclado. */
+.mb-root :focus-visible { outline: none; box-shadow: 0 0 0 3px var(--focus-ring) !important; }
+.mw-principal:focus, .mw-principal:focus-visible { box-shadow: none !important; }
+[tabindex="-1"]:focus:not(:focus-visible) { box-shadow: none !important; }
+
+.mw-sr {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0; border: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.mw-copia { position: fixed; left: -9999px; top: 0; opacity: 0; pointer-events: none; }
+
+.mw-mono { font-family: var(--font-mono); }
+.mw-num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.mw-ok { color: var(--success); }
+.mw-bad { color: var(--destructive); }
+.mw-spin { width: 14px; height: 14px; margin-right: 6px; vertical-align: -2px; }
+
+/* Botões do site: os do design system, com altura de controle da web. */
+.mw-btn { height: var(--control-height-regular); padding: 0 12px; gap: 6px; }
+.mw-btn.mb-btn--small { height: var(--control-height-small); padding: 0 10px; font-size: var(--text-callout); }
+.mw-btn--grande { height: var(--control-height-large); padding: 0 16px; }
+.mb-btn--plain.mw-btn { padding: 0 10px; }
+.mw-icone-btn { width: var(--control-height-regular); padding: 0; flex: none; }
+.mb-btn .mb-icon { flex: none; }
+
+@media (forced-colors: active) {
+  .mb-btn, .mb-seg__item, .mw-tile, .mb-search, .mw-select, .mw-beta, .mw-dz { border: 1px solid ButtonText; }
+  .mb-seg__item.is-selected, .mw-tile.is-active, .mw-ajuda__link[aria-current="page"] { outline: 2px solid Highlight; }
+  .mb-root :focus-visible { outline: 2px solid Highlight !important; outline-offset: 2px; }
+  .mw-barra { border: 1px solid CanvasText; }
+}

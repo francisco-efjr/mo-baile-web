@@ -1,0 +1,8 @@
+/* Mo baile Web: folha do site. Base: o design system do relatório do Mo baile
+   (tokens .mb-*, paleta Praia clara e escura, Liquid Glass em CSS). Carregada
+   por <link> no index.html, e não por import no JS, para a CSP sem
+   'unsafe-inline' valer também no servidor de desenvolvimento. */
+@import "../engine/assets/design_system.css";
+@import "./base.css";
+@import "./moldura.css";
+@import "./conteudo.css";
