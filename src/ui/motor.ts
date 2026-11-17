@@ -2,17 +2,23 @@
 import type * as engine from "../engine/index";
 import { EngineError, MAX_LOG_BYTES } from "../engine/index";
 import type { exemplo } from "../exemplos/index";
+import type { LeitorDePrints } from "../ocr/index";
 
 export type Motor = Pick<
   typeof engine,
-  "loadSpec" | "specSummary" | "readLog" | "audit" | "exportHtml" | "analyticsFromLog" | "decodeText"
+  "loadSpec" | "specSummary" | "readLog" | "audit" | "exportHtml" | "analyticsFromLog" | "decodeText" | "rascunhoDosPrints"
 >;
 
 export type Exemplo = typeof exemplo;
 
+/** O leitor de prints (OCR no navegador). Na interface, só pelo que ela usa. */
+export type LeitorOcr = Pick<LeitorDePrints, "lerPrints" | "encerrar">;
+
 export interface Dependencias {
   motor: Motor;
   exemplo: Exemplo;
+  /** Cria o leitor de prints (worker do OCR). Só é chamado quando a pessoa lê prints. */
+  criarLeitorOcr: () => LeitorOcr;
 }
 
 /** Texto para a tela: o do motor quando é erro de entrada, senão uma frase genérica. */

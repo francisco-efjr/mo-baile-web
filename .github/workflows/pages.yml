@@ -37,6 +37,11 @@ jobs:
       # npm ci: bug de dependência opcional no npm 11 (CONTRIBUTING). Sem scripts
       # de instalação: nenhuma dependência precisa deles para tipos, testes e build.
       - run: npm install --no-audit --no-fund --ignore-scripts
+      # Modelos do OCR (PaddleOCR v6 small, ~31 MB), conferidos pelo sha256 do manifesto.
+      - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: .cache/ocr
+          key: ocr-${{ hashFiles('src/ocr/manifesto.json') }}
       - run: npm run check
       - uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
       - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0

@@ -1,0 +1,157 @@
+{
+  "nome": "Demo bordas",
+  "spec_name": "demo-bordas.json",
+  "cards": [
+    {
+      "file": "bordas/Y.png",
+      "event": "login",
+      "params": {},
+      "bullets": {
+        "method": [
+          "senha",
+          "biometria"
+        ]
+      },
+      "doubts": []
+    },
+    {
+      "file": "bordas/u.png",
+      "event": "",
+      "params": {},
+      "bullets": {},
+      "doubts": [
+        "nenhum texto lido"
+      ]
+    },
+    {
+      "file": "bordas/v.png",
+      "event": "",
+      "params": {
+        "screen_name": "app:demo:home",
+        "flow_name": "demo"
+      },
+      "bullets": {},
+      "doubts": [
+        "nome do evento não lido"
+      ]
+    },
+    {
+      "file": "bordas/w.png",
+      "event": "",
+      "params": {},
+      "bullets": {},
+      "doubts": [
+        "nenhum texto lido"
+      ]
+    },
+    {
+      "file": "bordas/x.png",
+      "event": "view_item_list",
+      "params": {
+        "items": [
+          {
+            "item_name": "produto-1",
+            "item_id": "id\":\"sku-1",
+            "price": "[numero]",
+            "index": "1"
+          },
+          {
+            "item_name": "produto-2",
+            "item_id": "sku-2",
+            "price": "[numero]",
+            "index": "2",
+            "item_brand": "demo"
+          }
+        ],
+        "item_list_id": "lista-demo"
+      },
+      "bullets": {},
+      "doubts": [
+        "items.item_name: 'Produto-1' lido como 'produto-1'",
+        "items: chave 'item' lida como 'item_id'",
+        "items.item_name: 'Produto-2' lido como 'produto-2'",
+        "items: chave 'itemm_brand' lida como 'item_brand'"
+      ]
+    },
+    {
+      "file": "bordas/z.png",
+      "event": "form_input",
+      "params": {
+        "screen_name": "app:demo:cadastro:[dados|endereco]",
+        "flow_name": "",
+        "campo_extra": "[0|1]",
+        "installment_value": "[valor da parcela]",
+        "component": "[seguro|pedido]",
+        "detail": "click;fechar",
+        "text": "\"Olá, açaí ✨\"",
+        "section": "[avulso|empresa]",
+        "method": "[0|1]",
+        "loan_insurance_value": "[valor do seguro]"
+      },
+      "bullets": {},
+      "doubts": [
+        "parâmetro desconhecido 'campo_extra' (mantido como 'campo_extra')",
+        "screen_name 'app demo cadastro [dados|endereco]' lido como 'app:demo:cadastro:[dados|endereco]' (espaço vira ':')",
+        "valor de 'flow_name' não lido"
+      ]
+    }
+  ],
+  "review": [
+    {
+      "print": "Y.png",
+      "evento": "login",
+      "duvidas": [
+        "method aceita ['senha', 'biometria']; se cada variação usa um valor específico, ajuste em 'variacoes'"
+      ]
+    },
+    {
+      "print": "u.png",
+      "evento": "",
+      "duvidas": [
+        "nenhum texto lido",
+        "card sem nome de evento — preencha 'evento'"
+      ]
+    },
+    {
+      "print": "v.png",
+      "evento": "",
+      "duvidas": [
+        "nome do evento não lido",
+        "card sem nome de evento — preencha 'evento'"
+      ]
+    },
+    {
+      "print": "w.png",
+      "evento": "",
+      "duvidas": [
+        "nenhum texto lido",
+        "card sem nome de evento — preencha 'evento'"
+      ]
+    },
+    {
+      "print": "x.png",
+      "evento": "view_item_list",
+      "duvidas": [
+        "items.item_name: 'Produto-1' lido como 'produto-1'",
+        "items: chave 'item' lida como 'item_id'",
+        "items.item_name: 'Produto-2' lido como 'produto-2'",
+        "items: chave 'itemm_brand' lida como 'item_brand'",
+        "items.item_name: exemplos ['produto-1', 'produto-2'] viraram o padrão 'produto-[numero]'",
+        "items.index: exemplos ['1', '2'] viraram o padrão '[numero]'",
+        "items: a spec mostra 2 itens; só o primeiro é validado"
+      ]
+    },
+    {
+      "print": "z.png",
+      "evento": "form_input",
+      "duvidas": [
+        "parâmetro desconhecido 'campo_extra' (mantido como 'campo_extra')",
+        "screen_name 'app demo cadastro [dados|endereco]' lido como 'app:demo:cadastro:[dados|endereco]' (espaço vira ':')",
+        "valor de 'flow_name' não lido"
+      ]
+    }
+  ],
+  "spec_json": "{\n  \"projeto\": \"Demo bordas\",\n  \"versao_especificacao\": \"Rascunho gerado por OCR — revisar\",\n  \"plataforma\": \"android\",\n  \"prints_dir\": \"bordas\",\n  \"fluxos\": {},\n  \"cards\": [\n    {\n      \"secao\": \"1. geral\",\n      \"titulo\": \"login · geral\",\n      \"print\": \"Y.png\",\n      \"evento\": \"login\",\n      \"params\": {\n        \"method\": \"[senha|biometria]\"\n      }\n    },\n    {\n      \"secao\": \"1. geral\",\n      \"titulo\": \"? · geral\",\n      \"print\": \"u.png\",\n      \"evento\": \"\",\n      \"params\": {}\n    },\n    {\n      \"secao\": \"2. home\",\n      \"titulo\": \"? · home\",\n      \"print\": \"v.png\",\n      \"evento\": \"\",\n      \"params\": {\n        \"screen_name\": \"app:demo:home\",\n        \"flow_name\": \"demo\"\n      }\n    },\n    {\n      \"secao\": \"1. geral\",\n      \"titulo\": \"? · geral\",\n      \"print\": \"w.png\",\n      \"evento\": \"\",\n      \"params\": {}\n    },\n    {\n      \"secao\": \"1. geral\",\n      \"titulo\": \"view_item_list · geral\",\n      \"print\": \"x.png\",\n      \"evento\": \"view_item_list\",\n      \"params\": {\n        \"items\": [\n          {\n            \"item_name\": \"produto-[numero]\",\n            \"item_id\": \"id\\\":\\\"sku-1\",\n            \"price\": \"[numero]\",\n            \"index\": \"[numero]\"\n          }\n        ],\n        \"item_list_id\": \"lista-demo\"\n      }\n    },\n    {\n      \"secao\": \"3. cadastro\",\n      \"titulo\": \"form_input · cadastro\",\n      \"print\": \"z.png\",\n      \"evento\": \"form_input\",\n      \"params\": {\n        \"flow_name\": \"\",\n        \"campo_extra\": \"[0|1]\",\n        \"installment_value\": \"[numero]\",\n        \"component\": \"[seguro|pedido]\",\n        \"detail\": \"click;fechar\",\n        \"text\": \"\\\"Olá, açaí ✨\\\"\",\n        \"section\": \"[avulso|empresa]\",\n        \"method\": \"[0|1]\",\n        \"loan_insurance_value\": \"[numero]\"\n      },\n      \"variacoes\": [\n        {\n          \"screen_name\": \"app:demo:cadastro:dados\"\n        },\n        {\n          \"screen_name\": \"app:demo:cadastro:endereco\"\n        }\n      ]\n    }\n  ]\n}\n",
+  "review_md": "# Revisão do rascunho — Demo bordas\n\n6 prints lidos · 17 ponto(s) para conferir. Corrija direto no JSON e audite de novo na aba Relatório.\n\n## 1. login — `Y.png`\n- ⚠ method aceita ['senha', 'biometria']; se cada variação usa um valor específico, ajuste em 'variacoes'\n\n## 2. (sem evento) — `u.png`\n- ⚠ nenhum texto lido\n- ⚠ card sem nome de evento — preencha 'evento'\n\n## 3. (sem evento) — `v.png`\n- ⚠ nome do evento não lido\n- ⚠ card sem nome de evento — preencha 'evento'\n\n## 4. (sem evento) — `w.png`\n- ⚠ nenhum texto lido\n- ⚠ card sem nome de evento — preencha 'evento'\n\n## 5. view_item_list — `x.png`\n- ⚠ items.item_name: 'Produto-1' lido como 'produto-1'\n- ⚠ items: chave 'item' lida como 'item_id'\n- ⚠ items.item_name: 'Produto-2' lido como 'produto-2'\n- ⚠ items: chave 'itemm_brand' lida como 'item_brand'\n- ⚠ items.item_name: exemplos ['produto-1', 'produto-2'] viraram o padrão 'produto-[numero]'\n- ⚠ items.index: exemplos ['1', '2'] viraram o padrão '[numero]'\n- ⚠ items: a spec mostra 2 itens; só o primeiro é validado\n\n## 6. form_input — `z.png`\n- ⚠ parâmetro desconhecido 'campo_extra' (mantido como 'campo_extra')\n- ⚠ screen_name 'app demo cadastro [dados|endereco]' lido como 'app:demo:cadastro:[dados|endereco]' (espaço vira ':')\n- ⚠ valor de 'flow_name' não lido\n",
+  "checklist_md": "# Checklist · Demo bordas\n\n- Plataforma: ANDROID\n- Gerado em: 16/11/2026 09:30\n- Spec: `demo-bordas.json`\n- Prints: `bordas`\n\nMarque cada item com `[x]` ao conferir. Os itens com ⚠ são do OCR: confira no print e corrija a spec antes de auditar. Para o HTML no padrão do design system, use **Exportar Checklist…** na aba Relatório.\n\n## 1. geral\n\n### login · geral — `Y.png`\n\n**Parâmetros esperados**\n\n- `method`: `[senha|biometria]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: method aceita ['senha', 'biometria']; se cada variação usa um valor específico, ajuste em 'variacoes'\n- [ ] disparo de `login`\n\n### ? · geral — `u.png`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: nenhum texto lido\n- [ ] ⚠ Revisar OCR: card sem nome de evento — preencha 'evento'\n- [ ] disparo de `?`\n\n### ? · geral — `w.png`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: nenhum texto lido\n- [ ] ⚠ Revisar OCR: card sem nome de evento — preencha 'evento'\n- [ ] disparo de `?`\n\n### view_item_list · geral — `x.png`\n\n**Parâmetros esperados**\n\n- `items[0].item_name`: `produto-[numero]`\n- `items[0].item_id`: `id\":\"sku-1`\n- `items[0].price`: `[numero]`\n- `items[0].index`: `[numero]`\n- `item_list_id`: `lista-demo`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: items.item_name: 'Produto-1' lido como 'produto-1'\n- [ ] ⚠ Revisar OCR: items: chave 'item' lida como 'item_id'\n- [ ] ⚠ Revisar OCR: items.item_name: 'Produto-2' lido como 'produto-2'\n- [ ] ⚠ Revisar OCR: items: chave 'itemm_brand' lida como 'item_brand'\n- [ ] ⚠ Revisar OCR: items.item_name: exemplos ['produto-1', 'produto-2'] viraram o padrão 'produto-[numero]'\n- [ ] ⚠ Revisar OCR: items.index: exemplos ['1', '2'] viraram o padrão '[numero]'\n- [ ] ⚠ Revisar OCR: items: a spec mostra 2 itens; só o primeiro é validado\n- [ ] disparo de `view_item_list`\n\n## 2. home\n\n### ? · home — `v.png`\n\n**Parâmetros esperados**\n\n- `screen_name`: `app:demo:home`\n- `flow_name`: `demo`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: nome do evento não lido\n- [ ] ⚠ Revisar OCR: card sem nome de evento — preencha 'evento'\n- [ ] disparo de `?`\n\n## 3. cadastro\n\n### form_input · cadastro — `z.png`\n\n**Parâmetros esperados**\n\n- `flow_name`: *(vazio)*\n- `campo_extra`: `[0|1]`\n- `installment_value`: `[numero]`\n- `component`: `[seguro|pedido]`\n- `detail`: `click;fechar`\n- `text`: `\"Olá, açaí ✨\"`\n- `section`: `[avulso|empresa]`\n- `method`: `[0|1]`\n- `loan_insurance_value`: `[numero]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: parâmetro desconhecido 'campo_extra' (mantido como 'campo_extra')\n- [ ] ⚠ Revisar OCR: screen_name 'app demo cadastro [dados|endereco]' lido como 'app:demo:cadastro:[dados|endereco]' (espaço vira ':')\n- [ ] ⚠ Revisar OCR: valor de 'flow_name' não lido\n- [ ] `screen_name` = `app:demo:cadastro:dados`\n- [ ] `screen_name` = `app:demo:cadastro:endereco`\n"
+}

@@ -1,0 +1,239 @@
+{
+  "nome": "demo-03",
+  "spec_name": "demo-03.json",
+  "cards": [
+    {
+      "file": "demo-03/Captura 11.56.png",
+      "event": "flow_demo_[pf_pj]",
+      "params": {
+        "currency": "[pf|pj]-pre-agendado",
+        "value": "[valor]",
+        "items": [
+          {
+            "item_category": "1000",
+            "item_category3": "[numero]",
+            "item_category5": "[numero]",
+            "item_id": "demo-pf"
+          },
+          {
+            "item_category3": "demo-pf",
+            "item_category": "1001",
+            "item_name": "siulacao",
+            "item_id": "card-2"
+          },
+          {
+            "item_category3": "[numero]",
+            "item_category": "1002",
+            "item_brand": "1002",
+            "item_id": "cord-3"
+          }
+        ],
+        "installment_value": "[elemento]"
+      },
+      "bullets": {},
+      "doubts": [
+        "parâmetro 'ites' lido como 'items'"
+      ]
+    },
+    {
+      "file": "demo-03/Captura 15.16.png",
+      "event": "flow_start",
+      "params": {
+        "flow_name": "demo-pf",
+        "items": [
+          {
+            "item_name": "1000",
+            "item_id": "simulacao",
+            "item_category2": "simulacao"
+          },
+          {
+            "item_id": "1001",
+            "item_category4": "demo-pf",
+            "item_category": "1001"
+          },
+          {
+            "item_id": "simulacao"
+          }
+        ],
+        "operation_type": "[data primeiro vencimento]",
+        "value": "[valor da parcela]"
+      },
+      "bullets": {
+        "screen_name": [
+          "clck:simular",
+          "aprovado",
+          "click:continuar"
+        ],
+        "component": [
+          "button"
+        ]
+      },
+      "doubts": [
+        "parâmetro 'flow0name' lido como 'flow_name'",
+        "items.item_id: 'Simulacao' lido como 'simulacao'",
+        "items.item_id: 'Simulacao' lido como 'simulacao'",
+        "Observação: parâmetro 'sreen_name' lido como 'screen_name'"
+      ]
+    },
+    {
+      "file": "demo-03/Captura 31.20.png",
+      "event": "share",
+      "params": {
+        "installment_value": "BRL",
+        "currency": "BRL",
+        "screen_name": "app:demo:simul:acao",
+        "due_date": "BRL",
+        "value": "[taxa de juros]",
+        "items": [
+          {
+            "item_name": "[numero]",
+            "item_category5": "simulacao",
+            "item_id": "card-1",
+            "item_category": "card-3"
+          },
+          {
+            "item_id": "demo-pf",
+            "item_name": "[numero]",
+            "item_category5": "card-3"
+          },
+          {
+            "item_id": "1002"
+          }
+        ],
+        "component": "[id da transacao]"
+      },
+      "bullets": {
+        "order_status": [
+          "button",
+          "de-mo-pf",
+          "click:10-parcelas",
+          "click:fechar"
+        ]
+      },
+      "doubts": [
+        "parâmetro 'installment value' lido como 'installment_value'",
+        "parâmetro 'scree n_name' lido como 'screen_name'",
+        "parâmetro 'd0e_date' lido como 'due_date'",
+        "screen_name 'app demo simul acao' lido como 'app:demo:simul:acao' (espaço vira ':')",
+        "items.item_category5: 'Simulacao' lido como 'simulacao'",
+        "items: chave 'item__id' lida como 'item_id'",
+        "Observação: parâmetro 'order_status' lido como 'order_status'",
+        "order_status: item 'de mo-pf' lido como 'de-mo-pf'"
+      ]
+    },
+    {
+      "file": "demo-03/Captura 43.35.png",
+      "event": "screen_view",
+      "params": {
+        "installments": "[pf|pj]-pre-agendado",
+        "due_date": "[data primeiro vencimento]",
+        "insurance": "[0|1]"
+      },
+      "bullets": {},
+      "doubts": []
+    },
+    {
+      "file": "demo-03/Captura 52.40.png",
+      "event": "view_demo_[pf_pj]",
+      "params": {
+        "value": "[número de p arcelas]",
+        "detail": "click:[numero]-parcelas"
+      },
+      "bullets": {},
+      "doubts": []
+    },
+    {
+      "file": "demo-03/Captura 83.34.png",
+      "event": "interaction_demo_[pf|pj]",
+      "params": {
+        "flow_name": "demo-[pf|pj]",
+        "items": [
+          {
+            "item_category2": "1000",
+            "item_category4": "[numero]",
+            "item_category5": "simulacao",
+            "item_brand": "card-1",
+            "item_id": "demo-pf"
+          },
+          {
+            "item_category2": "simulacao",
+            "item_id": "simulacao"
+          }
+        ],
+        "operation_type": "[data prime iro vencimento]",
+        "component": "[valor da parcela]",
+        "status_do_pedido": "[valor da parcela]"
+      },
+      "bullets": {},
+      "doubts": [
+        "parâmetro desconhecido 'status do pedido' (mantido como 'status_do_pedido')",
+        "items.item_id: 'Simulacao' lido como 'simulacao'",
+        "Observação: parâmetro 'order_statu s' lido como 'order_statu_s'"
+      ]
+    }
+  ],
+  "review": [
+    {
+      "print": "Captura 11.56.png",
+      "evento": "flow_demo_[pf_pj]",
+      "duvidas": [
+        "parâmetro 'ites' lido como 'items'",
+        "items.item_category: exemplos ['1000', '1001', '1002'] viraram o padrão '[numero]'",
+        "items: a spec mostra 3 itens; só o primeiro é validado",
+        "items: exemplo da spec é do fluxo 'pf'; item_id fixado só para 'pf'"
+      ]
+    },
+    {
+      "print": "Captura 15.16.png",
+      "evento": "flow_start",
+      "duvidas": [
+        "parâmetro 'flow0name' lido como 'flow_name'",
+        "items.item_id: 'Simulacao' lido como 'simulacao'",
+        "items.item_id: 'Simulacao' lido como 'simulacao'",
+        "Observação: parâmetro 'sreen_name' lido como 'screen_name'",
+        "screen_name aceita ['clck:simular', 'aprovado', 'click:continuar']; se cada variação usa um valor específico, ajuste em 'variacoes'",
+        "items: a spec mostra 3 itens; só o primeiro é validado"
+      ]
+    },
+    {
+      "print": "Captura 31.20.png",
+      "evento": "share",
+      "duvidas": [
+        "parâmetro 'installment value' lido como 'installment_value'",
+        "parâmetro 'scree n_name' lido como 'screen_name'",
+        "parâmetro 'd0e_date' lido como 'due_date'",
+        "screen_name 'app demo simul acao' lido como 'app:demo:simul:acao' (espaço vira ':')",
+        "items.item_category5: 'Simulacao' lido como 'simulacao'",
+        "items: chave 'item__id' lida como 'item_id'",
+        "Observação: parâmetro 'order_status' lido como 'order_status'",
+        "order_status: item 'de mo-pf' lido como 'de-mo-pf'",
+        "order_status aceita ['button', 'de-mo-pf', 'click:10-parcelas', 'click:fechar']; se cada variação usa um valor específico, ajuste em 'variacoes'",
+        "items: a spec mostra 3 itens; só o primeiro é validado"
+      ]
+    },
+    {
+      "print": "Captura 43.35.png",
+      "evento": "screen_view",
+      "duvidas": []
+    },
+    {
+      "print": "Captura 52.40.png",
+      "evento": "view_demo_[pf_pj]",
+      "duvidas": []
+    },
+    {
+      "print": "Captura 83.34.png",
+      "evento": "interaction_demo_{fluxo}",
+      "duvidas": [
+        "parâmetro desconhecido 'status do pedido' (mantido como 'status_do_pedido')",
+        "items.item_id: 'Simulacao' lido como 'simulacao'",
+        "Observação: parâmetro 'order_statu s' lido como 'order_statu_s'",
+        "items: a spec mostra 2 itens; só o primeiro é validado",
+        "items: exemplo da spec é do fluxo 'pf'; item_id fixado só para 'pf'"
+      ]
+    }
+  ],
+  "spec_json": "{\n  \"projeto\": \"demo-03\",\n  \"versao_especificacao\": \"Rascunho gerado por OCR — revisar\",\n  \"plataforma\": \"ios\",\n  \"prints_dir\": \"demo-03\",\n  \"fluxos\": {\n    \"pf\": \"pf\",\n    \"pj\": \"pj\"\n  },\n  \"cards\": [\n    {\n      \"secao\": \"1. geral\",\n      \"titulo\": \"flow_demo_[pf_pj] · geral\",\n      \"print\": \"Captura 11.56.png\",\n      \"evento\": \"flow_demo_[pf_pj]\",\n      \"params\": {\n        \"currency\": \"{fluxo}-pre-agendado\",\n        \"value\": \"[numero]\",\n        \"items\": [\n          {\n            \"item_category\": \"[numero]\",\n            \"item_category3\": \"[numero]\",\n            \"item_category5\": \"[numero]\",\n            \"item_id\": \"demo-{fluxo}\"\n          }\n        ],\n        \"installment_value\": \"[preenchido]\"\n      }\n    },\n    {\n      \"secao\": \"1. geral\",\n      \"titulo\": \"flow_start · geral\",\n      \"print\": \"Captura 15.16.png\",\n      \"evento\": \"flow_start\",\n      \"params\": {\n        \"flow_name\": \"demo-pf\",\n        \"items\": [\n          {\n            \"item_name\": \"1000\",\n            \"item_id\": \"simulacao\",\n            \"item_category2\": \"simulacao\"\n          }\n        ],\n        \"operation_type\": \"[data]\",\n        \"value\": \"[numero]\",\n        \"screen_name\": \"[clck:simular|aprovado|click:continuar]\",\n        \"component\": \"button\"\n      }\n    },\n    {\n      \"secao\": \"2. acao\",\n      \"titulo\": \"share · acao\",\n      \"print\": \"Captura 31.20.png\",\n      \"evento\": \"share\",\n      \"params\": {\n        \"installment_value\": \"BRL\",\n        \"currency\": \"BRL\",\n        \"screen_name\": \"app:demo:simul:acao\",\n        \"due_date\": \"BRL\",\n        \"value\": \"[numero]\",\n        \"items\": [\n          {\n            \"item_name\": \"[numero]\",\n            \"item_category5\": \"simulacao\",\n            \"item_id\": \"card-1\",\n            \"item_category\": \"card-3\"\n          }\n        ],\n        \"component\": \"[preenchido]\",\n        \"order_status\": \"[button|de-mo-pf|click:10-parcelas|click:fechar]\"\n      }\n    },\n    {\n      \"secao\": \"1. geral\",\n      \"titulo\": \"screen_view · geral\",\n      \"print\": \"Captura 43.35.png\",\n      \"evento\": \"screen_view\",\n      \"params\": {\n        \"installments\": \"{fluxo}-pre-agendado\",\n        \"due_date\": \"[data]\",\n        \"insurance\": \"[0|1]\"\n      }\n    },\n    {\n      \"secao\": \"1. geral\",\n      \"titulo\": \"view_demo_[pf_pj] · geral\",\n      \"print\": \"Captura 52.40.png\",\n      \"evento\": \"view_demo_[pf_pj]\",\n      \"params\": {\n        \"value\": \"[numero]\",\n        \"detail\": \"click:[numero]-parcelas\"\n      }\n    },\n    {\n      \"secao\": \"1. geral\",\n      \"titulo\": \"interaction_demo_{fluxo} · geral\",\n      \"print\": \"Captura 83.34.png\",\n      \"evento\": \"interaction_demo_{fluxo}\",\n      \"params\": {\n        \"flow_name\": \"demo-{fluxo}\",\n        \"items\": [\n          {\n            \"item_category2\": \"1000\",\n            \"item_category4\": \"[numero]\",\n            \"item_category5\": \"simulacao\",\n            \"item_brand\": \"card-1\",\n            \"item_id\": \"demo-{fluxo}\"\n          }\n        ],\n        \"operation_type\": \"[data]\",\n        \"component\": \"[numero]\",\n        \"status_do_pedido\": \"[numero]\"\n      }\n    }\n  ]\n}\n",
+  "review_md": "# Revisão do rascunho — demo-03\n\n6 prints lidos · 25 ponto(s) para conferir. Corrija direto no JSON e audite de novo na aba Relatório.\n\nFluxos detectados: pf, pj (renomeie os rótulos em 'fluxos' se quiser).\n\n## 1. flow_demo_[pf_pj] — `Captura 11.56.png`\n- ⚠ parâmetro 'ites' lido como 'items'\n- ⚠ items.item_category: exemplos ['1000', '1001', '1002'] viraram o padrão '[numero]'\n- ⚠ items: a spec mostra 3 itens; só o primeiro é validado\n- ⚠ items: exemplo da spec é do fluxo 'pf'; item_id fixado só para 'pf'\n\n## 2. flow_start — `Captura 15.16.png`\n- ⚠ parâmetro 'flow0name' lido como 'flow_name'\n- ⚠ items.item_id: 'Simulacao' lido como 'simulacao'\n- ⚠ items.item_id: 'Simulacao' lido como 'simulacao'\n- ⚠ Observação: parâmetro 'sreen_name' lido como 'screen_name'\n- ⚠ screen_name aceita ['clck:simular', 'aprovado', 'click:continuar']; se cada variação usa um valor específico, ajuste em 'variacoes'\n- ⚠ items: a spec mostra 3 itens; só o primeiro é validado\n\n## 3. share — `Captura 31.20.png`\n- ⚠ parâmetro 'installment value' lido como 'installment_value'\n- ⚠ parâmetro 'scree n_name' lido como 'screen_name'\n- ⚠ parâmetro 'd0e_date' lido como 'due_date'\n- ⚠ screen_name 'app demo simul acao' lido como 'app:demo:simul:acao' (espaço vira ':')\n- ⚠ items.item_category5: 'Simulacao' lido como 'simulacao'\n- ⚠ items: chave 'item__id' lida como 'item_id'\n- ⚠ Observação: parâmetro 'order_status' lido como 'order_status'\n- ⚠ order_status: item 'de mo-pf' lido como 'de-mo-pf'\n- ⚠ order_status aceita ['button', 'de-mo-pf', 'click:10-parcelas', 'click:fechar']; se cada variação usa um valor específico, ajuste em 'variacoes'\n- ⚠ items: a spec mostra 3 itens; só o primeiro é validado\n\n## 4. screen_view — `Captura 43.35.png`\n- ✓ nada a conferir\n\n## 5. view_demo_[pf_pj] — `Captura 52.40.png`\n- ✓ nada a conferir\n\n## 6. interaction_demo_{fluxo} — `Captura 83.34.png`\n- ⚠ parâmetro desconhecido 'status do pedido' (mantido como 'status_do_pedido')\n- ⚠ items.item_id: 'Simulacao' lido como 'simulacao'\n- ⚠ Observação: parâmetro 'order_statu s' lido como 'order_statu_s'\n- ⚠ items: a spec mostra 2 itens; só o primeiro é validado\n- ⚠ items: exemplo da spec é do fluxo 'pf'; item_id fixado só para 'pf'\n",
+  "checklist_md": "# Checklist · demo-03\n\n- Plataforma: IOS\n- Gerado em: 16/11/2026 09:30\n- Spec: `demo-03.json`\n- Prints: `demo-03`\n- Fluxos: pf, pj\n\nMarque cada item com `[x]` ao conferir. Os itens com ⚠ são do OCR: confira no print e corrija a spec antes de auditar. Para o HTML no padrão do design system, use **Exportar Checklist…** na aba Relatório.\n\n## 1. geral\n\n### flow_demo_[pf_pj] · geral — `Captura 11.56.png`\n\n**Parâmetros esperados**\n\n- `currency`: `{fluxo}-pre-agendado`\n- `value`: `[numero]`\n- `items[0].item_category`: `[numero]`\n- `items[0].item_category3`: `[numero]`\n- `items[0].item_category5`: `[numero]`\n- `items[0].item_id`: `demo-{fluxo}`\n- `installment_value`: `[preenchido]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: parâmetro 'ites' lido como 'items'\n- [ ] ⚠ Revisar OCR: items.item_category: exemplos ['1000', '1001', '1002'] viraram o padrão '[numero]'\n- [ ] ⚠ Revisar OCR: items: a spec mostra 3 itens; só o primeiro é validado\n- [ ] ⚠ Revisar OCR: items: exemplo da spec é do fluxo 'pf'; item_id fixado só para 'pf'\n- [ ] fluxo **pf** · disparo de `flow_demo_[pf_pj]`\n- [ ] fluxo **pj** · disparo de `flow_demo_[pf_pj]`\n\n### flow_start · geral — `Captura 15.16.png`\n\n**Parâmetros esperados**\n\n- `flow_name`: `demo-pf`\n- `items[0].item_name`: `1000`\n- `items[0].item_id`: `simulacao`\n- `items[0].item_category2`: `simulacao`\n- `operation_type`: `[data]`\n- `value`: `[numero]`\n- `screen_name`: `[clck:simular|aprovado|click:continuar]`\n- `component`: `button`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: parâmetro 'flow0name' lido como 'flow_name'\n- [ ] ⚠ Revisar OCR: items.item_id: 'Simulacao' lido como 'simulacao'\n- [ ] ⚠ Revisar OCR: items.item_id: 'Simulacao' lido como 'simulacao'\n- [ ] ⚠ Revisar OCR: Observação: parâmetro 'sreen_name' lido como 'screen_name'\n- [ ] ⚠ Revisar OCR: screen_name aceita ['clck:simular', 'aprovado', 'click:continuar']; se cada variação usa um valor específico, ajuste em 'variacoes'\n- [ ] ⚠ Revisar OCR: items: a spec mostra 3 itens; só o primeiro é validado\n- [ ] disparo de `flow_start`\n\n### screen_view · geral — `Captura 43.35.png`\n\n**Parâmetros esperados**\n\n- `installments`: `{fluxo}-pre-agendado`\n- `due_date`: `[data]`\n- `insurance`: `[0|1]`\n\n**Conferir**\n\n- [ ] fluxo **pf** · disparo de `screen_view`\n- [ ] fluxo **pj** · disparo de `screen_view`\n\n### view_demo_[pf_pj] · geral — `Captura 52.40.png`\n\n**Parâmetros esperados**\n\n- `value`: `[numero]`\n- `detail`: `click:[numero]-parcelas`\n\n**Conferir**\n\n- [ ] disparo de `view_demo_[pf_pj]`\n\n### interaction_demo_{fluxo} · geral — `Captura 83.34.png`\n\n**Parâmetros esperados**\n\n- `flow_name`: `demo-{fluxo}`\n- `items[0].item_category2`: `1000`\n- `items[0].item_category4`: `[numero]`\n- `items[0].item_category5`: `simulacao`\n- `items[0].item_brand`: `card-1`\n- `items[0].item_id`: `demo-{fluxo}`\n- `operation_type`: `[data]`\n- `component`: `[numero]`\n- `status_do_pedido`: `[numero]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: parâmetro desconhecido 'status do pedido' (mantido como 'status_do_pedido')\n- [ ] ⚠ Revisar OCR: items.item_id: 'Simulacao' lido como 'simulacao'\n- [ ] ⚠ Revisar OCR: Observação: parâmetro 'order_statu s' lido como 'order_statu_s'\n- [ ] ⚠ Revisar OCR: items: a spec mostra 2 itens; só o primeiro é validado\n- [ ] ⚠ Revisar OCR: items: exemplo da spec é do fluxo 'pf'; item_id fixado só para 'pf'\n- [ ] fluxo **pf** · disparo de `interaction_demo_{fluxo}`\n- [ ] fluxo **pj** · disparo de `interaction_demo_{fluxo}`\n\n## 2. acao\n\n### share · acao — `Captura 31.20.png`\n\n**Parâmetros esperados**\n\n- `installment_value`: `BRL`\n- `currency`: `BRL`\n- `screen_name`: `app:demo:simul:acao`\n- `due_date`: `BRL`\n- `value`: `[numero]`\n- `items[0].item_name`: `[numero]`\n- `items[0].item_category5`: `simulacao`\n- `items[0].item_id`: `card-1`\n- `items[0].item_category`: `card-3`\n- `component`: `[preenchido]`\n- `order_status`: `[button|de-mo-pf|click:10-parcelas|click:fechar]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: parâmetro 'installment value' lido como 'installment_value'\n- [ ] ⚠ Revisar OCR: parâmetro 'scree n_name' lido como 'screen_name'\n- [ ] ⚠ Revisar OCR: parâmetro 'd0e_date' lido como 'due_date'\n- [ ] ⚠ Revisar OCR: screen_name 'app demo simul acao' lido como 'app:demo:simul:acao' (espaço vira ':')\n- [ ] ⚠ Revisar OCR: items.item_category5: 'Simulacao' lido como 'simulacao'\n- [ ] ⚠ Revisar OCR: items: chave 'item__id' lida como 'item_id'\n- [ ] ⚠ Revisar OCR: Observação: parâmetro 'order_status' lido como 'order_status'\n- [ ] ⚠ Revisar OCR: order_status: item 'de mo-pf' lido como 'de-mo-pf'\n- [ ] ⚠ Revisar OCR: order_status aceita ['button', 'de-mo-pf', 'click:10-parcelas', 'click:fechar']; se cada variação usa um valor específico, ajuste em 'variacoes'\n- [ ] ⚠ Revisar OCR: items: a spec mostra 3 itens; só o primeiro é validado\n- [ ] disparo de `share`\n"
+}

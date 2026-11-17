@@ -1,0 +1,179 @@
+{
+  "nome": "demo-18",
+  "spec_name": "demo-18.json",
+  "cards": [
+    {
+      "file": "demo-18/Captura 26.41.png",
+      "event": "select_item",
+      "params": {
+        "operation_type": "[valor da parcela]",
+        "detail": "click:[numero]-parcelas",
+        "items": [
+          {
+            "item_name": "[numero]",
+            "item_category2": "[numero]",
+            "item_id": "demo-mensal"
+          }
+        ],
+        "currency": "RL",
+        "installment_value": "[data primeiro vencimento]"
+      },
+      "bullets": {},
+      "doubts": [
+        "evento '@ selecl_item' lido como 'select_item'"
+      ]
+    },
+    {
+      "file": "demo-18/Captura 50.35.png",
+      "event": "add_to_cart",
+      "params": {
+        "flow_name": "demo-[mensal|anual]",
+        "items": [
+          {
+            "item_brand": "card-1",
+            "item_category5": "1000",
+            "item_category3": "[numero]",
+            "item_id": "1000",
+            "item_category4": "[numero]"
+          },
+          {
+            "item_brand": "card-2",
+            "item_category5": "card-2",
+            "item_id": "simulacao"
+          }
+        ],
+        "installment_value": "texto livre",
+        "currency": "[id da tr ansacao]",
+        "insurance": "[0|1]",
+        "detail": "click:continuar",
+        "campo_novo": "[id da transacao]"
+      },
+      "bullets": {},
+      "doubts": [
+        "parâmetro desconhecido 'campo_novo' (mantido como 'campo_novo')",
+        "evento 'O add_ to_cart' lido como 'add_to_cart'"
+      ]
+    },
+    {
+      "file": "demo-18/Captura 74.56.png",
+      "event": "view_item_list",
+      "params": {
+        "flow_name": "demo-[mensal|anual]",
+        "component": "[data primeiro vencime nto]",
+        "due_date": "[valor]",
+        "installments": "texto livre",
+        "value": "",
+        "insurance": "[0|1]",
+        "items": [
+          {
+            "item_id": "card-1",
+            "item_name": "[numero]",
+            "item_brand": "1001"
+          },
+          {
+            "item_id": "[numero]"
+          }
+        ]
+      },
+      "bullets": {
+        "order_status": [
+          "button",
+          "modal",
+          "demo-mensal",
+          "click:10-parcelas"
+        ]
+      },
+      "doubts": [
+        "parâmetro 'insallment_v' lido como 'installments'",
+        "parâmetro 'alue' lido como 'value'",
+        "valor de 'value' não lido",
+        "Observação: parâmetro 'order_status' lido como 'order_status'"
+      ]
+    },
+    {
+      "file": "demo-18/Captura 81.26.png",
+      "event": "error_view",
+      "params": {
+        "component": "eRL",
+        "screen_name": "app:demo:[detalhe|termos-e-condicoes]",
+        "items": [
+          {
+            "item_category5": "[numero]",
+            "item_category2": "1000",
+            "item_category3": "simulacao",
+            "item_id": "[numero]"
+          },
+          {
+            "item_category5": "card-2",
+            "item_category2": "card-2",
+            "item_id": "simulacao",
+            "item_category": "demo-mensal",
+            "item_brand": "[preenchido]"
+          },
+          {
+            "item_id": "simulacao"
+          }
+        ],
+        "currency": "[nome do produto]",
+        "insurance": "[0|1]",
+        "detail": "click:cont inuar"
+      },
+      "bullets": {
+        "flow_name": [
+          "button",
+          "click:12-parcelas",
+          "clic0:fechar"
+        ]
+      },
+      "doubts": [
+        "parâmetro 'compnent' lido como 'component'",
+        "parâmetro 'currenca' lido como 'currency'"
+      ]
+    }
+  ],
+  "review": [
+    {
+      "print": "Captura 26.41.png",
+      "evento": "select_item",
+      "duvidas": [
+        "evento '@ selecl_item' lido como 'select_item'"
+      ]
+    },
+    {
+      "print": "Captura 50.35.png",
+      "evento": "add_to_cart",
+      "duvidas": [
+        "parâmetro desconhecido 'campo_novo' (mantido como 'campo_novo')",
+        "evento 'O add_ to_cart' lido como 'add_to_cart'",
+        "items.item_brand: exemplos ['card-1', 'card-2'] viraram o padrão 'card-[numero]'",
+        "items: a spec mostra 2 itens; só o primeiro é validado"
+      ]
+    },
+    {
+      "print": "Captura 74.56.png",
+      "evento": "view_item_list",
+      "duvidas": [
+        "parâmetro 'insallment_v' lido como 'installments'",
+        "parâmetro 'alue' lido como 'value'",
+        "valor de 'value' não lido",
+        "Observação: parâmetro 'order_status' lido como 'order_status'",
+        "order_status aceita ['button', 'modal', 'demo-mensal', 'click:10-parcelas']; se cada variação usa um valor específico, ajuste em 'variacoes'",
+        "items: a spec mostra 2 itens; só o primeiro é validado",
+        "order_status='[button|modal|demo-mensal|click:10-parcelas]' cita o fluxo 'mensal' fixo num card por fluxo — confira"
+      ]
+    },
+    {
+      "print": "Captura 81.26.png",
+      "evento": "error_view",
+      "duvidas": [
+        "parâmetro 'compnent' lido como 'component'",
+        "parâmetro 'currenca' lido como 'currency'",
+        "flow_name aceita ['button', 'click:12-parcelas', 'clic0:fechar']; se cada variação usa um valor específico, ajuste em 'variacoes'",
+        "items: a spec mostra 3 itens; só o primeiro é validado"
+      ]
+    }
+  ],
+  "spec_json": "{\n  \"projeto\": \"demo-18\",\n  \"versao_especificacao\": \"Rascunho gerado por OCR — revisar\",\n  \"plataforma\": \"ios\",\n  \"prints_dir\": \"demo-18\",\n  \"fluxos\": {\n    \"mensal\": \"mensal\",\n    \"anual\": \"anual\"\n  },\n  \"cards\": [\n    {\n      \"secao\": \"1. geral\",\n      \"titulo\": \"select_item · geral\",\n      \"print\": \"Captura 26.41.png\",\n      \"evento\": \"select_item\",\n      \"params\": {\n        \"operation_type\": \"[numero]\",\n        \"detail\": \"click:[numero]-parcelas\",\n        \"items\": [\n          {\n            \"item_name\": \"[numero]\",\n            \"item_category2\": \"[numero]\",\n            \"item_id\": \"demo-mensal\"\n          }\n        ],\n        \"currency\": \"RL\",\n        \"installment_value\": \"[data]\"\n      }\n    },\n    {\n      \"secao\": \"1. geral\",\n      \"titulo\": \"add_to_cart · geral\",\n      \"print\": \"Captura 50.35.png\",\n      \"evento\": \"add_to_cart\",\n      \"params\": {\n        \"flow_name\": \"demo-{fluxo}\",\n        \"items\": [\n          {\n            \"item_brand\": \"card-[numero]\",\n            \"item_category5\": \"1000\",\n            \"item_category3\": \"[numero]\",\n            \"item_id\": \"1000\",\n            \"item_category4\": \"[numero]\"\n          }\n        ],\n        \"installment_value\": \"texto livre\",\n        \"currency\": \"[preenchido]\",\n        \"insurance\": \"[0|1]\",\n        \"detail\": \"click:continuar\",\n        \"campo_novo\": \"[preenchido]\"\n      }\n    },\n    {\n      \"secao\": \"1. geral\",\n      \"titulo\": \"view_item_list · geral\",\n      \"print\": \"Captura 74.56.png\",\n      \"evento\": \"view_item_list\",\n      \"params\": {\n        \"flow_name\": \"demo-{fluxo}\",\n        \"component\": \"[data]\",\n        \"due_date\": \"[numero]\",\n        \"installments\": \"texto livre\",\n        \"value\": \"\",\n        \"insurance\": \"[0|1]\",\n        \"items\": [\n          {\n            \"item_id\": \"card-1\",\n            \"item_name\": \"[numero]\",\n            \"item_brand\": \"1001\"\n          }\n        ],\n        \"order_status\": \"[button|modal|demo-mensal|click:10-parcelas]\"\n      }\n    },\n    {\n      \"secao\": \"2. demo\",\n      \"titulo\": \"error_view · demo\",\n      \"print\": \"Captura 81.26.png\",\n      \"evento\": \"error_view\",\n      \"params\": {\n        \"component\": \"eRL\",\n        \"items\": [\n          {\n            \"item_category5\": \"[numero]\",\n            \"item_category2\": \"1000\",\n            \"item_category3\": \"simulacao\",\n            \"item_id\": \"[numero]\"\n          }\n        ],\n        \"currency\": \"[preenchido]\",\n        \"insurance\": \"[0|1]\",\n        \"detail\": \"click:cont inuar\",\n        \"flow_name\": \"[button|click:12-parcelas|clic0:fechar]\"\n      },\n      \"variacoes\": [\n        {\n          \"screen_name\": \"app:demo:detalhe\"\n        },\n        {\n          \"screen_name\": \"app:demo:termos-e-condicoes\"\n        }\n      ]\n    }\n  ]\n}\n",
+  "review_md": "# Revisão do rascunho — demo-18\n\n4 prints lidos · 16 ponto(s) para conferir. Corrija direto no JSON e audite de novo na aba Relatório.\n\nFluxos detectados: mensal, anual (renomeie os rótulos em 'fluxos' se quiser).\n\n## 1. select_item — `Captura 26.41.png`\n- ⚠ evento '@ selecl_item' lido como 'select_item'\n\n## 2. add_to_cart — `Captura 50.35.png`\n- ⚠ parâmetro desconhecido 'campo_novo' (mantido como 'campo_novo')\n- ⚠ evento 'O add_ to_cart' lido como 'add_to_cart'\n- ⚠ items.item_brand: exemplos ['card-1', 'card-2'] viraram o padrão 'card-[numero]'\n- ⚠ items: a spec mostra 2 itens; só o primeiro é validado\n\n## 3. view_item_list — `Captura 74.56.png`\n- ⚠ parâmetro 'insallment_v' lido como 'installments'\n- ⚠ parâmetro 'alue' lido como 'value'\n- ⚠ valor de 'value' não lido\n- ⚠ Observação: parâmetro 'order_status' lido como 'order_status'\n- ⚠ order_status aceita ['button', 'modal', 'demo-mensal', 'click:10-parcelas']; se cada variação usa um valor específico, ajuste em 'variacoes'\n- ⚠ items: a spec mostra 2 itens; só o primeiro é validado\n- ⚠ order_status='[button|modal|demo-mensal|click:10-parcelas]' cita o fluxo 'mensal' fixo num card por fluxo — confira\n\n## 4. error_view — `Captura 81.26.png`\n- ⚠ parâmetro 'compnent' lido como 'component'\n- ⚠ parâmetro 'currenca' lido como 'currency'\n- ⚠ flow_name aceita ['button', 'click:12-parcelas', 'clic0:fechar']; se cada variação usa um valor específico, ajuste em 'variacoes'\n- ⚠ items: a spec mostra 3 itens; só o primeiro é validado\n",
+  "checklist_md": "# Checklist · demo-18\n\n- Plataforma: IOS\n- Gerado em: 16/11/2026 09:30\n- Spec: `demo-18.json`\n- Prints: `demo-18`\n- Fluxos: mensal, anual\n\nMarque cada item com `[x]` ao conferir. Os itens com ⚠ são do OCR: confira no print e corrija a spec antes de auditar. Para o HTML no padrão do design system, use **Exportar Checklist…** na aba Relatório.\n\n## 1. geral\n\n### select_item · geral — `Captura 26.41.png`\n\n**Parâmetros esperados**\n\n- `operation_type`: `[numero]`\n- `detail`: `click:[numero]-parcelas`\n- `items[0].item_name`: `[numero]`\n- `items[0].item_category2`: `[numero]`\n- `items[0].item_id`: `demo-mensal`\n- `currency`: `RL`\n- `installment_value`: `[data]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: evento '@ selecl_item' lido como 'select_item'\n- [ ] disparo de `select_item`\n\n### add_to_cart · geral — `Captura 50.35.png`\n\n**Parâmetros esperados**\n\n- `flow_name`: `demo-{fluxo}`\n- `items[0].item_brand`: `card-[numero]`\n- `items[0].item_category5`: `1000`\n- `items[0].item_category3`: `[numero]`\n- `items[0].item_id`: `1000`\n- `items[0].item_category4`: `[numero]`\n- `installment_value`: `texto livre`\n- `currency`: `[preenchido]`\n- `insurance`: `[0|1]`\n- `detail`: `click:continuar`\n- `campo_novo`: `[preenchido]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: parâmetro desconhecido 'campo_novo' (mantido como 'campo_novo')\n- [ ] ⚠ Revisar OCR: evento 'O add_ to_cart' lido como 'add_to_cart'\n- [ ] ⚠ Revisar OCR: items.item_brand: exemplos ['card-1', 'card-2'] viraram o padrão 'card-[numero]'\n- [ ] ⚠ Revisar OCR: items: a spec mostra 2 itens; só o primeiro é validado\n- [ ] fluxo **mensal** · disparo de `add_to_cart`\n- [ ] fluxo **anual** · disparo de `add_to_cart`\n\n### view_item_list · geral — `Captura 74.56.png`\n\n**Parâmetros esperados**\n\n- `flow_name`: `demo-{fluxo}`\n- `component`: `[data]`\n- `due_date`: `[numero]`\n- `installments`: `texto livre`\n- `value`: *(vazio)*\n- `insurance`: `[0|1]`\n- `items[0].item_id`: `card-1`\n- `items[0].item_name`: `[numero]`\n- `items[0].item_brand`: `1001`\n- `order_status`: `[button|modal|demo-mensal|click:10-parcelas]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: parâmetro 'insallment_v' lido como 'installments'\n- [ ] ⚠ Revisar OCR: parâmetro 'alue' lido como 'value'\n- [ ] ⚠ Revisar OCR: valor de 'value' não lido\n- [ ] ⚠ Revisar OCR: Observação: parâmetro 'order_status' lido como 'order_status'\n- [ ] ⚠ Revisar OCR: order_status aceita ['button', 'modal', 'demo-mensal', 'click:10-parcelas']; se cada variação usa um valor específico, ajuste em 'variacoes'\n- [ ] ⚠ Revisar OCR: items: a spec mostra 2 itens; só o primeiro é validado\n- [ ] ⚠ Revisar OCR: order_status='[button|modal|demo-mensal|click:10-parcelas]' cita o fluxo 'mensal' fixo num card por fluxo — confira\n- [ ] fluxo **mensal** · disparo de `view_item_list`\n- [ ] fluxo **anual** · disparo de `view_item_list`\n\n## 2. demo\n\n### error_view · demo — `Captura 81.26.png`\n\n**Parâmetros esperados**\n\n- `component`: `eRL`\n- `items[0].item_category5`: `[numero]`\n- `items[0].item_category2`: `1000`\n- `items[0].item_category3`: `simulacao`\n- `items[0].item_id`: `[numero]`\n- `currency`: `[preenchido]`\n- `insurance`: `[0|1]`\n- `detail`: `click:cont inuar`\n- `flow_name`: `[button|click:12-parcelas|clic0:fechar]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: parâmetro 'compnent' lido como 'component'\n- [ ] ⚠ Revisar OCR: parâmetro 'currenca' lido como 'currency'\n- [ ] ⚠ Revisar OCR: flow_name aceita ['button', 'click:12-parcelas', 'clic0:fechar']; se cada variação usa um valor específico, ajuste em 'variacoes'\n- [ ] ⚠ Revisar OCR: items: a spec mostra 3 itens; só o primeiro é validado\n- [ ] `screen_name` = `app:demo:detalhe`\n- [ ] `screen_name` = `app:demo:termos-e-condicoes`\n"
+}

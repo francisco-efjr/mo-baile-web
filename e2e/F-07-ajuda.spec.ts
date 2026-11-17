@@ -1,13 +1,13 @@
 import { expect, test } from "@playwright/test";
 import { abrir } from "./apoio";
 
-const GUIAS = ["Começando", "Relatório", "Analytics", "Relatar um Problema"];
+const GUIAS = ["Começando", "Relatório", "Importar Prints do Figma", "Analytics", "Relatar um Problema"];
 const SECOES = ["O que é", "Quando usar", "Passo a passo", "Exemplo prático", "Recursos", "Problemas comuns"];
 
 test("F-07 ajuda: lista os guias e abre cada um com as seis seções", async ({ page }) => {
   await abrir(page, "Ajuda");
   const nav = page.getByRole("navigation", { name: "Guias da Ajuda" });
-  await expect(nav.getByRole("link")).toHaveCount(4);
+  await expect(nav.getByRole("link")).toHaveCount(5);
 
   // Guia padrão
   await expect(nav.getByRole("link", { name: "Começando" })).toHaveAttribute("aria-current", "page");

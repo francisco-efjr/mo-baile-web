@@ -1,0 +1,35 @@
+{
+  "versao": 1,
+  "modelo": "PP-OCRv6 small (PaddleOCR, Apache-2.0), convertido para ONNX Runtime pela ppu-paddle-ocr",
+  "fonte": "https://huggingface.co/snowfluke/ppu-paddle-ocr-models/resolve/3cbb26882389013ed863b66a78e52376b5ff0f0a/",
+  "modelos": [
+    {
+      "papel": "deteccao",
+      "nome": "PP-OCRv6_small_det.ort",
+      "caminho": "detection/ort/PP-OCRv6_small_det.ort",
+      "bytes": 9982352,
+      "sha256": "c21be8d8268f0f45e2693b1d52432a290a56d008f6c1ff28b4baa7c35bab250e"
+    },
+    {
+      "papel": "reconhecimento",
+      "nome": "PP-OCRv6_small_rec.ort",
+      "caminho": "recognition/ort/PP-OCRv6_small_rec.ort",
+      "bytes": 21290816,
+      "sha256": "40bccd9fa3ae2d14d724bf9d020c8f0edfc801489477b92f7449162a538366df"
+    },
+    {
+      "papel": "dicionario",
+      "nome": "ppocrv6_dict.txt",
+      "caminho": "recognition/ppocrv6_dict.txt",
+      "bytes": 74948,
+      "sha256": "41557512862dfe31970cf22407742b629725461dd84c0d8771bde9c87c2202c8"
+    }
+  ],
+  "runtime": {
+    "pacote": "onnxruntime-web",
+    "versao": "1.31.1",
+    "arquivo": "ort-wasm-simd-threaded.wasm",
+    "bytes": 14848852,
+    "sha256": "4b884c203b0fa48d057be3332c65513ff85aa3c5bddd6946acc0fab7ecda001d"
+  }
+}

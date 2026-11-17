@@ -1,0 +1,71 @@
+{
+  "nome": "demo",
+  "spec_name": "demo.json",
+  "cards": [
+    {
+      "file": "demo-24/Captura 41.36.png",
+      "event": "add_payment_info",
+      "params": {
+        "detail": "click:[numero]-parcelas",
+        "flow_name": "demo",
+        "items": [
+          {
+            "item_category5": "simulacao",
+            "item_id": "simulacao"
+          },
+          {
+            "item_category5": "card-2",
+            "item_category2": "simulacao",
+            "item_id": "simulacao"
+          }
+        ],
+        "insurance": "[0|1]",
+        "campo_novo": "[label do b otao]"
+      },
+      "bullets": {},
+      "doubts": [
+        "parâmetro 'flow__name' lido como 'flow_name'",
+        "parâmetro desconhecido 'campo_novo' (mantido como 'campo_novo')",
+        "items.item_category5: 'Simulacao' lido como 'simulacao'",
+        "items.item_id: 'Simulacao' lido como 'simulacao'"
+      ]
+    },
+    {
+      "file": "demo-24/Captura 44.21.png",
+      "event": "form_input",
+      "params": {
+        "insurance": "[0|1]",
+        "installments": "[label do botao]",
+        "flow_name": "demo",
+        "installment_value": "[data primeiro vencimento]"
+      },
+      "bullets": {},
+      "doubts": [
+        "parâmetro 'insuranc' lido como 'insurance'"
+      ]
+    }
+  ],
+  "review": [
+    {
+      "print": "Captura 41.36.png",
+      "evento": "add_payment_info",
+      "duvidas": [
+        "parâmetro 'flow__name' lido como 'flow_name'",
+        "parâmetro desconhecido 'campo_novo' (mantido como 'campo_novo')",
+        "items.item_category5: 'Simulacao' lido como 'simulacao'",
+        "items.item_id: 'Simulacao' lido como 'simulacao'",
+        "items: a spec mostra 2 itens; só o primeiro é validado"
+      ]
+    },
+    {
+      "print": "Captura 44.21.png",
+      "evento": "form_input",
+      "duvidas": [
+        "parâmetro 'insuranc' lido como 'insurance'"
+      ]
+    }
+  ],
+  "spec_json": "{\n  \"projeto\": \"demo\",\n  \"versao_especificacao\": \"Rascunho gerado por OCR — revisar\",\n  \"plataforma\": \"ios\",\n  \"prints_dir\": \"demo-24\",\n  \"fluxos\": {},\n  \"cards\": [\n    {\n      \"secao\": \"1. geral\",\n      \"titulo\": \"add_payment_info · geral\",\n      \"print\": \"Captura 41.36.png\",\n      \"evento\": \"add_payment_info\",\n      \"params\": {\n        \"detail\": \"click:[numero]-parcelas\",\n        \"flow_name\": \"demo\",\n        \"items\": [\n          {\n            \"item_category5\": \"simulacao\",\n            \"item_id\": \"simulacao\"\n          }\n        ],\n        \"insurance\": \"[0|1]\",\n        \"campo_novo\": \"[preenchido]\"\n      }\n    },\n    {\n      \"secao\": \"1. geral\",\n      \"titulo\": \"form_input · geral\",\n      \"print\": \"Captura 44.21.png\",\n      \"evento\": \"form_input\",\n      \"params\": {\n        \"insurance\": \"[0|1]\",\n        \"installments\": \"[preenchido]\",\n        \"flow_name\": \"demo\",\n        \"installment_value\": \"[data]\"\n      }\n    }\n  ]\n}\n",
+  "review_md": "# Revisão do rascunho — demo\n\n2 prints lidos · 6 ponto(s) para conferir. Corrija direto no JSON e audite de novo na aba Relatório.\n\n## 1. add_payment_info — `Captura 41.36.png`\n- ⚠ parâmetro 'flow__name' lido como 'flow_name'\n- ⚠ parâmetro desconhecido 'campo_novo' (mantido como 'campo_novo')\n- ⚠ items.item_category5: 'Simulacao' lido como 'simulacao'\n- ⚠ items.item_id: 'Simulacao' lido como 'simulacao'\n- ⚠ items: a spec mostra 2 itens; só o primeiro é validado\n\n## 2. form_input — `Captura 44.21.png`\n- ⚠ parâmetro 'insuranc' lido como 'insurance'\n",
+  "checklist_md": "# Checklist · demo\n\n- Plataforma: IOS\n- Gerado em: 16/11/2026 09:30\n- Spec: `demo.json`\n- Prints: `demo-24`\n\nMarque cada item com `[x]` ao conferir. Os itens com ⚠ são do OCR: confira no print e corrija a spec antes de auditar. Para o HTML no padrão do design system, use **Exportar Checklist…** na aba Relatório.\n\n## 1. geral\n\n### add_payment_info · geral — `Captura 41.36.png`\n\n**Parâmetros esperados**\n\n- `detail`: `click:[numero]-parcelas`\n- `flow_name`: `demo`\n- `items[0].item_category5`: `simulacao`\n- `items[0].item_id`: `simulacao`\n- `insurance`: `[0|1]`\n- `campo_novo`: `[preenchido]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: parâmetro 'flow__name' lido como 'flow_name'\n- [ ] ⚠ Revisar OCR: parâmetro desconhecido 'campo_novo' (mantido como 'campo_novo')\n- [ ] ⚠ Revisar OCR: items.item_category5: 'Simulacao' lido como 'simulacao'\n- [ ] ⚠ Revisar OCR: items.item_id: 'Simulacao' lido como 'simulacao'\n- [ ] ⚠ Revisar OCR: items: a spec mostra 2 itens; só o primeiro é validado\n- [ ] disparo de `add_payment_info`\n\n### form_input · geral — `Captura 44.21.png`\n\n**Parâmetros esperados**\n\n- `insurance`: `[0|1]`\n- `installments`: `[preenchido]`\n- `flow_name`: `demo`\n- `installment_value`: `[data]`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: parâmetro 'insuranc' lido como 'insurance'\n- [ ] disparo de `form_input`\n"
+}

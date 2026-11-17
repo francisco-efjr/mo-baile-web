@@ -1,0 +1,9 @@
+{
+  "nome": "DemoApp",
+  "spec_name": "demoapp.json",
+  "cards": [],
+  "review": [],
+  "spec_json": "{\n  \"projeto\": \"DemoApp\",\n  \"versao_especificacao\": \"Rascunho gerado por OCR — revisar\",\n  \"plataforma\": \"android\",\n  \"prints_dir\": \"vazia\",\n  \"fluxos\": {},\n  \"cards\": []\n}\n",
+  "review_md": "# Revisão do rascunho — DemoApp\n\n0 prints lidos · 0 ponto(s) para conferir. Corrija direto no JSON e audite de novo na aba Relatório.\n",
+  "checklist_md": "# Checklist · DemoApp\n\n- Plataforma: ANDROID\n- Gerado em: 16/11/2026 09:30\n- Spec: `demoapp.json`\n- Prints: `vazia`\n\nMarque cada item com `[x]` ao conferir. Os itens com ⚠ são do OCR: confira no print e corrija a spec antes de auditar. Para o HTML no padrão do design system, use **Exportar Checklist…** na aba Relatório.\n"
+}

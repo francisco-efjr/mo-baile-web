@@ -1,0 +1,223 @@
+{
+  "nome": "demo-15",
+  "spec_name": "demo-15.json",
+  "cards": [
+    {
+      "file": "demo-15/Captura 14.32.png",
+      "event": "sign_up",
+      "params": {
+        "items": [
+          {
+            "item_category3": "card-1",
+            "item_category4": "[numero]",
+            "item_id": "[numero]",
+            "item_category5": "[numero]"
+          },
+          {
+            "item_id": "[numero]",
+            "item_category": "card-2"
+          },
+          {
+            "item_id": "[numero]",
+            "item_name": "[numero]",
+            "item_category4": "demo-novo",
+            "item_category": "demo-novo"
+          },
+          {
+            "item_id": "card-3"
+          }
+        ],
+        "installments": "[taxa de ju ros]",
+        "detail": "lick:fechar",
+        "value": "texto livre"
+      },
+      "bullets": {},
+      "doubts": [
+        "parâmetro 'vaue' lido como 'value'",
+        "evento 'S  sign_u' lido como 'sign_up'"
+      ]
+    },
+    {
+      "file": "demo-15/Captura 16.10.png",
+      "event": "view_item_list",
+      "params": {
+        "currency": "[data primeiro vencime nto]"
+      },
+      "bullets": {
+        "detail": [
+          "click:fechar"
+        ]
+      },
+      "doubts": []
+    },
+    {
+      "file": "demo-15/Captura 16.47.png",
+      "event": "add_to_cart",
+      "params": {
+        "insurance": "[0|1]",
+        "currency": "[id da transacao]",
+        "installments": "BRL",
+        "detail": "click:[numero]-parcelas"
+      },
+      "bullets": {},
+      "doubts": []
+    },
+    {
+      "file": "demo-15/Captura 42.42.png",
+      "event": "select_item",
+      "params": {
+        "insurance": "[0|1]",
+        "items": [
+          {
+            "item_category3": "1000",
+            "item_name": "card-1",
+            "item_category5": "demo-novo",
+            "item_id": "1000",
+            "item_category2": "card-2"
+          },
+          {
+            "item_category5": "simulacao",
+            "item_id": "0\"1001"
+          }
+        ],
+        "component": "[taxa de juro s]",
+        "ditail": "click:[numero]-parcelas"
+      },
+      "bullets": {},
+      "doubts": [
+        "parâmetro desconhecido 'dItail' (mantido como 'ditail')"
+      ]
+    },
+    {
+      "file": "demo-15/Captura 61.54.png",
+      "event": "sign_up",
+      "params": {
+        "flow_name": "demo[novo|usado]",
+        "installment_value": "[novo|usado]-pre-agen dado",
+        "items": [
+          {
+            "item_id": "1000",
+            "item_category5": "demo-novo",
+            "item_category4": "[numero]",
+            "item_category2": "simulacao"
+          },
+          {
+            "item_id": "demo-novo"
+          }
+        ]
+      },
+      "bullets": {
+        "order_status": [
+          "aprovado",
+          "click:continuar",
+          "click:fechaa"
+        ],
+        "flow_name": [
+          "click:ver-detalhes"
+        ]
+      },
+      "doubts": [
+        "parâmetro desconhecido 'iIstallment_va' (mantido como 'iistallment_va')",
+        "Observação: parâmetro 'order status' lido como 'order_status'"
+      ]
+    },
+    {
+      "file": "demo-15/Captura 62.33.png",
+      "event": "share",
+      "params": {
+        "operation_type": "[valor da parcela]",
+        "installments": "[id da transacao]",
+        "iteml": "item_id:\"1000\", item_category4:\"simulacao\", \"item_name\":\"demo-novo\", *item_category5*:\"card-1\", *item_id*:\"simulacao\", } \"item_category5\":\"1001\", item_id:\"simulacao\", *item_id*:\"(taxa)\", 'item_cate gory4':\"card-3\", 'item_category5':\"[valor bruto]\", 'item_id':\"(taxa)\", }"
+      },
+      "bullets": {},
+      "doubts": [
+        "parâmetro desconhecido 'iteml' (mantido como 'iteml')"
+      ]
+    },
+    {
+      "file": "demo-15/Captura 67.14.png",
+      "event": "add_to_cart",
+      "params": {
+        "installment_value": "[valor da parcela]",
+        "flow_name": "demo-[novo|usado]",
+        "": "[valor da parcela]"
+      },
+      "bullets": {
+        "component": [
+          "click:fechar"
+        ],
+        "flow_name": [
+          "click:sim-ular",
+          "click:10-parcelas"
+        ]
+      },
+      "doubts": [
+        "parâmetro desconhecido '' (mantido como '')",
+        "Observação: parâmetro 'cmponent' lido como 'component'",
+        "component: item 'click.fechar' lido como 'click:fechar'",
+        "flow_name: item 'click:sim ular' lido como 'click:sim-ular'"
+      ]
+    }
+  ],
+  "review": [
+    {
+      "print": "Captura 14.32.png",
+      "evento": "sign_up",
+      "duvidas": [
+        "parâmetro 'vaue' lido como 'value'",
+        "evento 'S  sign_u' lido como 'sign_up'",
+        "items: a spec mostra 4 itens; só o primeiro é validado"
+      ]
+    },
+    {
+      "print": "Captura 16.10.png",
+      "evento": "view_item_list",
+      "duvidas": []
+    },
+    {
+      "print": "Captura 16.47.png",
+      "evento": "add_to_cart",
+      "duvidas": []
+    },
+    {
+      "print": "Captura 42.42.png",
+      "evento": "select_item",
+      "duvidas": [
+        "parâmetro desconhecido 'dItail' (mantido como 'ditail')",
+        "items: a spec mostra 2 itens; só o primeiro é validado"
+      ]
+    },
+    {
+      "print": "Captura 61.54.png",
+      "evento": "sign_up",
+      "duvidas": [
+        "parâmetro desconhecido 'iIstallment_va' (mantido como 'iistallment_va')",
+        "Observação: parâmetro 'order status' lido como 'order_status'",
+        "order_status aceita ['aprovado', 'click:continuar', 'click:fechaa']; se cada variação usa um valor específico, ajuste em 'variacoes'",
+        "items: a spec mostra 2 itens; só o primeiro é validado",
+        "items: exemplo da spec é do fluxo 'novo'; item_id fixado só para 'novo'"
+      ]
+    },
+    {
+      "print": "Captura 62.33.png",
+      "evento": "share",
+      "duvidas": [
+        "parâmetro desconhecido 'iteml' (mantido como 'iteml')"
+      ]
+    },
+    {
+      "print": "Captura 67.14.png",
+      "evento": "add_to_cart",
+      "duvidas": [
+        "parâmetro desconhecido '' (mantido como '')",
+        "Observação: parâmetro 'cmponent' lido como 'component'",
+        "component: item 'click.fechar' lido como 'click:fechar'",
+        "flow_name: item 'click:sim ular' lido como 'click:sim-ular'",
+        "flow_name aceita ['click:sim-ular', 'click:10-parcelas']; se cada variação usa um valor específico, ajuste em 'variacoes'"
+      ]
+    }
+  ],
+  "spec_json": "{\n  \"projeto\": \"demo-15\",\n  \"versao_especificacao\": \"Rascunho gerado por OCR — revisar\",\n  \"plataforma\": \"ios\",\n  \"prints_dir\": \"demo-15\",\n  \"fluxos\": {\n    \"novo\": \"novo\",\n    \"usado\": \"usado\"\n  },\n  \"cards\": [\n    {\n      \"secao\": \"1. geral\",\n      \"titulo\": \"sign_up · geral\",\n      \"print\": \"Captura 14.32.png\",\n      \"evento\": \"sign_up\",\n      \"params\": {\n        \"items\": [\n          {\n            \"item_category3\": \"card-1\",\n            \"item_category4\": \"[numero]\",\n            \"item_id\": \"[numero]\",\n            \"item_category5\": \"[numero]\"\n          }\n        ],\n        \"installments\": \"[numero]\",\n        \"detail\": \"lick:fechar\",\n        \"value\": \"texto livre\"\n      }\n    },\n    {\n      \"secao\": \"1. geral\",\n      \"titulo\": \"view_item_list · geral\",\n      \"print\": \"Captura 16.10.png\",\n      \"evento\": \"view_item_list\",\n      \"params\": {\n        \"currency\": \"[data]\"\n      },\n      \"variacoes\": [\n        {\n          \"detail\": \"click:fechar\"\n        }\n      ]\n    },\n    {\n      \"secao\": \"1. geral\",\n      \"titulo\": \"add_to_cart · geral\",\n      \"print\": \"Captura 16.47.png\",\n      \"evento\": \"add_to_cart\",\n      \"params\": {\n        \"insurance\": \"[0|1]\",\n        \"currency\": \"[preenchido]\",\n        \"installments\": \"BRL\",\n        \"detail\": \"click:[numero]-parcelas\"\n      }\n    },\n    {\n      \"secao\": \"1. geral\",\n      \"titulo\": \"select_item · geral\",\n      \"print\": \"Captura 42.42.png\",\n      \"evento\": \"select_item\",\n      \"params\": {\n        \"insurance\": \"[0|1]\",\n        \"items\": [\n          {\n            \"item_category3\": \"1000\",\n            \"item_name\": \"card-1\",\n            \"item_category5\": \"demo-novo\",\n            \"item_id\": \"1000\",\n            \"item_category2\": \"card-2\"\n          }\n        ],\n        \"component\": \"[numero]\",\n        \"ditail\": \"click:[numero]-parcelas\"\n      }\n    },\n    {\n      \"secao\": \"1. geral\",\n      \"titulo\": \"sign_up · geral\",\n      \"print\": \"Captura 61.54.png\",\n      \"evento\": \"sign_up\",\n      \"params\": {\n        \"flow_name\": \"click:ver-detalhes\",\n        \"installment_value\": \"{fluxo}-pre-agen dado\",\n        \"items\": [\n          {\n            \"item_id\": \"[preenchido]\",\n            \"item_category5\": \"demo-{fluxo}\",\n            \"item_category4\": \"[numero]\",\n            \"item_category2\": \"simulacao\"\n          }\n        ],\n        \"order_status\": \"[aprovado|click:continuar|click:fechaa]\"\n      },\n      \"params_por_fluxo\": {\n        \"novo\": {\n          \"items\": [\n            {\n              \"item_id\": \"1000\"\n            }\n          ]\n        }\n      }\n    },\n    {\n      \"secao\": \"1. geral\",\n      \"titulo\": \"share · geral\",\n      \"print\": \"Captura 62.33.png\",\n      \"evento\": \"share\",\n      \"params\": {\n        \"operation_type\": \"[numero]\",\n        \"installments\": \"[preenchido]\",\n        \"iteml\": \"item_id:\\\"1000\\\", item_category4:\\\"simulacao\\\", \\\"item_name\\\":\\\"demo-novo\\\", *item_category5*:\\\"card-1\\\", *item_id*:\\\"simulacao\\\", } \\\"item_category5\\\":\\\"1001\\\", item_id:\\\"simulacao\\\", *item_id*:\\\"(taxa)\\\", 'item_cate gory4':\\\"card-3\\\", 'item_category5':\\\"[numero]\\\", 'item_id':\\\"(taxa)\\\", }\"\n      }\n    },\n    {\n      \"secao\": \"1. geral\",\n      \"titulo\": \"add_to_cart · geral\",\n      \"print\": \"Captura 67.14.png\",\n      \"evento\": \"add_to_cart\",\n      \"params\": {\n        \"installment_value\": \"[numero]\",\n        \"flow_name\": \"[click:sim-ular|click:10-parcelas]\",\n        \"\": \"[numero]\",\n        \"component\": \"click:fechar\"\n      }\n    }\n  ]\n}\n",
+  "review_md": "# Revisão do rascunho — demo-15\n\n7 prints lidos · 16 ponto(s) para conferir. Corrija direto no JSON e audite de novo na aba Relatório.\n\nFluxos detectados: novo, usado (renomeie os rótulos em 'fluxos' se quiser).\n\n## 1. sign_up — `Captura 14.32.png`\n- ⚠ parâmetro 'vaue' lido como 'value'\n- ⚠ evento 'S  sign_u' lido como 'sign_up'\n- ⚠ items: a spec mostra 4 itens; só o primeiro é validado\n\n## 2. view_item_list — `Captura 16.10.png`\n- ✓ nada a conferir\n\n## 3. add_to_cart — `Captura 16.47.png`\n- ✓ nada a conferir\n\n## 4. select_item — `Captura 42.42.png`\n- ⚠ parâmetro desconhecido 'dItail' (mantido como 'ditail')\n- ⚠ items: a spec mostra 2 itens; só o primeiro é validado\n\n## 5. sign_up — `Captura 61.54.png`\n- ⚠ parâmetro desconhecido 'iIstallment_va' (mantido como 'iistallment_va')\n- ⚠ Observação: parâmetro 'order status' lido como 'order_status'\n- ⚠ order_status aceita ['aprovado', 'click:continuar', 'click:fechaa']; se cada variação usa um valor específico, ajuste em 'variacoes'\n- ⚠ items: a spec mostra 2 itens; só o primeiro é validado\n- ⚠ items: exemplo da spec é do fluxo 'novo'; item_id fixado só para 'novo'\n\n## 6. share — `Captura 62.33.png`\n- ⚠ parâmetro desconhecido 'iteml' (mantido como 'iteml')\n\n## 7. add_to_cart — `Captura 67.14.png`\n- ⚠ parâmetro desconhecido '' (mantido como '')\n- ⚠ Observação: parâmetro 'cmponent' lido como 'component'\n- ⚠ component: item 'click.fechar' lido como 'click:fechar'\n- ⚠ flow_name: item 'click:sim ular' lido como 'click:sim-ular'\n- ⚠ flow_name aceita ['click:sim-ular', 'click:10-parcelas']; se cada variação usa um valor específico, ajuste em 'variacoes'\n",
+  "checklist_md": "# Checklist · demo-15\n\n- Plataforma: IOS\n- Gerado em: 16/11/2026 09:30\n- Spec: `demo-15.json`\n- Prints: `demo-15`\n- Fluxos: novo, usado\n\nMarque cada item com `[x]` ao conferir. Os itens com ⚠ são do OCR: confira no print e corrija a spec antes de auditar. Para o HTML no padrão do design system, use **Exportar Checklist…** na aba Relatório.\n\n## 1. geral\n\n### sign_up · geral — `Captura 14.32.png`\n\n**Parâmetros esperados**\n\n- `items[0].item_category3`: `card-1`\n- `items[0].item_category4`: `[numero]`\n- `items[0].item_id`: `[numero]`\n- `items[0].item_category5`: `[numero]`\n- `installments`: `[numero]`\n- `detail`: `lick:fechar`\n- `value`: `texto livre`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: parâmetro 'vaue' lido como 'value'\n- [ ] ⚠ Revisar OCR: evento 'S  sign_u' lido como 'sign_up'\n- [ ] ⚠ Revisar OCR: items: a spec mostra 4 itens; só o primeiro é validado\n- [ ] disparo de `sign_up`\n\n### view_item_list · geral — `Captura 16.10.png`\n\n**Parâmetros esperados**\n\n- `currency`: `[data]`\n\n**Conferir**\n\n- [ ] `detail` = `click:fechar`\n\n### add_to_cart · geral — `Captura 16.47.png`\n\n**Parâmetros esperados**\n\n- `insurance`: `[0|1]`\n- `currency`: `[preenchido]`\n- `installments`: `BRL`\n- `detail`: `click:[numero]-parcelas`\n\n**Conferir**\n\n- [ ] disparo de `add_to_cart`\n\n### select_item · geral — `Captura 42.42.png`\n\n**Parâmetros esperados**\n\n- `insurance`: `[0|1]`\n- `items[0].item_category3`: `1000`\n- `items[0].item_name`: `card-1`\n- `items[0].item_category5`: `demo-novo`\n- `items[0].item_id`: `1000`\n- `items[0].item_category2`: `card-2`\n- `component`: `[numero]`\n- `ditail`: `click:[numero]-parcelas`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: parâmetro desconhecido 'dItail' (mantido como 'ditail')\n- [ ] ⚠ Revisar OCR: items: a spec mostra 2 itens; só o primeiro é validado\n- [ ] disparo de `select_item`\n\n### sign_up · geral — `Captura 61.54.png`\n\n**Parâmetros esperados**\n\n- `flow_name`: `click:ver-detalhes`\n- `installment_value`: `{fluxo}-pre-agen dado`\n- `items[0].item_id`: `[preenchido]`\n- `items[0].item_category5`: `demo-{fluxo}`\n- `items[0].item_category4`: `[numero]`\n- `items[0].item_category2`: `simulacao`\n- `order_status`: `[aprovado|click:continuar|click:fechaa]`\n- `items[0].item_id` (só no fluxo novo): `1000`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: parâmetro desconhecido 'iIstallment_va' (mantido como 'iistallment_va')\n- [ ] ⚠ Revisar OCR: Observação: parâmetro 'order status' lido como 'order_status'\n- [ ] ⚠ Revisar OCR: order_status aceita ['aprovado', 'click:continuar', 'click:fechaa']; se cada variação usa um valor específico, ajuste em 'variacoes'\n- [ ] ⚠ Revisar OCR: items: a spec mostra 2 itens; só o primeiro é validado\n- [ ] ⚠ Revisar OCR: items: exemplo da spec é do fluxo 'novo'; item_id fixado só para 'novo'\n- [ ] fluxo **novo** · disparo de `sign_up`\n- [ ] fluxo **usado** · disparo de `sign_up`\n\n### share · geral — `Captura 62.33.png`\n\n**Parâmetros esperados**\n\n- `operation_type`: `[numero]`\n- `installments`: `[preenchido]`\n- `iteml`: `item_id:\"1000\", item_category4:\"simulacao\", \"item_name\":\"demo-novo\", *item_category5*:\"card-1\", *item_id*:\"simulacao\", } \"item_category5\":\"1001\", item_id:\"simulacao\", *item_id*:\"(taxa)\", 'item_cate gory4':\"card-3\", 'item_category5':\"[numero]\", 'item_id':\"(taxa)\", }`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: parâmetro desconhecido 'iteml' (mantido como 'iteml')\n- [ ] disparo de `share`\n\n### add_to_cart · geral — `Captura 67.14.png`\n\n**Parâmetros esperados**\n\n- `installment_value`: `[numero]`\n- `flow_name`: `[click:sim-ular|click:10-parcelas]`\n- *(vazio)*: `[numero]`\n- `component`: `click:fechar`\n\n**Conferir**\n\n- [ ] ⚠ Revisar OCR: parâmetro desconhecido '' (mantido como '')\n- [ ] ⚠ Revisar OCR: Observação: parâmetro 'cmponent' lido como 'component'\n- [ ] ⚠ Revisar OCR: component: item 'click.fechar' lido como 'click:fechar'\n- [ ] ⚠ Revisar OCR: flow_name: item 'click:sim ular' lido como 'click:sim-ular'\n- [ ] ⚠ Revisar OCR: flow_name aceita ['click:sim-ular', 'click:10-parcelas']; se cada variação usa um valor específico, ajuste em 'variacoes'\n- [ ] disparo de `add_to_cart`\n"
+}

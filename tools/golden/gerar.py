@@ -29,6 +29,7 @@ from __future__ import annotations
 
 import dataclasses
 import datetime
+import difflib
 import hashlib
 import json
 import re
@@ -38,9 +39,11 @@ import textwrap
 from pathlib import Path
 
 from mobaile.domain.errors import EngineError, InvalidInputError
-from mobaile.domain.report import PLATFORMS
+from mobaile.domain.report import PLATFORMS, OcrLine
 from mobaile.security import safe_file_stem
 from mobaile.services.report import html_report
+from mobaile.services.report.card_reader import build_spec, read_card, review_markdown
+from mobaile.services.report.checklist import checklist_markdown
 from mobaile.services.report.firebase_log import events_from_items, items_from_text
 from mobaile.services.report.service import export_info, html_file_name
 from mobaile.web.handlers import WebReportService, analytics_tsv
@@ -48,6 +51,7 @@ from mobaile.web.sandbox import decode_text
 
 RAIZ = Path(__file__).resolve().parents[2]
 CORPUS = RAIZ / "test" / "corpus"
+CORPUS_PRINTS = RAIZ / "test" / "corpus-prints"
 GOLDEN = RAIZ / "test" / "golden"
 UNIDADES = Path(__file__).with_name("unidades.json")
 
@@ -193,7 +197,41 @@ def unidades() -> None:
     saida["splitlines"] = [[s, s.splitlines()] for s in entradas["splitlines"]]
     saida["safe_file_stem"] = [[s, safe_file_stem(s, "spec")] for s in
                                ["DemoApp", "DemoApp Café ☕", "  ", "<script>alert(\"x\")</script>", "Ação & Reação!", "x" * 80]]
+    saida["close_matches"] = [
+        [palavra, opcoes, corte, difflib.get_close_matches(palavra, opcoes, n=1, cutoff=corte),
+         [repr(difflib.SequenceMatcher(None, palavra, o).ratio()) for o in opcoes]]
+        for palavra, opcoes, corte in entradas["close_matches"]
+    ]
     gravar(GOLDEN / "_unidades.json", dump(saida))
+
+
+def prints() -> int:
+    """Importação de prints: leitor de cards, rascunho da spec, revisão e checklist.
+
+    Segue `ReportService.import_prints` depois do OCR: os prints da pasta em
+    ordem de nome, um card por print, o nome do projeto (ou o da pasta) e o
+    nome do arquivo da spec que vai no checklist.
+    """
+    casos = sorted(CORPUS_PRINTS.glob("*.json")) if CORPUS_PRINTS.exists() else []
+    for arquivo in casos:
+        caso = json.loads(arquivo.read_text(encoding="utf-8"))
+        pasta = caso["pasta"]
+        ordem = sorted(caso["prints"], key=lambda p: p["file"])
+        cards = [read_card([OcrLine(**ln) for ln in p["lines"]], f"{pasta}/{p['file']}") for p in ordem]
+        nome = (caso["projeto"] or "").strip() or pasta
+        spec, review = build_spec(cards, nome, caso["plataforma"], pasta)
+        spec_name = f"{safe_file_stem(nome, 'spec')}.json"
+        saida = {
+            "nome": nome,
+            "spec_name": spec_name,
+            "cards": [dataclasses.asdict(c) for c in cards],
+            "review": review,
+            "spec_json": json.dumps(spec, ensure_ascii=False, indent=2) + "\n",
+            "review_md": review_markdown(spec, review),
+            "checklist_md": checklist_markdown(spec, review, spec_name=spec_name, generated_at=INSTANTE),
+        }
+        gravar(GOLDEN / f"prints-{arquivo.stem}.json", dump(saida))
+    return len(casos)
 
 
 def ativos() -> None:
@@ -215,7 +253,9 @@ def main() -> None:
     casos = sorted(p for p in CORPUS.iterdir() if p.is_dir()) if CORPUS.exists() else []
     for pasta in casos:
         caso(pasta)
-    print(f"gabarito: {len(casos)} caso(s) e as unidades em {GOLDEN.relative_to(RAIZ)}", file=sys.stderr)
+    n_prints = prints()
+    print(f"gabarito: {len(casos)} caso(s), {n_prints} pasta(s) de prints e as unidades em {GOLDEN.relative_to(RAIZ)}",
+          file=sys.stderr)
 
 
 if __name__ == "__main__":

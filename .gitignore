@@ -7,3 +7,5 @@ playwright/.auth/
 .privado/
 .DS_Store
 *.log
+.cache/
+public/ocr/

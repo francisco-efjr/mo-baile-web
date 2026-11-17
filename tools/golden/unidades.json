@@ -49,5 +49,25 @@
   ],
   "strip": [" a ", "\u00a0a\u3000", "\ufeffa\ufeff", "\u001ca\u0085", "\t\n x \r\u000b\u000c"],
   "splitlines": ["a\nb\r\nc\rd", "a\u2028b\u0085c\u000bd\u000ce\u001cf", "fim\n", "\n\n", "x\r\n"],
-  "repr_float_fmt": ["1.6", "2.2", "2", "1.4"]
+  "repr_float_fmt": ["1.6", "2.2", "2", "1.4"],
+  "close_matches": [
+    ["screnname", ["screenname", "flowname", "component", "detail", "insurance", "currency", "installments", "items", "value", "duedate", "installmentvalue", "operationtype", "loaninsurancevalue", "downpayment", "tax", "cet", "iof", "transactionid", "itemlistname", "itemlistid", "text", "title", "section", "subsection"], 0.84],
+    ["fiowname", ["screenname", "flowname", "component", "detail", "insurance", "currency", "installments", "items", "value", "duedate", "installmentvalue", "operationtype", "loaninsurancevalue", "downpayment", "tax", "cet", "iof", "transactionid", "itemlistname", "itemlistid", "text", "title", "section", "subsection"], 0.84],
+    ["loaninsuranceva", ["screenname", "flowname", "component", "detail", "insurance", "currency", "installments", "items", "value", "duedate", "installmentvalue", "operationtype", "loaninsurancevalue", "downpayment", "tax", "cet", "iof", "transactionid", "itemlistname", "itemlistid", "text", "title", "section", "subsection"], 0.84],
+    ["installmentvaiue", ["screenname", "flowname", "component", "detail", "insurance", "currency", "installments", "items", "value", "duedate", "installmentvalue", "operationtype", "loaninsurancevalue", "downpayment", "tax", "cet", "iof", "transactionid", "itemlistname", "itemlistid", "text", "title", "section", "subsection"], 0.84],
+    ["valu", ["screenname", "flowname", "component", "detail", "insurance", "currency", "installments", "items", "value", "duedate", "installmentvalue", "operationtype", "loaninsurancevalue", "downpayment", "tax", "cet", "iof", "transactionid", "itemlistname", "itemlistid", "text", "title", "section", "subsection"], 0.84],
+    ["x", ["screenname", "flowname", "component", "detail", "insurance", "currency", "installments", "items", "value", "duedate", "installmentvalue", "operationtype", "loaninsurancevalue", "downpayment", "tax", "cet", "iof", "transactionid", "itemlistname", "itemlistid", "text", "title", "section", "subsection"], 0.84],
+    ["", ["screenname", "flowname", "component", "detail", "insurance", "currency", "installments", "items", "value", "duedate", "installmentvalue", "operationtype", "loaninsurancevalue", "downpayment", "tax", "cet", "iof", "transactionid", "itemlistname", "itemlistid", "text", "title", "section", "subsection"], 0.84],
+    ["addtocar", ["screenview", "flowstart", "flowsuccess", "forminput", "modalview", "errorview", "interaction", "viewitemlist", "viewitem", "selectitem", "addtocart", "removefromcart", "begincheckout", "purchase"], 0.86],
+    ["viewitemiist", ["screenview", "flowstart", "flowsuccess", "forminput", "modalview", "errorview", "interaction", "viewitemlist", "viewitem", "selectitem", "addtocart", "removefromcart", "begincheckout", "purchase"], 0.86],
+    ["intcraction", ["screenview", "flowstart", "flowsuccess", "forminput", "modalview", "errorview", "interaction", "viewitemlist", "viewitem", "selectitem", "addtocart", "removefromcart", "begincheckout", "purchase"], 0.86],
+    ["purchasc", ["screenview", "flowstart", "flowsuccess", "forminput", "modalview", "errorview", "interaction", "viewitemlist", "viewitem", "selectitem", "addtocart", "removefromcart", "begincheckout", "purchase"], 0.86],
+    ["iteml", ["itemid", "itemname", "itemlistid", "index"], 0.8],
+    ["itemmbrand", ["itembrand", "itemname", "itemid"], 0.8],
+    ["açaí", ["acai", "açai", "açaí "], 0.6],
+    ["abcabcabc", ["abc", "bcabca", "cabcab"], 0.5],
+    ["tax", ["tax", "taxa", "tex"], 0.6],
+    ["aaaaaaaaaa", ["aaaaa", "aaaaaaaaab", "baaaaaaaaa"], 0.6],
+    ["aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", ["aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", "abababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababab"], 0.5]
+  ]
 }

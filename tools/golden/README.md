@@ -56,3 +56,34 @@ motor.". O gabarito não leva caminho de disco nem dado pessoal.
 Dados sempre sintéticos e neutros: app `DemoApp`, hosts `*.demoapp.test`,
 nenhum nome real de pessoa, empresa, banco ou produto. O caso
 `01-exemplo-loja` é também o exemplo do site (`src/exemplos/index.ts`).
+
+## Importação de prints
+
+`test/corpus-prints/<caso>.json` é uma pasta de prints já lida pelo OCR:
+`{"projeto", "pasta", "plataforma", "prints": [{"file", "lines": [{"t", "x", "y", "w", "h", "c"}]}]}`.
+Quem grava o corpus é `corpus_prints.py`, com semente fixa:
+
+- casos escritos à mão (`manual-*`), com os ruídos que o OCR comete nos cards
+  "Anotações" do Figma;
+- casos sorteados (`sorteio-*`), que misturam cabeçalho, tabela, `items` e
+  Observação com erros de leitura.
+
+```bash
+PYTHONPATH=<clone do Mo baile>/engine/src python3 tools/golden/corpus_prints.py
+PYTHONPATH=<clone do Mo baile>/engine/src python3 tools/golden/gerar.py
+```
+
+Para cada caso, `gerar.py` grava `test/golden/prints-<caso>.json`. A pasta
+passa pelo mesmo caminho do `report.import` depois do OCR: prints em ordem de
+nome, `read_card` em cada um, `build_spec`, `review_markdown` e
+`checklist_markdown` com o instante fixo. O arquivo guarda:
+
+- os cards lidos (`cards`);
+- a revisão (`review`);
+- o JSON da spec como o Mo baile grava (`spec_json`);
+- os dois Markdown (`review_md` e `checklist_md`).
+
+Os casos são fictícios. O corpus cobre quase todas as linhas de
+`card_reader.py`; só fica de fora um ramo que o OCR não alcança. Ao mudar o
+corpus, confira com um teste de mutação: trocar uma regra no port precisa
+quebrar `test/prints.test.ts`.

@@ -15,6 +15,20 @@ Use `npm install`, e não `npm ci`: o npm 11 grava o lockfile sem uma das
 dependências opcionais de plataforma do Rollup, e o `npm ci` recusa. As
 versões continuam as do lockfile.
 
+### Modelos do OCR
+
+A importação de prints usa o PaddleOCR v6 small. Os modelos (31 MB) não ficam
+no git:
+
+```bash
+npm run ocr:ativos # baixa uma vez, confere o sha256 e copia para public/ocr/
+```
+
+O download fica em `.cache/ocr/`. O `npm run check` e o `npm run e2e` rodam
+esse passo sozinhos. Para mudar de modelo, atualize `src/ocr/manifesto.json`
+(fonte fixada num commit, tamanho e sha256) e registre o motivo no ADR 0002.
+`npm run ocr:cards` redesenha os cards fictícios do teste F-10.
+
 ## Portão de qualidade
 
 ```bash
